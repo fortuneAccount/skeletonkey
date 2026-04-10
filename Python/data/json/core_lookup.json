@@ -1,0 +1,1297 @@
+[
+  {
+    "display_name": "2048",
+    "system_name": "2048",
+    "system_code": "2048",
+    "core_name": "2048",
+    "bios_required": false
+  },
+  {
+    "display_name": "4DO",
+    "system_name": "4do",
+    "system_code": "T3DO",
+    "core_name": "4do",
+    "bios_required": true
+  },
+  {
+    "display_name": "81",
+    "system_name": "Sinclair - ZX 81 (EightyOne)",
+    "system_code": "SINZX81",
+    "core_name": "81",
+    "bios_required": false
+  },
+  {
+    "display_name": "Arcade (various)",
+    "system_name": "Daphne",
+    "system_code": "MAMARC",
+    "core_name": "daphne",
+    "bios_required": false
+  },
+  {
+    "display_name": "Atari800",
+    "system_name": "Atari - 5200 (Atari800)",
+    "system_code": "AT52",
+    "core_name": "atari800",
+    "bios_required": false
+  },
+  {
+    "display_name": "Beetle GBA",
+    "system_name": "Nintendo - Game Boy Advance (Beetle GBA)",
+    "system_code": "NNGBA",
+    "core_name": "mednafen_gba",
+    "bios_required": false
+  },
+  {
+    "display_name": "Beetle Lynx",
+    "system_name": "Atari - Lynx (Beetle Lynx)",
+    "system_code": "ATLNX",
+    "core_name": "mednafen_lynx",
+    "bios_required": false
+  },
+  {
+    "display_name": "Beetle NeoPop",
+    "system_name": "SNK - Neo Geo Pocket / Color (Beetle NeoPop)",
+    "system_code": "SNEOPKT",
+    "core_name": "mednafen_ngp",
+    "bios_required": false
+  },
+  {
+    "display_name": "Beetle PC-FX",
+    "system_name": "NEC - PC-FX (Beetle PC-FX)",
+    "system_code": "NPCFX",
+    "core_name": "mednafen_pcfx",
+    "bios_required": false
+  },
+  {
+    "display_name": "Beetle PCE Fast",
+    "system_name": "NEC - PC Engine / CD (Beetle PCE FAST)",
+    "system_code": "NPCENG",
+    "core_name": "mednafen_pce_fast",
+    "bios_required": false
+  },
+  {
+    "display_name": "Beetle PCE",
+    "system_name": "NEC - PC Engine / SuperGrafx / CD (Beetle PCE)",
+    "system_code": "NSGX",
+    "core_name": "mednafen_pce",
+    "bios_required": false
+  },
+  {
+    "display_name": "Beetle PSX HW",
+    "system_name": "Sony - PlayStation (Beetle PSX HW)",
+    "system_code": "SPLAY",
+    "core_name": "mednafen_psx_hw",
+    "bios_required": true
+  },
+  {
+    "display_name": "Beetle PSX",
+    "system_name": "Sony - PlayStation (Beetle PSX)",
+    "system_code": "SPLAY",
+    "core_name": "mednafen_psx",
+    "bios_required": true
+  },
+  {
+    "display_name": "Beetle Saturn",
+    "system_name": "Sega - Saturn (Beetle Saturn)",
+    "system_code": "SSAT",
+    "core_name": "mednafen_saturn",
+    "bios_required": true
+  },
+  {
+    "display_name": "Beetle Supafaust",
+    "system_name": "Nintendo - SNES / SFC (Beetle Supafaust)",
+    "system_code": "NSNES",
+    "core_name": "mednafen_supafaust",
+    "bios_required": false
+  },
+  {
+    "display_name": "Beetle SuperGrafx",
+    "system_name": "NEC - PC Engine SuperGrafx (Beetle SuperGrafx)",
+    "system_code": "NSGX",
+    "core_name": "mednafen_supergrafx",
+    "bios_required": false
+  },
+  {
+    "display_name": "Beetle VB",
+    "system_name": "Nintendo - Virtual Boy (Beetle VB)",
+    "system_code": "NNVB",
+    "core_name": "mednafen_vb",
+    "bios_required": false
+  },
+  {
+    "display_name": "Beetle WonderSwan",
+    "system_name": "Bandai - WonderSwan/Color (Beetle Cygne)",
+    "system_code": "BWSWAN",
+    "core_name": "mednafen_wswan",
+    "bios_required": false
+  },
+  {
+    "display_name": "Beetle bsnes",
+    "system_name": "Mednafen Snes",
+    "system_code": "NSNES",
+    "core_name": "mednafen_snes",
+    "bios_required": false
+  },
+  {
+    "display_name": "BlastEm",
+    "system_name": "Sega - Mega Drive - Genesis (BlastEm)",
+    "system_code": "SMEGAD",
+    "core_name": "blastem",
+    "bios_required": false
+  },
+  {
+    "display_name": "CPC",
+    "system_name": "Caprice32",
+    "system_code": "AMSCPC",
+    "core_name": "cap32",
+    "bios_required": false
+  },
+  {
+    "display_name": "ChaiLove",
+    "system_name": "ChaiLove",
+    "system_code": "CHAIL",
+    "core_name": "chailove",
+    "bios_required": false
+  },
+  {
+    "display_name": "Citra",
+    "system_name": "Nintendo - 3DS (Citra)",
+    "system_code": "NN3DS",
+    "core_name": "citra",
+    "bios_required": false
+  },
+  {
+    "display_name": "Craft",
+    "system_name": "Minecraft (Craft)",
+    "system_code": "MINECR",
+    "core_name": "craft",
+    "bios_required": false
+  },
+  {
+    "display_name": "CrocoDS",
+    "system_name": "Amstrad - CPC (CrocoDS)",
+    "system_code": "AMSCPC",
+    "core_name": "crocods",
+    "bios_required": false
+  },
+  {
+    "display_name": "DOSBox-SVN",
+    "system_name": "DOS (DOSBox-SVN)",
+    "system_code": "MSDOS",
+    "core_name": "dosbox_svn",
+    "bios_required": false
+  },
+  {
+    "display_name": "DOSBox-core",
+    "system_name": "DOS (DOSBox-core)",
+    "system_code": "MSDOS",
+    "core_name": "dosbox_core",
+    "bios_required": false
+  },
+  {
+    "display_name": "DOSBox-pure",
+    "system_name": "DOSBox-PURE",
+    "system_code": "MSDOS",
+    "core_name": "dosbox_pure",
+    "bios_required": false
+  },
+  {
+    "display_name": "DOS",
+    "system_name": "DOSBox-SVN CE",
+    "system_code": "MSDOS",
+    "core_name": "dosbox_svn_ce",
+    "bios_required": false
+  },
+  {
+    "display_name": "DS",
+    "system_name": "DeSmuME 2015",
+    "system_code": "NNDS",
+    "core_name": "desmume2015",
+    "bios_required": false
+  },
+  {
+    "display_name": "DeSmuME",
+    "system_name": "Nintendo - DS (DeSmuME)",
+    "system_code": "NNDS",
+    "core_name": "desmume",
+    "bios_required": false
+  },
+  {
+    "display_name": "Dinothawr",
+    "system_name": "Dinothawr",
+    "system_code": "DINOTH",
+    "core_name": "dinothawr",
+    "bios_required": false
+  },
+  {
+    "display_name": "Dolphin",
+    "system_name": "Dolphin",
+    "system_code": "NNGC",
+    "core_name": "dolphin",
+    "bios_required": false
+  },
+  {
+    "display_name": "Doom 3 Game Engine",
+    "system_name": "boom3",
+    "system_code": "DOOM3",
+    "core_name": "boom3",
+    "bios_required": false
+  },
+  {
+    "display_name": "Doom 3 XP Game Engine",
+    "system_name": "boom3_xp",
+    "system_code": "DOOM3XP",
+    "core_name": "boom3_xp",
+    "bios_required": false
+  },
+  {
+    "display_name": "Doom 3 XP Game Engine",
+    "system_name": "dhewm3_xp",
+    "system_code": "DOOM3XP",
+    "core_name": "dhewm3_xp",
+    "bios_required": false
+  },
+  {
+    "display_name": "DuckStation",
+    "system_name": "Sony - PlayStation (DuckStation)",
+    "system_code": "SPLAY",
+    "core_name": "duckstation",
+    "bios_required": false
+  },
+  {
+    "display_name": "ECWolf",
+    "system_name": "Wolfenstein 3D (ECWolf)",
+    "system_code": "ECWLF",
+    "core_name": "ecwolf",
+    "bios_required": false
+  },
+  {
+    "display_name": "Emux CHIP-8",
+    "system_name": "emux-chip8",
+    "system_code": "RCACHP8",
+    "core_name": "emux_chip8",
+    "bios_required": false
+  },
+  {
+    "display_name": "Emux GB",
+    "system_name": "emux-gb",
+    "system_code": "NNGB",
+    "core_name": "emux_gb",
+    "bios_required": false
+  },
+  {
+    "display_name": "Emux NES",
+    "system_name": "emux-nes",
+    "system_code": "NNES",
+    "core_name": "emux_nes",
+    "bios_required": false
+  },
+  {
+    "display_name": "Emux SMS",
+    "system_name": "emux-sms",
+    "system_code": "SEGMS",
+    "core_name": "emux_sms",
+    "bios_required": false
+  },
+  {
+    "display_name": "FB Alpha 2012 CPS-1",
+    "system_name": "FB Alpha 2012 CPS-1",
+    "system_code": "CPS",
+    "core_name": "fbalpha2012_cps1",
+    "bios_required": false
+  },
+  {
+    "display_name": "FB Alpha 2012 CPS-2",
+    "system_name": "FB Alpha 2012 CPS-2",
+    "system_code": "CPSII",
+    "core_name": "fbalpha2012_cps2",
+    "bios_required": false
+  },
+  {
+    "display_name": "FB Alpha 2012 Neo Geo",
+    "system_name": "FB Alpha 2012 Neo Geo",
+    "system_code": "SNEOMVS",
+    "core_name": "fbalpha2012_neogeo",
+    "bios_required": false
+  },
+  {
+    "display_name": "FB Alpha 2012",
+    "system_name": "FB Alpha 2012",
+    "system_code": "MAMARC",
+    "core_name": "fbalpha2012",
+    "bios_required": false
+  },
+  {
+    "display_name": "FB Alpha Neo",
+    "system_name": "MAMARC",
+    "system_code": "fbaneo",
+    "core_name": "1",
+    "bios_required": false
+  },
+  {
+    "display_name": "FB Alpha",
+    "system_name": "MAMARC",
+    "system_code": "fbalpha",
+    "core_name": "1",
+    "bios_required": false
+  },
+  {
+    "display_name": "FCEUmm",
+    "system_name": "Nintendo - NES / Famicom (FCEUmm)",
+    "system_code": "NNES",
+    "core_name": "fceumm",
+    "bios_required": true
+  },
+  {
+    "display_name": "FFmpeg",
+    "system_name": "FFmpeg",
+    "system_code": "MLTMED",
+    "core_name": "ffmpeg",
+    "bios_required": false
+  },
+  {
+    "display_name": "FinalBurn Neo",
+    "system_name": "Arcade (FinalBurn Neo)",
+    "system_code": "MAMARC",
+    "core_name": "fbneo",
+    "bios_required": false
+  },
+  {
+    "display_name": "Flycast GLES2",
+    "system_name": "flycast WinCE",
+    "system_code": "SEGDC",
+    "core_name": "flycast_gles2",
+    "bios_required": true
+  },
+  {
+    "display_name": "Flycast",
+    "system_name": "Sega - Dreamcast/NAOMI (Flycast)",
+    "system_code": "SEGDC",
+    "core_name": "flycast",
+    "bios_required": true
+  },
+  {
+    "display_name": "FreeChaF",
+    "system_name": "Fairchild ChannelF (FreeChaF)",
+    "system_code": "FCHANF",
+    "core_name": "freechaf",
+    "bios_required": false
+  },
+  {
+    "display_name": "FreeIntv",
+    "system_name": "Mattel - Intellivision (FreeIntv)",
+    "system_code": "MINTEL",
+    "core_name": "freeintv",
+    "bios_required": false
+  },
+  {
+    "display_name": "Frodo",
+    "system_name": "Commodore - C64 (Frodo)",
+    "system_code": "COM64",
+    "core_name": "frodo",
+    "bios_required": false
+  },
+  {
+    "display_name": "Fuse",
+    "system_name": "Sinclair - ZX Spectrum +3 (Fuse)",
+    "system_code": "SINZXS",
+    "core_name": "fuse",
+    "bios_required": false
+  },
+  {
+    "display_name": "Gambatte",
+    "system_name": "Nintendo - Game Boy / Color (Gambatte)",
+    "system_code": "NNGB",
+    "core_name": "gambatte",
+    "bios_required": false
+  },
+  {
+    "display_name": "Game Boy Advance",
+    "system_name": "Button Test",
+    "system_code": "NNGBA",
+    "core_name": "testinput_buttontest",
+    "bios_required": false
+  },
+  {
+    "display_name": "Game Boy Advance",
+    "system_name": "Test RetroLuxury",
+    "system_code": "NNGBA",
+    "core_name": "testretroluxury",
+    "bios_required": false
+  },
+  {
+    "display_name": "Game Boy Advance",
+    "system_name": "TestAudio Callback",
+    "system_code": "NNGBA",
+    "core_name": "testaudio_callback",
+    "bios_required": false
+  },
+  {
+    "display_name": "Game Boy Advance",
+    "system_name": "TestAudio NoCallback",
+    "system_code": "NNGBA",
+    "core_name": "testaudio_no_callback",
+    "bios_required": false
+  },
+  {
+    "display_name": "Game Boy Advance",
+    "system_name": "TestAudio Playback Wav",
+    "system_code": "NNGBA",
+    "core_name": "testaudio_playback_wav",
+    "bios_required": false
+  },
+  {
+    "display_name": "Game Boy Advance",
+    "system_name": "TestGL (FF)",
+    "system_code": "NNGBA",
+    "core_name": "testgl_ff",
+    "bios_required": false
+  },
+  {
+    "display_name": "Game Boy Advance",
+    "system_name": "TestGL ComputeShaders",
+    "system_code": "NNGBA",
+    "core_name": "testgl_compute_shaders",
+    "bios_required": false
+  },
+  {
+    "display_name": "Game Boy Advance",
+    "system_name": "TestGL",
+    "system_code": "NNGBA",
+    "core_name": "testgl",
+    "bios_required": false
+  },
+  {
+    "display_name": "Game Boy Advance",
+    "system_name": "TestSW VRAM",
+    "system_code": "NNGBA",
+    "core_name": "testsw_vram",
+    "bios_required": false
+  },
+  {
+    "display_name": "Game Boy Advance",
+    "system_name": "TestSW",
+    "system_code": "NNGBA",
+    "core_name": "testsw",
+    "bios_required": false
+  },
+  {
+    "display_name": "Game Boy Advance",
+    "system_name": "TestVulkan AsyncCompute",
+    "system_code": "NNGBA",
+    "core_name": "testvulkan_async_compute",
+    "bios_required": false
+  },
+  {
+    "display_name": "Game Boy Advance",
+    "system_name": "TestVulkan",
+    "system_code": "NNGBA",
+    "core_name": "testvulkan",
+    "bios_required": false
+  },
+  {
+    "display_name": "Game Music Emu",
+    "system_name": "Game Music Emu",
+    "system_code": "CHPTUN",
+    "core_name": "gme",
+    "bios_required": false
+  },
+  {
+    "display_name": "GameCube / Wii",
+    "system_name": "Dolphin Launcher",
+    "system_code": "NNWII",
+    "core_name": "dolphin_launcher",
+    "bios_required": false
+  },
+  {
+    "display_name": "GameCube / Wii",
+    "system_name": "Ishiiruka",
+    "system_code": "NNWII",
+    "core_name": "ishiiruka",
+    "bios_required": false
+  },
+  {
+    "display_name": "Gearboy",
+    "system_name": "Nintendo - Game Boy / Color (Gearboy)",
+    "system_code": "NNGB",
+    "core_name": "gearboy",
+    "bios_required": false
+  },
+  {
+    "display_name": "Gearsystem",
+    "system_name": "Sega - MS/GG/SG-1000 (Gearsystem)",
+    "system_code": "SEG1K",
+    "core_name": "gearsystem",
+    "bios_required": false
+  },
+  {
+    "display_name": "Genesis Plus GX",
+    "system_name": "Sega - MS/GG/MD/CD (Genesis Plus GX)",
+    "system_code": "SMEGAD",
+    "core_name": "genesis_plus_gx",
+    "bios_required": false
+  },
+  {
+    "display_name": "HBMAME (Git)",
+    "system_name": "Arcade (HBMAME)",
+    "system_code": "MAMARC",
+    "core_name": "hbmame",
+    "bios_required": false
+  },
+  {
+    "display_name": "Handy",
+    "system_name": "Atari - Lynx (Handy)",
+    "system_code": "ATLNX",
+    "core_name": "handy",
+    "bios_required": true
+  },
+  {
+    "display_name": "Hatari",
+    "system_name": "Atari - ST/STE/TT/Falcon (Hatari)",
+    "system_code": "ATST",
+    "core_name": "hatari",
+    "bios_required": true
+  },
+  {
+    "display_name": "Kronos",
+    "system_name": "Sega - Saturn/ST-V (Kronos)",
+    "system_code": "SSAT",
+    "core_name": "kronos",
+    "bios_required": true
+  },
+  {
+    "display_name": "Lutro",
+    "system_name": "Lua Engine (Lutro)",
+    "system_code": "LUTRO",
+    "core_name": "lutro",
+    "bios_required": false
+  },
+  {
+    "display_name": "MAME 2000 (0.37b5)",
+    "system_name": "MAME 2000",
+    "system_code": "MAMARC",
+    "core_name": "mame2000",
+    "bios_required": false
+  },
+  {
+    "display_name": "MAME 2003 (0.78)",
+    "system_name": "Arcade (MAME 2003)",
+    "system_code": "MAMARC",
+    "core_name": "mame2003",
+    "bios_required": false
+  },
+  {
+    "display_name": "MAME 2003-Plus",
+    "system_name": "Arcade (MAME 2003-Plus)",
+    "system_code": "MAMARC",
+    "core_name": "mame2003_plus",
+    "bios_required": false
+  },
+  {
+    "display_name": "MAME 2010 (0.139)",
+    "system_name": "Arcade (MAME 2010)",
+    "system_code": "MAMARC",
+    "core_name": "mame2010",
+    "bios_required": false
+  },
+  {
+    "display_name": "MAME 2010",
+    "system_name": "MAMARC",
+    "system_code": "mame 2010",
+    "core_name": "1",
+    "bios_required": false
+  },
+  {
+    "display_name": "MAME 2014",
+    "system_name": "MAMARC",
+    "system_code": "mame2014",
+    "core_name": "1",
+    "bios_required": false
+  },
+  {
+    "display_name": "MAME 2015 (0.160)",
+    "system_name": "Arcade (MAME 2015)",
+    "system_code": "MAMARC",
+    "core_name": "mame2015",
+    "bios_required": false
+  },
+  {
+    "display_name": "MAME 2016 (0.174)",
+    "system_name": "Arcade (MAME 2016)",
+    "system_code": "MAMARC",
+    "core_name": "mame2016",
+    "bios_required": false
+  },
+  {
+    "display_name": "MESS 2015 (0.160)",
+    "system_name": "Multi (MESS 2015)",
+    "system_code": "MESSYS",
+    "core_name": "mess2015",
+    "bios_required": false
+  },
+  {
+    "display_name": "Mesen-S",
+    "system_name": "Nintendo - SNES / SFC / Game Boy / Color (Mesen-S)",
+    "system_code": "NSNES",
+    "core_name": "mesen-s",
+    "bios_required": false
+  },
+  {
+    "display_name": "Mesen",
+    "system_name": "Nintendo - NES / Famicom (Mesen)",
+    "system_code": "NNES",
+    "core_name": "mesen",
+    "bios_required": false
+  },
+  {
+    "display_name": "Mr.Boom",
+    "system_name": "Mr.Boom (Bomberman)",
+    "system_code": "MRBOOM",
+    "core_name": "mrboom",
+    "bios_required": false
+  },
+  {
+    "display_name": "Mupen64Plus-Next",
+    "system_name": "Nintendo - Nintendo 64 (Mupen64Plus-Next)",
+    "system_code": "NN64",
+    "core_name": "mupen64plus_next",
+    "bios_required": false
+  },
+  {
+    "display_name": "Mu",
+    "system_name": "Palm OS (Mu)",
+    "system_code": "PALM",
+    "core_name": "mu",
+    "bios_required": false
+  },
+  {
+    "display_name": "NXEngine",
+    "system_name": "Cave Story (NXEngine)",
+    "system_code": "CAVSTR",
+    "core_name": "nxengine",
+    "bios_required": false
+  },
+  {
+    "display_name": "Neko Project II",
+    "system_name": "NEC - PC-98 (Neko Project II Kai)",
+    "system_code": "NPC98",
+    "core_name": "np2kai",
+    "bios_required": false
+  },
+  {
+    "display_name": "Neko Project II",
+    "system_name": "NEC - PC-98 (Neko Project II)",
+    "system_code": "NPC98",
+    "core_name": "nekop2",
+    "bios_required": false
+  },
+  {
+    "display_name": "NeoCD",
+    "system_name": "SNK - Neo Geo CD (NeoCD)",
+    "system_code": "SNEOCD",
+    "core_name": "neocd",
+    "bios_required": false
+  },
+  {
+    "display_name": "Nestopia",
+    "system_name": "Nintendo - NES / Famicom (Nestopia UE)",
+    "system_code": "NNES",
+    "core_name": "nestopia",
+    "bios_required": false
+  },
+  {
+    "display_name": "Nintendo Entertainment System",
+    "system_name": "fixNES",
+    "system_code": "NNES",
+    "core_name": "fixnes",
+    "bios_required": false
+  },
+  {
+    "display_name": "O2EM",
+    "system_name": "Magnavox - Odyssey2 / Phillips Videopac+ (O2EM)",
+    "system_code": "MODYS2",
+    "core_name": "o2em",
+    "bios_required": false
+  },
+  {
+    "display_name": "OpenLara",
+    "system_name": "Tomb Raider (OpenLara)",
+    "system_code": "OPNLARA",
+    "core_name": "openlara",
+    "bios_required": false
+  },
+  {
+    "display_name": "Opera",
+    "system_name": "The 3DO Company - 3DO (Opera)",
+    "system_code": "T3DO",
+    "core_name": "opera",
+    "bios_required": false
+  },
+  {
+    "display_name": "Outrun Game Engine",
+    "system_name": "Cannonball",
+    "system_code": "OUTRUN",
+    "core_name": "cannonball",
+    "bios_required": false
+  },
+  {
+    "display_name": "PCSX-ReARMed",
+    "system_name": "Sony - PlayStation (PCSX ReARMed)",
+    "system_code": "SPLAY",
+    "core_name": "pcsx_rearmed",
+    "bios_required": true
+  },
+  {
+    "display_name": "PC",
+    "system_name": "PCem",
+    "system_code": "WINGAME",
+    "core_name": "pcem",
+    "bios_required": false
+  },
+  {
+    "display_name": "PICO8",
+    "system_name": "Retro8",
+    "system_code": "PICO8",
+    "core_name": "retro8",
+    "bios_required": false
+  },
+  {
+    "display_name": "PPSSPP",
+    "system_name": "Sony - PlayStation Portable (PPSSPP)",
+    "system_code": "SPLAYP",
+    "core_name": "ppsspp",
+    "bios_required": false
+  },
+  {
+    "display_name": "PUAE",
+    "system_name": "Commodore - Amiga (P-UAE)",
+    "system_code": "AMIG",
+    "core_name": "puae",
+    "bios_required": true
+  },
+  {
+    "display_name": "PX68k",
+    "system_name": "Sharp - X68000 (PX68k)",
+    "system_code": "SHRPX68K",
+    "core_name": "px68k",
+    "bios_required": true
+  },
+  {
+    "display_name": "ParaLLEl N64",
+    "system_name": "Nintendo - Nintendo 64 (ParaLLEl N64)",
+    "system_code": "NN64",
+    "core_name": "parallel_n64",
+    "bios_required": false
+  },
+  {
+    "display_name": "PicoDrive",
+    "system_name": "Sega - MS/MD/CD/32X (PicoDrive)",
+    "system_code": "SMEGAD",
+    "core_name": "picodrive",
+    "bios_required": false
+  },
+  {
+    "display_name": "Play!",
+    "system_name": "Sony - PlayStation 2 (Play!)",
+    "system_code": "SPS2",
+    "core_name": "play",
+    "bios_required": false
+  },
+  {
+    "display_name": "PlayStation",
+    "system_name": "PCSX ReARMed [Interpreter]",
+    "system_code": "SPLAY",
+    "core_name": "pcsx_rearmed_interpreter",
+    "bios_required": false
+  },
+  {
+    "display_name": "PlayStation",
+    "system_name": "PCSX1",
+    "system_code": "SPLAY",
+    "core_name": "pcsx1",
+    "bios_required": false
+  },
+  {
+    "display_name": "PlayStation",
+    "system_name": "Rustation",
+    "system_code": "SPLAY",
+    "core_name": "rustation",
+    "bios_required": false
+  },
+  {
+    "display_name": "PocketCDG",
+    "system_name": "PocketCDG",
+    "system_code": "POKCDG",
+    "core_name": "pocketcdg",
+    "bios_required": false
+  },
+  {
+    "display_name": "PokeMini",
+    "system_name": "Nintendo - Pokemon Mini (PokeMini)",
+    "system_code": "NPOK",
+    "core_name": "pokemini",
+    "bios_required": false
+  },
+  {
+    "display_name": "PrBoom",
+    "system_name": "Doom (PrBoom)",
+    "system_code": "PRBOOM",
+    "core_name": "prboom",
+    "bios_required": false
+  },
+  {
+    "display_name": "ProSystem",
+    "system_name": "Atari - 7800 (ProSystem)",
+    "system_code": "AT78",
+    "core_name": "prosystem",
+    "bios_required": false
+  },
+  {
+    "display_name": "QUASI88",
+    "system_name": "NEC - PC-8000 / PC-8800 series (QUASI88)",
+    "system_code": "NPC88",
+    "core_name": "quasi88",
+    "bios_required": false
+  },
+  {
+    "display_name": "QuickNES",
+    "system_name": "Nintendo - NES / Famicom (QuickNES)",
+    "system_code": "NNES",
+    "core_name": "quicknes",
+    "bios_required": false
+  },
+  {
+    "display_name": "RACE",
+    "system_name": "SNK - Neo Geo Pocket / Color (RACE)",
+    "system_code": "NEPKTC",
+    "core_name": "race",
+    "bios_required": false
+  },
+  {
+    "display_name": "REminiscence",
+    "system_name": "Flashback (REminiscence)",
+    "system_code": "FLSHBK",
+    "core_name": "reminiscence",
+    "bios_required": false
+  },
+  {
+    "display_name": "Redream",
+    "system_name": "Redream",
+    "system_code": "SEGDC",
+    "core_name": "redream",
+    "bios_required": true
+  },
+  {
+    "display_name": "SMS Plus GX",
+    "system_name": "Sega - MS/GG (SMS Plus GX)",
+    "system_code": "SEGMS",
+    "core_name": "smsplus",
+    "bios_required": false
+  },
+  {
+    "display_name": "SameBoy",
+    "system_name": "Nintendo - Game Boy / Color (SameBoy)",
+    "system_code": "NNGBC",
+    "core_name": "sameboy",
+    "bios_required": false
+  },
+  {
+    "display_name": "ScummVM",
+    "system_name": "ScummVM",
+    "system_code": "SCUMV",
+    "core_name": "scummvm",
+    "bios_required": false
+  },
+  {
+    "display_name": "Sega - CD (Genesis Plus GX)",
+    "system_name": "SSMEGCD",
+    "system_code": "genesis_plus_gx_segacd",
+    "core_name": "0",
+    "bios_required": false
+  },
+  {
+    "display_name": "Sega Dreamcast",
+    "system_name": "RetroDream",
+    "system_code": "SEGDC",
+    "core_name": "retrodream",
+    "bios_required": false
+  },
+  {
+    "display_name": "Snes9x 2002",
+    "system_name": "Nintendo - SNES / SFC (Snes9x 2002)",
+    "system_code": "NSNES",
+    "core_name": "snes9x2002",
+    "bios_required": false
+  },
+  {
+    "display_name": "Snes9x 2005 Plus",
+    "system_name": "Nintendo - SNES / SFC (Snes9x 2005 Plus)",
+    "system_code": "NSNES",
+    "core_name": "snes9x2005_plus",
+    "bios_required": false
+  },
+  {
+    "display_name": "Snes9x 2005",
+    "system_name": "Nintendo - SNES / SFC (Snes9x 2005)",
+    "system_code": "NSNES",
+    "core_name": "snes9x2005",
+    "bios_required": false
+  },
+  {
+    "display_name": "Snes9x 2010",
+    "system_name": "Nintendo - SNES / SFC (Snes9x 2010)",
+    "system_code": "NSNES",
+    "core_name": "snes9x2010",
+    "bios_required": false
+  },
+  {
+    "display_name": "Snes9x",
+    "system_name": "Nintendo - SNES / SFC (Snes9x - Current)",
+    "system_code": "NSNES",
+    "core_name": "snes9x",
+    "bios_required": false
+  },
+  {
+    "display_name": "SquirrelJME",
+    "system_name": "Java ME (SquirrelJME)",
+    "system_code": "JAVAME",
+    "core_name": "squirreljme",
+    "bios_required": false
+  },
+  {
+    "display_name": "Stella 2014",
+    "system_name": "Atari - 2600 (Stella 2014)",
+    "system_code": "AT26",
+    "core_name": "stella2014",
+    "bios_required": false
+  },
+  {
+    "display_name": "Stella",
+    "system_name": "Atari - 2600 (Stella)",
+    "system_code": "AT26",
+    "core_name": "stella",
+    "bios_required": false
+  },
+  {
+    "display_name": "Supafaust",
+    "system_name": "Nintendo - SNES / SFC (Supafaust)",
+    "system_code": "NSNES",
+    "core_name": "supafaust",
+    "bios_required": false
+  },
+  {
+    "display_name": "Super Nintendo Entertainment System",
+    "system_name": "Imageviewer",
+    "system_code": "NSNES",
+    "core_name": "imageviewer",
+    "bios_required": false
+  },
+  {
+    "display_name": "Super Nintendo Entertainment System",
+    "system_name": "bsnes 2014 Accuracy",
+    "system_code": "NSNES",
+    "core_name": "bsnes2014_accuracy",
+    "bios_required": false
+  },
+  {
+    "display_name": "Super Nintendo Entertainment System",
+    "system_name": "bsnes 2014 Balanced",
+    "system_code": "NSNES",
+    "core_name": "bsnes2014_balanced",
+    "bios_required": false
+  },
+  {
+    "display_name": "Super Nintendo Entertainment System",
+    "system_name": "bsnes 2014 Performance",
+    "system_code": "NSNES",
+    "core_name": "bsnes2014_performance",
+    "bios_required": false
+  },
+  {
+    "display_name": "Super Nintendo Entertainment System",
+    "system_name": "bsnes C++98 (v085)",
+    "system_code": "NSNES",
+    "core_name": "bsnes_cplusplus98",
+    "bios_required": false
+  },
+  {
+    "display_name": "Super Nintendo Entertainment System",
+    "system_name": "bsnes-hd beta",
+    "system_code": "NSNES",
+    "core_name": "bsnes_hd_beta",
+    "bios_required": false
+  },
+  {
+    "display_name": "Super Nintendo Entertainment System",
+    "system_name": "bsnes-mercury Balanced",
+    "system_code": "NSNES",
+    "core_name": "bsnes_mercury_balanced",
+    "bios_required": false
+  },
+  {
+    "display_name": "Super Nintendo Entertainment System",
+    "system_name": "bsnes-mercury Performance",
+    "system_code": "NSNES",
+    "core_name": "bsnes_mercury_performance",
+    "bios_required": false
+  },
+  {
+    "display_name": "Super Nintendo Entertainment System",
+    "system_name": "higan (Super Famicom Accuracy)",
+    "system_code": "NSNES",
+    "core_name": "higan_sfc",
+    "bios_required": false
+  },
+  {
+    "display_name": "TGB Dual",
+    "system_name": "Nintendo - Game Boy / Color (TGB Dual)",
+    "system_code": "NNGB",
+    "core_name": "tgbdual",
+    "bios_required": false
+  },
+  {
+    "display_name": "TIC-80",
+    "system_name": "TIC-80",
+    "system_code": "TIC80",
+    "core_name": "tic80",
+    "bios_required": false
+  },
+  {
+    "display_name": "Test",
+    "system_name": "Test",
+    "system_code": "_TEST_",
+    "core_name": "test",
+    "bios_required": false
+  },
+  {
+    "display_name": "ThePowderToy",
+    "system_name": "The Powder Toy",
+    "system_code": "TPOWDT",
+    "core_name": "thepowdertoy",
+    "bios_required": false
+  },
+  {
+    "display_name": "TyrQuake",
+    "system_name": "Quake (TyrQuake)",
+    "system_code": "QUAKE",
+    "core_name": "tyrquake",
+    "bios_required": false
+  },
+  {
+    "display_name": "UME 2014",
+    "system_name": "MAMARC",
+    "system_code": "ume2014",
+    "core_name": "0",
+    "bios_required": false
+  },
+  {
+    "display_name": "UME 2015 (0.160)",
+    "system_name": "Multi (UME 2015)",
+    "system_code": "MESSYS",
+    "core_name": "ume2015",
+    "bios_required": false
+  },
+  {
+    "display_name": "VBA Next",
+    "system_name": "Nintendo - Game Boy Advance (VBA Next)",
+    "system_code": "NNGBA",
+    "core_name": "vba_next",
+    "bios_required": false
+  },
+  {
+    "display_name": "VBA-M",
+    "system_name": "Nintendo - Game Boy Advance (VBA-M)",
+    "system_code": "NNGBA",
+    "core_name": "vbam",
+    "bios_required": false
+  },
+  {
+    "display_name": "VICE x128",
+    "system_name": "Commodore - C128 (VICE x128)",
+    "system_code": "COM128",
+    "core_name": "vice_x128",
+    "bios_required": false
+  },
+  {
+    "display_name": "VICE x64sc",
+    "system_name": "Commodore - C64 (VICE x64sc, accurate)",
+    "system_code": "COM64",
+    "core_name": "vice_x64sc",
+    "bios_required": false
+  },
+  {
+    "display_name": "VICE x64",
+    "system_name": "Commodore - C64 (VICE x64, fast)",
+    "system_code": "COM64",
+    "core_name": "vice_x64",
+    "bios_required": true
+  },
+  {
+    "display_name": "VICE xcbm2",
+    "system_name": "Commodore - CBM-II (VICE xcbm2)",
+    "system_code": "COMCBMII",
+    "core_name": "vice_xcbm2",
+    "bios_required": false
+  },
+  {
+    "display_name": "VICE xcbm5x0",
+    "system_name": "Commodore - CBM-5x0 (VICE xcbm5x0)",
+    "system_code": "COMCBMII",
+    "core_name": "vice_xcbm5x0",
+    "bios_required": false
+  },
+  {
+    "display_name": "VICE xpet",
+    "system_name": "Commodore - PET (VICE xpet)",
+    "system_code": "COMPET",
+    "core_name": "vice_xpet",
+    "bios_required": false
+  },
+  {
+    "display_name": "VICE xplus4",
+    "system_name": "Commodore - PLUS/4 (VICE xplus4)",
+    "system_code": "COMPLUS",
+    "core_name": "vice_xplus4",
+    "bios_required": false
+  },
+  {
+    "display_name": "VICE xscpu64",
+    "system_name": "Commodore - C64 SuperCPU (VICE xscpu64)",
+    "system_code": "COM64",
+    "core_name": "vice_xscpu64",
+    "bios_required": false
+  },
+  {
+    "display_name": "VICE xvic",
+    "system_name": "Commodore - VIC-20 (VICE xvic)",
+    "system_code": "COMVIC",
+    "core_name": "vice_xvic",
+    "bios_required": false
+  },
+  {
+    "display_name": "VeMUlator",
+    "system_name": "VeMUlator",
+    "system_code": "VEMUL",
+    "core_name": "vemulator",
+    "bios_required": false
+  },
+  {
+    "display_name": "Virtual Jaguar",
+    "system_name": "Atari - Jaguar (Virtual Jaguar)",
+    "system_code": "ATJAG",
+    "core_name": "virtualjaguar",
+    "bios_required": false
+  },
+  {
+    "display_name": "XRick",
+    "system_name": "Rick Dangerous (XRick)",
+    "system_code": "XRICK",
+    "core_name": "xrick",
+    "bios_required": false
+  },
+  {
+    "display_name": "YabaSanshiro",
+    "system_name": "Sega - Saturn (YabaSanshiro)",
+    "system_code": "SSAT",
+    "core_name": "yabasanshiro",
+    "bios_required": true
+  },
+  {
+    "display_name": "Yabause",
+    "system_name": "Sega - Saturn (Yabause)",
+    "system_code": "SSAT",
+    "core_name": "yabause",
+    "bios_required": true
+  },
+  {
+    "display_name": "bk",
+    "system_name": "Elektronika - BK-0010/BK-0011(M)",
+    "system_code": "ELKBK",
+    "core_name": "bk",
+    "bios_required": false
+  },
+  {
+    "display_name": "blueMSX",
+    "system_name": "MSX/SVI/ColecoVision/SG-1000 (blueMSX)",
+    "system_code": "MSX",
+    "core_name": "bluemsx",
+    "bios_required": true
+  },
+  {
+    "display_name": "bsnes",
+    "system_name": "Nintendo - SNES / SFC (bsnes)",
+    "system_code": "NSNES",
+    "core_name": "bsnes",
+    "bios_required": false
+  },
+  {
+    "display_name": "fMSX",
+    "system_name": "fmsx",
+    "system_code": "MSX",
+    "core_name": "fmsx",
+    "bios_required": true
+  },
+  {
+    "display_name": "final burn alpha",
+    "system_name": "MAMARC",
+    "system_code": "fba",
+    "core_name": "1",
+    "bios_required": false
+  },
+  {
+    "display_name": "gpSP",
+    "system_name": "Nintendo - Game Boy Advance (gpSP)",
+    "system_code": "NNGBA",
+    "core_name": "gpsp",
+    "bios_required": false
+  },
+  {
+    "display_name": "mGBA",
+    "system_name": "Nintendo - Game Boy Advance (mGBA)",
+    "system_code": "NNGBA",
+    "core_name": "mgba",
+    "bios_required": false
+  },
+  {
+    "display_name": "melonDS",
+    "system_name": "Nintendo - DS (melonDS)",
+    "system_code": "NNDS",
+    "core_name": "melonds",
+    "bios_required": false
+  },
+  {
+    "display_name": "theodore",
+    "system_name": "Thomson - MO/TO (Theodore)",
+    "system_code": "TMO8",
+    "core_name": "theodore",
+    "bios_required": false
+  },
+  {
+    "display_name": "uzem",
+    "system_name": "Uzebox (Uzem)",
+    "system_code": "UZEM",
+    "core_name": "uzem",
+    "bios_required": false
+  },
+  {
+    "display_name": "vecx",
+    "system_name": "GCE - Vectrex (vecx)",
+    "system_code": "GVEXTR",
+    "core_name": "vecx",
+    "bios_required": false
+  },
+  {
+    "display_name": "x1",
+    "system_name": "Sharp X1 (X Millenium)",
+    "system_code": "SHARPX1",
+    "core_name": "x1",
+    "bios_required": true
+  },
+  {
+    "display_name": "Vita3k",
+    "system_name": "Sony - Playstation Vita",
+    "system_code": "SPVITA",
+    "core_name": "vita3k",
+    "bios_required": false
+  }
+]

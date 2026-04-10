@@ -1,0 +1,165 @@
+{
+  "description": "BIOS/firmware requirements with hash verification",
+  "entries": {
+    "Nintendo - Game Boy": {
+      "gambatte": {
+        "required_files": [
+          {"path": "retroarch/system", "name": "dmg_boot.bin", "hash": "59C8598E"}
+        ]
+      },
+      "mgba": {
+        "required_files": []
+      }
+    },
+    "Nintendo - Game Boy Advance": {
+      "mgba": {
+        "required_files": []
+      },
+      "vba-m": {
+        "required_files": [
+          {"path": "retroarch/system", "name": "gba_bios.bin", "hash": "81977335"},
+          {"path": "retroarch/system", "name": "gba-jap.bin", "hash": "15E1F676"}
+        ]
+      }
+    },
+    "Nintendo - Game Boy Color": {
+      "gambatte": {
+        "required_files": []
+      }
+    },
+    "Nintendo - DS": {
+      "desmume": {
+        "required_files": [
+          {"path": "retroarch/system", "name": "bios7.bin", "hash": "1280F0D5"},
+          {"path": "retroarch/system", "name": "bios9.bin", "hash": "2AB23573"},
+          {"path": "retroarch/system", "name": "firmware.bin", "hash": "6133798D"}
+        ]
+      },
+      "melonds": {
+        "required_files": []
+      }
+    },
+    "Sony - PlayStation": {
+      "duckstation": {
+        "required_files": [
+          {"path": "duckstation/bios", "name": "scph5500.bin", "hash": "3B601FC8"},
+          {"path": "duckstation/bios", "name": "scph5501.bin", "hash": "502224B6"},
+          {"path": "duckstation/bios", "name": "scph5502.bin", "hash": "4D9E7C86"}
+        ]
+      },
+      "pcsx2": {
+        "required_files": []
+      },
+      "mednafen_psx": {
+        "required_files": [
+          {"path": "retroarch/system", "name": "scph5500.bin", "hash": "3B601FC8"},
+          {"path": "retroarch/system", "name": "scph5501.bin", "hash": "502224B6"}
+        ]
+      }
+    },
+    "Sony - PlayStation 2": {
+      "pcsx2": {
+        "required_files": [
+          {"path": "pcsx2/bios", "name": "SCPH-39001_BIOS_V7_USA_160.bin", "hash": "A19E0BF5"}
+        ]
+      }
+    },
+    "Sega - Saturn": {
+      "kronos": {
+        "required_files": []
+      },
+      "yabause": {
+        "required_files": []
+      },
+      "ssf": {
+        "required_files": [
+          {"path": "SSF/Setting", "name": "sega_101.bin", "hash": "224B752C"}
+        ]
+      }
+    },
+    "Sega - Dreamcast": {
+      "redream": {
+        "required_files": [
+          {"path": "redream/bios", "name": "DC - BIOS (All).bin", "hash": "61D5613F"}
+        ]
+      },
+      "flycast": {
+        "required_files": [
+          {"path": "retroarch/system/dc", "name": "dc_flash.bin", "hash": "C611B498"}
+        ]
+      }
+    },
+    "Sega - Mega Drive": {
+      "genesis_plus_gx": {
+        "required_files": []
+      }
+    },
+    "NEC - PC Engine": {
+      "mednafen_pce": {
+        "required_files": [
+          {"path": "retroarch/system", "name": "syscard3.pce", "hash": "FF2A5EC3"}
+        ]
+      }
+    },
+    "NEC - PC-FX": {
+      "mednafen_pcfx": {
+        "required_files": [
+          {"path": "retroarch/system", "name": "pcfx.rom", "hash": "AC3ED590"}
+        ]
+      }
+    },
+    "Atari - 2600": {
+      "stella": {
+        "required_files": []
+      },
+      "prosystem": {
+        "required_files": [
+          {"path": "retroarch/system", "name": "7800 BIOS (U).rom", "hash": "D5B61170"}
+        ]
+      }
+    },
+    "Atari - Lynx": {
+      "handy": {
+        "required_files": [
+          {"path": "retroarch/system", "name": "lynxboot.img", "hash": "0D973C9D"}
+        ]
+      }
+    },
+    "Atari - Jaguar": {
+      "virtualjaguar": {
+        "required_files": []
+      }
+    },
+    "Commodore - 64": {
+      "vice_x64": {
+        "required_files": []
+      }
+    },
+    "Commodore - Amiga": {
+      "puae": {
+        "required_files": []
+      },
+      "winuae": {
+        "required_files": [
+          {"path": "retroarch/system", "name": "kickstart.rom", "hash": ""}
+        ]
+      }
+    },
+    "Nintendo - Nintendo 64": {
+      "mupen64plus": {
+        "required_files": []
+      },
+      "parallel_n64": {
+        "required_files": []
+      }
+    },
+    "Nintendo - SNES": {
+      "bsnes": {
+        "required_files": []
+      },
+      "snes9x": {
+        "required_files": []
+      }
+    }
+  }
+}

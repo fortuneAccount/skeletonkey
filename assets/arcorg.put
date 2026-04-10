@@ -1,0 +1,19 @@
+[GLOBAL]
+HOSTINGURL=[HOSTINGURL]
+IMGDATS=[IMGDATS]
+ROMDATS=[ROMDATS]
+REPODATS=[REPODATS]
+IALTH=[IALTH]
+SOURCEHOST=[SOURCEHOST]
+IP_LOOKUP=[IPLK]
+UPDATEFILE=[UPDATEFILE]
+RASTABLE=1.14.0
+
+[SOURCES]
+
+[REPOSITORIES]
+buildBotCore=https://buildbot.libretro.com
+BLDBOT= https://buildbot.libretro.com/nightly/windows/x86%ARCHR%
+imgrepo= https://raw.githubusercontent.com/libretro/libretro-thumbnails/master
+SHADERHOST= https://raw.githubusercontent.com/libretro/shader-previews/master/
+curlobby= https://lobby.libretro.com/list|http://playarch.online/list

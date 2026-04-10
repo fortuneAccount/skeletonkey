@@ -1,0 +1,8712 @@
+[
+  {
+    "emulators": [
+      "prosystem"
+    ],
+    "paths": [
+      "retroarch\\system"
+    ],
+    "filename": "7800 BIOS (U).rom",
+    "crc32": "A010EDF",
+    "required": false
+  },
+  {
+    "emulators": [
+      "prosystem"
+    ],
+    "paths": [
+      "retroarch\\system",
+      "bizhawk\\firmware"
+    ],
+    "filename": "7800 BIOS (U).rom",
+    "crc32": "D5B61170",
+    "required": false,
+    "alt_filename": "7800PALBIOS.bin"
+  },
+  {
+    "emulators": [
+      "prosystem"
+    ],
+    "paths": [
+      "retroarch\\system",
+      "bizhawk\\firmware"
+    ],
+    "filename": "7800 BIOS (U).rom",
+    "crc32": "5D13730C",
+    "required": true,
+    "alt_filename": "7800NTSCBIOS.bin"
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system"
+    ],
+    "filename": "bios_CD_U.bin",
+    "crc32": "9F6F6276",
+    "required": true
+  },
+  {
+    "emulators": [
+      "Winx68k",
+      "XM6"
+    ],
+    "paths": [
+      "retroarch\\system\\keropi"
+    ],
+    "filename": "cgrom.dat",
+    "crc32": "9F3195F1",
+    "required": true
+  },
+  {
+    "emulators": [
+      "Winx68k",
+      "XM6"
+    ],
+    "paths": [
+      "retroarch\\system\\keropi"
+    ],
+    "filename": "iplrom.dat",
+    "crc32": "72BDF532",
+    "required": true
+  },
+  {
+    "emulators": [
+      "Winx68k",
+      "XM6"
+    ],
+    "paths": [
+      "retroarch\\system\\keropi"
+    ],
+    "filename": "BOOT.ROM",
+    "crc32": "72BDF532",
+    "required": true
+  },
+  {
+    "emulators": [
+      "Winx68k",
+      "XM6"
+    ],
+    "paths": [
+      "retroarch\\system\\keropi"
+    ],
+    "filename": "keyconf.dat",
+    "crc32": "DB9B5DB0",
+    "required": true
+  },
+  {
+    "emulators": [
+      "Winx68k",
+      "XM6"
+    ],
+    "paths": [
+      "retroarch\\system\\keropi"
+    ],
+    "filename": "SRAM.RAM",
+    "crc32": "AF3B5C44",
+    "required": true
+  },
+  {
+    "emulators": [
+      "Winx68k",
+      "XM6"
+    ],
+    "paths": [
+      "retroarch\\system\\keropi"
+    ],
+    "filename": "X68000 IPL CG Rom (1987)(Sharp)[dat].dat",
+    "crc32": "3B385EEC",
+    "required": true
+  },
+  {
+    "emulators": [
+      "Winx68k",
+      "XM6"
+    ],
+    "paths": [
+      "retroarch\\system\\keropi"
+    ],
+    "filename": "X68000 SRAM (1987)(Sharp)[dat].dat",
+    "crc32": "5EDC1E7B",
+    "required": true
+  },
+  {
+    "emulators": [
+      "Winx68k",
+      "XM6"
+    ],
+    "paths": [
+      "retroarch\\system\\keropi"
+    ],
+    "filename": "X68000 SRAM (1987)(Sharp)[ram].ram",
+    "crc32": "B809D38A",
+    "required": true
+  },
+  {
+    "emulators": [
+      "steem"
+    ],
+    "paths": [
+      "retroarch\\system"
+    ],
+    "filename": "TOS.img",
+    "crc32": "3B5CD0C5",
+    "required": true
+  },
+  {
+    "emulators": [
+      "XM7"
+    ],
+    "paths": [],
+    "filename": "Boot_bas.rom",
+    "crc32": "C70F0C74",
+    "required": true
+  },
+  {
+    "emulators": [
+      "XM7"
+    ],
+    "paths": [],
+    "filename": "Boot_dos.rom",
+    "crc32": "198614FF",
+    "required": true
+  },
+  {
+    "emulators": [
+      "XM7"
+    ],
+    "paths": [],
+    "filename": "DicRom.rom",
+    "crc32": "B142ACBC",
+    "required": true
+  },
+  {
+    "emulators": [
+      "XM7"
+    ],
+    "paths": [],
+    "filename": "ExtSub.rom",
+    "crc32": "0F7FCCE3",
+    "required": true
+  },
+  {
+    "emulators": [
+      "XM7"
+    ],
+    "paths": [],
+    "filename": "Fbasic30.rom",
+    "crc32": "A96D19B6",
+    "required": true
+  },
+  {
+    "emulators": [
+      "XM7"
+    ],
+    "paths": [],
+    "filename": "Initiate.rom",
+    "crc32": "785CB06C",
+    "required": true
+  },
+  {
+    "emulators": [
+      "XM7"
+    ],
+    "paths": [],
+    "filename": "KANJI [a].ROM",
+    "crc32": "FE8F63B0",
+    "required": true
+  },
+  {
+    "emulators": [
+      "XM7"
+    ],
+    "paths": [],
+    "filename": "KANJI1.ROM",
+    "crc32": "FE8F63B0",
+    "required": false
+  },
+  {
+    "emulators": [
+      "XM7"
+    ],
+    "paths": [],
+    "filename": "Kanji.rom",
+    "crc32": "62402AC9",
+    "required": true
+  },
+  {
+    "emulators": [
+      "XM7"
+    ],
+    "paths": [],
+    "filename": "Kanji1.rom",
+    "crc32": "62402AC9",
+    "required": true
+  },
+  {
+    "emulators": [
+      "XM7"
+    ],
+    "paths": [],
+    "filename": "Kanji2.rom",
+    "crc32": "38644251",
+    "required": true
+  },
+  {
+    "emulators": [
+      "XM7"
+    ],
+    "paths": [],
+    "filename": "SubsysCg.rom",
+    "crc32": "E9F16C42",
+    "required": true
+  },
+  {
+    "emulators": [
+      "XM7"
+    ],
+    "paths": [],
+    "filename": "Subsys_a.rom",
+    "crc32": "E8014FBB",
+    "required": true
+  },
+  {
+    "emulators": [
+      "XM7"
+    ],
+    "paths": [],
+    "filename": "Subsys_b.rom",
+    "crc32": "9BE69FAC",
+    "required": true
+  },
+  {
+    "emulators": [
+      "XM7"
+    ],
+    "paths": [],
+    "filename": "Subsys_c.rom",
+    "crc32": "24CEC93F",
+    "required": true
+  },
+  {
+    "emulators": [
+      "XM7"
+    ],
+    "paths": [],
+    "filename": "Userdic.dat",
+    "crc32": "B42934350",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "Dolphin\\Sys\\GC"
+    ],
+    "filename": "dsp_coef.bin",
+    "crc32": "D2777C90",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "Dolphin\\Sys\\GC"
+    ],
+    "filename": "dsp_rom.bin",
+    "crc32": "47DAAA65",
+    "required": true
+  },
+  {
+    "emulators": [
+      "Tsugaru",
+      "UNZ"
+    ],
+    "paths": [],
+    "filename": "FMT_DIC.ROM",
+    "crc32": "82D1DAA2",
+    "required": true
+  },
+  {
+    "emulators": [
+      "Tsugaru",
+      "UNZ"
+    ],
+    "paths": [],
+    "filename": "FMT_DOS.ROM",
+    "crc32": "112872EE",
+    "required": true
+  },
+  {
+    "emulators": [
+      "Tsugaru",
+      "UNZ"
+    ],
+    "paths": [],
+    "filename": "FMT_F20.ROM",
+    "crc32": "9F55A20C",
+    "required": true
+  },
+  {
+    "emulators": [
+      "Tsugaru",
+      "UNZ"
+    ],
+    "paths": [],
+    "filename": "FMT_FNT.ROM",
+    "crc32": "DD6FD544",
+    "required": true
+  },
+  {
+    "emulators": [
+      "Tsugaru",
+      "UNZ"
+    ],
+    "paths": [],
+    "filename": "Fmt_sys [a].rom",
+    "crc32": "842B72D8",
+    "required": true
+  },
+  {
+    "emulators": [
+      "Tsugaru",
+      "UNZ"
+    ],
+    "paths": [],
+    "filename": "FMT_SYS.ROM",
+    "crc32": "AFE4EBCF",
+    "required": true
+  },
+  {
+    "emulators": [
+      "Tsugaru",
+      "UNZ"
+    ],
+    "paths": [],
+    "filename": "Marty.rom",
+    "crc32": "39D81A66",
+    "required": true
+  },
+  {
+    "emulators": [
+      "kegs",
+      "kegs32"
+    ],
+    "paths": [],
+    "filename": "Rom03gd",
+    "crc32": "DE7DDF29",
+    "required": true
+  },
+  {
+    "emulators": [
+      "kegs",
+      "kegs32"
+    ],
+    "paths": [],
+    "filename": "xgs.rom",
+    "crc32": "42F124B0",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system",
+      "bizhawk\\firmware"
+    ],
+    "filename": "cx4.data.rom",
+    "crc32": "B6E76A6A",
+    "required": true,
+    "alt_filename": "cx4.rom"
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system",
+      "bizhawk\\firmware"
+    ],
+    "filename": "cx4.rom",
+    "crc32": "B6E76A6A",
+    "required": true
+  },
+  {
+    "emulators": [
+      "mednafen",
+      "fceux",
+      "mesen"
+    ],
+    "paths": [
+      "retroarch\\system"
+    ],
+    "filename": "disksys.rom",
+    "crc32": "1C7AE5D5",
+    "required": false
+  },
+  {
+    "emulators": [
+      "mednafen",
+      "fceux",
+      "mesen"
+    ],
+    "paths": [
+      "retroarch\\system"
+    ],
+    "filename": "disksys.rom",
+    "crc32": "4DF24A6C",
+    "required": false
+  },
+  {
+    "emulators": [
+      "mednafen",
+      "fceux",
+      "mesen"
+    ],
+    "paths": [
+      "retroarch\\system",
+      "bizhawk\\firmware"
+    ],
+    "filename": "disksys.rom",
+    "crc32": "5E607DCF",
+    "required": true,
+    "alt_filename": "disksys-nintendo.rom"
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system"
+    ],
+    "filename": "dsp1.data.rom",
+    "crc32": "C8347CBD",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system"
+    ],
+    "filename": "dsp1.program.rom",
+    "crc32": "DB9A4C92",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system",
+      "bizhawk\\firmware"
+    ],
+    "filename": "dsp1.rom",
+    "crc32": "E359F184",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system"
+    ],
+    "filename": "dsp1b.data.rom",
+    "crc32": "37A252C6",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system"
+    ],
+    "filename": "dsp1b.program.rom",
+    "crc32": "66A73998",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system",
+      "bizhawk\\firmware"
+    ],
+    "filename": "dsp1b.rom",
+    "crc32": "465C4E1C",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system"
+    ],
+    "filename": "dsp2.data.rom",
+    "crc32": "B3893C70",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system"
+    ],
+    "filename": "dsp2.program.rom",
+    "crc32": "0C1CF838",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system",
+      "bizhawk\\firmware"
+    ],
+    "filename": "dsp2.rom",
+    "crc32": "9A984974",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system"
+    ],
+    "filename": "dsp3.data.rom",
+    "crc32": "8B41A2BD",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system"
+    ],
+    "filename": "dsp3.program.rom",
+    "crc32": "F29BE51C",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system",
+      "bizhawk\\firmware"
+    ],
+    "filename": "dsp3.rom",
+    "crc32": "D4A38EE7",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system"
+    ],
+    "filename": "dsp4.data.rom",
+    "crc32": "EFA8B9B2",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system"
+    ],
+    "filename": "dsp4.program.rom",
+    "crc32": "14B77AE3",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system",
+      "bizhawk\\firmware"
+    ],
+    "filename": "dsp4.rom",
+    "crc32": "E15384C0",
+    "required": true
+  },
+  {
+    "emulators": [
+      "mednafen"
+    ],
+    "paths": [
+      "gens\\BIOS",
+      "gensgs\\BIOS",
+      "genssplus\\BIOS",
+      "fusion\\BIOS",
+      "retroarch\\system"
+    ],
+    "filename": "eu_mcd1_9210.bin",
+    "crc32": "34D3CCE1",
+    "required": false
+  },
+  {
+    "emulators": [
+      "mednafen"
+    ],
+    "paths": [
+      "gens\\BIOS",
+      "gensgs\\BIOS",
+      "genssplus\\BIOS",
+      "fusion\\BIOS",
+      "retroarch\\system"
+    ],
+    "filename": "eu_mcd1_9210.bin",
+    "crc32": "4D5CB8DA",
+    "required": false
+  },
+  {
+    "emulators": [
+      "mednafen"
+    ],
+    "paths": [
+      "gens\\BIOS",
+      "gensgs\\BIOS",
+      "genssplus\\BIOS",
+      "fusion\\BIOS",
+      "retroarch\\system"
+    ],
+    "filename": "eu_mcd1_9210.bin",
+    "crc32": "0507B590",
+    "required": false
+  },
+  {
+    "emulators": [
+      "mednafen"
+    ],
+    "paths": [
+      "gens\\BIOS",
+      "gensgs\\BIOS",
+      "genssplus\\BIOS",
+      "fusion\\BIOS",
+      "retroarch\\system"
+    ],
+    "filename": "eu_mcd1_9210.bin",
+    "crc32": "D344F125",
+    "required": false
+  },
+  {
+    "emulators": [
+      "mednafen"
+    ],
+    "paths": [
+      "gens\\BIOS",
+      "gensgs\\BIOS",
+      "genssplus\\BIOS",
+      "fusion\\BIOS",
+      "retroarch\\system",
+      "bizhawk\\firmware"
+    ],
+    "filename": "eu_mcd1_9210.bin",
+    "crc32": "529AC15A",
+    "required": true
+  },
+  {
+    "emulators": [
+      "mednafen"
+    ],
+    "paths": [
+      "gens\\BIOS",
+      "gensgs\\BIOS",
+      "genssplus\\BIOS",
+      "fusion\\BIOS",
+      "retroarch\\system"
+    ],
+    "filename": "jp_mcd1_9112.bin",
+    "crc32": "2B19972F",
+    "required": false
+  },
+  {
+    "emulators": [
+      "mednafen"
+    ],
+    "paths": [
+      "gens\\BIOS",
+      "gensgs\\BIOS",
+      "genssplus\\BIOS",
+      "fusion\\BIOS",
+      "retroarch\\system"
+    ],
+    "filename": "jp_mcd1_9112.bin",
+    "crc32": "D21FE71D",
+    "required": false
+  },
+  {
+    "emulators": [
+      "mednafen"
+    ],
+    "paths": [
+      "gens\\BIOS",
+      "gensgs\\BIOS",
+      "genssplus\\BIOS",
+      "fusion\\BIOS",
+      "retroarch\\system"
+    ],
+    "filename": "jp_mcd1_9112.bin",
+    "crc32": "DD6CC972",
+    "required": false
+  },
+  {
+    "emulators": [
+      "mednafen"
+    ],
+    "paths": [
+      "gens\\BIOS",
+      "gensgs\\BIOS",
+      "genssplus\\BIOS",
+      "fusion\\BIOS",
+      "retroarch\\system",
+      "bizhawk\\firmware"
+    ],
+    "filename": "jp_mcd1_9112.bin",
+    "crc32": "9D2DA8F2",
+    "required": false,
+    "alt_filename": "jp_mcd1_9111.bin"
+  },
+  {
+    "emulators": [
+      "mednafen"
+    ],
+    "paths": [
+      "gens\\BIOS",
+      "gensgs\\BIOS",
+      "genssplus\\BIOS",
+      "fusion\\BIOS",
+      "retroarch\\system"
+    ],
+    "filename": "jp_mcd1_9112.bin",
+    "crc32": "79F85384",
+    "required": false
+  },
+  {
+    "emulators": [
+      "mednafen"
+    ],
+    "paths": [
+      "gens\\BIOS",
+      "gensgs\\BIOS",
+      "genssplus\\BIOS",
+      "fusion\\BIOS",
+      "retroarch\\system"
+    ],
+    "filename": "jp_mcd1_9112.bin",
+    "crc32": "F18DDE5B",
+    "required": false
+  },
+  {
+    "emulators": [
+      "mednafen"
+    ],
+    "paths": [
+      "gens\\BIOS",
+      "gensgs\\BIOS",
+      "genssplus\\BIOS",
+      "fusion\\BIOS",
+      "retroarch\\system"
+    ],
+    "filename": "jp_mcd1_9112.bin",
+    "crc32": "00EEDB3A",
+    "required": false
+  },
+  {
+    "emulators": [
+      "mednafen"
+    ],
+    "paths": [
+      "gens\\BIOS",
+      "gensgs\\BIOS",
+      "genssplus\\BIOS",
+      "fusion\\BIOS",
+      "retroarch\\system"
+    ],
+    "filename": "jp_mcd1_9112.bin",
+    "crc32": "550F30BB",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system"
+    ],
+    "filename": "japan-j3.bin",
+    "crc32": "DFF6D41F",
+    "required": true
+  },
+  {
+    "emulators": [
+      "VisualBoyAdvance",
+      "vgba",
+      "mednafen"
+    ],
+    "paths": [
+      "retroarch\\system"
+    ],
+    "filename": "gba-jap [fastboot mode][h].bin",
+    "crc32": "3363015D",
+    "required": false
+  },
+  {
+    "emulators": [
+      "VisualBoyAdvance",
+      "vgba",
+      "mednafen"
+    ],
+    "paths": [
+      "retroarch\\system"
+    ],
+    "filename": "gba-jap.bin",
+    "crc32": "15E1F676",
+    "required": false
+  },
+  {
+    "emulators": [
+      "byuu"
+    ],
+    "paths": [],
+    "filename": "SCD_U.bin",
+    "crc32": "15E1F676",
+    "required": false
+  },
+  {
+    "emulators": [
+      "byuu"
+    ],
+    "paths": [],
+    "filename": "SCD_U.bin",
+    "crc32": "290F8E33",
+    "required": false
+  },
+  {
+    "emulators": [
+      "byuu"
+    ],
+    "paths": [],
+    "filename": "SCD_U.bin",
+    "crc32": "2E49D72C",
+    "required": false
+  },
+  {
+    "emulators": [
+      "byuu"
+    ],
+    "paths": [],
+    "filename": "SCD_U.bin",
+    "crc32": "9F6F6276",
+    "required": false
+  },
+  {
+    "emulators": [
+      "byuu"
+    ],
+    "paths": [],
+    "filename": "SCD_U.bin",
+    "crc32": "8AF65F58",
+    "required": false
+  },
+  {
+    "emulators": [
+      "byuu"
+    ],
+    "paths": [],
+    "filename": "SCD_U.bin",
+    "crc32": "E7E3AFE2",
+    "required": false
+  },
+  {
+    "emulators": [
+      "byuu"
+    ],
+    "paths": [],
+    "filename": "SCD_U.bin",
+    "crc32": "50CD3D23",
+    "required": false
+  },
+  {
+    "emulators": [
+      "byuu"
+    ],
+    "paths": [],
+    "filename": "SCD_U.bin",
+    "crc32": "3B10CF41",
+    "required": false
+  },
+  {
+    "emulators": [
+      "byuu"
+    ],
+    "paths": [],
+    "filename": "SCD_J.bin",
+    "crc32": "9D2DA8F2",
+    "required": false
+  },
+  {
+    "emulators": [
+      "byuu"
+    ],
+    "paths": [],
+    "filename": "SCD_J.bin",
+    "crc32": "550F30BB",
+    "required": false
+  },
+  {
+    "emulators": [
+      "byuu"
+    ],
+    "paths": [],
+    "filename": "SCD_J.bin",
+    "crc32": "DD6CC972",
+    "required": false
+  },
+  {
+    "emulators": [
+      "byuu"
+    ],
+    "paths": [],
+    "filename": "SCD_J.bin",
+    "crc32": "DFF6D41F",
+    "required": false
+  },
+  {
+    "emulators": [
+      "byuu"
+    ],
+    "paths": [],
+    "filename": "SCD_E.bin",
+    "crc32": "4D5CB8DA",
+    "required": false
+  },
+  {
+    "emulators": [
+      "byuu"
+    ],
+    "paths": [],
+    "filename": "SCD_E.bin",
+    "crc32": "0507B590",
+    "required": false
+  },
+  {
+    "emulators": [
+      "byuu"
+    ],
+    "paths": [],
+    "filename": "SCD_E.bin",
+    "crc32": "9B1FFC6F",
+    "required": false
+  },
+  {
+    "emulators": [
+      "byuu"
+    ],
+    "paths": [],
+    "filename": "SCD_E.bin",
+    "crc32": "4D5CB8DA",
+    "required": false
+  },
+  {
+    "emulators": [
+      "byuu"
+    ],
+    "paths": [],
+    "filename": "SCD_E.bin",
+    "crc32": "529AC15A",
+    "required": false
+  },
+  {
+    "emulators": [
+      "byuu"
+    ],
+    "paths": [],
+    "filename": "SCD_E.bin",
+    "crc32": "D344F125",
+    "required": false
+  },
+  {
+    "emulators": [
+      "byuu"
+    ],
+    "paths": [],
+    "filename": "FDS.bin",
+    "crc32": "1C7AE5D5",
+    "required": false
+  },
+  {
+    "emulators": [
+      "byuu"
+    ],
+    "paths": [],
+    "filename": "FDS.bin",
+    "crc32": "4DF24A6C",
+    "required": false
+  },
+  {
+    "emulators": [
+      "byuu"
+    ],
+    "paths": [],
+    "filename": "FDS.bin",
+    "crc32": "5E607DCF",
+    "required": false
+  },
+  {
+    "emulators": [
+      "byuu"
+    ],
+    "paths": [],
+    "filename": "NEPKT.bin",
+    "crc32": "6232DF8D",
+    "required": false
+  },
+  {
+    "emulators": [
+      "byuu"
+    ],
+    "paths": [],
+    "filename": "NEOPKTC.bin",
+    "crc32": "6EEB6F40",
+    "required": false
+  },
+  {
+    "emulators": [
+      "VisualBoyAdvance-M",
+      "VisualBoyAdvance",
+      "vgba",
+      "mednafen"
+    ],
+    "paths": [
+      "retroarch\\system",
+      "bizhawk\\firmware"
+    ],
+    "filename": "gba_bios.bin",
+    "crc32": "81977335",
+    "required": true,
+    "alt_filename": "gbabios.rom"
+  },
+  {
+    "emulators": [
+      "VisualBoyAdvance-M",
+      "vgba",
+      "mednafen"
+    ],
+    "paths": [
+      "retroarch\\system"
+    ],
+    "filename": "gba-jap [fastboot mode][h].bin",
+    "crc32": "3363015D",
+    "required": false,
+    "alt_filename": "gba_bios.bin"
+  },
+  {
+    "emulators": [
+      "VisualBoyAdvance-M",
+      "vgba",
+      "mednafen"
+    ],
+    "paths": [
+      "retroarch\\system"
+    ],
+    "filename": "gba-jap.bin",
+    "crc32": "15E1F676",
+    "required": false,
+    "alt_filename": "gba_bios.bin"
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\neocd"
+    ],
+    "filename": "front-sp1.bin",
+    "crc32": "CAC62307",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\neocd"
+    ],
+    "filename": "top-sp1.bin",
+    "crc32": "C36A47C0",
+    "required": true
+  },
+  {
+    "emulators": [
+      "neoraine"
+    ],
+    "paths": [
+      "retroarch\\system\\neocd"
+    ],
+    "filename": "neocd.bin",
+    "crc32": "DF9DE490",
+    "required": true
+  },
+  {
+    "emulators": [
+      "neoraine"
+    ],
+    "paths": [
+      "retroarch\\system\\neocd"
+    ],
+    "filename": "uni-bioscd.rom",
+    "crc32": "OFFB3127",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\neocd"
+    ],
+    "filename": "000-lo.lo",
+    "crc32": "5A86CFF2",
+    "required": true
+  },
+  {
+    "emulators": [
+      "mednafen"
+    ],
+    "paths": [
+      "retroarch\\system",
+      "bizhawk\\firmware"
+    ],
+    "filename": "lynxboot.img",
+    "crc32": "0D973C9D",
+    "required": false
+  },
+  {
+    "emulators": [
+      "mednafen"
+    ],
+    "paths": [
+      "retroarch\\system"
+    ],
+    "filename": "lynxboot.img",
+    "crc32": "E1FFECB6",
+    "required": false
+  },
+  {
+    "emulators": [
+      "mednafen"
+    ],
+    "paths": [
+      "retroarch\\system"
+    ],
+    "filename": "lynxboot.img",
+    "crc32": "B2AA7578",
+    "required": false
+  },
+  {
+    "emulators": [
+      "mednafen"
+    ],
+    "paths": [
+      "retroarch\\system",
+      "bizhawk\\firmware"
+    ],
+    "filename": "lynxboot.img",
+    "crc32": "0D973C9D",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "mame\\roms\\neogeo.zip"
+    ],
+    "filename": "neo-epo.bin",
+    "crc32": "D27A71F1",
+    "required": false
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "mame\\roms\\neogeo.zip"
+    ],
+    "filename": "neo-po.bin",
+    "crc32": "16D0C132",
+    "required": false
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "mame\\roms\\neogeo.zip"
+    ],
+    "filename": "neodebug.bin",
+    "crc32": "698EBB7D",
+    "required": false
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "mame\\roms\\neogeo.zip"
+    ],
+    "filename": "usa_2slt.bin",
+    "crc32": "E72943DE",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system",
+      "bizhawk\\firmware"
+    ],
+    "filename": "o2rom.bin",
+    "crc32": "8016A315",
+    "required": true,
+    "alt_filename": "Odyssey2.bin"
+  },
+  {
+    "emulators": [
+      "4DO"
+    ],
+    "paths": [
+      "3doplay\\BIOS",
+      "retroarch\\system"
+    ],
+    "filename": "panafz10.bin",
+    "crc32": "C8C8FF89",
+    "required": false
+  },
+  {
+    "emulators": [
+      "4DO"
+    ],
+    "paths": [
+      "3doplay\\BIOS",
+      "retroarch\\system"
+    ],
+    "filename": "panafz10.bin",
+    "crc32": "58242CEE",
+    "required": true
+  },
+  {
+    "emulators": [
+      "4DO"
+    ],
+    "paths": [
+      "3doplay\\BIOS",
+      "retroarch\\system"
+    ],
+    "filename": "bios.rom",
+    "crc32": "58242CEE",
+    "required": false
+  },
+  {
+    "emulators": [
+      "4DO"
+    ],
+    "paths": [
+      "3doplay\\BIOS",
+      "retroarch\\system"
+    ],
+    "filename": "goldstar.bin",
+    "crc32": "B6F5028B",
+    "required": true
+  },
+  {
+    "emulators": [
+      "4DO"
+    ],
+    "paths": [
+      "3doplay\\BIOS",
+      "retroarch\\system"
+    ],
+    "filename": "panafz10 [h].bin",
+    "crc32": "230E6FEB",
+    "required": false
+  },
+  {
+    "emulators": [
+      "4DO"
+    ],
+    "paths": [
+      "3doplay\\BIOS",
+      "retroarch\\system"
+    ],
+    "filename": "sanyotry.bin",
+    "crc32": "D5CBC509",
+    "required": true
+  },
+  {
+    "emulators": [
+      "m88"
+    ],
+    "paths": [
+      "retroarch\\system\\quasi88"
+    ],
+    "filename": "disk.rom",
+    "crc32": "2158D307",
+    "required": false
+  },
+  {
+    "emulators": [
+      "m88"
+    ],
+    "paths": [
+      "retroarch\\system\\quasi88"
+    ],
+    "filename": "font.rom",
+    "crc32": "56653188",
+    "required": false
+  },
+  {
+    "emulators": [
+      "m88"
+    ],
+    "paths": [
+      "retroarch\\system\\quasi88"
+    ],
+    "filename": "kanji.rom",
+    "crc32": "6178BD43",
+    "required": true
+  },
+  {
+    "emulators": [
+      "m88"
+    ],
+    "paths": [
+      "retroarch\\system\\quasi88"
+    ],
+    "filename": "kanji2.rom",
+    "crc32": "154803CC",
+    "required": true
+  },
+  {
+    "emulators": [
+      "m88"
+    ],
+    "paths": [
+      "retroarch\\system\\quasi88"
+    ],
+    "filename": "n80.rom",
+    "crc32": "5CB8B584",
+    "required": false
+  },
+  {
+    "emulators": [
+      "m88"
+    ],
+    "paths": [
+      "retroarch\\system\\quasi88"
+    ],
+    "filename": "n88.rom",
+    "crc32": "FFD68BEO",
+    "required": false
+  },
+  {
+    "emulators": [
+      "m88"
+    ],
+    "paths": [
+      "retroarch\\system\\quasi88"
+    ],
+    "filename": "n88_0.rom",
+    "crc32": "61984BAB",
+    "required": false
+  },
+  {
+    "emulators": [
+      "m88"
+    ],
+    "paths": [
+      "retroarch\\system\\quasi88"
+    ],
+    "filename": "n88_1.rom",
+    "crc32": "C0BD2AA6",
+    "required": true
+  },
+  {
+    "emulators": [
+      "m88"
+    ],
+    "paths": [
+      "retroarch\\system\\quasi88"
+    ],
+    "filename": "n88_2.rom",
+    "crc32": "AF2B6EFA",
+    "required": true
+  },
+  {
+    "emulators": [
+      "m88"
+    ],
+    "paths": [
+      "retroarch\\system\\quasi88"
+    ],
+    "filename": "n88_3.rom",
+    "crc32": "7713C519",
+    "required": true
+  },
+  {
+    "emulators": [
+      "m88"
+    ],
+    "paths": [
+      "retroarch\\system\\quasi88"
+    ],
+    "filename": "N88.ROM",
+    "crc32": "A0FC0473",
+    "required": false
+  },
+  {
+    "emulators": [
+      "m88"
+    ],
+    "paths": [
+      "retroarch\\system\\quasi88"
+    ],
+    "filename": "N88SUB.ROM",
+    "crc32": "2158D307",
+    "required": false
+  },
+  {
+    "emulators": [
+      "m88"
+    ],
+    "paths": [
+      "retroarch\\system\\quasi88"
+    ],
+    "filename": "N88N.ROM",
+    "crc32": "27E1857D",
+    "required": false
+  },
+  {
+    "emulators": [
+      "m88"
+    ],
+    "paths": [
+      "retroarch\\system\\quasi88"
+    ],
+    "filename": "N88EXT0.ROM",
+    "crc32": "710A63EC",
+    "required": false
+  },
+  {
+    "emulators": [
+      "m88"
+    ],
+    "paths": [
+      "retroarch\\system\\quasi88"
+    ],
+    "filename": "N88JISHO.ROM",
+    "crc32": "BD6EB062",
+    "required": false
+  },
+  {
+    "emulators": [
+      "Altirra",
+      "Atari800",
+      "Atariplusplus"
+    ],
+    "paths": [
+      "Atari800winplus\\rom",
+      "retroarch\\system"
+    ],
+    "filename": "ATARIBAS.ROM",
+    "crc32": "7D684184",
+    "required": true
+  },
+  {
+    "emulators": [
+      "Altirra",
+      "Atari800",
+      "Atariplusplus"
+    ],
+    "paths": [
+      "Atari800winplus\\rom",
+      "retroarch\\system"
+    ],
+    "filename": "ATARIOSB.ROM",
+    "crc32": "3E28A1FE",
+    "required": true
+  },
+  {
+    "emulators": [
+      "Altirra",
+      "Atari800",
+      "Atariplusplus"
+    ],
+    "paths": [
+      "Atari800winplus\\rom",
+      "retroarch\\system"
+    ],
+    "filename": "ATARIXL.ROM",
+    "crc32": "1F9CD270",
+    "required": true
+  },
+  {
+    "emulators": [
+      "Altirra",
+      "Atari800",
+      "Atariplusplus"
+    ],
+    "paths": [
+      "Atari800winplus\\rom",
+      "retroarch\\system"
+    ],
+    "filename": "5200.rom",
+    "crc32": "4248D3E3",
+    "required": true
+  },
+  {
+    "emulators": [
+      "Altirra",
+      "Atari800",
+      "Atariplusplus"
+    ],
+    "paths": [
+      "Atari800winplus\\rom",
+      "retroarch\\system"
+    ],
+    "filename": "5200a.rom",
+    "crc32": "C2BA2613",
+    "required": true
+  },
+  {
+    "emulators": [
+      "mednafen"
+    ],
+    "paths": [
+      "retroarch\\system"
+    ],
+    "filename": "pcfx.rom",
+    "crc32": "AC3ED590",
+    "required": false
+  },
+  {
+    "emulators": [
+      "mednafen"
+    ],
+    "paths": [
+      "retroarch\\system",
+      "bizhawk\\firmware"
+    ],
+    "filename": "pcfx.bios",
+    "crc32": "76FFB97A",
+    "required": true,
+    "alt_filename": "pcfx.rom?pcfxbios.bin"
+  },
+  {
+    "emulators": [
+      "mednafen"
+    ],
+    "paths": [
+      "retroarch\\system",
+      "fusion\\BIOS"
+    ],
+    "filename": "bios.gg",
+    "crc32": "C611B498",
+    "required": false
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system"
+    ],
+    "filename": "rtc.ram",
+    "crc32": "16CF848D",
+    "required": true
+  },
+  {
+    "emulators": [
+      "neko"
+    ],
+    "paths": [
+      "retroarch\\system\\np2"
+    ],
+    "filename": "BIOS.ROM",
+    "crc32": "34A19A59",
+    "required": true
+  },
+  {
+    "emulators": [
+      "neko"
+    ],
+    "paths": [
+      "retroarch\\system\\np2"
+    ],
+    "filename": "font.bmp",
+    "crc32": "D271798B",
+    "required": true
+  },
+  {
+    "emulators": [
+      "mednafen",
+      "xebra"
+    ],
+    "paths": [
+      "psxfin\\BIOS",
+      "ePSXe\\BIOS",
+      "duckstation\\bios",
+      "pcsxr\\BIOS",
+      "retroarch\\system"
+    ],
+    "filename": "scph5500.bin",
+    "crc32": "EC541CD0",
+    "required": false
+  },
+  {
+    "emulators": [
+      "mednafen",
+      "xebra"
+    ],
+    "paths": [
+      "psxfin\\BIOS",
+      "ePSXe\\BIOS",
+      "duckstation\\bios",
+      "pcsxr\\BIOS",
+      "retroarch\\system"
+    ],
+    "filename": "scph5500.bin",
+    "crc32": "3B601FC8",
+    "required": false
+  },
+  {
+    "emulators": [
+      "mednafen",
+      "xebra"
+    ],
+    "paths": [
+      "psxfin\\BIOS",
+      "ePSXe\\BIOS",
+      "duckstation\\bios",
+      "pcsxr\\BIOS",
+      "retroarch\\system",
+      "bizhawk\\firmware"
+    ],
+    "filename": "scph5500.bin",
+    "crc32": "FF3EEB8C",
+    "required": true,
+    "alt_filename": "ps-30j.bin"
+  },
+  {
+    "emulators": [
+      "mednafen",
+      "xebra"
+    ],
+    "paths": [
+      "psxfin\\BIOS",
+      "ePSXe\\BIOS",
+      "duckstation\\bios",
+      "pcsxr\\BIOS",
+      "retroarch\\system"
+    ],
+    "filename": "scph5501.bin",
+    "crc32": "502224B6",
+    "required": false
+  },
+  {
+    "emulators": [
+      "mednafen"
+    ],
+    "paths": [
+      "retroarch\\system"
+    ],
+    "filename": "scph5501.bin",
+    "crc32": "37157331",
+    "required": true
+  },
+  {
+    "emulators": [
+      "xebra"
+    ],
+    "paths": [
+      "psxfin\\BIOS",
+      "ePSXe\\BIOS",
+      "duckstation\\bios",
+      "pcsxr\\BIOS"
+    ],
+    "filename": "scph1001.bin",
+    "crc32": "37157331",
+    "required": true
+  },
+  {
+    "emulators": [
+      "mednafen",
+      "xebra"
+    ],
+    "paths": [
+      "psxfin\\BIOS",
+      "ePSXe\\BIOS",
+      "duckstation\\bios",
+      "pcsxr\\BIOS",
+      "retroarch\\system",
+      "bizhawk\\firmware"
+    ],
+    "filename": "scph5501.bin",
+    "crc32": "8D8CB7E4",
+    "required": true,
+    "alt_filename": "ps-30a.bin"
+  },
+  {
+    "emulators": [
+      "mednafen",
+      "xebra"
+    ],
+    "paths": [
+      "psxfin\\BIOS",
+      "ePSXe\\BIOS",
+      "duckstation\\bios",
+      "pcsxr\\BIOS",
+      "retroarch\\system"
+    ],
+    "filename": "scph5502.bin",
+    "crc32": "4D9E7C86",
+    "required": false
+  },
+  {
+    "emulators": [
+      "mednafen",
+      "xebra"
+    ],
+    "paths": [
+      "psxfin\\BIOS",
+      "ePSXe\\BIOS",
+      "duckstation\\bios",
+      "pcsxr\\BIOS",
+      "retroarch\\system"
+    ],
+    "filename": "scph5502.bin",
+    "crc32": "318178BF",
+    "required": false
+  },
+  {
+    "emulators": [
+      "mednafen",
+      "xebra"
+    ],
+    "paths": [
+      "psxfin\\BIOS",
+      "ePSXe\\BIOS",
+      "duckstation\\bios",
+      "pcsxr\\BIOS",
+      "retroarch\\system",
+      "bizhawk\\firmware"
+    ],
+    "filename": "scph5502.bin",
+    "crc32": "D786F0B9",
+    "required": true,
+    "alt_filename": "ps-30e.bin"
+  },
+  {
+    "emulators": [
+      "mednafen",
+      "yabause"
+    ],
+    "paths": [
+      "SSF\\Setting\\Saturn",
+      "retroarch\\system",
+      "bizhawk\\firmware"
+    ],
+    "filename": "mpr-18811-mx.ic1",
+    "crc32": "B9644B52",
+    "required": true,
+    "alt_filename": "Ultraman.bin"
+  },
+  {
+    "emulators": [
+      "mednafen",
+      "yabause"
+    ],
+    "paths": [
+      "SSF\\Setting\\Saturn",
+      "retroarch\\system",
+      "bizhawk\\firmware"
+    ],
+    "filename": "mpr-19367-mx.ic1",
+    "crc32": "90412E10",
+    "required": true,
+    "alt_filename": "kof95.bin"
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system",
+      "bizhawk\\firmware"
+    ],
+    "filename": "mpr-17933.bin",
+    "crc32": "4AFCF0FA",
+    "required": true,
+    "alt_filename": "saturn-1.00-(U+E).bin"
+  },
+  {
+    "emulators": [
+      "mednafen",
+      "yabause"
+    ],
+    "paths": [
+      "SSF\\Setting\\Saturn",
+      "retroarch\\system"
+    ],
+    "filename": "saturn_bios.bin",
+    "crc32": "224B752C",
+    "required": false,
+    "alt_filename": "mpr-17933.bin"
+  },
+  {
+    "emulators": [
+      "mednafen",
+      "yabause"
+    ],
+    "paths": [
+      "SSF\\Setting\\Saturn",
+      "retroarch\\system"
+    ],
+    "filename": "sega1003.bin",
+    "crc32": "B3C63C25",
+    "required": false,
+    "alt_filename": "sega_101.bin"
+  },
+  {
+    "emulators": [
+      "mednafen",
+      "yabause"
+    ],
+    "paths": [
+      "SSF\\Setting\\Saturn",
+      "retroarch\\system",
+      "bizhawk\\firmware"
+    ],
+    "filename": "sega_100.bin",
+    "crc32": "2ABA43C2",
+    "required": true,
+    "alt_filename": "sega_101.bin?saturn-1.00-(J).bin"
+  },
+  {
+    "emulators": [
+      "mednafen",
+      "yabause"
+    ],
+    "paths": [
+      "SSF\\Setting\\Saturn",
+      "retroarch\\system"
+    ],
+    "filename": "sega_100a.bin",
+    "crc32": "F90F0089",
+    "required": true,
+    "alt_filename": "mpr-17933.bin"
+  },
+  {
+    "emulators": [
+      "mednafen",
+      "yabause"
+    ],
+    "paths": [
+      "SSF\\Setting\\Saturn",
+      "retroarch\\system",
+      "bizhawk\\firmware"
+    ],
+    "filename": "sega_101.bin",
+    "crc32": "4AFCF0FA",
+    "required": false,
+    "alt_filename": "saturn-1.00-(U+E).bin"
+  },
+  {
+    "emulators": [
+      "mednafen",
+      "yabause"
+    ],
+    "paths": [
+      "SSF\\Setting\\Saturn",
+      "retroarch\\system"
+    ],
+    "filename": "sega_101.bin",
+    "crc32": "224B752C",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "SSF\\Setting\\STV"
+    ],
+    "filename": "stv110.bin",
+    "crc32": "3DFEDA92",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "SSF\\Setting\\STV"
+    ],
+    "filename": "mp17954a.s",
+    "crc32": "F77223AD",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "SSF\\Setting\\STV"
+    ],
+    "filename": "mp17952a.s",
+    "crc32": "D1BE2ADF",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "SSF\\Setting\\STV"
+    ],
+    "filename": "epr19730.ic8",
+    "crc32": "D0E0889D",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "SSF\\Setting\\STV"
+    ],
+    "filename": "mp17953a.ic8",
+    "crc32": "A4C47570",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "SSF\\Setting\\STV"
+    ],
+    "filename": "20091.bin",
+    "crc32": "59ED40F4",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "SSF\\Setting\\STV"
+    ],
+    "filename": "mp17951a.s",
+    "crc32": "2672F9D8",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system"
+    ],
+    "filename": "sgb.boot.rom",
+    "crc32": "EC8A83B9",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system"
+    ],
+    "filename": "st010.data.rom",
+    "crc32": "216081B2",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system"
+    ],
+    "filename": "st010.program.rom",
+    "crc32": "691CBB4F",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system",
+      "bizhawk\\firmware"
+    ],
+    "filename": "st010.rom",
+    "crc32": "8FC29D4C",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system"
+    ],
+    "filename": "st011.data.rom",
+    "crc32": "803256A7",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system"
+    ],
+    "filename": "st011.program.rom",
+    "crc32": "A741E9FB",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system",
+      "bizhawk\\firmware"
+    ],
+    "filename": "st011.rom",
+    "crc32": "84AAB2AE",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system"
+    ],
+    "filename": "st018.data.rom",
+    "crc32": "B5255459",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system"
+    ],
+    "filename": "st018.program.rom",
+    "crc32": "F73D5E10",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system",
+      "bizhawk\\firmware"
+    ],
+    "filename": "st018.rom",
+    "crc32": "5C403CC5",
+    "required": true
+  },
+  {
+    "emulators": [
+      "mednafen",
+      "Ootake"
+    ],
+    "paths": [
+      "retroarch\\system"
+    ],
+    "filename": "syscard3.pce",
+    "crc32": "FF2A5EC3",
+    "required": false
+  },
+  {
+    "emulators": [
+      "mednafen",
+      "Ootake"
+    ],
+    "paths": [
+      "retroarch\\system"
+    ],
+    "filename": "syscard3.pce",
+    "crc32": "2B5B75FE",
+    "required": false
+  },
+  {
+    "emulators": [
+      "mednafen",
+      "Ootake"
+    ],
+    "paths": [
+      "retroarch\\system",
+      "bizhawk\\firmware"
+    ],
+    "filename": "syscard3.pce",
+    "crc32": "6D9A73EF",
+    "required": false,
+    "alt_filename": "pcecd-3.0-(J).pce"
+  },
+  {
+    "emulators": [
+      "mednafen",
+      "Ootake"
+    ],
+    "paths": [
+      "retroarch\\system"
+    ],
+    "filename": "syscard3.pce",
+    "crc32": "3F9F95A4",
+    "required": false
+  },
+  {
+    "emulators": [
+      "mednafen",
+      "Ootake"
+    ],
+    "paths": [
+      "retroarch\\system"
+    ],
+    "filename": "syscard3.pce",
+    "crc32": "52520BC6",
+    "required": false
+  },
+  {
+    "emulators": [
+      "mednafen",
+      "Ootake"
+    ],
+    "paths": [
+      "retroarch\\system"
+    ],
+    "filename": "syscard3.pce",
+    "crc32": "283B74E0",
+    "required": false
+  },
+  {
+    "emulators": [
+      "mednafen",
+      "Ootake"
+    ],
+    "paths": [
+      "retroarch\\system"
+    ],
+    "filename": "syscard3.pce",
+    "crc32": "64F78E3C",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system"
+    ],
+    "filename": "us_scd1_9210.bin",
+    "crc32": "290F8E33",
+    "required": false,
+    "alt_filename": "bios_CD_U.bin"
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system"
+    ],
+    "filename": "us_scd1_9210.bin",
+    "crc32": "2E49D72C",
+    "required": false,
+    "alt_filename": "bios_CD_U.bin"
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system"
+    ],
+    "filename": "us_scd1_9210.bin",
+    "crc32": "9F6F6276",
+    "required": false,
+    "alt_filename": "bios_CD_U.bin"
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system"
+    ],
+    "filename": "us_scd1_9210.bin",
+    "crc32": "8AF65F58",
+    "required": false,
+    "alt_filename": "bios_CD_U.bin"
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system"
+    ],
+    "filename": "us_scd1_9210.bin",
+    "crc32": "E7E3AFE2",
+    "required": false,
+    "alt_filename": "bios_CD_U.bin"
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system"
+    ],
+    "filename": "us_scd1_9210.bin",
+    "crc32": "50CD3D23",
+    "required": false,
+    "alt_filename": "bios_CD_U.bin"
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system"
+    ],
+    "filename": "us_scd1_9210.bin",
+    "crc32": "3B10CF41",
+    "required": false,
+    "alt_filename": "bios_CD_U.bin"
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system"
+    ],
+    "filename": "us_scd1_9210.bin",
+    "crc32": "9F6F6276",
+    "required": false,
+    "alt_filename": "bios_CD_U.bin"
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system",
+      "bizhawk\\firmware"
+    ],
+    "filename": "us_scd1_9210.bin",
+    "crc32": "C6D10268",
+    "required": true,
+    "alt_filename": "bios_CD_U.bin?us_scd1_9210.bin"
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system"
+    ],
+    "filename": "Sega Mega-CD Model 2 BIOS v2.00 (1993)(Sega)(Eu).bin",
+    "crc32": "0507B590",
+    "required": false,
+    "alt_filename": "bios_CD_E.bin"
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system"
+    ],
+    "filename": "Sega Mega-CD Model 2 BIOS v2.00 (1993)(Sega)(Eu)[b].bin",
+    "crc32": "9B1FFC6F",
+    "required": false,
+    "alt_filename": "bios_CD_E.bin"
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system"
+    ],
+    "filename": "Sega Mega-CD Model 2 BIOS v2.00w (1993)(Sega)(Eu).bin",
+    "crc32": "4D5CB8DA",
+    "required": false,
+    "alt_filename": "bios_CD_E.bin"
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system",
+      "bizhawk\\firmware"
+    ],
+    "filename": "Mega-CD (E) - Model 1 v1.00 (1992).bin",
+    "crc32": "529AC15A",
+    "required": false,
+    "alt_filename": "bios_CD_E.bin?eu_mcd1_9210.bin"
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system"
+    ],
+    "filename": "eu_mcd2_9306.bin",
+    "crc32": "D344F125",
+    "required": false,
+    "alt_filename": "bios_CD_E.bin"
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system",
+      "bizhawk\\firmware"
+    ],
+    "filename": "Mega-CD (J) - Model 1 v1.00p (1991).bin",
+    "crc32": "9D2DA8F2",
+    "required": false,
+    "alt_filename": "bios_CD_J.bin?jp_mcd1_9111.bin"
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system"
+    ],
+    "filename": "jp_mcd1_9112.bin",
+    "crc32": "550F30BB",
+    "required": false,
+    "alt_filename": "bios_CD_J.bin"
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system"
+    ],
+    "filename": "[BIOS] Mega-CD 2 (Japan) (v2.00C).md",
+    "crc32": "DD6CC972",
+    "required": false,
+    "alt_filename": "bios_CD_J.bin"
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system"
+    ],
+    "filename": "japan-j3(jp).bin",
+    "crc32": "DFF6D41F",
+    "required": false,
+    "alt_filename": "bios_CD_J.bin"
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system",
+      "bizhawk\\firmware"
+    ],
+    "filename": "Sega CD (U) - Model 1 v1.10 (1992).bin",
+    "crc32": "C6D10268",
+    "required": false,
+    "alt_filename": "bios_CD_U.bin?us_scd1_9210.bin"
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system"
+    ],
+    "filename": "Sega CD (U) - Model 2 v2.00 (1993) [b].bin",
+    "crc32": "340B4BE4",
+    "required": false,
+    "alt_filename": "bios_CD_U.bin"
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system"
+    ],
+    "filename": "Sega CD (U) - Model 2 v2.11x (1993) [b].bin",
+    "crc32": "B0519ED3",
+    "required": false,
+    "alt_filename": "bios_CD_U.bin"
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system"
+    ],
+    "filename": "Sega CD (U) - Model 2 v2.11x (2.00) (1993).bin",
+    "crc32": "2E49D72C",
+    "required": false,
+    "alt_filename": "bios_CD_U.bin"
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system"
+    ],
+    "filename": "Sega CDX (U) - v2.21x (1993) [b].bin",
+    "crc32": "4A940D4A",
+    "required": false,
+    "alt_filename": "bios_CD_U.bin"
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system"
+    ],
+    "filename": "Sega CDX (U) - v2.21x (1993).bin",
+    "crc32": "D48C44B5",
+    "required": false,
+    "alt_filename": "bios_CD_U.bin"
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system"
+    ],
+    "filename": "us_mcd_9208 [h].rom",
+    "crc32": "CE60984E",
+    "required": false,
+    "alt_filename": "bios_CD_U.bin"
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system"
+    ],
+    "filename": "us_mcd_9306 [h].rom",
+    "crc32": "7F7677CC",
+    "required": false,
+    "alt_filename": "bios_CD_U.bin"
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system"
+    ],
+    "filename": "us_scd2_9306.bin",
+    "crc32": "9F6F6276",
+    "required": false,
+    "alt_filename": "bios_CD_U.bin"
+  },
+  {
+    "emulators": [
+      "mednafen"
+    ],
+    "paths": [
+      "gens\\BIOS",
+      "gensgs\\BIOS",
+      "genssplus\\BIOS",
+      "fusion\\BIOS"
+    ],
+    "filename": "us_scd1_9210.bin",
+    "crc32": "290F8E33",
+    "required": false
+  },
+  {
+    "emulators": [
+      "mednafen"
+    ],
+    "paths": [
+      "gens\\BIOS",
+      "gensgs\\BIOS",
+      "genssplus\\BIOS",
+      "fusion\\BIOS"
+    ],
+    "filename": "us_scd1_9210.bin",
+    "crc32": "2E49D72C",
+    "required": false
+  },
+  {
+    "emulators": [
+      "mednafen"
+    ],
+    "paths": [
+      "gens\\BIOS",
+      "gensgs\\BIOS",
+      "genssplus\\BIOS",
+      "fusion\\BIOS"
+    ],
+    "filename": "us_scd1_9210.bin",
+    "crc32": "9F6F6276",
+    "required": false
+  },
+  {
+    "emulators": [
+      "mednafen"
+    ],
+    "paths": [
+      "gens\\BIOS",
+      "gensgs\\BIOS",
+      "genssplus\\BIOS",
+      "fusion\\BIOS"
+    ],
+    "filename": "us_scd1_9210.bin",
+    "crc32": "8AF65F58",
+    "required": false
+  },
+  {
+    "emulators": [
+      "mednafen"
+    ],
+    "paths": [
+      "gens\\BIOS",
+      "gensgs\\BIOS",
+      "genssplus\\BIOS",
+      "fusion\\BIOS"
+    ],
+    "filename": "us_scd1_9210.bin",
+    "crc32": "E7E3AFE2",
+    "required": false
+  },
+  {
+    "emulators": [
+      "mednafen"
+    ],
+    "paths": [
+      "gens\\BIOS",
+      "gensgs\\BIOS",
+      "genssplus\\BIOS",
+      "fusion\\BIOS"
+    ],
+    "filename": "us_scd1_9210.bin",
+    "crc32": "50CD3D23",
+    "required": false
+  },
+  {
+    "emulators": [
+      "mednafen"
+    ],
+    "paths": [
+      "gens\\BIOS",
+      "gensgs\\BIOS",
+      "genssplus\\BIOS",
+      "fusion\\BIOS"
+    ],
+    "filename": "us_scd1_9210.bin",
+    "crc32": "3B10CF41",
+    "required": false
+  },
+  {
+    "emulators": [
+      "mednafen"
+    ],
+    "paths": [
+      "gens\\BIOS",
+      "gensgs\\BIOS",
+      "genssplus\\BIOS",
+      "fusion\\BIOS"
+    ],
+    "filename": "us_scd1_9210.bin",
+    "crc32": "9F6F6276",
+    "required": false
+  },
+  {
+    "emulators": [
+      "mednafen"
+    ],
+    "paths": [
+      "gens\\BIOS",
+      "gensgs\\BIOS",
+      "genssplus\\BIOS",
+      "fusion\\BIOS",
+      "bizhawk\\firmware"
+    ],
+    "filename": "us_scd1_9210.bin",
+    "crc32": "C6D10268",
+    "required": true
+  },
+  {
+    "emulators": [
+      "mednafen"
+    ],
+    "paths": [
+      "gens\\BIOS",
+      "gensgs\\BIOS",
+      "genssplus\\BIOS",
+      "fusion\\BIOS",
+      "retroarch\\system"
+    ],
+    "filename": "Datel CDX Pro BIOS v1.70 (199x) [b].bin",
+    "crc32": "E7F3A492",
+    "required": false
+  },
+  {
+    "emulators": [
+      "mednafen"
+    ],
+    "paths": [
+      "gens\\BIOS",
+      "gensgs\\BIOS",
+      "genssplus\\BIOS",
+      "fusion\\BIOS",
+      "retroarch\\system"
+    ],
+    "filename": "Datel CDX Pro BIOS v1.8i (199x) [b].bin",
+    "crc32": "D640553E",
+    "required": false
+  },
+  {
+    "emulators": [
+      "mednafen"
+    ],
+    "paths": [
+      "gens\\BIOS",
+      "gensgs\\BIOS",
+      "genssplus\\BIOS",
+      "fusion\\BIOS",
+      "retroarch\\system"
+    ],
+    "filename": "Datel CDX Pro BIOS v1.8i (199x).bin",
+    "crc32": "170CA9DA",
+    "required": false
+  },
+  {
+    "emulators": [
+      "mednafen"
+    ],
+    "paths": [
+      "gens\\BIOS",
+      "gensgs\\BIOS",
+      "genssplus\\BIOS",
+      "fusion\\BIOS",
+      "retroarch\\system"
+    ],
+    "filename": "Flux for Mega CD (Eu)(Virgin).rom",
+    "crc32": "2A1DA08C",
+    "required": false
+  },
+  {
+    "emulators": [
+      "mednafen"
+    ],
+    "paths": [
+      "gens\\BIOS",
+      "gensgs\\BIOS",
+      "genssplus\\BIOS",
+      "fusion\\BIOS",
+      "retroarch\\system"
+    ],
+    "filename": "JVC X'EYE (JUE) - v2.00.bin",
+    "crc32": "290F8E33",
+    "required": false
+  },
+  {
+    "emulators": [
+      "mednafen"
+    ],
+    "paths": [
+      "gens\\BIOS",
+      "gensgs\\BIOS",
+      "genssplus\\BIOS",
+      "fusion\\BIOS",
+      "retroarch\\system"
+    ],
+    "filename": "Mega CD Formatted Ram cartridge.rom",
+    "crc32": "9B017B7E",
+    "required": false
+  },
+  {
+    "emulators": [
+      "mednafen"
+    ],
+    "paths": [
+      "gens\\BIOS",
+      "gensgs\\BIOS",
+      "genssplus\\BIOS",
+      "fusion\\BIOS"
+    ],
+    "filename": "Sega Mega-CD Model 2 BIOS v2.00 (1993)(Sega)(Eu).bin",
+    "crc32": "0507B590",
+    "required": false,
+    "alt_filename": "eu_mcd2_9306.bin"
+  },
+  {
+    "emulators": [
+      "mednafen"
+    ],
+    "paths": [
+      "gens\\BIOS",
+      "gensgs\\BIOS",
+      "genssplus\\BIOS",
+      "fusion\\BIOS"
+    ],
+    "filename": "Sega Mega-CD Model 2 BIOS v2.00w (1993)(Sega)(Eu).bin",
+    "crc32": "4D5CB8DA",
+    "required": false,
+    "alt_filename": "eu_mcd2_9306"
+  },
+  {
+    "emulators": [
+      "mednafen"
+    ],
+    "paths": [
+      "gens\\BIOS",
+      "gensgs\\BIOS",
+      "genssplus\\BIOS",
+      "fusion\\BIOS"
+    ],
+    "filename": "Sega Mega-CD Model 2 BIOS v2.00 (1993)(Sega)(Eu)[b].bin",
+    "crc32": "9B1FFC6F",
+    "required": false,
+    "alt_filename": "eu_mcd2_9306"
+  },
+  {
+    "emulators": [
+      "mednafen"
+    ],
+    "paths": [
+      "gens\\BIOS",
+      "gensgs\\BIOS",
+      "genssplus\\BIOS",
+      "fusion\\BIOS",
+      "retroarch\\system",
+      "bizhawk\\firmware"
+    ],
+    "filename": "Mega-CD (E) - Model 1 v1.00 (1992).bin",
+    "crc32": "529AC15A",
+    "required": false,
+    "alt_filename": "eu_mcd2_9306.bin?eu_mcd1_9210.bin"
+  },
+  {
+    "emulators": [
+      "mednafen"
+    ],
+    "paths": [
+      "gens\\BIOS",
+      "gensgs\\BIOS",
+      "genssplus\\BIOS",
+      "fusion\\BIOS"
+    ],
+    "filename": "eu_mcd2_9306.bin",
+    "crc32": "D344F125",
+    "required": false
+  },
+  {
+    "emulators": [
+      "mednafen"
+    ],
+    "paths": [
+      "gens\\BIOS",
+      "gensgs\\BIOS",
+      "genssplus\\BIOS",
+      "fusion\\BIOS",
+      "bizhawk\\firmware"
+    ],
+    "filename": "Mega-CD (J) - Model 1 v1.00p (1991).bin",
+    "crc32": "9D2DA8F2",
+    "required": false,
+    "alt_filename": "jp_mcd1_9112.bin?jp_mcd1_9111.bin"
+  },
+  {
+    "emulators": [
+      "mednafen"
+    ],
+    "paths": [
+      "gens\\BIOS",
+      "gensgs\\BIOS",
+      "genssplus\\BIOS",
+      "fusion\\BIOS"
+    ],
+    "filename": "jp_mcd1_9112.bin",
+    "crc32": "550F30BB",
+    "required": false
+  },
+  {
+    "emulators": [
+      "mednafen"
+    ],
+    "paths": [
+      "gens\\BIOS",
+      "gensgs\\BIOS",
+      "genssplus\\BIOS",
+      "fusion\\BIOS"
+    ],
+    "filename": "[BIOS] Mega-CD 2 (Japan) (v2.00C).md",
+    "crc32": "DD6CC972",
+    "required": false,
+    "alt_filename": "jp_mcd1_9112.bin"
+  },
+  {
+    "emulators": [
+      "mednafen"
+    ],
+    "paths": [
+      "gens\\BIOS",
+      "gensgs\\BIOS",
+      "genssplus\\BIOS",
+      "fusion\\BIOS"
+    ],
+    "filename": "japan-j3(jp).bin",
+    "crc32": "DFF6D41F",
+    "required": false,
+    "alt_filename": "jp_mcd1_9112.bin"
+  },
+  {
+    "emulators": [
+      "mednafen"
+    ],
+    "paths": [
+      "gens\\BIOS",
+      "gensgs\\BIOS",
+      "genssplus\\BIOS",
+      "fusion\\BIOS",
+      "bizhawk\\firmware"
+    ],
+    "filename": "Sega CD (U) - Model 1 v1.10 (1992).bin",
+    "crc32": "C6D10268",
+    "required": false,
+    "alt_filename": "us_scd1_9210.bin?us_scd1_9210.bin"
+  },
+  {
+    "emulators": [
+      "mednafen"
+    ],
+    "paths": [
+      "gens\\BIOS",
+      "gensgs\\BIOS",
+      "genssplus\\BIOS",
+      "fusion\\BIOS"
+    ],
+    "filename": "Sega CD (U) - Model 2 v2.00 (1993) [b].bin",
+    "crc32": "340B4BE4",
+    "required": false,
+    "alt_filename": "us_scd1_9210.bin"
+  },
+  {
+    "emulators": [
+      "mednafen"
+    ],
+    "paths": [
+      "gens\\BIOS",
+      "gensgs\\BIOS",
+      "genssplus\\BIOS",
+      "fusion\\BIOS"
+    ],
+    "filename": "Sega CD (U) - Model 2 v2.11x (1993) [b].bin",
+    "crc32": "B0519ED3",
+    "required": false,
+    "alt_filename": "us_scd1_9210.bin"
+  },
+  {
+    "emulators": [
+      "mednafen"
+    ],
+    "paths": [
+      "gens\\BIOS",
+      "gensgs\\BIOS",
+      "genssplus\\BIOS",
+      "fusion\\BIOS"
+    ],
+    "filename": "Sega CD (U) - Model 2 v2.11x (2.00) (1993).bin",
+    "crc32": "2E49D72C",
+    "required": false,
+    "alt_filename": "us_scd1_9210.bin"
+  },
+  {
+    "emulators": [
+      "mednafen"
+    ],
+    "paths": [
+      "gens\\BIOS",
+      "gensgs\\BIOS",
+      "genssplus\\BIOS",
+      "fusion\\BIOS"
+    ],
+    "filename": "Sega CDX (U) - v2.21x (1993) [b].bin",
+    "crc32": "4A940D4A",
+    "required": false,
+    "alt_filename": "us_scd1_9210.bin"
+  },
+  {
+    "emulators": [
+      "mednafen"
+    ],
+    "paths": [
+      "gens\\BIOS",
+      "gensgs\\BIOS",
+      "genssplus\\BIOS",
+      "fusion\\BIOS"
+    ],
+    "filename": "Sega CDX (U) - v2.21x (1993).bin",
+    "crc32": "D48C44B5",
+    "required": false,
+    "alt_filename": "us_scd1_9210.bin"
+  },
+  {
+    "emulators": [
+      "mednafen"
+    ],
+    "paths": [
+      "gens\\BIOS",
+      "gensgs\\BIOS",
+      "genssplus\\BIOS",
+      "fusion\\BIOS"
+    ],
+    "filename": "us_mcd_9208 [h].rom",
+    "crc32": "CE60984E",
+    "required": false,
+    "alt_filename": "us_scd1_9210.bin"
+  },
+  {
+    "emulators": [
+      "mednafen"
+    ],
+    "paths": [
+      "gens\\BIOS",
+      "gensgs\\BIOS",
+      "genssplus\\BIOS",
+      "fusion\\BIOS"
+    ],
+    "filename": "us_mcd_9306 [h].rom",
+    "crc32": "7F7677CC",
+    "required": false,
+    "alt_filename": "us_scd1_9210.bin"
+  },
+  {
+    "emulators": [
+      "mednafen"
+    ],
+    "paths": [
+      "gens\\BIOS",
+      "gensgs\\BIOS",
+      "genssplus\\BIOS",
+      "fusion\\BIOS"
+    ],
+    "filename": "us_scd2_9306.bin",
+    "crc32": "9F6F6276",
+    "required": false,
+    "alt_filename": "us_scd1_9210.bin"
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "gens\\BIOS",
+      "gensgs\\BIOS",
+      "genssplus\\BIOS",
+      "fusion\\BIOS",
+      "retroarch\\system",
+      "bizhawk\\firmware"
+    ],
+    "filename": "32X_M_BIOS.BIN",
+    "crc32": "DD9C46B8",
+    "required": false
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "gens\\BIOS",
+      "gensgs\\BIOS",
+      "genssplus\\BIOS",
+      "fusion\\BIOS",
+      "retroarch\\system",
+      "bizhawk\\firmware"
+    ],
+    "filename": "32X_S_BIOS.BIN",
+    "crc32": "BFDA1FE5",
+    "required": false
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "gens\\BIOS",
+      "gensgs\\BIOS",
+      "genssplus\\BIOS",
+      "fusion\\BIOS",
+      "retroarch\\system",
+      "bizhawk\\firmware"
+    ],
+    "filename": "32X_G_BIOS.BIN",
+    "crc32": "5C12EAE8",
+    "required": false
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "gens\\BIOS",
+      "gensgs\\BIOS",
+      "genssplus\\BIOS",
+      "fusion\\BIOS",
+      "retroarch\\system"
+    ],
+    "filename": "bios32xg.68k",
+    "crc32": "4EF8231F",
+    "required": false,
+    "alt_filename": "32X_G_BIOS.BIN"
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "gens\\BIOS",
+      "gensgs\\BIOS",
+      "genssplus\\BIOS",
+      "fusion\\BIOS",
+      "retroarch\\system"
+    ],
+    "filename": "BIOS32XG.BIN",
+    "crc32": "5D9017FA",
+    "required": true,
+    "alt_filename": "32X_G_BIOS.BIN"
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "gens\\BIOS",
+      "gensgs\\BIOS",
+      "genssplus\\BIOS",
+      "fusion\\BIOS",
+      "retroarch\\system"
+    ],
+    "filename": "BIOS32XM.BIN",
+    "crc32": "D3D57C39",
+    "required": true,
+    "alt_filename": "32X_M_BIOS.BIN"
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "gens\\BIOS",
+      "gensgs\\BIOS",
+      "genssplus\\BIOS",
+      "fusion\\BIOS",
+      "retroarch\\system"
+    ],
+    "filename": "BIOS32XS.BIN",
+    "crc32": "FFB1B7FA",
+    "required": true,
+    "alt_filename": "32X_S_BIOS.BIN"
+  },
+  {
+    "emulators": [
+      "nostalgia"
+    ],
+    "paths": [
+      "retroarch\\system"
+    ],
+    "filename": "exec.bin",
+    "crc32": "CBCE86F7",
+    "required": true
+  },
+  {
+    "emulators": [
+      "nostalgia"
+    ],
+    "paths": [
+      "retroarch\\system",
+      "bizhawk\\firmware"
+    ],
+    "filename": "grom.bin",
+    "crc32": "683A4158",
+    "required": true
+  },
+  {
+    "emulators": [
+      "nostalgia"
+    ],
+    "paths": [
+      "retroarch\\system",
+      "bizhawk\\firmware"
+    ],
+    "filename": "exec.bin",
+    "crc32": "CBCE86F7",
+    "required": true,
+    "alt_filename": "erom.bin"
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "pcsx2\\bios",
+      "retroarch\\system\\PCSX2\\bios",
+      "play\\bios"
+    ],
+    "filename": "ps2-0101j-20000217.bin",
+    "crc32": "211DFB6A",
+    "required": false
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "pcsx2\\bios",
+      "retroarch\\system\\PCSX2\\bios",
+      "play\\bios"
+    ],
+    "filename": "ps2-0101xd-20000224.bin",
+    "crc32": "2FEF9FAF",
+    "required": false
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "pcsx2\\bios",
+      "retroarch\\system\\PCSX2\\bios",
+      "play\\bios"
+    ],
+    "filename": "ps2-0110a-20000727.bin",
+    "crc32": "9678AD6A",
+    "required": false
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "pcsx2\\bios",
+      "retroarch\\system\\PCSX2\\bios",
+      "play\\bios"
+    ],
+    "filename": "ps2-0110ad-20000727.bin",
+    "crc32": "795578C1",
+    "required": false
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "pcsx2\\bios",
+      "retroarch\\system\\PCSX2\\bios",
+      "play\\bios"
+    ],
+    "filename": "ps2-0120a-20000902.bin",
+    "crc32": "1AE71E5D",
+    "required": false
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "pcsx2\\bios",
+      "retroarch\\system\\PCSX2\\bios",
+      "play\\bios"
+    ],
+    "filename": "ps2-0120j-20001027-185015.bin",
+    "crc32": "9B096622",
+    "required": false
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "pcsx2\\bios",
+      "retroarch\\system\\PCSX2\\bios",
+      "play\\bios"
+    ],
+    "filename": "ps2-0120j-20001027-191435.bin",
+    "crc32": "C1CCF3F6",
+    "required": false
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "pcsx2\\bios",
+      "retroarch\\system\\PCSX2\\bios",
+      "play\\bios"
+    ],
+    "filename": "ps2-0150a-20001228.bin",
+    "crc32": "BCE74746",
+    "required": false
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "pcsx2\\bios",
+      "retroarch\\system\\PCSX2\\bios",
+      "play\\bios"
+    ],
+    "filename": "ps2-0150e-20001228.bin",
+    "crc32": "1559FD43",
+    "required": false
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "pcsx2\\bios",
+      "retroarch\\system\\PCSX2\\bios",
+      "play\\bios"
+    ],
+    "filename": "ps2-0150j-20010118.bin",
+    "crc32": "4FC3B495",
+    "required": false
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "pcsx2\\bios",
+      "retroarch\\system\\PCSX2\\bios",
+      "play\\bios"
+    ],
+    "filename": "ps2-0160a-20010427.bin",
+    "crc32": "4008AC18",
+    "required": false
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "pcsx2\\bios",
+      "retroarch\\system\\PCSX2\\bios",
+      "play\\bios"
+    ],
+    "filename": "ps2-0160e-20010704.bin",
+    "crc32": "F1AC735F",
+    "required": false
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "pcsx2\\bios",
+      "retroarch\\system\\PCSX2\\bios",
+      "play\\bios"
+    ],
+    "filename": "ps2-0160e-20011004.bin",
+    "crc32": "82AA5055",
+    "required": false
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "pcsx2\\bios",
+      "retroarch\\system\\PCSX2\\bios",
+      "play\\bios"
+    ],
+    "filename": "ps2-0160e-20020319.bin",
+    "crc32": "2FE21E4D",
+    "required": false
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "pcsx2\\bios",
+      "retroarch\\system\\PCSX2\\bios",
+      "play\\bios"
+    ],
+    "filename": "ps2-0160h-20010730.bin",
+    "crc32": "75F83C67",
+    "required": false
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "pcsx2\\bios",
+      "retroarch\\system\\PCSX2\\bios",
+      "play\\bios"
+    ],
+    "filename": "ps2-0160j-20010427.bin",
+    "crc32": "C268EF47",
+    "required": false
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "pcsx2\\bios",
+      "retroarch\\system\\PCSX2\\bios",
+      "play\\bios"
+    ],
+    "filename": "ps2-0170a-20030325.bin",
+    "crc32": "9A99E3F4",
+    "required": false
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "pcsx2\\bios",
+      "retroarch\\system\\PCSX2\\bios",
+      "play\\bios"
+    ],
+    "filename": "ps2-0170e-20030227.bin",
+    "crc32": "51B5FB8B",
+    "required": false
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "pcsx2\\bios",
+      "retroarch\\system\\PCSX2\\bios",
+      "play\\bios"
+    ],
+    "filename": "ps2-0180j-20031028.bin",
+    "crc32": "585FD27C",
+    "required": false
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "pcsx2\\bios",
+      "retroarch\\system\\PCSX2\\bios",
+      "play\\bios"
+    ],
+    "filename": "ps2-0190a-20030623.bin",
+    "crc32": "B3E87709",
+    "required": false
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "pcsx2\\bios",
+      "retroarch\\system\\PCSX2\\bios",
+      "play\\bios"
+    ],
+    "filename": "ps2-0190c-20030623.bin",
+    "crc32": "40D6C676",
+    "required": false
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "pcsx2\\bios",
+      "retroarch\\system\\PCSX2\\bios",
+      "play\\bios"
+    ],
+    "filename": "ps2-0190e-20030623.bin",
+    "crc32": "1752A52E",
+    "required": false
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "pcsx2\\bios",
+      "retroarch\\system\\PCSX2\\bios",
+      "play\\bios"
+    ],
+    "filename": "ps2-0190h-20030623.bin",
+    "crc32": "36B0580C",
+    "required": false
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "pcsx2\\bios",
+      "retroarch\\system\\PCSX2\\bios",
+      "play\\bios"
+    ],
+    "filename": "ps2-0190r-20030623.bin",
+    "crc32": "063A2368",
+    "required": false
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "pcsx2\\bios",
+      "retroarch\\system\\PCSX2\\bios",
+      "play\\bios"
+    ],
+    "filename": "ps2-0220a-20050620.bin",
+    "crc32": "D305A97A",
+    "required": false
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "pcsx2\\bios",
+      "retroarch\\system\\PCSX2\\bios",
+      "play\\bios"
+    ],
+    "filename": "ps2-0220a-20060905.bin",
+    "crc32": "1C17EAFC",
+    "required": false
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "pcsx2\\bios",
+      "retroarch\\system\\PCSX2\\bios",
+      "play\\bios"
+    ],
+    "filename": "ps2-0220e-20060905.bin",
+    "crc32": "2D946DBF",
+    "required": false
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "pcsx2\\bios",
+      "retroarch\\system\\PCSX2\\bios",
+      "play\\bios"
+    ],
+    "filename": "ps2-0220h-20060905.bin",
+    "crc32": "2D6E09EA",
+    "required": false
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "pcsx2\\bios",
+      "retroarch\\system\\PCSX2\\bios",
+      "play\\bios"
+    ],
+    "filename": "ps2-0230a-20080220.bin",
+    "crc32": "286897C2",
+    "required": false
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "pcsx2\\bios",
+      "retroarch\\system\\PCSX2\\bios",
+      "play\\bios"
+    ],
+    "filename": "ps2-0230e-20080220.bin",
+    "crc32": "19EB1081",
+    "required": false
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "pcsx2\\bios",
+      "retroarch\\system\\PCSX2\\bios",
+      "play\\bios"
+    ],
+    "filename": "ps2-dvd-110u.bin",
+    "crc32": "95E51761",
+    "required": false
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "pcsx2\\bios",
+      "retroarch\\system\\PCSX2\\bios",
+      "play\\bios"
+    ],
+    "filename": "ps2-dvd-120e.bin",
+    "crc32": "394E64E8",
+    "required": false
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "pcsx2\\bios",
+      "retroarch\\system\\PCSX2\\bios",
+      "play\\bios"
+    ],
+    "filename": "ps2-dvd-120u.bin",
+    "crc32": "37A86C9E",
+    "required": false
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "pcsx2\\bios",
+      "retroarch\\system\\PCSX2\\bios",
+      "play\\bios"
+    ],
+    "filename": "ps2-dvd-130e.bin",
+    "crc32": "11C77794",
+    "required": false
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "pcsx2\\bios",
+      "retroarch\\system\\PCSX2\\bios",
+      "play\\bios"
+    ],
+    "filename": "ps2-dvd-130u.bin",
+    "crc32": "43683B3A",
+    "required": false
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "pcsx2\\bios",
+      "retroarch\\system\\PCSX2\\bios",
+      "play\\bios"
+    ],
+    "filename": "ps2-dvd-200j.bin",
+    "crc32": "6C1F070E",
+    "required": false
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "pcsx2\\bios",
+      "retroarch\\system\\PCSX2\\bios",
+      "play\\bios"
+    ],
+    "filename": "ps2-dvd-210e.bin",
+    "crc32": "8741CC92",
+    "required": false
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "pcsx2\\bios",
+      "retroarch\\system\\PCSX2\\bios",
+      "play\\bios"
+    ],
+    "filename": "ps2-dvd-210j.bin",
+    "crc32": "DB611D70",
+    "required": false
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "pcsx2\\bios",
+      "retroarch\\system\\PCSX2\\bios",
+      "play\\bios"
+    ],
+    "filename": "ps2-dvd-210u.bin",
+    "crc32": "FB64B4A1",
+    "required": false
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "pcsx2\\bios",
+      "retroarch\\system\\PCSX2\\bios",
+      "play\\bios"
+    ],
+    "filename": "ps2-dvd-212g.bin",
+    "crc32": "1428B7A1",
+    "required": false
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "pcsx2\\bios",
+      "retroarch\\system\\PCSX2\\bios",
+      "play\\bios"
+    ],
+    "filename": "ps2-dvd-212u.bin",
+    "crc32": "5CC1A412",
+    "required": false
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "pcsx2\\bios",
+      "retroarch\\system\\PCSX2\\bios",
+      "play\\bios"
+    ],
+    "filename": "ps2-dvd-213e.bin",
+    "crc32": "71026453",
+    "required": false
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "pcsx2\\bios",
+      "retroarch\\system\\PCSX2\\bios",
+      "play\\bios"
+    ],
+    "filename": "ps2-dvd-300e.bin",
+    "crc32": "7A3208CE",
+    "required": false
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "pcsx2\\bios",
+      "retroarch\\system\\PCSX2\\bios",
+      "play\\bios"
+    ],
+    "filename": "ps2-dvd-300u.bin",
+    "crc32": "5343A330",
+    "required": false
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "pcsx2\\bios",
+      "retroarch\\system\\PCSX2\\bios",
+      "play\\bios"
+    ],
+    "filename": "ps2-dvd-302e.bin",
+    "crc32": "2BB87C5A",
+    "required": false
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "pcsx2\\bios",
+      "retroarch\\system\\PCSX2\\bios",
+      "play\\bios"
+    ],
+    "filename": "ps2-dvd-302u.bin",
+    "crc32": "A1092A68",
+    "required": false
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "pcsx2\\bios",
+      "retroarch\\system\\PCSX2\\bios",
+      "play\\bios"
+    ],
+    "filename": "ps2-dvd-310.bin",
+    "crc32": "DF8F104F",
+    "required": false
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "pcsx2\\bios",
+      "retroarch\\system\\PCSX2\\bios",
+      "play\\bios"
+    ],
+    "filename": "rom1.bin",
+    "crc32": "2C3BCD32",
+    "required": false
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "pcsx2\\bios",
+      "retroarch\\system\\PCSX2\\bios",
+      "play\\bios"
+    ],
+    "filename": "rom2.bin",
+    "crc32": "B5FAD94A",
+    "required": false
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "pcsx2\\bios",
+      "retroarch\\system\\PCSX2\\bios",
+      "play\\bios"
+    ],
+    "filename": "SCPH-30003_BIOS_Vx_PAL_120.bin",
+    "crc32": "7B08C33B",
+    "required": false
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "pcsx2\\bios",
+      "retroarch\\system\\PCSX2\\bios",
+      "play\\bios"
+    ],
+    "filename": "SCPH-30004.bin",
+    "crc32": "9386A740",
+    "required": false
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "pcsx2\\bios",
+      "retroarch\\system\\PCSX2\\bios",
+      "play\\bios"
+    ],
+    "filename": "SCPH-39001_BIOS_V7_USA_160.bin",
+    "crc32": "A19E0BF5",
+    "required": false
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "pcsx2\\bios",
+      "retroarch\\system\\PCSX2\\bios",
+      "play\\bios"
+    ],
+    "filename": "SCPH-39004_BIOS_V7_PAL_160.bin",
+    "crc32": "1F2A283C",
+    "required": false
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "pcsx2\\bios",
+      "retroarch\\system\\PCSX2\\bios",
+      "play\\bios"
+    ],
+    "filename": "SCPH-50000_BIOS_Vx_JAP_170.bin",
+    "crc32": "9457F64E",
+    "required": false
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "pcsx2\\bios",
+      "retroarch\\system\\PCSX2\\bios",
+      "play\\bios"
+    ],
+    "filename": "SCPH-50004_BIOS_V9_PAL_190.BIN",
+    "crc32": "BFE41270",
+    "required": false
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "pcsx2\\bios",
+      "retroarch\\system\\PCSX2\\bios",
+      "play\\bios"
+    ],
+    "filename": "SCPH-70000_BIOS_JAP_200.rom",
+    "crc32": "2F314730",
+    "required": false
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "pcsx2\\bios",
+      "retroarch\\system\\PCSX2\\bios",
+      "play\\bios"
+    ],
+    "filename": "SCPH-70004_BIOS_V12_PAL_200.bin",
+    "crc32": "6F8E3C29",
+    "required": false
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "pcsx2\\bios",
+      "retroarch\\system\\PCSX2\\bios",
+      "play\\bios"
+    ],
+    "filename": "SCPH-70006.bin",
+    "crc32": "B57201BF",
+    "required": false
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "pcsx2\\bios",
+      "retroarch\\system\\PCSX2\\bios",
+      "play\\bios"
+    ],
+    "filename": "SCPH-70008_BIOS_PAL_200.bin",
+    "crc32": "92AA71A2",
+    "required": false
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "pcsx2\\bios",
+      "retroarch\\system\\PCSX2\\bios",
+      "play\\bios"
+    ],
+    "filename": "SCPH-70012_BIOS_V12_USA_200.bin",
+    "crc32": "7EBD68DE",
+    "required": false
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "pcsx2\\bios",
+      "retroarch\\system\\PCSX2\\bios",
+      "play\\bios"
+    ],
+    "filename": "SCPH-90006_BIOS_VX_HK _220.BIN",
+    "crc32": "493C1E58",
+    "required": false
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "pcsx2\\bios",
+      "retroarch\\system\\PCSX2\\bios",
+      "play\\bios"
+    ],
+    "filename": "scph10000.bin",
+    "crc32": "B7EF81A9",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "pcsx2\\bios",
+      "retroarch\\system\\PCSX2\\bios",
+      "play\\bios"
+    ],
+    "filename": "SCPH50003.bin",
+    "crc32": "A5860B09",
+    "required": false
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "pcsx2\\bios",
+      "retroarch\\system\\PCSX2\\bios",
+      "play\\bios"
+    ],
+    "filename": "SCPH77001.bin",
+    "crc32": "1279FCE9",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "pcsx2\\bios",
+      "retroarch\\system\\PCSX2\\bios",
+      "play\\bios"
+    ],
+    "filename": "Sony PlayStation 2 BIOS (E)(v2.0)(2004-06-14)[SCPH70008].bin",
+    "crc32": "92887B09",
+    "required": false
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "pcsx2\\bios",
+      "retroarch\\system\\PCSX2\\bios",
+      "play\\bios"
+    ],
+    "filename": "Sony PlayStation 2 SCPH-18000 System ROM v5.0 build 01.20 (2000-10-27)(Sony)(JP).bin",
+    "crc32": "0DCCE9D7",
+    "required": false
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "pcsx2\\bios",
+      "retroarch\\system\\PCSX2\\bios",
+      "play\\bios"
+    ],
+    "filename": "DTL-H10000_X_Dev_0101_20000224_v0_[8DCC8219].nvm",
+    "crc32": "83301F23",
+    "required": false
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "pcsx2\\bios",
+      "retroarch\\system\\PCSX2\\bios",
+      "play\\bios"
+    ],
+    "filename": "DTL-H30001_BIOS_V2_USA_110.EROM",
+    "crc32": "423292F8",
+    "required": false
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "pcsx2\\bios",
+      "retroarch\\system\\PCSX2\\bios",
+      "play\\bios"
+    ],
+    "filename": "DTL-H30001_BIOS_V2_USA_110.NVM",
+    "crc32": "82A6B781",
+    "required": false
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "pcsx2\\bios",
+      "retroarch\\system\\PCSX2\\bios",
+      "play\\bios"
+    ],
+    "filename": "DTL-H30001_BIOS_V2_USA_110.ROM1",
+    "crc32": "B7094978",
+    "required": false
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "pcsx2\\bios",
+      "retroarch\\system\\PCSX2\\bios",
+      "play\\bios"
+    ],
+    "filename": "erom.bin",
+    "crc32": "6932E64C",
+    "required": false
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "pcsx2\\bios",
+      "retroarch\\system\\PCSX2\\bios",
+      "play\\bios"
+    ],
+    "filename": "fps2bios.rom",
+    "crc32": "BA45BD94",
+    "required": false
+  },
+  {
+    "emulators": [
+      "gambatte",
+      "mgba"
+    ],
+    "paths": [
+      "retroarch\\system",
+      "bizhawk\\firmware"
+    ],
+    "filename": "dmg_boot.bin",
+    "crc32": "59C8598E",
+    "required": true,
+    "alt_filename": "GB_boot_ROM.gb"
+  },
+  {
+    "emulators": [
+      "desmume",
+      "corgids",
+      "melonds"
+    ],
+    "paths": [
+      "retroarch\\system"
+    ],
+    "filename": "biosdsi7.bin",
+    "crc32": "9F1840D9",
+    "required": true
+  },
+  {
+    "emulators": [
+      "desmume",
+      "corgids",
+      "melonds"
+    ],
+    "paths": [
+      "retroarch\\system"
+    ],
+    "filename": "biosdsi9.bin",
+    "crc32": "3D64D498",
+    "required": true
+  },
+  {
+    "emulators": [
+      "desmume",
+      "corgids",
+      "melonds"
+    ],
+    "paths": [
+      "retroarch\\system"
+    ],
+    "filename": "biosnds7.bin",
+    "crc32": "1280F0D5",
+    "required": true
+  },
+  {
+    "emulators": [
+      "desmume",
+      "corgids",
+      "melonds"
+    ],
+    "paths": [
+      "retroarch\\system"
+    ],
+    "filename": "biosnds9.bin",
+    "crc32": "2AB23573",
+    "required": true
+  },
+  {
+    "emulators": [
+      "desmume",
+      "corgids",
+      "melonds"
+    ],
+    "paths": [
+      "retroarch\\system"
+    ],
+    "filename": "dsfirmware.bin",
+    "crc32": "62EFC03D",
+    "required": true
+  },
+  {
+    "emulators": [
+      "desmume",
+      "corgids",
+      "melonds"
+    ],
+    "paths": [
+      "retroarch\\system"
+    ],
+    "filename": "dsifirmware.bin",
+    "crc32": "6F6D289B",
+    "required": true
+  },
+  {
+    "emulators": [
+      "desmume",
+      "corgids",
+      "melonds"
+    ],
+    "paths": [
+      "retroarch\\system"
+    ],
+    "filename": "dsinand.bin",
+    "crc32": "8B79A73C",
+    "required": true
+  },
+  {
+    "emulators": [
+      "desmume",
+      "corgids",
+      "melonds"
+    ],
+    "paths": [
+      "retroarch\\system"
+    ],
+    "filename": "BIOSGBA.ROM",
+    "crc32": "81977335",
+    "required": true
+  },
+  {
+    "emulators": [
+      "desmume",
+      "corgids",
+      "melonds"
+    ],
+    "paths": [
+      "retroarch\\system"
+    ],
+    "filename": "key.cfg",
+    "crc32": "0D1C432B",
+    "required": true
+  },
+  {
+    "emulators": [
+      "desmume",
+      "corgids",
+      "melonds"
+    ],
+    "paths": [
+      "retroarch\\system"
+    ],
+    "filename": "bios7.bin",
+    "crc32": "1280F0D5",
+    "required": true
+  },
+  {
+    "emulators": [
+      "desmume",
+      "corgids",
+      "melonds"
+    ],
+    "paths": [
+      "retroarch\\system"
+    ],
+    "filename": "bios9.bin",
+    "crc32": "2AB23573",
+    "required": true
+  },
+  {
+    "emulators": [
+      "desmume",
+      "corgids",
+      "melonds"
+    ],
+    "paths": [
+      "retroarch\\system"
+    ],
+    "filename": "firmware.bin",
+    "crc32": "6133798D",
+    "required": true
+  },
+  {
+    "emulators": [
+      "desmume",
+      "corgids",
+      "melonds"
+    ],
+    "paths": [
+      "retroarch\\system"
+    ],
+    "filename": "firmware 2006-01-21.nds",
+    "crc32": "01D2B9E8",
+    "required": false
+  },
+  {
+    "emulators": [
+      "desmume",
+      "corgids",
+      "melonds"
+    ],
+    "paths": [
+      "retroarch\\system"
+    ],
+    "filename": "firmware 2006-02-20.nds",
+    "crc32": "A82CB6A6",
+    "required": false
+  },
+  {
+    "emulators": [
+      "desmume",
+      "corgids",
+      "melonds"
+    ],
+    "paths": [
+      "retroarch\\system"
+    ],
+    "filename": "firmware.bin",
+    "crc32": "945F9DC9",
+    "required": false
+  },
+  {
+    "emulators": [
+      "desmume",
+      "corgids",
+      "melonds"
+    ],
+    "paths": [
+      "retroarch\\system"
+    ],
+    "filename": "firmware.nds",
+    "crc32": "34A169E1",
+    "required": false
+  },
+  {
+    "emulators": [
+      "desmume",
+      "corgids",
+      "melonds"
+    ],
+    "paths": [
+      "retroarch\\system"
+    ],
+    "filename": "firmware14d.ds.gba",
+    "crc32": "343EA6F9",
+    "required": false
+  },
+  {
+    "emulators": [
+      "desmume",
+      "corgids",
+      "melonds"
+    ],
+    "paths": [
+      "retroarch\\system"
+    ],
+    "filename": "firmware14d.nds",
+    "crc32": "DDC677F9",
+    "required": false
+  },
+  {
+    "emulators": [
+      "desmume",
+      "corgids",
+      "melonds"
+    ],
+    "paths": [
+      "retroarch\\system"
+    ],
+    "filename": "firmware_10a.ds.gba",
+    "crc32": "491BD35A",
+    "required": false
+  },
+  {
+    "emulators": [
+      "desmume",
+      "corgids",
+      "melonds"
+    ],
+    "paths": [
+      "retroarch\\system"
+    ],
+    "filename": "firmware_10a.nds",
+    "crc32": "734477D6",
+    "required": false
+  },
+  {
+    "emulators": [
+      "desmume",
+      "corgids",
+      "melonds"
+    ],
+    "paths": [
+      "retroarch\\system"
+    ],
+    "filename": "firmware_11.ds.gba",
+    "crc32": "EA9A1D30",
+    "required": false
+  },
+  {
+    "emulators": [
+      "desmume",
+      "corgids",
+      "melonds"
+    ],
+    "paths": [
+      "retroarch\\system"
+    ],
+    "filename": "firmware_11.nds",
+    "crc32": "98ADE713",
+    "required": false
+  },
+  {
+    "emulators": [
+      "desmume",
+      "corgids",
+      "melonds"
+    ],
+    "paths": [
+      "retroarch\\system"
+    ],
+    "filename": "firmware_13a.ds.gba",
+    "crc32": "FCD7E15D",
+    "required": false
+  },
+  {
+    "emulators": [
+      "desmume",
+      "corgids",
+      "melonds"
+    ],
+    "paths": [
+      "retroarch\\system"
+    ],
+    "filename": "firmware_13a.nds",
+    "crc32": "2CD94BB1",
+    "required": false
+  },
+  {
+    "emulators": [
+      "desmume",
+      "corgids",
+      "melonds"
+    ],
+    "paths": [
+      "retroarch\\system"
+    ],
+    "filename": "firmware_14b.ds.gba",
+    "crc32": "532764E3",
+    "required": false
+  },
+  {
+    "emulators": [
+      "desmume",
+      "corgids",
+      "melonds"
+    ],
+    "paths": [
+      "retroarch\\system"
+    ],
+    "filename": "firmware_14b.nds",
+    "crc32": "B48A644D",
+    "required": false
+  },
+  {
+    "emulators": [
+      "desmume",
+      "corgids",
+      "melonds"
+    ],
+    "paths": [
+      "retroarch\\system"
+    ],
+    "filename": "flashme - NDS-FW-V6.nds",
+    "crc32": "FC1FD958",
+    "required": false
+  },
+  {
+    "emulators": [
+      "desmume",
+      "corgids",
+      "melonds"
+    ],
+    "paths": [
+      "retroarch\\system"
+    ],
+    "filename": "flashme v4 fix.ds.gba",
+    "crc32": "0C2B79C8",
+    "required": false
+  },
+  {
+    "emulators": [
+      "desmume",
+      "corgids",
+      "melonds"
+    ],
+    "paths": [
+      "retroarch\\system"
+    ],
+    "filename": "flashme v4.ds.gba",
+    "crc32": "9606CDC5",
+    "required": false
+  },
+  {
+    "emulators": [
+      "desmume",
+      "corgids",
+      "melonds"
+    ],
+    "paths": [
+      "retroarch\\system"
+    ],
+    "filename": "flashme v7.nds",
+    "crc32": "A4FEA840",
+    "required": false
+  },
+  {
+    "emulators": [
+      "desmume",
+      "corgids",
+      "melonds"
+    ],
+    "paths": [
+      "retroarch\\system"
+    ],
+    "filename": "flashme_Lite_final.nds",
+    "crc32": "597F2B69",
+    "required": false
+  },
+  {
+    "emulators": [
+      "desmume",
+      "corgids",
+      "melonds"
+    ],
+    "paths": [
+      "retroarch\\system"
+    ],
+    "filename": "flashme_Lite_final_stealth.nds",
+    "crc32": "0D8B19AE",
+    "required": false
+  },
+  {
+    "emulators": [
+      "desmume",
+      "corgids",
+      "melonds"
+    ],
+    "paths": [
+      "retroarch\\system"
+    ],
+    "filename": "flashme_stealth - NDS-FW-V6.nds",
+    "crc32": "DFAFF4F7",
+    "required": false
+  },
+  {
+    "emulators": [
+      "desmume",
+      "corgids",
+      "melonds"
+    ],
+    "paths": [
+      "retroarch\\system"
+    ],
+    "filename": "flashme_stealth v7.nds",
+    "crc32": "19AF919B",
+    "required": false
+  },
+  {
+    "emulators": [
+      "desmume",
+      "corgids",
+      "melonds"
+    ],
+    "paths": [
+      "retroarch\\system"
+    ],
+    "filename": "installer.nds",
+    "crc32": "87F6D64C",
+    "required": false
+  },
+  {
+    "emulators": [
+      "desmume",
+      "corgids",
+      "melonds"
+    ],
+    "paths": [
+      "retroarch\\system"
+    ],
+    "filename": "noflashme v4.ds.gba",
+    "crc32": "3B320FDC",
+    "required": false
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "redream\\bios",
+      "flycast\\data",
+      "demul\\roms\\dc.zip"
+    ],
+    "filename": "1_01d_01.bin",
+    "crc32": "89F2B1A1",
+    "required": false
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "redream\\bios",
+      "flycast\\data",
+      "demul\\roms\\dc.zip"
+    ],
+    "filename": "1_01d_02.bin",
+    "crc32": "A2564FAD",
+    "required": false
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "redream\\bios",
+      "flycast\\data",
+      "demul\\roms\\dc.zip"
+    ],
+    "filename": "1_004_01.bin",
+    "crc32": "545481F",
+    "required": false
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "redream\\bios",
+      "flycast\\data",
+      "demul\\roms\\dc.zip"
+    ],
+    "filename": "1_011_01.bin",
+    "crc32": "2186E0E5",
+    "required": false
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "redream\\bios",
+      "flycast\\data",
+      "demul\\roms\\dc.zip"
+    ],
+    "filename": "1_022_01.bin",
+    "crc32": "786168F9",
+    "required": false
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "redream\\bios",
+      "nullDC\\data",
+      "reicast\\data",
+      "flycast\\data",
+      "retroarch\\system\\dc"
+    ],
+    "filename": "DC - BIOS (All).bin",
+    "crc32": "61D5613F",
+    "required": false
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "redream\\bios",
+      "nullDC\\data",
+      "reicast\\data",
+      "flycast\\data",
+      "retroarch\\system\\dc"
+    ],
+    "filename": "DC - Flash (All).bin",
+    "crc32": "E0D202A2",
+    "required": false
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "redream\\bios",
+      "nullDC\\data",
+      "reicast\\data",
+      "flycast\\data",
+      "retroarch\\system\\dc"
+    ],
+    "filename": "DC - VMS BIOS (Full).bin",
+    "crc32": "C7C77B3C",
+    "required": true
+  },
+  {
+    "emulators": [
+      "chankast"
+    ],
+    "paths": [],
+    "filename": "dc_bios.bin",
+    "crc32": "C611B498",
+    "required": false
+  },
+  {
+    "emulators": [
+      "chankast"
+    ],
+    "paths": [],
+    "filename": "dc_bios.bin",
+    "crc32": "05EFF2BB",
+    "required": false
+  },
+  {
+    "emulators": [
+      "chankast"
+    ],
+    "paths": [],
+    "filename": "dc_bios.bin",
+    "crc32": "89F2B1A1",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "redream\\bios",
+      "nullDC\\data",
+      "reicast\\data",
+      "flycast\\data",
+      "retroarch\\system\\dc"
+    ],
+    "filename": "DC101d_us.bin",
+    "crc32": "05EFF2BB",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "redream\\bios",
+      "nullDC\\data",
+      "reicast\\data",
+      "flycast\\data",
+      "retroarch\\system\\dc"
+    ],
+    "filename": "DC_boot.bin",
+    "crc32": "89F2B1A1",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "redream\\bios",
+      "nullDC\\data",
+      "reicast\\data",
+      "flycast\\data",
+      "retroarch\\system\\dc"
+    ],
+    "filename": "DC_flash.bin",
+    "crc32": "C611B498",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "redream\\bios",
+      "nullDC\\data",
+      "reicast\\data",
+      "flycast\\data",
+      "retroarch\\system\\dc"
+    ],
+    "filename": "DC_nvmem.bin",
+    "crc32": "05EFF2BB",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "redream\\bios",
+      "nullDC\\data",
+      "reicast\\data",
+      "flycast\\data",
+      "retroarch\\system\\dc"
+    ],
+    "filename": "fsca-table.bin",
+    "crc32": "5D905DE4",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "redream\\bios",
+      "flycast\\data",
+      "retroarch\\system\\dc\\naomi.zip"
+    ],
+    "filename": "naomi_boot.bin",
+    "crc32": "D2A1C6BF",
+    "required": false
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "redream\\bios",
+      "flycast\\data",
+      "retroarch\\system\\dc"
+    ],
+    "filename": "vmu_save_A1.bin",
+    "crc32": "7EE8CDCD",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "yuzu\\keys"
+    ],
+    "filename": "prod.keys",
+    "crc32": "DCAA7CAC",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "yuzu\\keys"
+    ],
+    "filename": "title.keys",
+    "crc32": "7467A450",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "yuzu\\sysdata"
+    ],
+    "filename": "FontChineseSimplified.ttf",
+    "crc32": "725c5a9a",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "yuzu\\sysdata"
+    ],
+    "filename": "FontChineseTraditional.ttf",
+    "crc32": "9f579516",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "yuzu\\sysdata"
+    ],
+    "filename": "FontExtendedChineseSimplified.ttf",
+    "crc32": "d5d7ce2f",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "yuzu\\sysdata"
+    ],
+    "filename": "FontKorean.ttf",
+    "crc32": "eb2882a7",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "yuzu\\sysdata"
+    ],
+    "filename": "FontNintendoExtended.ttf",
+    "crc32": "19bd72e8",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "yuzu\\sysdata"
+    ],
+    "filename": "FontNintendoExtended2.ttf",
+    "crc32": "7f2a88f5",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "yuzu\\sysdata"
+    ],
+    "filename": "FontStandard.ttf",
+    "crc32": "514c512b",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "redream\\bios",
+      "flycast\\data",
+      "demul\\roms\\awbios.zip",
+      "retroarch\\system\\dc\\awbios.zip"
+    ],
+    "filename": "bios.ic23",
+    "crc32": "5D5687C7",
+    "required": false
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "redream\\bios",
+      "flycast\\data",
+      "demul\\roms\\awbios.zip",
+      "retroarch\\system\\dc\\awbios.zip"
+    ],
+    "filename": "bios.ic23_l",
+    "crc32": "E5693CE3",
+    "required": false
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "redream\\bios",
+      "flycast\\data",
+      "demul\\roms\\awbios.zip",
+      "retroarch\\system\\dc\\awbios.zip"
+    ],
+    "filename": "bios0.ic23",
+    "crc32": "719B2B0B",
+    "required": false
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "redream\\bios",
+      "flycast\\data",
+      "demul\\roms\\awbios.zip",
+      "retroarch\\system\\dc\\awbios.zip"
+    ],
+    "filename": "bios1.ic23",
+    "crc32": "D3E80A9F",
+    "required": false
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "redream\\bios",
+      "flycast\\data",
+      "demul\\roms\\naomi.zip",
+      "retroarch\\system\\dc\\naomi.zip"
+    ],
+    "filename": "dcnaodev.bios",
+    "crc32": "7A50FAB9",
+    "required": false
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "redream\\bios",
+      "flycast\\data",
+      "demul\\roms\\naomi.zip",
+      "retroarch\\system\\dc\\naomi.zip"
+    ],
+    "filename": "eeprom-naomi-main-default.bin",
+    "crc32": "FEA29CBB",
+    "required": false
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "redream\\bios",
+      "flycast\\data",
+      "demul\\roms\\naomigd.zip",
+      "retroarch\\system\\dc\\naomigd.zip"
+    ],
+    "filename": "eeprom-naomi-main-default.bin",
+    "crc32": "FEA29CBB",
+    "required": false
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "redream\\bios",
+      "flycast\\data",
+      "demul\\roms\\naomigd.zip",
+      "retroarch\\system\\dc\\naomigd.zip"
+    ],
+    "filename": "epr-21576d.bin",
+    "crc32": "3B2AFA7B",
+    "required": false
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "redream\\bios",
+      "flycast\\data",
+      "demul\\roms\\naomigd.zip",
+      "retroarch\\system\\dc\\naomigd.zip"
+    ],
+    "filename": "epr-21576e.bin",
+    "crc32": "08C0ADD7",
+    "required": false
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "redream\\bios",
+      "flycast\\data",
+      "demul\\roms\\naomigd.zip",
+      "retroarch\\system\\dc\\naomigd.zip"
+    ],
+    "filename": "epr-21576g.bin",
+    "crc32": "D2A1C6BF",
+    "required": false
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "redream\\bios",
+      "flycast\\data",
+      "demul\\roms\\naomigd.zip",
+      "retroarch\\system\\dc\\naomigd.zip"
+    ],
+    "filename": "epr-21576h.bin",
+    "crc32": "D4895685",
+    "required": false
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "redream\\bios",
+      "flycast\\data",
+      "demul\\roms\\naomigd.zip",
+      "retroarch\\system\\dc\\naomigd.zip"
+    ],
+    "filename": "epr-21577d.bin",
+    "crc32": "60DDCBBE",
+    "required": false
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "redream\\bios",
+      "flycast\\data",
+      "demul\\roms\\naomigd.zip",
+      "retroarch\\system\\dc\\naomigd.zip"
+    ],
+    "filename": "epr-21577e.bin",
+    "crc32": "CF36E97B",
+    "required": false
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "redream\\bios",
+      "flycast\\data",
+      "demul\\roms\\naomigd.zip",
+      "retroarch\\system\\dc\\naomigd.zip"
+    ],
+    "filename": "epr-21577g.bin",
+    "crc32": "25F64AF7",
+    "required": false
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "redream\\bios",
+      "flycast\\data",
+      "demul\\roms\\naomigd.zip",
+      "retroarch\\system\\dc\\naomigd.zip"
+    ],
+    "filename": "epr-21578d.bin",
+    "crc32": "DFD5F42A",
+    "required": false
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "redream\\bios",
+      "flycast\\data",
+      "demul\\roms\\naomigd.zip",
+      "retroarch\\system\\dc\\naomigd.zip"
+    ],
+    "filename": "epr-21578e.bin",
+    "crc32": "087F09A3",
+    "required": false
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "redream\\bios",
+      "flycast\\data",
+      "demul\\roms\\naomigd.zip",
+      "retroarch\\system\\dc\\naomigd.zip"
+    ],
+    "filename": "epr-21578g.ic27",
+    "crc32": "55413214",
+    "required": false
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "redream\\bios",
+      "flycast\\data",
+      "demul\\roms\\naomigd.zip",
+      "retroarch\\system\\dc\\naomigd.zip"
+    ],
+    "filename": "epr-21578h.ic27",
+    "crc32": "7B452946",
+    "required": false
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "redream\\bios",
+      "flycast\\data",
+      "demul\\roms\\naomigd.zip",
+      "retroarch\\system\\dc\\naomigd.zip"
+    ],
+    "filename": "fpr-23489c.ic14",
+    "crc32": "BC38BEA1",
+    "required": false
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "redream\\bios",
+      "flycast\\data",
+      "demul\\roms\\naomi.zip",
+      "retroarch\\system\\dc\\naomi.zip"
+    ],
+    "filename": "epr-21576.ic27",
+    "crc32": "9DAD3495",
+    "required": false
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "redream\\bios",
+      "flycast\\data",
+      "demul\\roms\\naomi.zip",
+      "retroarch\\system\\dc\\naomi.zip"
+    ],
+    "filename": "epr-21576b.ic27",
+    "crc32": "755A6E07",
+    "required": false
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "redream\\bios",
+      "flycast\\data",
+      "demul\\roms\\naomi.zip",
+      "retroarch\\system\\dc\\naomi.zip"
+    ],
+    "filename": "epr-21576d.ic27",
+    "crc32": "3B2AFA7B",
+    "required": false
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "redream\\bios",
+      "flycast\\data",
+      "demul\\roms\\naomi.zip",
+      "retroarch\\system\\dc\\naomi.zip"
+    ],
+    "filename": "epr-21576e.ic27",
+    "crc32": "08C0ADD7",
+    "required": false
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "redream\\bios",
+      "flycast\\data",
+      "demul\\roms\\naomi.zi",
+      "retroarch\\system\\dc\\naomi.zipp"
+    ],
+    "filename": "epr-21576g.ic27",
+    "crc32": "D2A1C6BF",
+    "required": false
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "redream\\bios",
+      "flycast\\data",
+      "demul\\roms\\naomi.zip",
+      "retroarch\\system\\dc\\naomi.zip"
+    ],
+    "filename": "epr-21576h.ic27",
+    "crc32": "D4895685",
+    "required": false
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "redream\\bios",
+      "flycast\\data",
+      "demul\\roms\\naomi.zip",
+      "retroarch\\system\\dc\\naomi.zip"
+    ],
+    "filename": "epr-21577d.ic27",
+    "crc32": "60DDCBBE",
+    "required": false
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "redream\\bios",
+      "flycast\\data",
+      "demul\\roms\\naomi.zip",
+      "retroarch\\system\\dc\\naomi.zip"
+    ],
+    "filename": "epr-21577e.ic27",
+    "crc32": "CF36E97B",
+    "required": false
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "redream\\bios",
+      "flycast\\data",
+      "demul\\roms\\naomi.zip",
+      "retroarch\\system\\dc\\naomi.zip"
+    ],
+    "filename": "epr-21577g.ic27",
+    "crc32": "25F64AF7",
+    "required": false
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "redream\\bios",
+      "flycast\\data",
+      "demul\\roms\\naomi.zip",
+      "retroarch\\system\\dc\\naomi.zip"
+    ],
+    "filename": "epr-21578b.ic27",
+    "crc32": "6C9AAD83",
+    "required": false
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "redream\\bios",
+      "flycast\\data",
+      "demul\\roms\\naomi.zip",
+      "retroarch\\system\\dc\\naomi.zip"
+    ],
+    "filename": "epr-21578d.ic27",
+    "crc32": "DFD5F42A",
+    "required": false
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "redream\\bios",
+      "flycast\\data",
+      "demul\\roms\\naomi.zip",
+      "retroarch\\system\\dc\\naomi.zip"
+    ],
+    "filename": "epr-21578e.ic27",
+    "crc32": "087F09A3",
+    "required": false
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "redream\\bios",
+      "flycast\\data",
+      "demul\\roms\\naomi.zip",
+      "retroarch\\system\\dc\\naomi.zip"
+    ],
+    "filename": "epr-21578g.ic27",
+    "crc32": "55413214",
+    "required": false
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "redream\\bios",
+      "flycast\\data",
+      "demul\\roms\\naomi.zip",
+      "retroarch\\system\\dc\\naomi.zip"
+    ],
+    "filename": "epr-21578h.ic27",
+    "crc32": "7B452946",
+    "required": false
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "redream\\bios",
+      "flycast\\data",
+      "demul\\roms\\naomi.zip",
+      "retroarch\\system\\dc\\naomi.zip"
+    ],
+    "filename": "epr-22850.ic27",
+    "crc32": "28AA539D",
+    "required": false
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "redream\\bios",
+      "flycast\\data",
+      "demul\\roms\\naomi.zip",
+      "retroarch\\system\\dc\\naomi.zip"
+    ],
+    "filename": "epr-22851.ic27",
+    "crc32": "62483677",
+    "required": false
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "redream\\bios",
+      "flycast\\data",
+      "demul\\roms\\naomi2.zip",
+      "retroarch\\system\\dc\\naomi2.zip"
+    ],
+    "filename": "eeprom-naomi-main-default.bin",
+    "crc32": "FEA29CBB",
+    "required": false
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "redream\\bios",
+      "flycast\\data",
+      "demul\\roms\\naomi2.zip",
+      "retroarch\\system\\dc\\naomi2.zip"
+    ],
+    "filename": "epr-23605.bin",
+    "crc32": "5731E446",
+    "required": false
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "redream\\bios",
+      "flycast\\data",
+      "demul\\roms\\naomi2.zip",
+      "retroarch\\system\\dc\\naomi2.zip"
+    ],
+    "filename": "epr-23605a.bin",
+    "crc32": "7BC3FC2D",
+    "required": false
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "redream\\bios",
+      "flycast\\data",
+      "demul\\roms\\naomi2.zip",
+      "retroarch\\system\\dc\\naomi2.zip"
+    ],
+    "filename": "epr-23605b.bin",
+    "crc32": "3A3242D4",
+    "required": false
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "redream\\bios",
+      "flycast\\data",
+      "demul\\roms\\naomi2.zip",
+      "retroarch\\system\\dc\\naomi2.zip"
+    ],
+    "filename": "epr-23605c.bin",
+    "crc32": "297EA6ED",
+    "required": false
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "redream\\bios",
+      "flycast\\data",
+      "demul\\roms\\naomi2.zip",
+      "retroarch\\system\\dc\\naomi2.zip"
+    ],
+    "filename": "epr-23607.bin",
+    "crc32": "2B55ADD2",
+    "required": false
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "redream\\bios",
+      "flycast\\data",
+      "demul\\roms\\naomi2.zip",
+      "retroarch\\system\\dc\\naomi2.zip"
+    ],
+    "filename": "epr-23607b.bin",
+    "crc32": "F308C5E9",
+    "required": false
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "redream\\bios",
+      "flycast\\data",
+      "demul\\roms\\naomi2.zip",
+      "retroarch\\system\\dc\\naomi2.zip"
+    ],
+    "filename": "epr-23608.bin",
+    "crc32": "929CC3A6",
+    "required": false
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "redream\\bios",
+      "flycast\\data",
+      "demul\\roms\\naomi2.zip",
+      "retroarch\\system\\dc\\naomi2.zip"
+    ],
+    "filename": "epr-23608b.bin",
+    "crc32": "A554B1E3",
+    "required": false
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "redream\\bios",
+      "flycast\\data",
+      "demul\\roms\\naomi2.zip",
+      "retroarch\\system\\dc\\naomi2.zip"
+    ],
+    "filename": "epr-23608c.bin",
+    "crc32": "6EF1DD8E",
+    "required": false
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system"
+    ],
+    "filename": "ProSystem.dat",
+    "crc32": "9402D164",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Databases"
+    ],
+    "filename": "colecodb.xml",
+    "crc32": "5C42B5D1",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Databases"
+    ],
+    "filename": "msxcaswavdb.xml",
+    "crc32": "4AE56BF2",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Databases"
+    ],
+    "filename": "msxromdb.xml",
+    "crc32": "ED4C6720",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Databases"
+    ],
+    "filename": "msxsysromdb.xml",
+    "crc32": "A11837C3",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Databases"
+    ],
+    "filename": "segadb.xml",
+    "crc32": "AD813665",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Databases"
+    ],
+    "filename": "svidb.xml",
+    "crc32": "84D48F54",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\COL - Bit Corporation Dina"
+    ],
+    "filename": "config.ini",
+    "crc32": "AD177B1C",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\COL - Bit Corporation Dina"
+    ],
+    "filename": "czz50-1.rom",
+    "crc32": "696C101A",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\COL - Bit Corporation Dina"
+    ],
+    "filename": "czz50-2.rom",
+    "crc32": "6538DD32",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\COL - ColecoVision",
+      "bizhawk\\firmware"
+    ],
+    "filename": "coleco.rom",
+    "crc32": "3AA93EF3",
+    "required": true,
+    "alt_filename": "ColecoBios.bin"
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\COL - ColecoVision"
+    ],
+    "filename": "config.ini",
+    "crc32": "D3DE69D9",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\COL - ColecoVision with Opcode Memory Extension",
+      "bizhawk\\firmware"
+    ],
+    "filename": "coleco.rom",
+    "crc32": "3AA93EF3",
+    "required": true,
+    "alt_filename": "ColecoBios.bin"
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\COL - ColecoVision with Opcode Memory Extension"
+    ],
+    "filename": "config.ini",
+    "crc32": "4233F38D",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\COL - Spectravideo SVI-603 Coleco"
+    ],
+    "filename": "config.ini",
+    "crc32": "F8B7F23B",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\COL - Spectravideo SVI-603 Coleco"
+    ],
+    "filename": "SVI603.ROM",
+    "crc32": "19E91B82",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\Forte II Games - Pesadelo"
+    ],
+    "filename": "config.ini",
+    "crc32": "BCD41DE3",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\Forte II Games - Pesadelo"
+    ],
+    "filename": "pesadelo.rom",
+    "crc32": "1AE2F724",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX"
+    ],
+    "filename": "config.ini",
+    "crc32": "FB7EA5D9",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX - Al Alamiah AX-170"
+    ],
+    "filename": "config.ini",
+    "crc32": "F9FE3F94",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX - Arabic"
+    ],
+    "filename": "config.ini",
+    "crc32": "E0F1C37D",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX - Brazilian"
+    ],
+    "filename": "config.ini",
+    "crc32": "EAFC0CEB",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX - C-BIOS"
+    ],
+    "filename": "cbios.txt",
+    "crc32": "582C06D2",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX - C-BIOS"
+    ],
+    "filename": "cbios_logo_msx1.rom",
+    "crc32": "F969E424",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX - C-BIOS"
+    ],
+    "filename": "cbios_main_msx1.rom",
+    "crc32": "F0050785",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX - C-BIOS"
+    ],
+    "filename": "config.ini",
+    "crc32": "4C4104DD",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX - Canon V-10"
+    ],
+    "filename": "config.ini",
+    "crc32": "9AC28DE1",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX - Canon V-20"
+    ],
+    "filename": "config.ini",
+    "crc32": "A859DD0B",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX - Daewoo DPC-100"
+    ],
+    "filename": "config.ini",
+    "crc32": "77A5003F",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX - Daewoo DPC-180"
+    ],
+    "filename": "config.ini",
+    "crc32": "09B64445",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX - Daewoo DPC-200"
+    ],
+    "filename": "config.ini",
+    "crc32": "29B291CD",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX - Daewoo DPC-200E"
+    ],
+    "filename": "config.ini",
+    "crc32": "20643071",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX - Estonian"
+    ],
+    "filename": "config.ini",
+    "crc32": "C8F96701",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX - Frael Bruc 100-1"
+    ],
+    "filename": "config.ini",
+    "crc32": "135089A8",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX - French"
+    ],
+    "filename": "config.ini",
+    "crc32": "4A086035",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX - German"
+    ],
+    "filename": "config.ini",
+    "crc32": "FE7AA493",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX - Goldstar FC-200"
+    ],
+    "filename": "config.ini",
+    "crc32": "ACF2101E",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX - Gradiente Expert 1.0"
+    ],
+    "filename": "config.ini",
+    "crc32": "D6104239",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX - Gradiente Expert 1.1"
+    ],
+    "filename": "config.ini",
+    "crc32": "FB9E90B4",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX - Gradiente Expert 1.3"
+    ],
+    "filename": "config.ini",
+    "crc32": "B7F821ED",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX - Gradiente Expert DDPlus"
+    ],
+    "filename": "config.ini",
+    "crc32": "01F45D95",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX - Gradiente Expert Plus"
+    ],
+    "filename": "config.ini",
+    "crc32": "F15A946B",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX - Japanese"
+    ],
+    "filename": "config.ini",
+    "crc32": "6C4D184C",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX - JVC HC-7GB"
+    ],
+    "filename": "config.ini",
+    "crc32": "8A857A78",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX - Korean"
+    ],
+    "filename": "config.ini",
+    "crc32": "77CF5559",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX - Mitsubishi ML-F80"
+    ],
+    "filename": "config.ini",
+    "crc32": "D08091C7",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX - Mitsubishi ML-FX1"
+    ],
+    "filename": "config.ini",
+    "crc32": "70C19A2F",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX - National CF-1200"
+    ],
+    "filename": "config.ini",
+    "crc32": "AF296A1D",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX - National CF-2000"
+    ],
+    "filename": "config.ini",
+    "crc32": "E935AD5F",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX - National CF-2700"
+    ],
+    "filename": "config.ini",
+    "crc32": "1E1252FE",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX - National CF-3000"
+    ],
+    "filename": "config.ini",
+    "crc32": "C406C3DD",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX - National CF-3300"
+    ],
+    "filename": "config.ini",
+    "crc32": "B1FDB3B2",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX - National FS-1300"
+    ],
+    "filename": "config.ini",
+    "crc32": "9F3C19AD",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX - National FS-4000"
+    ],
+    "filename": "config.ini",
+    "crc32": "2CCAC7AE",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX - Olympia PHC-2"
+    ],
+    "filename": "config.ini",
+    "crc32": "B6EEB005",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX - Olympia PHC-28"
+    ],
+    "filename": "config.ini",
+    "crc32": "102592BF",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX - Panasonic CF-2700G"
+    ],
+    "filename": "config.ini",
+    "crc32": "0E77F49F",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX - Philips NMS-801"
+    ],
+    "filename": "config.ini",
+    "crc32": "302E63E8",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX - Philips VG-8000"
+    ],
+    "filename": "config.ini",
+    "crc32": "F88548E0",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX - Philips VG-8010"
+    ],
+    "filename": "config.ini",
+    "crc32": "960CAC22",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX - Philips VG-8010F"
+    ],
+    "filename": "config.ini",
+    "crc32": "51957B67",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX - Philips VG-8020-00"
+    ],
+    "filename": "config.ini",
+    "crc32": "111C72AF",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX - Philips VG-8020-20"
+    ],
+    "filename": "config.ini",
+    "crc32": "388304D6",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX - Philips VG-8020F"
+    ],
+    "filename": "config.ini",
+    "crc32": "FB6CAC1C",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX - Pioneer PX-7"
+    ],
+    "filename": "config.ini",
+    "crc32": "34A4A905",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX - Pioneer PX-V60"
+    ],
+    "filename": "config.ini",
+    "crc32": "1FCB7015",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX - Russian"
+    ],
+    "filename": "config.ini",
+    "crc32": "98863885",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX - Sanyo MPC-100"
+    ],
+    "filename": "config.ini",
+    "crc32": "C72BAE29",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX - Sanyo MPC-64"
+    ],
+    "filename": "config.ini",
+    "crc32": "1CE7A6AF",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX - Sanyo PHC-28L"
+    ],
+    "filename": "config.ini",
+    "crc32": "DFACBF5E",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX - Sanyo PHC-28S"
+    ],
+    "filename": "config.ini",
+    "crc32": "98842945",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX - Sanyo Wavy MPC-10"
+    ],
+    "filename": "config.ini",
+    "crc32": "41B32477",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX - Sharp Epcom HotBit 1.1"
+    ],
+    "filename": "config.ini",
+    "crc32": "CA568852",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX - Sharp Epcom HotBit 1.2"
+    ],
+    "filename": "config.ini",
+    "crc32": "22B6E359",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX - Sharp Epcom HotBit 1.3b"
+    ],
+    "filename": "config.ini",
+    "crc32": "BF6BEB70",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX - Sharp Epcom HotBit 1.3p"
+    ],
+    "filename": "config.ini",
+    "crc32": "E2677AF7",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX - Sony HB-10P"
+    ],
+    "filename": "config.ini",
+    "crc32": "ED471739",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX - Sony HB-201"
+    ],
+    "filename": "config.ini",
+    "crc32": "8FE12434",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX - Sony HB-201P"
+    ],
+    "filename": "config.ini",
+    "crc32": "6FAB5EE0",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX - Sony HB-20P"
+    ],
+    "filename": "config.ini",
+    "crc32": "B50F35DB",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX - Sony HB-501P"
+    ],
+    "filename": "config.ini",
+    "crc32": "301881E4",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX - Sony HB-55D"
+    ],
+    "filename": "config.ini",
+    "crc32": "9B6D45EA",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX - Sony HB-55P"
+    ],
+    "filename": "config.ini",
+    "crc32": "62D74324",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX - Sony HB-75D"
+    ],
+    "filename": "config.ini",
+    "crc32": "C7C00A93",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX - Sony HB-75P"
+    ],
+    "filename": "config.ini",
+    "crc32": "F7A2EB39",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX - Spanish"
+    ],
+    "filename": "config.ini",
+    "crc32": "0FE6F34C",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX - Spectravideo SVI-728"
+    ],
+    "filename": "config.ini",
+    "crc32": "3A44E91F",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX - Spectravideo SVI-738"
+    ],
+    "filename": "config.ini",
+    "crc32": "B123EB6D",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX - Spectravideo SVI-738 Henrik Gilvad"
+    ],
+    "filename": "config.ini",
+    "crc32": "5B607874",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX - Spectravideo SVI-738 Swedish"
+    ],
+    "filename": "config.ini",
+    "crc32": "9118AD4E",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX - Swedish"
+    ],
+    "filename": "config.ini",
+    "crc32": "779B3BAA",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX - Talent DPC-200"
+    ],
+    "filename": "config.ini",
+    "crc32": "075F91D6",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX - Talent DPC-200A"
+    ],
+    "filename": "config.ini",
+    "crc32": "4EAD381D",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX - Toshiba HX-10"
+    ],
+    "filename": "config.ini",
+    "crc32": "34C70DA4",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX - Toshiba HX-10S"
+    ],
+    "filename": "config.ini",
+    "crc32": "F77F58FD",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX - Toshiba HX-20"
+    ],
+    "filename": "config.ini",
+    "crc32": "6889993B",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX - Yamaha CX5M-1"
+    ],
+    "filename": "config.ini",
+    "crc32": "0039CBDE",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX - Yamaha CX5M-128"
+    ],
+    "filename": "config.ini",
+    "crc32": "B3E1ECAE",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX - Yamaha CX5M-2"
+    ],
+    "filename": "config.ini",
+    "crc32": "BFE16742",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX - Yamaha CX5MII"
+    ],
+    "filename": "config.ini",
+    "crc32": "BAA6720E",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX - Yamaha YIS303"
+    ],
+    "filename": "config.ini",
+    "crc32": "E3C8308D",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX - Yamaha YIS503"
+    ],
+    "filename": "config.ini",
+    "crc32": "513B3D55",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX - Yamaha YIS503F"
+    ],
+    "filename": "config.ini",
+    "crc32": "F5339B4D",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX - Yamaha YIS503II"
+    ],
+    "filename": "config.ini",
+    "crc32": "6B90864E",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX - Yamaha YIS503IIR"
+    ],
+    "filename": "config.ini",
+    "crc32": "3209D68F",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX - Yamaha YIS503IIR Estonian"
+    ],
+    "filename": "config.ini",
+    "crc32": "FCA636B9",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX - Yamaha YIS503M"
+    ],
+    "filename": "config.ini",
+    "crc32": "ED147BD7",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX - Yashica YC-64"
+    ],
+    "filename": "config.ini",
+    "crc32": "C581CC8F",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX - Yeno DPC-64"
+    ],
+    "filename": "config.ini",
+    "crc32": "DD81F0B1",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX - Yeno MX64"
+    ],
+    "filename": "config.ini",
+    "crc32": "B3F889B5",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX2"
+    ],
+    "filename": "config.ini",
+    "crc32": "11543FA2",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX2 - Al Alamiah AX-350"
+    ],
+    "filename": "config.ini",
+    "crc32": "42E63ED1",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX2 - Al Alamiah AX-370"
+    ],
+    "filename": "config.ini",
+    "crc32": "8A8E9736",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX2 - Arabic"
+    ],
+    "filename": "config.ini",
+    "crc32": "9C397EB5",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX2 - Brazilian"
+    ],
+    "filename": "config.ini",
+    "crc32": "B0259AB1",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX2 - C-BIOS"
+    ],
+    "filename": "cbios.txt",
+    "crc32": "582C06D2",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX2 - C-BIOS"
+    ],
+    "filename": "cbios_logo_msx2.rom",
+    "crc32": "4C5485AA",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX2 - C-BIOS"
+    ],
+    "filename": "cbios_main_msx2.rom",
+    "crc32": "EC2FE089",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX2 - C-BIOS"
+    ],
+    "filename": "cbios_sub.rom",
+    "crc32": "F7A597E1",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX2 - C-BIOS"
+    ],
+    "filename": "config.ini",
+    "crc32": "080B6B1E",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX2 - Daewoo CPC-300"
+    ],
+    "filename": "config.ini",
+    "crc32": "52530CCC",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX2 - Daewoo CPC-300E"
+    ],
+    "filename": "config.ini",
+    "crc32": "E2832AE3",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX2 - Daewoo CPC-400"
+    ],
+    "filename": "config.ini",
+    "crc32": "9AF2E00A",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX2 - Daewoo CPC-400S"
+    ],
+    "filename": "config.ini",
+    "crc32": "8D968A40",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX2 - Estonian"
+    ],
+    "filename": "config.ini",
+    "crc32": "19952725",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX2 - French"
+    ],
+    "filename": "config.ini",
+    "crc32": "A64FF87B",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX2 - German"
+    ],
+    "filename": "config.ini",
+    "crc32": "BCB1D3B4",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX2 - Gradiente Expert 2.0"
+    ],
+    "filename": "config.ini",
+    "crc32": "DF6DAF1A",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX2 - Japanese"
+    ],
+    "filename": "config.ini",
+    "crc32": "17FC45D5",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX2 - Korean"
+    ],
+    "filename": "config.ini",
+    "crc32": "F0F95424",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX2 - National FS-4500"
+    ],
+    "filename": "config.ini",
+    "crc32": "FDE93321",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX2 - National FS-4600"
+    ],
+    "filename": "config.ini",
+    "crc32": "E3EBCCED",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX2 - National FS-4700"
+    ],
+    "filename": "config.ini",
+    "crc32": "EC1468D3",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX2 - National FS-5000"
+    ],
+    "filename": "config.ini",
+    "crc32": "E611066F",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX2 - National FS-5500F1"
+    ],
+    "filename": "config.ini",
+    "crc32": "8D95D4E6",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX2 - National FS-5500F2"
+    ],
+    "filename": "config.ini",
+    "crc32": "7F8063E8",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX2 - Only PSG"
+    ],
+    "filename": "config.ini",
+    "crc32": "73100086",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX2 - Panasonic FS-A1"
+    ],
+    "filename": "config.ini",
+    "crc32": "8EB6EB2F",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX2 - Panasonic FS-A1 (a)"
+    ],
+    "filename": "config.ini",
+    "crc32": "4A942A29",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX2 - Panasonic FS-A1F"
+    ],
+    "filename": "config.ini",
+    "crc32": "3499459A",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX2 - Panasonic FS-A1FM"
+    ],
+    "filename": "config.ini",
+    "crc32": "ADF5CAF0",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX2 - Panasonic FS-A1MK2"
+    ],
+    "filename": "config.ini",
+    "crc32": "D3CA7D2F",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX2 - Philips NMS-8220"
+    ],
+    "filename": "config.ini",
+    "crc32": "0EBE4397",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX2 - Philips NMS-8220 (a)"
+    ],
+    "filename": "config.ini",
+    "crc32": "A93DE8C0",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX2 - Philips NMS-8245"
+    ],
+    "filename": "config.ini",
+    "crc32": "EC7F14C6",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX2 - Philips NMS-8245F"
+    ],
+    "filename": "config.ini",
+    "crc32": "7475B435",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX2 - Philips NMS-8250"
+    ],
+    "filename": "config.ini",
+    "crc32": "A1628665",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX2 - Philips NMS-8255"
+    ],
+    "filename": "config.ini",
+    "crc32": "C66C35F0",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX2 - Philips NMS-8280"
+    ],
+    "filename": "config.ini",
+    "crc32": "69A285B4",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX2 - Philips NMS-8280G"
+    ],
+    "filename": "config.ini",
+    "crc32": "0A2FE875",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX2 - Philips VG-8230"
+    ],
+    "filename": "config.ini",
+    "crc32": "DEA2D08E",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX2 - Philips VG-8235"
+    ],
+    "filename": "config.ini",
+    "crc32": "5AC10507",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX2 - Philips VG-8235F"
+    ],
+    "filename": "config.ini",
+    "crc32": "2EA76906",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX2 - Philips VG-8240"
+    ],
+    "filename": "config.ini",
+    "crc32": "87A1EE46",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX2 - Russian"
+    ],
+    "filename": "config.ini",
+    "crc32": "D599144F",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX2 - Sanyo Wavy MPC-25FD"
+    ],
+    "filename": "config.ini",
+    "crc32": "517437A9",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX2 - Sanyo Wavy PHC-23"
+    ],
+    "filename": "config.ini",
+    "crc32": "AC750030",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX2 - Sharp Epcom HotBit 2.0"
+    ],
+    "filename": "config.ini",
+    "crc32": "4028BD85",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX2 - Sony HB-F1"
+    ],
+    "filename": "config.ini",
+    "crc32": "3D4977E9",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX2 - Sony HB-F1II"
+    ],
+    "filename": "config.ini",
+    "crc32": "4C57996C",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX2 - Sony HB-F1XD"
+    ],
+    "filename": "config.ini",
+    "crc32": "ADCE47DD",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX2 - Sony HB-F1XDMK2"
+    ],
+    "filename": "config.ini",
+    "crc32": "9B54D48B",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX2 - Sony HB-F500"
+    ],
+    "filename": "config.ini",
+    "crc32": "6138ABF7",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX2 - Sony HB-F500P"
+    ],
+    "filename": "config.ini",
+    "crc32": "D284F5D7",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX2 - Sony HB-F700D"
+    ],
+    "filename": "config.ini",
+    "crc32": "C57083E9",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX2 - Sony HB-F700F"
+    ],
+    "filename": "config.ini",
+    "crc32": "CF0E9203",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX2 - Sony HB-F700P"
+    ],
+    "filename": "config.ini",
+    "crc32": "4D9BD42F",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX2 - Sony HB-F700S"
+    ],
+    "filename": "config.ini",
+    "crc32": "42DACD30",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX2 - Sony HB-F900"
+    ],
+    "filename": "config.ini",
+    "crc32": "6D1A1F65",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX2 - Sony HB-F900 (a)"
+    ],
+    "filename": "config.ini",
+    "crc32": "5C0720A6",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX2 - Sony HB-F9P"
+    ],
+    "filename": "config.ini",
+    "crc32": "DAAC01C9",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX2 - Sony HB-F9P Russian"
+    ],
+    "filename": "config.ini",
+    "crc32": "70C34C64",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX2 - Sony HB-F9S"
+    ],
+    "filename": "config.ini",
+    "crc32": "29CDD686",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX2 - Sony HB-G900AP"
+    ],
+    "filename": "config.ini",
+    "crc32": "6255227F",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX2 - Sony HB-G900P"
+    ],
+    "filename": "config.ini",
+    "crc32": "B1590BFA",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX2 - Spanish"
+    ],
+    "filename": "config.ini",
+    "crc32": "E8135C5E",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX2 - Spectravideo SVI-738-2 CUC"
+    ],
+    "filename": "config.ini",
+    "crc32": "A8F63614",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX2 - Spectravideo SVI-738-2 JP Grobler"
+    ],
+    "filename": "config.ini",
+    "crc32": "608C4306",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX2 - Spectravideo SVI-738-2 LC Grosso"
+    ],
+    "filename": "config.ini",
+    "crc32": "1489EE4C",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX2 - Swedish"
+    ],
+    "filename": "config.ini",
+    "crc32": "DFA548EF",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX2 - Talent TPC-310"
+    ],
+    "filename": "config.ini",
+    "crc32": "8C4167EE",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX2 - Toshiba HX-23"
+    ],
+    "filename": "config.ini",
+    "crc32": "27723BF9",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX2 - Toshiba HX-23F"
+    ],
+    "filename": "config.ini",
+    "crc32": "425CE987",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX2 - Virtual Haesung Console"
+    ],
+    "filename": "config.ini",
+    "crc32": "62DBFCE5",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX2 - Yamaha CX7M"
+    ],
+    "filename": "config.ini",
+    "crc32": "9212C2DB",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX2 - Yamaha CX7M-128"
+    ],
+    "filename": "config.ini",
+    "crc32": "BB7DA292",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX2+"
+    ],
+    "filename": "config.ini",
+    "crc32": "8609E07E",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX2+ - Brazilian"
+    ],
+    "filename": "config.ini",
+    "crc32": "19FE4C08",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX2+ - C-BIOS"
+    ],
+    "filename": "cbios.txt",
+    "crc32": "582C06D2",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX2+ - C-BIOS"
+    ],
+    "filename": "cbios_logo_msx2+.rom",
+    "crc32": "1C7429C6",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX2+ - C-BIOS"
+    ],
+    "filename": "cbios_main_msx2+.rom",
+    "crc32": "AE23C039",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX2+ - C-BIOS"
+    ],
+    "filename": "cbios_music.rom",
+    "crc32": "15C6CE2B",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX2+ - C-BIOS"
+    ],
+    "filename": "cbios_sub.rom",
+    "crc32": "F7A597E1",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX2+ - C-BIOS"
+    ],
+    "filename": "config.ini",
+    "crc32": "463E6FFC",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX2+ - Ciel Expert 3 IDE"
+    ],
+    "filename": "config.ini",
+    "crc32": "8EA96669",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX2+ - Ciel Expert 3 Turbo"
+    ],
+    "filename": "config.ini",
+    "crc32": "7AB7592C",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX2+ - European"
+    ],
+    "filename": "config.ini",
+    "crc32": "390CA8FD",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX2+ - European"
+    ],
+    "filename": "KANJI.rom",
+    "crc32": "1F6406FB",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX2+ - European"
+    ],
+    "filename": "Msx2pe.rom",
+    "crc32": "76C46FE0",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX2+ - European"
+    ],
+    "filename": "Msx2pexte.rom",
+    "crc32": "2852B383",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX2+ - European"
+    ],
+    "filename": "MSX2PMUS.rom",
+    "crc32": "456E494E",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX2+ - European"
+    ],
+    "filename": "MSXKANJI.rom",
+    "crc32": "B4FC574D",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX2+ - European"
+    ],
+    "filename": "PANASONICDISK.rom",
+    "crc32": "17FA392B",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX2+ - European"
+    ],
+    "filename": "XBASIC2.rom",
+    "crc32": "2825B1A0",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX2+ - Gradiente Expert AC88+"
+    ],
+    "filename": "config.ini",
+    "crc32": "054C631D",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX2+ - Gradiente Expert DDX+"
+    ],
+    "filename": "config.ini",
+    "crc32": "746D1F27",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX2+ - MSXPLAYer 2003"
+    ],
+    "filename": "config.ini",
+    "crc32": "63683601",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX2+ - Panasonic FS-A1FX"
+    ],
+    "filename": "config.ini",
+    "crc32": "6FD91ED9",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX2+ - Panasonic FS-A1WSX"
+    ],
+    "filename": "config.ini",
+    "crc32": "C2C572FB",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX2+ - Panasonic FS-A1WX"
+    ],
+    "filename": "config.ini",
+    "crc32": "B2CFD854",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX2+ - Panasonic FS-A1WX (a)"
+    ],
+    "filename": "config.ini",
+    "crc32": "3D191A4B",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX2+ - Sanyo Wavy PHC-35J"
+    ],
+    "filename": "config.ini",
+    "crc32": "D71D6C2A",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX2+ - Sanyo Wavy PHC-70FD1"
+    ],
+    "filename": "config.ini",
+    "crc32": "589092E3",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX2+ - Sanyo Wavy PHC-70FD2"
+    ],
+    "filename": "config.ini",
+    "crc32": "DA69E434",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX2+ - Sony HB-F1XDJ"
+    ],
+    "filename": "config.ini",
+    "crc32": "46EDD0BA",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX2+ - Sony HB-F1XV"
+    ],
+    "filename": "config.ini",
+    "crc32": "E079EDDD",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSX2+ - Sony HB-F9S+"
+    ],
+    "filename": "config.ini",
+    "crc32": "C3B50B71",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSXturboR"
+    ],
+    "filename": "config.ini",
+    "crc32": "1F62C680",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSXturboR - European"
+    ],
+    "filename": "config.ini",
+    "crc32": "9435070A",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSXturboR - Panasonic FS-A1GT"
+    ],
+    "filename": "config.ini",
+    "crc32": "5835F149",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSXturboR - Panasonic FS-A1ST"
+    ],
+    "filename": "config.ini",
+    "crc32": "158717D0",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSXturboR - Panasonic FS-A1ST (a)"
+    ],
+    "filename": "config.ini",
+    "crc32": "3158CDF2",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\MSXturboR - Panasonic FS-A1ST (b)"
+    ],
+    "filename": "config.ini",
+    "crc32": "B72BEA18",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\SEGA - SC-3000"
+    ],
+    "filename": "config.ini",
+    "crc32": "B74A08E6",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\SEGA - SF-7000"
+    ],
+    "filename": "config.ini",
+    "crc32": "BA727732",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\SEGA - SF-7000"
+    ],
+    "filename": "sf7000.rom",
+    "crc32": "D76810B8",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\SEGA - SG-1000"
+    ],
+    "filename": "config.ini",
+    "crc32": "6C26E357",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\Shared Roms"
+    ],
+    "filename": "ARAB1.ROM",
+    "crc32": "339CD1AA",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\Shared Roms"
+    ],
+    "filename": "ARABIC.rom",
+    "crc32": "C0D8FC85",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\Shared Roms"
+    ],
+    "filename": "BEERIDE.ROM",
+    "crc32": "584B1250",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\Shared Roms"
+    ],
+    "filename": "FMPAC.rom",
+    "crc32": "0E84505D",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\Shared Roms"
+    ],
+    "filename": "GCVMX80.ROM",
+    "crc32": "47B843CA",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\Shared Roms"
+    ],
+    "filename": "HANGUL.rom",
+    "crc32": "B663C605",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\Shared Roms"
+    ],
+    "filename": "KANJI.rom",
+    "crc32": "1F6406FB",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\Shared Roms"
+    ],
+    "filename": "MICROSOLDISK.ROM",
+    "crc32": "232222BE",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\Shared Roms"
+    ],
+    "filename": "MOONSOUND.rom",
+    "crc32": "2A9D8D43",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\Shared Roms"
+    ],
+    "filename": "MSX.rom",
+    "crc32": "A317E6B4",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\Shared Roms"
+    ],
+    "filename": "MSX2.rom",
+    "crc32": "6CDAF3A5",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\Shared Roms"
+    ],
+    "filename": "MSX2AR.ROM",
+    "crc32": "EA306155",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\Shared Roms"
+    ],
+    "filename": "MSX2AREXT.ROM",
+    "crc32": "7C7540B7",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\Shared Roms"
+    ],
+    "filename": "MSX2BR.rom",
+    "crc32": "6BACDCE4",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\Shared Roms"
+    ],
+    "filename": "MSX2BREXT.rom",
+    "crc32": "08CED880",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\Shared Roms"
+    ],
+    "filename": "MSX2EXT.rom",
+    "crc32": "66237ECF",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\Shared Roms"
+    ],
+    "filename": "MSX2FR.rom",
+    "crc32": "C0577A50",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\Shared Roms"
+    ],
+    "filename": "MSX2FREXT.rom",
+    "crc32": "E235D5C8",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\Shared Roms"
+    ],
+    "filename": "MSX2G.rom",
+    "crc32": "8FA060E2",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\Shared Roms"
+    ],
+    "filename": "MSX2GEXT.rom",
+    "crc32": "41E36D03",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\Shared Roms"
+    ],
+    "filename": "MSX2HAN.rom",
+    "crc32": "A8EAD5E3",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\Shared Roms"
+    ],
+    "filename": "MSX2J.rom",
+    "crc32": "9B3E7B97",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\Shared Roms"
+    ],
+    "filename": "MSX2JEXT.rom",
+    "crc32": "43E7A7FC",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\Shared Roms"
+    ],
+    "filename": "MSX2KR.rom",
+    "crc32": "53850907",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\Shared Roms"
+    ],
+    "filename": "MSX2KREXT.rom",
+    "crc32": "2BA104A3",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\Shared Roms"
+    ],
+    "filename": "MSX2P.rom",
+    "crc32": "19771608",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\Shared Roms"
+    ],
+    "filename": "MSX2PEXT.rom",
+    "crc32": "B8BA44D3",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\Shared Roms"
+    ],
+    "filename": "MSX2PMUS.rom",
+    "crc32": "456E494E",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\Shared Roms"
+    ],
+    "filename": "MSX2R.rom",
+    "crc32": "E7D08E29",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\Shared Roms"
+    ],
+    "filename": "MSX2R2.ROM",
+    "crc32": "D0C20F54",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\Shared Roms"
+    ],
+    "filename": "MSX2REXT.rom",
+    "crc32": "34D21778",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\Shared Roms"
+    ],
+    "filename": "MSX2SE.rom",
+    "crc32": "5648EEEB",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\Shared Roms"
+    ],
+    "filename": "MSX2SP.rom",
+    "crc32": "C2B889A5",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\Shared Roms"
+    ],
+    "filename": "MSX2SPEXT.rom",
+    "crc32": "DC0951BD",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\Shared Roms"
+    ],
+    "filename": "MSXAR.ROM",
+    "crc32": "BD95C436",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\Shared Roms"
+    ],
+    "filename": "MSXBR.rom",
+    "crc32": "EFB4B972",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\Shared Roms"
+    ],
+    "filename": "MSXDOS23.ROM",
+    "crc32": "D25FC001",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\Shared Roms"
+    ],
+    "filename": "MSXFR.rom",
+    "crc32": "6E692FA1",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\Shared Roms"
+    ],
+    "filename": "MSXG.rom",
+    "crc32": "7E2B32DD",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\Shared Roms"
+    ],
+    "filename": "MSXHAN.rom",
+    "crc32": "938DB440",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\Shared Roms"
+    ],
+    "filename": "MSXJ.rom",
+    "crc32": "071135E0",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\Shared Roms"
+    ],
+    "filename": "MSXKANJI.rom",
+    "crc32": "B4FC574D",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\Shared Roms"
+    ],
+    "filename": "MSXKR.rom",
+    "crc32": "3AB0CD3B",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\Shared Roms"
+    ],
+    "filename": "MSXR.rom",
+    "crc32": "5095AE3D",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\Shared Roms"
+    ],
+    "filename": "MSXR2.ROM",
+    "crc32": "67872F40",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\Shared Roms"
+    ],
+    "filename": "MSXSE.ROM",
+    "crc32": "C8CCDAA0",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\Shared Roms"
+    ],
+    "filename": "MSXSP.rom",
+    "crc32": "FED7506F",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\Shared Roms"
+    ],
+    "filename": "MSXTR.ROM",
+    "crc32": "937C8DBB",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\Shared Roms"
+    ],
+    "filename": "MSXTREXT.ROM",
+    "crc32": "70AEA0FE",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\Shared Roms"
+    ],
+    "filename": "MSXTRMUS.ROM",
+    "crc32": "F5F93437",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\Shared Roms"
+    ],
+    "filename": "MSXTROPT.ROM",
+    "crc32": "50D11F60",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\Shared Roms"
+    ],
+    "filename": "NATIONALDISK.rom",
+    "crc32": "1E7D6512",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\Shared Roms"
+    ],
+    "filename": "NOVAXIS.rom",
+    "crc32": "ECF385F2",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\Shared Roms"
+    ],
+    "filename": "nowindDos1.rom",
+    "crc32": "0A7A7A5B",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\Shared Roms"
+    ],
+    "filename": "nowindDos2.rom",
+    "crc32": "D64DEE77",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\Shared Roms"
+    ],
+    "filename": "PAINT.rom",
+    "crc32": "18956E3A",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\Shared Roms"
+    ],
+    "filename": "PANASONICDISK.rom",
+    "crc32": "17FA392B",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\Shared Roms"
+    ],
+    "filename": "PHILIPSDISK.rom",
+    "crc32": "CA3307D3",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\Shared Roms"
+    ],
+    "filename": "RS232.ROM",
+    "crc32": "3353DCC6",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\Shared Roms"
+    ],
+    "filename": "Shared.txt",
+    "crc32": "71689EC0",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\Shared Roms"
+    ],
+    "filename": "SUNRISEIDE.rom",
+    "crc32": "C3438B15",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\Shared Roms"
+    ],
+    "filename": "SWP.rom",
+    "crc32": "076F40FC",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\Shared Roms"
+    ],
+    "filename": "XBASIC2.rom",
+    "crc32": "2825B1A0",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\SVI - Spectravideo SVI-318"
+    ],
+    "filename": "config.ini",
+    "crc32": "F05BF1E4",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\SVI - Spectravideo SVI-318"
+    ],
+    "filename": "svi318.rom",
+    "crc32": "98D48655",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\SVI - Spectravideo SVI-328"
+    ],
+    "filename": "config.ini",
+    "crc32": "89A71896",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\SVI - Spectravideo SVI-328"
+    ],
+    "filename": "svi328.rom",
+    "crc32": "709904E9",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\SVI - Spectravideo SVI-328 80 Column"
+    ],
+    "filename": "config.ini",
+    "crc32": "FDAED247",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\SVI - Spectravideo SVI-328 80 Column"
+    ],
+    "filename": "svi328a.rom",
+    "crc32": "BC433DF6",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\SVI - Spectravideo SVI-328 80 Column"
+    ],
+    "filename": "svi806.rom",
+    "crc32": "850BC232",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\SVI - Spectravideo SVI-328 80 Swedish"
+    ],
+    "filename": "config.ini",
+    "crc32": "F12A70FD",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\SVI - Spectravideo SVI-328 80 Swedish"
+    ],
+    "filename": "svi328a.rom",
+    "crc32": "BC433DF6",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\SVI - Spectravideo SVI-328 80 Swedish"
+    ],
+    "filename": "svi806se.rom",
+    "crc32": "DAEA8956",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\SVI - Spectravideo SVI-328 MK2"
+    ],
+    "filename": "config.ini",
+    "crc32": "4F3F32BE",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\SVI - Spectravideo SVI-328 MK2"
+    ],
+    "filename": "svi328a.rom",
+    "crc32": "BC433DF6",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\Machines\\SVI - Spectravideo SVI-328 MK2"
+    ],
+    "filename": "svi806.rom",
+    "crc32": "850BC232",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\PPSSPP"
+    ],
+    "filename": "ppge_atlas.zim",
+    "crc32": "1E8709C1",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\PPSSPP\\flash0\\font"
+    ],
+    "filename": "arib.pgf",
+    "crc32": "16493569",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\PPSSPP\\flash0\\font"
+    ],
+    "filename": "jpn0.pgf",
+    "crc32": "428A1A18",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\PPSSPP\\flash0\\font"
+    ],
+    "filename": "kr0.pgf",
+    "crc32": "640EC9CF",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\PPSSPP\\flash0\\font"
+    ],
+    "filename": "ltn0.pgf",
+    "crc32": "63694424",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\PPSSPP\\flash0\\font"
+    ],
+    "filename": "ltn1.pgf",
+    "crc32": "19F82761",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\PPSSPP\\flash0\\font"
+    ],
+    "filename": "ltn10.pgf",
+    "crc32": "6A1C1701",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\PPSSPP\\flash0\\font"
+    ],
+    "filename": "ltn11.pgf",
+    "crc32": "E3A63AE0",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\PPSSPP\\flash0\\font"
+    ],
+    "filename": "ltn12.pgf",
+    "crc32": "0F2C3DFE",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\PPSSPP\\flash0\\font"
+    ],
+    "filename": "ltn13.pgf",
+    "crc32": "EA735706",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\PPSSPP\\flash0\\font"
+    ],
+    "filename": "ltn14.pgf",
+    "crc32": "2B6B3111",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\PPSSPP\\flash0\\font"
+    ],
+    "filename": "ltn15.pgf",
+    "crc32": "4FEF9779",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\PPSSPP\\flash0\\font"
+    ],
+    "filename": "ltn2.pgf",
+    "crc32": "6440B952",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\PPSSPP\\flash0\\font"
+    ],
+    "filename": "ltn3.pgf",
+    "crc32": "CB843E28",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\PPSSPP\\flash0\\font"
+    ],
+    "filename": "ltn4.pgf",
+    "crc32": "57E74B60",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\PPSSPP\\flash0\\font"
+    ],
+    "filename": "ltn5.pgf",
+    "crc32": "B7ADC5AD",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\PPSSPP\\flash0\\font"
+    ],
+    "filename": "ltn6.pgf",
+    "crc32": "649214C7",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\PPSSPP\\flash0\\font"
+    ],
+    "filename": "ltn7.pgf",
+    "crc32": "8305B511",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\PPSSPP\\flash0\\font"
+    ],
+    "filename": "ltn8.pgf",
+    "crc32": "48437F2D",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\PPSSPP\\flash0\\font"
+    ],
+    "filename": "ltn9.pgf",
+    "crc32": "ACA2ABCE",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\PPSSPP\\flash0\\font"
+    ],
+    "filename": "zh_gb.pgf",
+    "crc32": "8E873D4C",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\_Extras\\SNES SPC1170 (Far East of Eden - Tengai Makyou Zero)"
+    ],
+    "filename": "data.rom",
+    "crc32": "D3D26F16",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\_Extras\\SNES SPC1170 (Far East of Eden - Tengai Makyou Zero)"
+    ],
+    "filename": "Tengai Makyou Zero (Japan).srm",
+    "crc32": "54E74103",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\_Extras\\SNES SPC1170 (Momotarou Dentetsu Happy)"
+    ],
+    "filename": "data.rom",
+    "crc32": "ED1E5493",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\_Extras\\SNES SPC1170 (Momotarou Dentetsu Happy)"
+    ],
+    "filename": "Momotarou Dentetsu Happy (Japan).srm",
+    "crc32": "9F978CFB",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\_Extras\\SNES SPC1170 (Super Power League 4)"
+    ],
+    "filename": "data.rom",
+    "crc32": "E8A36E80",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "retroarch\\system\\_Extras\\SNES SPC1170 (Super Power League 4)"
+    ],
+    "filename": "Super Power League 4 (Japan).srm",
+    "crc32": "7F4243FD",
+    "required": true
+  },
+  {
+    "emulators": [
+      "fsuae",
+      "WinUAE"
+    ],
+    "paths": [],
+    "filename": "Amiga 1000 Bootstrap - 252180-01 (USA, Europe).rom",
+    "crc32": "8E5B9A37",
+    "required": false
+  },
+  {
+    "emulators": [
+      "fsuae",
+      "WinUAE"
+    ],
+    "paths": [],
+    "filename": "Amiga 1000 Bootstrap - 252179-01 (USA, Europe).rom",
+    "crc32": "76BD46EC",
+    "required": false
+  },
+  {
+    "emulators": [
+      "fsuae",
+      "WinUAE"
+    ],
+    "paths": [],
+    "filename": "Amiga 1000 Bootstrap - 252180-01 (USA, Europe).rom",
+    "crc32": "DD516B6D",
+    "required": false
+  },
+  {
+    "emulators": [
+      "fsuae",
+      "WinUAE"
+    ],
+    "paths": [],
+    "filename": "Kickstart - EVEN (USA, Europe) (v3.0 Rev 39.065) (Beta) (A3000).rom",
+    "crc32": "1B64EA21",
+    "required": false
+  },
+  {
+    "emulators": [
+      "fsuae",
+      "WinUAE"
+    ],
+    "paths": [],
+    "filename": "Kickstart - ODD (USA, Europe) (v3.0 Rev 39.065) (Beta) (A3000).rom",
+    "crc32": "F2742238",
+    "required": false
+  },
+  {
+    "emulators": [
+      "fsuae",
+      "WinUAE"
+    ],
+    "paths": [],
+    "filename": "Kickstart - 391304-02 (USA, Europe) (v2.05 Rev 37.350) (A600HD).rom",
+    "crc32": "43B0DF7B",
+    "required": false
+  },
+  {
+    "emulators": [
+      "fsuae",
+      "WinUAE"
+    ],
+    "paths": [],
+    "filename": "Kickstart - 391304-01 (USA, Europe) (v2.05 Rev 37.300) (A600HD).rom",
+    "crc32": "64466C2A",
+    "required": false
+  },
+  {
+    "emulators": [
+      "fsuae",
+      "WinUAE"
+    ],
+    "paths": [],
+    "filename": "Kickstart - 315093-02 (USA, Europe) (v1.3 Rev 34.005) (A500, A2000).rom",
+    "crc32": "C4F0F55F",
+    "required": false
+  },
+  {
+    "emulators": [
+      "fsuae",
+      "WinUAE"
+    ],
+    "paths": [],
+    "filename": "Kickstart - 391388-01 (USA, Europe) (v2.05 Rev 37.299) (A600).rom",
+    "crc32": "83028FB5",
+    "required": false
+  },
+  {
+    "emulators": [
+      "fsuae",
+      "WinUAE"
+    ],
+    "paths": [],
+    "filename": "Kickstart (USA, Europe) (v2.05 Rev 37.210) (Proto) (A600).rom",
+    "crc32": "4C0C1603",
+    "required": false
+  },
+  {
+    "emulators": [
+      "fsuae",
+      "WinUAE"
+    ],
+    "paths": [],
+    "filename": "Kickstart - 390629-03 (USA, Europe) (v2.04 Rev 37.175) (A3000).rom",
+    "crc32": "7DB1332B",
+    "required": false
+  },
+  {
+    "emulators": [
+      "fsuae",
+      "WinUAE"
+    ],
+    "paths": [],
+    "filename": "Kickstart - 390630-03 (USA, Europe) (v2.04 Rev 37.175) (A3000).rom",
+    "crc32": "A245DBDF",
+    "required": false
+  },
+  {
+    "emulators": [
+      "fsuae",
+      "WinUAE"
+    ],
+    "paths": [],
+    "filename": "Kickstart - 390979-01 (USA, Europe) (v2.04 Rev 37.175) (A500 Plus, A2000).rom",
+    "crc32": "C3BDB240",
+    "required": false
+  },
+  {
+    "emulators": [
+      "fsuae",
+      "WinUAE"
+    ],
+    "paths": [],
+    "filename": "Kickstart - 363968-01 (USA, Europe) (v2.04 Rev 37.175) (Proto) (A500 Plus, A2000).rom",
+    "crc32": "8DA9BD72",
+    "required": false
+  },
+  {
+    "emulators": [
+      "fsuae",
+      "WinUAE"
+    ],
+    "paths": [],
+    "filename": "Kickstart - 390629-02 (USA, Europe) (v1.4 Rev 36.016) (A3000).rom",
+    "crc32": "58327536",
+    "required": false
+  },
+  {
+    "emulators": [
+      "fsuae",
+      "WinUAE"
+    ],
+    "paths": [],
+    "filename": "Kickstart - 390630-02 (USA, Europe) (v1.4 Rev 36.016) (A3000).rom",
+    "crc32": "FE2F7FB9",
+    "required": false
+  },
+  {
+    "emulators": [
+      "fsuae",
+      "WinUAE"
+    ],
+    "paths": [],
+    "filename": "Kickstart - 315093-02 (USA, Europe) (v1.4 Rev 36.015) (Beta) (A500, A2000).rom",
+    "crc32": "A3BA6116",
+    "required": false
+  },
+  {
+    "emulators": [
+      "fsuae",
+      "WinUAE"
+    ],
+    "paths": [],
+    "filename": "Kickstart - 315093-01 (USA, Europe) (v1.2 Rev 33.180) (A500, A2000).rom",
+    "crc32": "A6CE1636",
+    "required": false
+  },
+  {
+    "emulators": [
+      "fsuae",
+      "WinUAE"
+    ],
+    "paths": [],
+    "filename": "Kickstart - 391657-01 (USA, Europe) (v3.1 Rev 40.070) (A4000T).rom",
+    "crc32": "0CA94F70",
+    "required": false
+  },
+  {
+    "emulators": [
+      "fsuae",
+      "WinUAE"
+    ],
+    "paths": [],
+    "filename": "Kickstart - 391658-01 (USA, Europe) (v3.1 Rev 40.070) (A4000T).rom",
+    "crc32": "DFE03120",
+    "required": false
+  },
+  {
+    "emulators": [
+      "fsuae",
+      "WinUAE"
+    ],
+    "paths": [],
+    "filename": "Kickstart - ROM0 (USA, Europe) (v3.1 Rev 40.068) (A3000).rom",
+    "crc32": "286B9A0D",
+    "required": false
+  },
+  {
+    "emulators": [
+      "fsuae",
+      "WinUAE"
+    ],
+    "paths": [],
+    "filename": "Kickstart - ROM1 (USA, Europe) (v3.1 Rev 40.068) (A3000).rom",
+    "crc32": "0B8CDE6A",
+    "required": false
+  },
+  {
+    "emulators": [
+      "fsuae",
+      "WinUAE"
+    ],
+    "paths": [],
+    "filename": "Kickstart - 391523-01 (USA, Europe) (v3.0 Rev 39.106) (A1200).rom",
+    "crc32": "C742A412",
+    "required": false
+  },
+  {
+    "emulators": [
+      "fsuae",
+      "WinUAE"
+    ],
+    "paths": [],
+    "filename": "Kickstart - 391524-01 (USA, Europe) (v3.0 Rev 39.106) (A1200).rom",
+    "crc32": "D55C6EC6",
+    "required": false
+  },
+  {
+    "emulators": [
+      "fsuae",
+      "WinUAE"
+    ],
+    "paths": [],
+    "filename": "Kickstart (USA, Europe) (v3.1 Rev 40.068) (Proto) (A600).rom",
+    "crc32": "8ECED804",
+    "required": false
+  },
+  {
+    "emulators": [
+      "fsuae",
+      "WinUAE"
+    ],
+    "paths": [],
+    "filename": "Kickstart - 391773-01 (USA, Europe) (v3.1 Rev 40.068) (A1200).rom",
+    "crc32": "08DBF275",
+    "required": false
+  },
+  {
+    "emulators": [
+      "fsuae",
+      "WinUAE"
+    ],
+    "paths": [],
+    "filename": "Kickstart - 391774-01 (USA, Europe) (v3.1 Rev 40.068) (A1200).rom",
+    "crc32": "16C07BF8",
+    "required": false
+  },
+  {
+    "emulators": [
+      "fsuae",
+      "WinUAE"
+    ],
+    "paths": [],
+    "filename": "Kickstart - EVEN (USA, Europe) (v3.1 Rev 40.055) (Beta) (A3000).rom",
+    "crc32": "6DCBB6DA",
+    "required": false
+  },
+  {
+    "emulators": [
+      "fsuae",
+      "WinUAE"
+    ],
+    "paths": [],
+    "filename": "Kickstart - ODD (USA, Europe) (v3.1 Rev 40.055) (Beta) (A3000).rom",
+    "crc32": "E1E0AD9F",
+    "required": false
+  },
+  {
+    "emulators": [
+      "fsuae",
+      "WinUAE"
+    ],
+    "paths": [],
+    "filename": "Kickstart (USA, Europe) (v3.1 Rev 40.063) (A500, A600, A2000).rom",
+    "crc32": "FC24AE0D",
+    "required": false
+  },
+  {
+    "emulators": [
+      "fsuae",
+      "WinUAE"
+    ],
+    "paths": [],
+    "filename": "Kickstart - ROM0 (USA, Europe) (v3.1 Rev 40.068) (A4000).rom",
+    "crc32": "B2AF34F8",
+    "required": false
+  },
+  {
+    "emulators": [
+      "fsuae",
+      "WinUAE"
+    ],
+    "paths": [],
+    "filename": "Kickstart - ROM1 (USA, Europe) (v3.1 Rev 40.068) (A4000).rom",
+    "crc32": "E65636A3",
+    "required": false
+  },
+  {
+    "emulators": [
+      "fsuae",
+      "WinUAE"
+    ],
+    "paths": [],
+    "filename": "Kickstart - 391513-02 (USA, Europe) (v3.0 Rev 39.106) (A4000).rom",
+    "crc32": "36F64DD0",
+    "required": false
+  },
+  {
+    "emulators": [
+      "fsuae",
+      "WinUAE"
+    ],
+    "paths": [],
+    "filename": "Kickstart - 391514-02 (USA, Europe) (v3.0 Rev 39.106) (A4000).rom",
+    "crc32": "17266A55",
+    "required": false
+  },
+  {
+    "emulators": [
+      "fsuae",
+      "WinUAE"
+    ],
+    "paths": [],
+    "filename": "Kickstart - ROM0 (USA, Europe) (v3.1 Rev 40.070) (A4000).rom",
+    "crc32": "F9CBECC9",
+    "required": false
+  },
+  {
+    "emulators": [
+      "fsuae",
+      "WinUAE"
+    ],
+    "paths": [],
+    "filename": "Kickstart - ROM1 (USA, Europe) (v3.1 Rev 40.070) (A4000).rom",
+    "crc32": "F8248355",
+    "required": false
+  },
+  {
+    "emulators": [
+      "fsuae",
+      "WinUAE"
+    ],
+    "paths": [],
+    "filename": "391640-03.u6a",
+    "crc32": "D3837AE4",
+    "required": false
+  },
+  {
+    "emulators": [
+      "fsuae",
+      "WinUAE"
+    ],
+    "paths": [],
+    "filename": "CD32 Extended-ROM rev 40.60 (1993)(Commodore)(CD32).rom",
+    "crc32": "87746BE2",
+    "required": false
+  },
+  {
+    "emulators": [
+      "fsuae",
+      "WinUAE"
+    ],
+    "paths": [],
+    "filename": "Kickstart v3.1 rev 40.63 (1993)(Commodore)(A500-A600-A2000).rom",
+    "crc32": "88136CA9",
+    "required": false
+  },
+  {
+    "emulators": [
+      "fsuae",
+      "WinUAE"
+    ],
+    "paths": [],
+    "filename": "Kickstart v3.1 rev 40.63 (1993)(Commodore)(A500-A600-A2000)[h ShapeShifter].rom",
+    "crc32": "B506177B",
+    "required": false
+  },
+  {
+    "emulators": [
+      "fsuae",
+      "WinUAE"
+    ],
+    "paths": [],
+    "filename": "V1.3_34.5 A500-A2000 1987.rom",
+    "crc32": "C4F0F55F",
+    "required": false
+  },
+  {
+    "emulators": [
+      "fsuae",
+      "WinUAE"
+    ],
+    "paths": [],
+    "filename": "V3.1_40.60 CD32 1993.rom",
+    "crc32": "1E62D4A5",
+    "required": false
+  },
+  {
+    "emulators": [
+      "fsuae",
+      "WinUAE"
+    ],
+    "paths": [],
+    "filename": "Kickstart 1.3.rom",
+    "crc32": "F6290043",
+    "required": false
+  },
+  {
+    "emulators": [
+      "fsuae",
+      "WinUAE"
+    ],
+    "paths": [],
+    "filename": "Kickstart 3.1.rom",
+    "crc32": "FC24AE0D",
+    "required": false
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "bizhawk\\firmware"
+    ],
+    "filename": "7800highscore.bin",
+    "crc32": "9BE408D3",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "bizhawk\\firmware"
+    ],
+    "filename": "AppleIIe.rom",
+    "crc32": "1D70B193",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "bizhawk\\firmware"
+    ],
+    "filename": "c64-basic.bin",
+    "crc32": "F833D117",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "bizhawk\\firmware"
+    ],
+    "filename": "c64-chargen.bin",
+    "crc32": "EC4272EE",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "bizhawk\\firmware"
+    ],
+    "filename": "c64-kernal.bin",
+    "crc32": "DBE3E7C7",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "bizhawk\\firmware"
+    ],
+    "filename": "DiskII.rom",
+    "crc32": "CE7144F6",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "bizhawk\\firmware"
+    ],
+    "filename": "drive-1541.bin",
+    "crc32": "57224CDE",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "bizhawk\\firmware"
+    ],
+    "filename": "drive-1541ii.bin",
+    "crc32": "899FA3C5",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "bizhawk\\firmware"
+    ],
+    "filename": "fx-scsi.rom",
+    "crc32": "F3E60E5E",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "bizhawk\\firmware"
+    ],
+    "filename": "GBC_boot_ROM.gb",
+    "crc32": "41884E46",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "bizhawk\\firmware"
+    ],
+    "filename": "pentagon.rom",
+    "crc32": "AA1CE4BD",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "bizhawk\\firmware"
+    ],
+    "filename": "PhillipsC52.bin",
+    "crc32": "A318E8D6",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "bizhawk\\firmware"
+    ],
+    "filename": "sgb.sfc",
+    "crc32": "8A4A174F",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "bizhawk\\firmware"
+    ],
+    "filename": "sms_jp_2.1.sms",
+    "crc32": "48D44A13",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "bizhawk\\firmware"
+    ],
+    "filename": "sms_kr.sms",
+    "crc32": "9C5BAD91",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "bizhawk\\firmware"
+    ],
+    "filename": "sms_us_1.3.sms",
+    "crc32": "0072ED54",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "bizhawk\\firmware"
+    ],
+    "filename": "ti83_102.rom",
+    "crc32": "7EE5D27B",
+    "required": true
+  },
+  {
+    "emulators": [],
+    "paths": [
+      "bizhawk\\firmware"
+    ],
+    "filename": "trdos.rom",
+    "crc32": "D8882A8C",
+    "required": true
+  }
+]
