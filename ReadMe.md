@@ -10,8 +10,8 @@ This tool serves as a comprehensive GUI to download and configure emulators, dep
 ---
 
 ## Legacy AHK Overview
-**Version:** 0.99.50.011  
-**Author:** oldtools  (hey...this guy looks like the poseur I used to pretend I wanted to be)
+**Version:** 0.99.50.011
+**Author:** oldtools
 The legacy version remains functional via `working.ahk`. To build from source, use AutoHotKey (Unicode-32bit) and the dependencies located in `\bin\`.
 
 ---
