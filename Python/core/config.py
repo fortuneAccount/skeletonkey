@@ -7,14 +7,28 @@ Replaces the AHK gets.ahk / sets.ahk pattern of IniRead / IniWrite calls.
 All paths are resolved relative to the application home directory so the
 app remains portable.
 """
-import configparser
+import json
 import os
 from pathlib import Path
 
 
 def _home() -> Path:
-    """Return the application root directory (three levels up from this file)."""
+    """Return the application root directory (parent of the Python folder)."""
     return Path(__file__).resolve().parent.parent.parent
+
+def _get_config_root() -> Path:
+    """Determine config location based on portable status."""
+    home = _home()
+    # Enable portable mode by default on first run if no config exists
+    portable_flag = home / "portable.txt"
+    if not portable_flag.exists() and not (Path(os.environ.get("APPDATA", "")) / "skeletonkey").exists():
+        portable_flag.write_text(f"{home}\ntrue", encoding="utf-8")
+
+    if (home / "portable.txt").exists():
+        return home
+    appdata = Path(os.environ.get("APPDATA", str(home))) / "skeletonkey"
+    appdata.mkdir(parents=True, exist_ok=True)
+    return appdata
 
 
 class Config:
@@ -41,13 +55,9 @@ class Config:
     ARCORG_FILE = "arcorg.ini"
 
     def __init__(self, filename: str = SETTINGS_FILE, home: Path | None = None):
-        self._home = home or _home()
-        # Place user configs in generated/ directory
-        generated_dir = self._home / "generated"
-        generated_dir.mkdir(parents=True, exist_ok=True)
-        self._path = generated_dir / filename
-        self._parser = configparser.RawConfigParser()
-        self._parser.optionxform = str  # preserve key case
+        self._home = home or _get_config_root()
+        self._path = self._home / filename.replace(".ini", ".json")
+        self._data = {}
         self._load()
 
     # ------------------------------------------------------------------
@@ -55,21 +65,17 @@ class Config:
     # ------------------------------------------------------------------
 
     def _load(self):
-        if self._path.exists():
-            self._read_with_fallback(self._path)
-
-    def _read_with_fallback(self, path: Path):
-        """Handles AHK-specific encodings (UTF-16 BOM, UTF-8-SIG)."""
-        encodings = ["utf-8-sig", "utf-16", "cp1252"]
-        for enc in encodings:
-            try:
-                self._parser.read(path, encoding=enc)
-                return
-            except (UnicodeDecodeError, configparser.Error):
-                continue
+        """Load JSON data with legacy INI fallback if necessary."""
+        if not self._path.exists():
+            return
+        try:
+            with open(self._path, "r", encoding="utf-8") as f:
+                self._data = json.load(f)
+        except (json.JSONDecodeError, IOError):
+            self._data = {}
 
     def reload(self):
-        self._parser.clear()
+        self._data = {}
         self._load()
 
     # ------------------------------------------------------------------
@@ -78,34 +84,33 @@ class Config:
 
     def get(self, section: str, key: str, fallback: str = "") -> str:
         """Read a value; returns *fallback* when section/key is absent."""
-        try:
-            raw = self._parser.get(section, key)
-            # Strip surrounding quotes that AHK IniWrite sometimes adds
-            return raw.strip('"')
-        except (configparser.NoSectionError, configparser.NoOptionError):
-            return fallback
+        # Handle default application overrides for the new paradigm
+        if section == "GLOBAL":
+            if key == "Logging" and "GLOBAL" not in self._data: return "1"
+            if key == "first_run" and "GLOBAL" not in self._data: return "1"
+
+        val = self._data.get(section, {}).get(key, fallback)
+        return str(val).strip('"')
 
     def set(self, section: str, key: str, value: str):
         """Write a value into memory (call save() to persist)."""
-        if not self._parser.has_section(section):
-            self._parser.add_section(section)
-        self._parser.set(section, key, value)
+        if section not in self._data:
+            self._data[section] = {}
+        self._data[section][key] = value
 
     def save(self):
         """Persist all in-memory changes back to disk."""
         self._path.parent.mkdir(parents=True, exist_ok=True)
         with open(self._path, "w", encoding="utf-8") as fh:
-            self._parser.write(fh)
+            json.dump(self._data, fh, indent=4)
 
     def sections(self) -> list[str]:
-        return self._parser.sections()
+        return list(self._data.keys())
 
     def items(self, section: str) -> list[tuple[str, str]]:
         """Return all key/value pairs in *section* (empty list if missing)."""
-        try:
-            return [(k, v.strip('"')) for k, v in self._parser.items(section)]
-        except configparser.NoSectionError:
-            return []
+        section_data = self._data.get(section, {})
+        return [(k, str(v).strip('"')) for k, v in section_data.items()]
 
     @property
     def path(self) -> Path:

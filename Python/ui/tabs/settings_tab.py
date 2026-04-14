@@ -21,9 +21,16 @@ from PyQt6.QtWidgets import (
     QPushButton, QFileDialog, QGroupBox, QCheckBox,
     QComboBox, QSizePolicy, QLabel, QSlider, QLineEdit, QMessageBox
 )
+from PyQt6.QtWidgets import QPlainTextEdit, QProgressBar
+import os
 
 from core.config import global_config
 from ui.tabs.base_tab import BaseTab
+from utils.paths import app_home
+
+def _home() -> Path:
+    """Return the application root directory (parent of the Python folder)."""
+    return Path(__file__).resolve().parent.parent.parent.parent
 
 _SEP = "|"  # delimiter used in Settings.ini for multi-path values
 
@@ -113,11 +120,8 @@ class _PathCombo(QWidget):
             self._add_path(chosen)
 
     def _add(self):
-        start = self.current_path() or str(Path.home())
-        chosen = QFileDialog.getExistingDirectory(
-            self, f"Add {self._label} Directory", start)
-        if chosen:
-            self._add_path(chosen)
+        """Trigger browse to select a directory to append."""
+        self._browse()
 
     def _remove(self):
         idx = self._combo.currentIndex()
@@ -173,6 +177,12 @@ class SettingsTab(BaseTab):
         self._emus_combo = _PathCombo("Emulators")
         form.addRow("Emulators:", self._emus_combo)
 
+        self._exclude_systems_combo = _PathCombo("Exclude Systems")
+        form.addRow("Exclude Systems:", self._exclude_systems_combo)
+
+        self._exclude_emus_combo = _PathCombo("Exclude Emulators")
+        form.addRow("Exclude Emulators:", self._exclude_emus_combo)
+
         self._cache_dir = QLineEdit()
         cache_row = QHBoxLayout()
         cache_row.addWidget(self._cache_dir)
@@ -183,12 +193,34 @@ class SettingsTab(BaseTab):
 
         root.addWidget(dirs)
 
+        # Activity Log Viewer
+        self._log_group = QGroupBox("Activity Log")
+        log_layout = QVBoxLayout(self._log_group)
+        self._log_text = QPlainTextEdit()
+        self._log_text.setReadOnly(True)
+        self._log_text.setMaximumHeight(150)
+        
+        self._progress_bar = QProgressBar()
+        self._progress_bar.setRange(0, 100)
+        self._progress_bar.setValue(0)
+        self._progress_bar.setTextVisible(True)
+        
+        self._export_btn = QPushButton("Export Log")
+        self._export_btn.setFixedWidth(100)
+        self._export_btn.clicked.connect(self._export_log)
+
+        log_layout.addWidget(self._progress_bar)
+        log_layout.addWidget(self._log_text)
+        log_layout.addWidget(self._export_btn, alignment=Qt.AlignmentFlag.AlignRight)
+        root.addWidget(self._log_group)
+
         # Middle Row: Global Options and Appearance
         mid_row = QHBoxLayout()
 
         opts = QGroupBox("App Options")
         opts_layout = QVBoxLayout(opts)
         self._portable_chk = QCheckBox("Portable mode")
+        self._portable_chk.toggled.connect(self._on_portable_toggled)
         self._always_on_top_chk = QCheckBox("Always On Top")
         self._logging_chk = QCheckBox("Enable Logging")
         self._auto_pgs_chk = QCheckBox("Auto-Load Per-Game Settings")
@@ -233,6 +265,27 @@ class SettingsTab(BaseTab):
     # Data
     # ------------------------------------------------------------------
 
+    def append_log(self, message: str):
+        """Thread-safe-ish append to the log viewer."""
+        from datetime import datetime
+        timestamp = datetime.now().strftime("%H:%M:%S")
+        self._log_text.appendPlainText(f"[{timestamp}] {message}")
+
+    def set_progress(self, value: int):
+        """Update the activity progress bar."""
+        self._progress_bar.setValue(value)
+
+    def refresh_ui(self):
+        """Public refresh method to reload values from config."""
+        self._load_values()
+
+    def _export_log(self):
+        """Save the log content to a text file."""
+        path, _ = QFileDialog.getSaveFileName(self, "Export Log", str(Path.home() / "skeletonkey_activity.log"), "Log Files (*.log);;Text Files (*.txt)")
+        if path:
+            Path(path).write_text(self._log_text.toPlainText(), encoding="utf-8")
+            self.set_status(f"Log exported to {Path(path).name}")
+
     def _load_values(self):
         sys_raw = self._cfg.get("GLOBAL", "systems_directory", fallback="")
         self._systems_combo.set_paths(_load_paths(sys_raw))
@@ -240,12 +293,19 @@ class SettingsTab(BaseTab):
         emu_raw = self._cfg.get("GLOBAL", "emulators_directory", fallback="")
         self._emus_combo.set_paths(_load_paths(emu_raw))
 
+        sys_ex_raw = self._cfg.get("GLOBAL", "exclude_systems", fallback="")
+        self._exclude_systems_combo.set_paths(_load_paths(sys_ex_raw))
+
+        emu_ex_raw = self._cfg.get("GLOBAL", "exclude_emus", fallback="")
+        self._exclude_emus_combo.set_paths(_load_paths(emu_ex_raw))
+
         self._cache_dir.setText(
             self._cfg.get("OPTIONS", "temp_location", fallback=""))
 
         # Load booleans
+        self._portable_chk.setChecked((self._cfg.home / "portable.txt").exists())
         self._always_on_top_chk.setChecked(self._cfg.get("GLOBAL", "AlwaysOnTop", fallback="0") == "1")
-        self._logging_chk.setChecked(self._cfg.get("GLOBAL", "Logging", fallback="0") == "1")
+        self._logging_chk.setChecked(self._cfg.get("GLOBAL", "Logging", fallback="1") == "1")
         self._auto_pgs_chk.setChecked(self._cfg.get("GLOBAL", "AutoLoad_PerGameSettings", fallback="1") == "1")
         self._dyn_trans_chk.setChecked(self._cfg.get("GLOBAL", "Dynamic_Transparency", fallback="0") == "1")
         self._trans_slider.setValue(int(self._cfg.get("GLOBAL", "Transparency", fallback="255")))
@@ -293,6 +353,24 @@ class SettingsTab(BaseTab):
                 (home / "hashdb.ini").unlink(missing_ok=True)
                 self.set_status("Playlist database cleared.")
 
+    def _on_portable_toggled(self, checked: bool):
+        """Create or remove portable.txt with project path and state in root and AppData."""
+        project_root = _home()
+        appdata_dir = Path(os.environ.get("APPDATA", "")) / "skeletonkey"
+        
+        content = f"{project_root}\n{str(checked).lower()}"
+        targets = [project_root / "portable.txt", appdata_dir / "portable.txt"]
+
+        if checked:
+            for p in targets:
+                try:
+                    p.parent.mkdir(parents=True, exist_ok=True)
+                    p.write_text(content, encoding="utf-8")
+                except Exception: pass
+        else:
+            for p in targets:
+                if p.exists(): p.unlink()
+
     def _browse_cache(self):
         current = self._cache_dir.text() or str(Path.home())
         chosen = QFileDialog.getExistingDirectory(
@@ -305,6 +383,8 @@ class SettingsTab(BaseTab):
                       _save_paths(self._systems_combo.paths()))
         self._cfg.set("GLOBAL", "emulators_directory",
                       _save_paths(self._emus_combo.paths()))
+        self._cfg.set("GLOBAL", "exclude_systems", _save_paths(self._exclude_systems_combo.paths()))
+        self._cfg.set("GLOBAL", "exclude_emus", _save_paths(self._exclude_emus_combo.paths()))
         self._cfg.set("OPTIONS", "temp_location", self._cache_dir.text())
         self._cfg.set("GLOBAL", "AlwaysOnTop", "1" if self._always_on_top_chk.isChecked() else "0")
         self._cfg.set("GLOBAL", "Logging", "1" if self._logging_chk.isChecked() else "0")

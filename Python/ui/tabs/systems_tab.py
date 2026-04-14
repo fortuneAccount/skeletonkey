@@ -7,6 +7,7 @@ and launch ROMs.
 from pathlib import Path
 
 from PyQt6.QtCore import Qt, QThread, pyqtSignal
+from PyQt6.QtGui import QBrush
 from PyQt6.QtWidgets import (
     QWidget, QVBoxLayout, QHBoxLayout, QSplitter,
     QListWidget, QListWidgetItem, QLabel, QLineEdit,
@@ -51,6 +52,39 @@ class SystemsTab(BaseTab):
         self._launch_thread: _LaunchThread | None = None
         self._build_ui()
         self._populate_systems()
+        
+        # Delay first-run logic slightly to ensure main window references are settled
+        from PyQt6.QtCore import QTimer
+        QTimer.singleShot(100, self._handle_first_run)
+
+    def _handle_first_run(self):
+        """Execute full environment discovery on first launch."""
+        if self._cfg.get("GLOBAL", "first_run", fallback="1") != "1":
+            return
+
+        main_win = self.window()
+        if hasattr(main_win, "_tab_widget") and hasattr(main_win, "_settings_tab"):
+            main_win._tab_widget.setCurrentWidget(main_win._settings_tab)
+
+        self.log("First run detected. Initiating comprehensive environment discovery...")
+        self.set_progress(5)
+        
+        # 1. Multi-stage System detection
+        self._on_detect_systems_clicked()
+        self.set_progress(40)
+
+        # 2. Sequential Category detection
+        cats = ["Emulators", "Frontends", "Utilities"]
+        for i, cat in enumerate(cats):
+            self.log(f"Scanning for {cat}...")
+            self._category_ddl.setCurrentText(cat)
+            self._on_detect_emus_clicked()
+            self.set_progress(40 + (i + 1) * 20)
+
+        self._cfg.set("GLOBAL", "first_run", "0")
+        self._cfg.save()
+        self.log("Initial setup and discovery complete.")
+        self.set_progress(100)
 
     # ------------------------------------------------------------------
     # UI construction
@@ -64,6 +98,34 @@ class SystemsTab(BaseTab):
         # Left panel: system list
         left = QWidget()
         left_layout = QVBoxLayout(left)
+
+        # Top Detection Group
+        self._detect_grp = QGroupBox("System Management")
+        dg_layout = QHBoxLayout(self._detect_grp)
+        self._detect_sys_btn = QPushButton("Detect Systems")
+        self._detect_sys_btn.clicked.connect(self._on_detect_clicked)
+        
+        self._search_combo = QComboBox()
+        self._search_combo.setEditable(True)
+        self._search_combo.setMinimumWidth(150)
+        self._search_combo.setPlaceholderText("Search...")
+        self._search_combo.editTextChanged.connect(self._on_search_text_changed)
+        self._search_combo.currentIndexChanged.connect(self._on_search_index_changed)
+
+        self._clear_search_btn = QPushButton("x")
+        self._clear_search_btn.setFixedWidth(24)
+        self._clear_search_btn.clicked.connect(self._clear_search)
+
+        self._filter_detected_btn = QPushButton("Y")
+        self._filter_detected_btn.setFixedWidth(24)
+        self._filter_detected_btn.setCheckable(True)
+        self._filter_detected_btn.clicked.connect(self._on_filter_detected_toggled)
+        
+        dg_layout.addWidget(self._detect_sys_btn)
+        dg_layout.addWidget(self._search_combo)
+        dg_layout.addWidget(self._clear_search_btn)
+        dg_layout.addWidget(self._filter_detected_btn)
+        left_layout.addWidget(self._detect_grp)
 
         # Category selector (mirrors SaList in AHK)
         self._category_ddl = QComboBox()
@@ -85,6 +147,16 @@ class SystemsTab(BaseTab):
 
         self._name_label = QLabel("")
         self._form.addRow("Name:", self._name_label)
+
+        # Rename row
+        self._rename_row = QHBoxLayout()
+        self._rename_edit = QLineEdit()
+        self._rename_edit.setPlaceholderText("New Alias...")
+        self._rename_btn = QPushButton("Rename")
+        self._rename_btn.clicked.connect(self._on_rename_clicked)
+        self._rename_row.addWidget(self._rename_edit)
+        self._rename_row.addWidget(self._rename_btn)
+        self._form.addRow("Alias:", self._rename_row)
 
         self._rom_path_combo = _PathCombo("ROMs")
         self._form.addRow("ROM Path:", self._rom_path_combo)
@@ -114,20 +186,21 @@ class SystemsTab(BaseTab):
         self._emu_combo.setEditable(True)
         self._form.addRow("Emulator:", self._emu_combo)
 
-        save_btn = QPushButton("Save Assignment")
-        save_btn.clicked.connect(self._save_assignment)
-
-        # Detect buttons row (mirrors SYSDETECT / EMUDETECT in AHK)
-        detect_row = QHBoxLayout()
-        detect_sys_btn = QPushButton("Detect Systems")
-        detect_sys_btn.clicked.connect(self._on_detect_systems_clicked)
-        detect_emu_btn = QPushButton("Detect Emulators")
-        detect_emu_btn.clicked.connect(self._on_detect_emus_clicked)
-        detect_row.addWidget(detect_sys_btn)
-        detect_row.addWidget(detect_emu_btn)
-
-        self._form.addRow("", save_btn)
-        self._form.addRow("", detect_row)
+        # Action Buttons Row
+        action_row = QHBoxLayout()
+        self._select_btn = QPushButton("Select")
+        self._assign_btn = QPushButton("Assign")
+        self._assign_btn.clicked.connect(self._save_assignment)
+        self._clear_emu_btn = QPushButton("Clear")
+        self._clear_emu_btn.clicked.connect(self._on_clear_emu_clicked)
+        self._delete_emu_btn = QPushButton("Delete")
+        self._delete_emu_btn.clicked.connect(self._on_delete_emu_clicked)
+        
+        action_row.addWidget(self._select_btn)
+        action_row.addWidget(self._assign_btn)
+        action_row.addWidget(self._clear_emu_btn)
+        action_row.addWidget(self._delete_emu_btn)
+        self._form.addRow("", action_row)
 
         right_layout.addWidget(self._info_group)
 
@@ -150,9 +223,45 @@ class SystemsTab(BaseTab):
     # Data population
     # ------------------------------------------------------------------
 
+    def log(self, message: str):
+        """Route messages to the status bar and the SettingsTab log viewer."""
+        self.set_status(message)
+        main_win = self.window()
+        # Find the SettingsTab instance to append to its log
+        if hasattr(main_win, "_settings_tab"):
+            main_win._settings_tab.append_log(message)
+
+    def set_progress(self, value: int):
+        """Update progress bar in Settings tab."""
+        main_win = self.window()
+        if hasattr(main_win, "_settings_tab"):
+            main_win._settings_tab.set_progress(value)
+
     def refresh_ui(self):
         """Sync UI lists with data registries."""
         self._populate_list()
+
+    def _update_active_domain(self, category: str):
+        self._search_combo.clear()
+        items = []
+        if category == "Systems":
+            items = self._systems.all_systems()
+        elif category == "Emulators":
+            items = [e.name for e in self._emus.emulators()]
+        elif category == "Frontends":
+            items = [e.name for e in self._emus.frontends()]
+        elif category == "Utilities":
+            items = [e.name for e in self._emus.utilities()]
+            
+        self._search_combo.addItems(items)
+        
+        # Apply status-indicating font-color-coding: gray out if NOT currently assigned/installed
+        for i in range(self._search_combo.count()):
+            name = self._search_combo.itemText(i)
+            # Matches logic used in _populate_list
+            is_installed = self._assignments.get_assignment(name) if category == "Systems" else self._emus.get(name).exe
+            if not is_installed:
+                self._search_combo.setItemData(i, QBrush(Qt.GlobalColor.gray), Qt.ItemDataRole.ForegroundRole)
 
     def _populate_systems(self):
         self._populate_list()
@@ -163,9 +272,12 @@ class SystemsTab(BaseTab):
 
     def _populate_list(self):
         category = self._category_ddl.currentText()
+        self._update_active_domain(category)
         self._item_list.clear()
         if category == "Systems":
             items = self._systems.all_systems()
+            # Clean up stray "E" or single char entries that may have been parsed incorrectly
+            items = [i for i in items if len(i) > 1]
         elif category == "Emulators":
             items = [e.name for e in self._emus.emulators()]
         elif category == "Frontends":
@@ -174,8 +286,29 @@ class SystemsTab(BaseTab):
             items = [e.name for e in self._emus.utilities()]
         else:
             items = []
+            
+        # Inverted color logic: grey out if NOT currently assigned/installed
         for name in items:
-            self._item_list.addItem(name)
+            item = QListWidgetItem(name)
+            is_installed = self._assignments.get_assignment(name) if category == "Systems" else self._emus.get(name).exe
+            if not is_installed:
+                item.setForeground(QBrush(Qt.GlobalColor.gray))
+            self._item_list.addItem(item)
+
+    def _update_field_styling(self):
+        """Apply Green (active) or Yellow (pending/missing) backgrounds to assignment fields."""
+        def apply_style(widget, path_str):
+            if not path_str:
+                widget.setStyleSheet("")
+                return
+            exists = any(Path(p.strip()).exists() for p in path_str.split('|') if p.strip())
+            if exists:
+                widget.setStyleSheet("background-color: #28a745; color: white; font-weight: bold;")
+            else:
+                widget.setStyleSheet("background-color: #ffc107; color: black; font-weight: bold;")
+
+        apply_style(self._exe_path_edit, self._exe_path_edit.text())
+        apply_style(self._emu_combo, self._emu_combo.currentText())
 
     def _update_ui_visibility(self):
         category = self._category_ddl.currentText()
@@ -204,8 +337,44 @@ class SystemsTab(BaseTab):
 
     def _on_category_changed(self, category: str):
         self._populate_list()
+        self._detect_grp.setTitle(f"{category} Management")
+        self._detect_sys_btn.setText(f"Detect {category}")
         self._update_ui_visibility()
         self._name_label.setText("")
+
+    def _on_search_text_changed(self, text: str):
+        for i in range(self._item_list.count()):
+            item = self._item_list.item(i)
+            item.setHidden(text.lower() not in item.text().lower())
+
+    def _on_search_index_changed(self, index: int):
+        if index < 0: return
+        text = self._search_combo.itemText(index)
+        found = self._item_list.findItems(text, Qt.MatchFlag.MatchExactly)
+        if found:
+            self._item_list.setCurrentItem(found[0])
+
+    def _clear_search(self):
+        self._search_combo.setCurrentText("")
+        self._on_search_text_changed("")
+
+    def _on_filter_detected_toggled(self, checked: bool):
+        cat = self._category_ddl.currentText()
+        for i in range(self._item_list.count()):
+            item = self._item_list.item(i)
+            name = item.text()
+            is_installed = self._assignments.get_assignment(name) if cat == "Systems" else self._emus.get(name).exe
+            if checked:
+                item.setHidden(not is_installed)
+            else:
+                search_text = self._search_combo.currentText().lower()
+                item.setHidden(search_text not in name.lower())
+
+    def _on_detect_clicked(self):
+        if self._category_ddl.currentText() == "Systems":
+            self._on_detect_systems_clicked()
+        else:
+            self._on_detect_emus_clicked()
 
     def _on_item_selected(self, name: str):
         if not name:
@@ -224,13 +393,13 @@ class SystemsTab(BaseTab):
             
             assigned = self._assignments.get_assignment(name)
             idx = self._emu_combo.findText(assigned)
-            
-            # Color the assigned emulator selection if valid
             if idx >= 0: 
                 self._emu_combo.setCurrentIndex(idx)
             else:
                 self._emu_combo.setCurrentText(assigned)
+
             self._populate_roms(self._rom_path_combo.current_path())
+            self._update_field_styling()
         else:
             entry = self._emus.get(name)
             if entry:
@@ -245,6 +414,7 @@ class SystemsTab(BaseTab):
                 self._config_path_combo.set_paths(entry.configs)
                 self._ext_edit.setText(", ".join(entry.extensions))
                 self._req_files_edit.setPlainText("\n".join(entry.required_files))
+                self._update_field_styling()
 
     def _populate_roms(self, rom_dir: str):
         self._rom_list.clear()
@@ -270,45 +440,142 @@ class SystemsTab(BaseTab):
             self._exe_path_edit.setText(chosen)
 
     def _on_detect_systems_clicked(self):
-        """Trigger fuzzy system detection from the primary systems directory."""
-        root = self._cfg.get("GLOBAL", "systems_directory", fallback="").split('|')[0]
-        if not root or not Path(root).exists():
-            QMessageBox.warning(self, "Path Error", "Primary Systems Directory not found. Set it in Settings.")
-            return
+        """Perform multi-stage system detection."""
+        self.log("Indexing drives for primary ROM/Emu roots...")
+        self.set_progress(10)
         
-        self._systems.detect_systems(Path(root))
-        
+        # 1. Discover primary directories on drive roots
+        found_sys_roots, found_emu_roots = self._systems.discover_primary_dirs()
+        for r in found_sys_roots + found_emu_roots:
+            self.log(f"Discovered primary root: {r}")
+
+        # Refresh Settings Tab to show the newly discovered roots
+        main_win = self.window()
+        if hasattr(main_win, "_settings_tab"):
+            main_win._settings_tab.refresh_ui()
+        self.set_progress(20)
+
+        # 2. Scan within established dirs and exact match drive roots
+        self.log("Matching identified folders against known systems...")
+        self._systems.detect_systems() 
+        self.set_progress(30)
+        found_exact = self._systems.exact_match_scan("Systems")
+        for item in found_exact:
+            self.log(f"Identified system: {item}")
+
+        self._systems.save()
+        self.log("System detection complete.")
+
         main_win = self.window()
         if hasattr(main_win, "refresh_all_tabs"):
             main_win.refresh_all_tabs()
 
-        self.set_status("System detection complete.")
+    def _on_rename_clicked(self):
+        """Handle system renaming and alias assignment."""
+        item = self._item_list.currentItem()
+        if not item:
+            return
+        old_name = item.text()
+        new_name = self._rename_edit.text().strip()
+        if not new_name or new_name == old_name:
+            return
+
+        # Update System Registry
+        path = self._systems.get_path(old_name)
+        self._systems.set_path(new_name, path)
+        self._systems.save()
+        
+        # Update Assignments/Overrides
+        assigned_emu = self._assignments.get_assignment(old_name)
+        if assigned_emu:
+            self._assignments.set_override(new_name, assigned_emu)
+            self._assignments.save()
+
+        self.refresh_ui()
+        self.set_status(f"System renamed: {old_name} -> {new_name}")
+
+    def _on_clear_emu_clicked(self):
+        """Clear the emulator assignment for the selected item."""
+        item = self._item_list.currentItem()
+        if not item:
+            return
+        name = item.text()
+        self._assignments.clear_override(name)
+        self._assignments.save()
+        self.refresh_ui()
+        self.set_status(f"Cleared assignment for {name}")
+
+    def _on_delete_emu_clicked(self):
+        """Remove assignment and delete the physical executable file."""
+        item = self._item_list.currentItem()
+        if not item or self._category_ddl.currentText() == "Systems":
+            return
+            
+        exe_path = self._exe_path_edit.text().strip()
+        if exe_path and Path(exe_path).exists():
+            ans = QMessageBox.warning(self, "Confirm Delete", f"Delete executable at {exe_path}?",
+                                     QMessageBox.StandardButton.Yes | QMessageBox.StandardButton.No)
+            if ans == QMessageBox.StandardButton.Yes:
+                Path(exe_path).unlink(missing_ok=True)
+                self._on_clear_emu_clicked()
 
     def _on_detect_emus_clicked(self):
-        """Scan emulator directories for known executables."""
-        root = self._cfg.get("GLOBAL", "emulators_directory", fallback="").split('|')[0]
-        if not root or not Path(root).exists():
-            QMessageBox.warning(self, "Path Error", "Primary Emulators Directory not found.")
-            return
+        """Scan established emulator directories and drive roots for known components."""
+        category = self._category_ddl.currentText()
+        self.set_status(f"Scanning for {category}...")
+        
+        # 1. Search within established emulator directories
+        emu_dirs_raw = self._cfg.get("GLOBAL", "emulators_directory", fallback="")
+        established = [Path(p.strip()) for p in emu_dirs_raw.split('|') if p.strip() and Path(p.strip()).exists()]
+        
+        # 2. Setup drive roots for exact folder matching
+        drives = []
+        import os, string
+        if os.name == 'nt':
+            for d in string.ascii_uppercase:
+                p = Path(f"{d}:/")
+                if p.exists(): drives.append(p)
 
-        self.set_status("Scanning for emulators...")
-        # Re-use the existing EmuRegistry logic to match found files
+        cat_map = {"Emulators": "emulator", "Frontends": "frontend", "Utilities": "utility"}
+        target_cat = cat_map.get(category, "emulator")
+
         found_count = 0
-        for p in Path(root).rglob("*.exe"):
-            # Check if this filename is a known exe in our registry
-            for entry in self._emus.by_category("emulator"):
-                if entry.exe.lower() == p.name.lower():
-                    from core.config import Config
-                    apps = Config(Config.APPS_FILE)
-                    apps.set("EMULATORS", entry.name, f'"{p}"')
-                    apps.save()
-                    found_count += 1
-                    break
+        
+        # Scan established directories (recursive search for known EXEs)
+        for root in established:
+            try:
+                for p in root.rglob("*.exe"):
+                    for entry in self._emus.by_category(target_cat):
+                        if entry.exe.lower() == p.name.lower():
+                            found_count += self._register_found_app(category, entry.name, p)
+                            break
+            except (PermissionError, OSError): continue
+            
+        # Scan drive roots (non-recursive exact folder match)
+        for d in drives:
+            try:
+                for item in d.iterdir():
+                    if item.is_dir():
+                        for entry in self._emus.by_category(target_cat):
+                            if item.name.lower() == entry.name.lower():
+                                exe_path = item / entry.exe
+                                if exe_path.exists():
+                                    found_count += self._register_found_app(category, entry.name, exe_path)
+                                    break
+            except (PermissionError, OSError): continue
 
         main_win = self.window()
         if hasattr(main_win, "refresh_all_tabs"):
             main_win.refresh_all_tabs()
-        self.set_status(f"Detection complete. Found {found_count} known emulators.")
+        self.set_status(f"Detection complete. Found {found_count} {category}.")
+
+    def _register_found_app(self, category: str, name: str, path: Path) -> int:
+        from core.config import Config
+        apps = Config(Config.APPS_FILE)
+        sec = "EMULATORS" if category == "Emulators" else category.upper()
+        apps.set(sec, name, f'"{path}"')
+        apps.save()
+        return 1
 
     def _edit_system_path(self):
         system = self._item_list.currentItem()
@@ -348,6 +615,8 @@ class SystemsTab(BaseTab):
             cfg_presets.save()
             self.set_status(f"Saved {category[:-1]}: {name}")
         
+        self._update_field_styling()
+
         main_win = self.window()
         if hasattr(main_win, "refresh_all_tabs"):
             main_win.refresh_all_tabs()

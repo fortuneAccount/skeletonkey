@@ -48,7 +48,7 @@ class JSONStore:
 def parse_set_file(path: Path, section: str) -> dict:
     """Parse a standard .set INI file into a dict."""
     parser = configparser.RawConfigParser(strict=False)
-    parser.optionxform = str
+    parser.optionxform = str  # type: ignore[assignment]
     try:
         parser.read(path, encoding="utf-8-sig")
     except UnicodeDecodeError:
@@ -62,7 +62,7 @@ def parse_set_file(path: Path, section: str) -> dict:
 def parse_pipe_line_set(path: Path, section: str) -> list[dict]:
     """Parse a pipe-delimited .set file (like EmuParts.set) into list of dicts."""
     parser = configparser.RawConfigParser(strict=False)
-    parser.optionxform = str
+    parser.optionxform = str  # type: ignore[assignment]
     try:
         parser.read(path, encoding="utf-8-sig")
     except UnicodeDecodeError:

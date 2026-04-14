@@ -11,6 +11,7 @@ where each field after $ is 0 or 1.
 import configparser
 from dataclasses import dataclass
 from pathlib import Path
+from core.config import global_config
 
 
 def _home() -> Path:
@@ -38,7 +39,7 @@ class LaunchParamsRegistry:
     SECTION = "LAUNCHPARAMS"
 
     def __init__(self, home: Path | None = None):
-        self._home = home or _home()
+        self._home = home or global_config().home
         self._data: dict[str, LaunchParams] = {}
         self._load()
 
@@ -48,7 +49,7 @@ class LaunchParamsRegistry:
 
     def _load(self):
         parser = configparser.RawConfigParser(strict=False)
-        parser.optionxform = str
+        parser.optionxform = str  # type: ignore[assignment]
 
         default_set = self._home / "assets" / "launchparams.set"
         if default_set.exists():
@@ -57,7 +58,7 @@ class LaunchParamsRegistry:
             except UnicodeDecodeError:
                 parser.read(default_set, encoding="utf-16")
 
-        user_ini = self._home / "generated" / "launchparams.ini"
+        user_ini = self._home / "launchparams.ini"
         if user_ini.exists():
             try:
                 parser.read(user_ini, encoding="utf-8-sig")
@@ -101,7 +102,7 @@ class LaunchParamsRegistry:
 
     def save(self):
         parser = configparser.RawConfigParser()
-        parser.optionxform = str
+        parser.optionxform = str  # type: ignore[assignment]
         parser.add_section(self.SECTION)
         for system, lp in self._data.items():
             val = "|".join([
@@ -113,7 +114,7 @@ class LaunchParamsRegistry:
                 "1" if lp.clean else "0",
             ])
             parser.set(self.SECTION, system, f'"{val}"')
-        dest = self._home / "generated" / "launchparams.ini"
+        dest = self._home / "launchparams.ini"
         dest.parent.mkdir(parents=True, exist_ok=True)
         with open(dest, "w", encoding="utf-8") as fh:
             parser.write(fh)
