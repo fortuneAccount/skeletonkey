@@ -7,7 +7,7 @@ Systems and Emulators directory fields are combo-boxes that support
 multiple paths.  The + button adds a new path (via folder browser),
 the - button removes the currently selected entry.
 
-Paths are stored in Settings.ini as pipe-delimited lists:
+Paths are stored in Settings.json as pipe-delimited lists:
     systems_directory = /path/a|/path/b
     emulators_directory = /path/x|/path/y
 
@@ -26,17 +26,15 @@ import os
 
 from core.config import global_config
 from ui.tabs.base_tab import BaseTab
-from utils.paths import app_home
+from utils.paths import app_home, config_home, assets_dir
 
-def _home() -> Path:
-    """Return the application root directory (parent of the Python folder)."""
-    return Path(__file__).resolve().parent.parent.parent.parent
-
-_SEP = "|"  # delimiter used in Settings.ini for multi-path values
+_SEP = "|"  # delimiter used in Settings.json for multi-path values
 
 
-def _load_paths(raw: str) -> list[str]:
+def _load_paths(raw: str | None) -> list[str]:
     """Split a pipe-delimited path string, stripping blanks."""
+    if not raw:
+        return []
     return [p.strip() for p in raw.split(_SEP) if p.strip()]
 
 
@@ -48,7 +46,7 @@ class _PathCombo(QWidget):
     """
     A combo-box pre-loaded with directory paths plus + / - action buttons.
 
-    Layout:  [combo▼]  [+]  [-]  [Browse…]
+    Layout:  [combo v]  [+]  [-]  [Browse...]
     """
 
     def __init__(self, label: str, parent=None):
@@ -73,13 +71,13 @@ class _PathCombo(QWidget):
         add_btn.clicked.connect(self._add)
         layout.addWidget(add_btn)
 
-        remove_btn = QPushButton("−")
+        remove_btn = QPushButton("-")
         remove_btn.setFixedWidth(28)
         remove_btn.setToolTip(f"Remove selected {self._label} directory")
         remove_btn.clicked.connect(self._remove)
         layout.addWidget(remove_btn)
 
-        browse_btn = QPushButton("Browse…")
+        browse_btn = QPushButton("Browse...")
         browse_btn.clicked.connect(self._browse)
         layout.addWidget(browse_btn)
 
@@ -155,7 +153,7 @@ class SettingsTab(BaseTab):
         # Header Row: Reset functionality (mirrors SKRESDDL/SKRESET)
         header_row = QHBoxLayout()
         self._reset_ddl = QComboBox()
-        self._reset_ddl.addItems(["All", "Session", "Jacket-Presets", "Retroarch", "Associations", "Core-Cfgs", "Playlist-DB"])
+        self._reset_ddl.addItems(["All", "Session", "Associations"])
         self._reset_ddl.setFixedWidth(160)
         header_row.addWidget(self._reset_ddl)
 
@@ -186,7 +184,7 @@ class SettingsTab(BaseTab):
         self._cache_dir = QLineEdit()
         cache_row = QHBoxLayout()
         cache_row.addWidget(self._cache_dir)
-        cache_browse = QPushButton("Browse…")
+        cache_browse = QPushButton("Browse...")
         cache_browse.clicked.connect(self._browse_cache)
         cache_row.addWidget(cache_browse)
         form.addRow("Cache / Temp:", cache_row)
@@ -315,47 +313,34 @@ class SettingsTab(BaseTab):
         ans = QMessageBox.question(self, "Confirm Reset", f"Are you sure you want to reset {target} settings?")
         if ans == QMessageBox.StandardButton.Yes:
             self.set_status(f"Resetting {target}...")
-            home = app_home()
+            conf_dir = config_home()
+            project_root = app_home()
 
             if target == "All":
                 # Mirrors RESET_ALL_QUIT: clear primary configs
-                for ext in ["*.ini", "*.cfg"]:
-                    for f in home.glob(ext):
+                for ext in ["*.json"]:
+                    for f in conf_dir.glob(ext):
                         f.unlink(missing_ok=True)
                 self.set_status("All settings cleared. Restart recommended.")
 
             elif target == "Session":
                 # Mirrors resetSYS: delete system index files
-                (home / "sysabr.ini").unlink(missing_ok=True)
-                (home / "sysint.ini").unlink(missing_ok=True)
-                (home / "hacksyst.ini").unlink(missing_ok=True)
+                (conf_dir / "sysabr.json").unlink(missing_ok=True)
+                (conf_dir / "sysint.json").unlink(missing_ok=True)
+                (conf_dir / "hacksyst.json").unlink(missing_ok=True)
                 self.set_status("Session cache cleared.")
 
-            elif target == "Jacket-Presets":
-                # Mirrors CLEAN_ROMJACKETS: remove jacket configs
-                import shutil
-                cfg_dir = home / "rj" / "sysCfgs"
-                if cfg_dir.exists():
-                    shutil.rmtree(cfg_dir)
-                    cfg_dir.mkdir(parents=True)
-                self.set_status("Jacket presets cleared.")
-
             elif target == "Associations":
-                # Mirrors AsocInit: restore from source template if available
+                # Restore from assets template
                 import shutil
-                src = home / "src" / "Assignments.set"
+                src = assets_dir() / "Assignments.json"
                 if src.exists():
-                    shutil.copy(src, home / "Assignments.ini")
+                    shutil.copy(src, conf_dir / "Assignments.json")
                 self.set_status("Associations restored to default.")
-
-            elif target == "Playlist-DB":
-                # Mirrors PlaylistInit
-                (home / "hashdb.ini").unlink(missing_ok=True)
-                self.set_status("Playlist database cleared.")
 
     def _on_portable_toggled(self, checked: bool):
         """Create or remove portable.txt with project path and state in root and AppData."""
-        project_root = _home()
+        project_root = app_home()
         appdata_dir = Path(os.environ.get("APPDATA", "")) / "skeletonkey"
         
         content = f"{project_root}\n{str(checked).lower()}"

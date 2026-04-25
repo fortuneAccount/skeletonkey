@@ -7,13 +7,13 @@ Replaces the exe_get / met_get / DownloadFile functions in gets.ahk.
 Emits Qt signals for progress so the UI can update progress bars without
 polling a status file (as the AHK version did).
 """
-import os
+import json
 import subprocess
 import threading
 from pathlib import Path
 
 from PyQt6.QtCore import QObject, pyqtSignal
-
+from utils.paths import bin_dir, assets_dir
 
 class DownloadWorker(QObject):
     """
@@ -40,9 +40,32 @@ class DownloadWorker(QObject):
         parent=None,
     ):
         super().__init__(parent)
+        
+        # Centralized URL resolution (resolves repository paths if relative)
+        if not url.startswith("http"):
+            arc_path = assets_dir() / "arcorg.json"
+            base = "https://buildbot.libretro.com"
+            if arc_path.exists():
+                try:
+                    with open(arc_path, "r", encoding="utf-8") as f:
+                        data = json.load(f)
+                        # Support both flat and nested "REPOSITORIES" keys
+                        repos = data.get("REPOSITORIES", data)
+                        base = repos.get("buildBotCore", base)
+                except Exception:
+                    pass
+            url = f"{base.rstrip('/')}/{url.lstrip('/')}"
+            
         self.url = url
         self.target_dir = Path(target_dir)
         self.filename = filename
+        
+        # Centralized aria2c resolution if no path was provided
+        if not aria2c_path:
+            aria_exe = bin_dir() / "aria2c.exe"
+            if aria_exe.exists():
+                aria2c_path = str(aria_exe)
+
         self.aria2c_path = aria2c_path
         self._cancelled = False
 

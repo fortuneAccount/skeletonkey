@@ -178,15 +178,6 @@ class MainTab(BaseTab):
         self._recurse_chk.setToolTip("Searches subdirectories for matching files")
         search_ctrl.addWidget(self._recurse_chk)
 
-        self._srch_rad_folder = QRadioButton("Folder")
-        self._srch_rad_playlist = QRadioButton("Playlist")
-        self._srch_rad_folder.setChecked(True)
-        srch_grp = QButtonGroup(self)
-        srch_grp.addButton(self._srch_rad_folder)
-        srch_grp.addButton(self._srch_rad_playlist)
-        search_ctrl.addWidget(self._srch_rad_folder)
-        search_ctrl.addWidget(self._srch_rad_playlist)
-
         # Location dropdown (mirrors SRCHLOCDL)
         self._srch_loc_ddl = QComboBox()
         self._srch_loc_ddl.setMinimumWidth(200)
@@ -263,6 +254,7 @@ class MainTab(BaseTab):
 
     def refresh_ui(self):
         """Public entry point for global refreshes."""
+        self._systems.reload()
         self._populate_systems()
         current_sys = self._system_ddl.currentText()
         if current_sys and current_sys != ":=:System List:=:":
@@ -279,11 +271,11 @@ class MainTab(BaseTab):
         inactive = []
 
         for name in all_systems:
-            path_raw = self._systems.get_path(name)
-            paths = [p.strip() for p in path_raw.split('|') if p.strip()]
+            entry = self._systems._data.get(name)
+            paths = entry.rom_path_list if entry else []
             is_active = any(Path(p).exists() for p in paths)
             
-            if is_active and path_raw.strip():
+            if is_active and paths:
                 active.append(name)
             else:
                 inactive.append(name)
@@ -307,10 +299,9 @@ class MainTab(BaseTab):
         self._srch_loc_ddl.clear()
         self._srch_loc_ddl.addItem(":=:System List:=:")
         for name in self._systems.all_systems():
+            entry = self._systems._data.get(name)
             # ONLY populate search with identified/active systems
-            path_raw = self._systems.get_path(name)
-            paths = [p.strip() for p in path_raw.split('|') if p.strip()]
-            if any(Path(p).exists() for p in paths):
+            if entry and any(Path(p).exists() for p in entry.rom_path_list):
                 self._srch_loc_ddl.addItem(name)
 
     def _populate_cores(self, system: str):
@@ -319,21 +310,20 @@ class MainTab(BaseTab):
         self._core_ddl.clear()
 
         assigned = self._assignments.get_assignment(system)
-        if not assigned:
-            assigned = ""
-
-        # Handle pipe-delimited assignments - prioritize last (invert)
-        # e.g., "CoreA|CoreB" means CoreB is preferred, CoreA is fallback
-        pipe_parts = [p.strip() for p in assigned.split('|') if p.strip()]
-        associated = list(reversed(pipe_parts)) if pipe_parts else []
+        # Prioritize most recently assigned (invert the list)
+        # e.g., ["CoreA", "CoreB"] means CoreB is preferred, CoreA is fallback
+        associated = list(reversed(assigned.emulators))
 
         # Get all installed emulators
         installed = [e.name for e in self._emus.get_installed_executables("emulator")]
         
         # Try both "retroArch" (as in apps.ini) and "retroarch"
-        ra_path = self._emus._apps_cfg.get("EMULATORS", "retroArch")
+        apps = self._emus._apps_cfg
+        ra_path = apps.get("EMULATORS", "retroArch") or apps.get("EMULATORS", "retroarch")
+        
         if not ra_path:
             ra_path = self._cfg.get("EMULATORS", "retroarch")
+
         if ra_path and Path(ra_path).exists():
             cores_dir = Path(ra_path).parent / "cores"
             if cores_dir.exists():
@@ -393,27 +383,41 @@ class MainTab(BaseTab):
         self._all_rom_items.clear()
         self._srch_edit.clear()
 
-        rom_dir = self._systems.get_path(system)
-        if not rom_dir:
+        entry = self._systems._data.get(system)
+        if not entry or not entry.rom_paths:
             return
 
-        p = Path(rom_dir)
-        if not p.exists():
-            self.set_status(f"ROM directory not found: {rom_dir}")
+        valid_paths = [Path(p) for p in entry.rom_path_list if Path(p).exists()]
+        if not valid_paths:
+            self.set_status(f"ROM directory not found: {entry.rom_paths}")
             return
 
         recurse = self._recurse_chk.isChecked()
         pattern = "**/*" if recurse else "*"
-        files = sorted(f for f in p.glob(pattern) if f.is_file())
+        
+        found_files = []
+        for base_p in valid_paths:
+            for f in base_p.glob(pattern):
+                if f.is_file():
+                    # Filter by ROMXT extensions if defined
+                    if entry.extensions:
+                        ext = f.suffix.lower().lstrip('.')
+                        if ext in [e.lower() for e in entry.extensions]:
+                            found_files.append((f, base_p))
+                    else:
+                        found_files.append((f, base_p))
 
-        for f in files:
-            display = str(f.relative_to(p)) if recurse else f.name
+        # Sort combined results by filename
+        found_files.sort(key=lambda x: x[0].name)
+
+        for f, base_p in found_files:
+            display = str(f.relative_to(base_p)) if recurse else f.name
             self._all_rom_items.append(str(f))
             item = QListWidgetItem(display)
             item.setData(Qt.ItemDataRole.UserRole, str(f))
             self._rom_list.addItem(item)
 
-        self.set_status(f"{len(files)} ROMs found in {system}")
+        self.set_status(f"{len(found_files)} ROMs found in {system}")
 
     def _restore_last(self):
         """Restore last used system and ROM from config."""
@@ -603,7 +607,6 @@ class MainTab(BaseTab):
         del_cfg_act.setEnabled(item is not None)
         menu.addAction(del_cfg_act)
 
-        me
         menu.exec(self._rom_list.mapToGlobal(pos))
 
     def _show_launch_menu(self):
@@ -643,7 +646,8 @@ class MainTab(BaseTab):
             path = Path(item.data(Qt.ItemDataRole.UserRole) or item.text())
         else:
             system = self._system_ddl.currentText()
-            path = Path(self._systems.get_path(system).split('|')[0])
+            entry = self._systems._data.get(system)
+            path = Path(entry.rom_path_list[0]) if entry and entry.rom_path_list else Path(".")
             
         if path.exists():
             if path.is_file():

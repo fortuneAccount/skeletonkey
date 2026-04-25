@@ -10,8 +10,8 @@ from pathlib import Path
 
 import requests
 
-from core.config import Config, global_config
-
+from core.config import global_config
+from utils.paths import assets_dir, app_root
 
 class Updater:
     """
@@ -22,7 +22,14 @@ class Updater:
     """
 
     def __init__(self):
-        self._arcorg = Config(Config.ARCORG_FILE)
+        self._arcorg_data = {}
+        path = assets_dir() / "arcorg.json"
+        if path.exists():
+            import json
+            try:
+                with open(path, "r", encoding="utf-8") as f:
+                    self._arcorg_data = json.load(f)
+            except: pass
         self._settings = global_config()
 
     # ------------------------------------------------------------------
@@ -31,15 +38,15 @@ class Updater:
 
     @property
     def current_version(self) -> str:
-        return self._arcorg.get("GLOBAL", "Version", fallback="")
+        return self._arcorg_data.get("GLOBAL", {}).get("Version", "")
 
     @property
     def source_host(self) -> str:
-        return self._arcorg.get("GLOBAL", "SOURCEHOST", fallback="")
+        return self._arcorg_data.get("GLOBAL", {}).get("SOURCEHOST", "")
 
     @property
     def update_url(self) -> str:
-        raw = self._arcorg.get("GLOBAL", "UPDATEFILE", fallback="")
+        raw = self._arcorg_data.get("GLOBAL", {}).get("UPDATEFILE", "")
         return raw.split("|")[0].strip()
 
     def check(self) -> tuple[bool, str]:
@@ -77,7 +84,7 @@ class Updater:
         except Exception as exc:
             return False
 
-        home = Path(__file__).resolve().parent.parent
+        home = app_root()
         result = subprocess.run(
             [seven_zip_path, "x", "-y", str(archive), f"-O{home}"],
             capture_output=True,

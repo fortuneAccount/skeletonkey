@@ -102,6 +102,7 @@ class ArtworkTab(BaseTab):
         splitter.setSizes([280, 720])
 
     def _populate_systems(self):
+        self._systems.reload()
         self._system_list.clear()
         for name in self._systems.all_systems():
             self._system_list.addItem(name)

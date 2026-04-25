@@ -139,26 +139,12 @@ class EmulatorsTab(BaseTab):
         bits = 64 if self._arch_combo.currentIndex() == 0 else 32
         archive_url = resolve_arch(entry.archive, bits)
 
-        # If archive is a relative path, prepend the configured repo base URL
-        if not archive_url.startswith("http"):
-            from core.config import Config
-            arcorg = Config(Config.ARCORG_FILE)
-            base = arcorg.get("REPOSITORIES", "buildBotCore",
-                              fallback="https://buildbot.libretro.com")
-            archive_url = f"{base}/{archive_url}"
-
         dest_dir = self._install_path.text() or str(
             app_home() / "Emulators" / entry.name)
         filename = Path(archive_url).name
 
-        aria2c = str(bin_dir() / "aria2c.exe") if (bin_dir() / "aria2c.exe").exists() else ""
-
         self._active_worker = DownloadWorker(
-            url=archive_url,
-            target_dir=dest_dir,
-            filename=filename,
-            aria2c_path=aria2c,
-        )
+            url=archive_url, target_dir=dest_dir, filename=filename)
         self._active_worker.progress.connect(self._progress.setValue)
         self._active_worker.speed.connect(self._speed_label.setText)
         self._active_worker.finished.connect(self._on_download_finished)

@@ -15,7 +15,8 @@ import sys
 from dataclasses import dataclass, field
 from pathlib import Path
 from typing import NamedTuple
-
+from utils.paths import assets_dir, app_root, check_paths_exist
+from utils.archive import extract
 
 class BiosRequirement(NamedTuple):
     """Single BIOS file requirement."""
@@ -31,10 +32,6 @@ class BiosStatus(NamedTuple):
     errors: list[str]
 
 
-def _home() -> Path:
-    return Path(__file__).resolve().parent.parent.parent
-
-
 @dataclass
 class LaunchConfig:
     """All parameters needed to launch a single ROM."""
@@ -46,8 +43,8 @@ class LaunchConfig:
     include_extension: bool = True
     include_path: bool = True
     working_dir: str = ""       # cwd for the emulator process
-    pre_configs: list[str] = field(default_factory=list)   # files to stage before launch
-    post_configs: list[str] = field(default_factory=list)  # files to restore after launch
+    extract_rom: bool = False   # Flag to trigger archive extraction
+    clean_after: bool = False   # Delete temp files after launch
     keymapper_path: str = ""    # optional antimicro / xpadder path
     keymapper_profile: str = "" # controller profile file
 
@@ -74,21 +71,14 @@ class Launcher:
     def _resolve_rom_path(self, path_str: str) -> str:
         """
         Resolves a multi-path constructed string into a single existing file.
-        Handles strings like 'C:/Roms|D:/Roms/game.zip' by checking each base dir.
         """
         if "|" not in path_str:
             return path_str
 
-        full_p = Path(path_str)
-        filename = full_p.name
-
-        # Extract the delimited directories. 
-        # Path("A|B") / "file" results in "A|B\file"
-        dirs_raw = str(full_p.parent).split("|")
-        
-        for d in dirs_raw:
-            candidate = Path(d.strip()) / filename
-            if candidate.exists():
+        # Handle filename resolution from multiple base directories
+        filename = Path(path_str).name
+        for d in str(Path(path_str).parent).split("|"):
+            if (candidate := Path(d.strip()) / filename).exists():
                 return str(candidate)
 
         return path_str
@@ -99,9 +89,18 @@ class Launcher:
         Returns the emulator process exit code.
         """
         self.cfg.rom_path = self._resolve_rom_path(self.cfg.rom_path)
+        
+        # Handle Archive Extraction if required
+        original_rom = Path(self.cfg.rom_path)
+        if self.cfg.extract_rom and original_rom.suffix.lower() in ('.zip', '.7z', '.rar'):
+            temp_dir = app_root() / "temp" / original_rom.stem
+            if extract(str(original_rom), str(temp_dir)):
+                # Find the first file in the extracted folder to use as the target
+                files = [f for f in temp_dir.iterdir() if f.is_file()]
+                if files:
+                    self.cfg.rom_path = str(files[0])
 
         self._start_keymapper()
-        self._stage_pre_configs()
 
         cmd = self._build_command()
         cwd = self.cfg.working_dir or str(Path(self.cfg.emulator_path).parent)
@@ -109,7 +108,11 @@ class Launcher:
         self._proc = subprocess.Popen(cmd, cwd=cwd, shell=False)
         exit_code = self._proc.wait()
 
-        self._restore_post_configs()
+        # Cleanup if required
+        if self.cfg.clean_after and self.cfg.extract_rom:
+            import shutil
+            shutil.rmtree(Path(self.cfg.rom_path).parent, ignore_errors=True)
+
         self._stop_keymapper()
         return exit_code
 
@@ -140,31 +143,6 @@ class Launcher:
         if self.cfg.arguments:
             parts += self.cfg.arguments.split()
         return parts
-
-    def _stage_pre_configs(self):
-        """Copy per-game config files into the emulator directory before launch."""
-        rom_stem = Path(self.cfg.rom_path).stem
-        emu_dir = Path(self.cfg.emulator_path).parent
-        for pattern in self.cfg.pre_configs:
-            if not pattern:
-                continue
-            src = emu_dir / pattern.replace("[ROMNAME]", rom_stem)
-            if src.exists():
-                import shutil
-                shutil.copy2(src, emu_dir / src.name.replace(f"{rom_stem}_", ""))
-
-    def _restore_post_configs(self):
-        """Copy emulator config files back to per-game slots after launch."""
-        rom_stem = Path(self.cfg.rom_path).stem
-        emu_dir = Path(self.cfg.emulator_path).parent
-        for pattern in self.cfg.post_configs:
-            if not pattern:
-                continue
-            src = emu_dir / pattern
-            if src.exists():
-                import shutil
-                dest = emu_dir / f"{rom_stem}_{src.name}"
-                shutil.copy2(src, dest)
 
     def _start_keymapper(self):
         if not self.cfg.keymapper_path:
@@ -315,7 +293,7 @@ def _search_bios_paths(base: Path, sub_path: str, filename: str) -> list[Path]:
     search_roots = [
         base,
         base.parent,
-        _home() / "Emulators",
+        app_root() / "Emulators",
         Path("C:/Users/Public/RetroArch") / "system",
         Path("C:/Program Files/RetroArch") / "system",
         Path("C:/Program Files (x86)/RetroArch") / "system",
@@ -338,17 +316,24 @@ def verify_bios(emu_name: str, system: str, app_home: Path) -> BiosStatus:
     """
     import json
 
-    bios_json = _home() / "data" / "bios.json"
+    bios_json = assets_dir() / "bios.json"
     if not bios_json.exists():
-        return BiosStatus(missing=[], present=[], errors=["BIOS database not found"])
+        # Fallback to internal data folder if assets are missing
+        bios_json = app_root() / "Python" / "data" / "bios.json"
+        if not bios_json.exists():
+            return BiosStatus(missing=[], present=[], errors=["BIOS database not found"])
 
     try:
         with open(bios_json, "r", encoding="utf-8") as f:
             bios_data = json.load(f)
+        
+        if not isinstance(bios_data, dict):
+            raise ValueError("BIOS database format mismatch (expected dictionary)")
+            
+        entries = bios_data.get("entries", {})
     except Exception as e:
         return BiosStatus(missing=[], present=[], errors=[f"Failed to load BIOS data: {e}"])
 
-    entries = bios_data.get("entries", {})
     system_entry = entries.get(system, {})
     emu_entry = system_entry.get(emu_name.lower(), {})
     required = emu_entry.get("required_files", [])
@@ -392,7 +377,7 @@ def check_launch_prerequisites(emu_name: str, system: str) -> tuple[bool, list[s
     Check if a ROM can be launched given current BIOS/firmware status.
     Returns (can_launch: bool, warnings: list[str])
     """
-    app_home = _home() / "Emulators"
+    app_home = app_root() / "Emulators"
     status = verify_bios(emu_name, system, app_home)
 
     warnings = []

@@ -1,0 +1,4610 @@
+{
+    "Acetronic - MPU-1000": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "mpu1000",
+        "MAMEOPTS": "<mpu1000 -cart<",
+        "SHORTNM": "ACEMPU1K",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Acorn - Archimedes": {
+        "EMUPRESET": "Arculator",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "a310",
+        "MAMEOPTS": "<a310 -flop<a7000 -flop",
+        "ROMXT": "adf|ads|adm|adl|apd|d77|d88|1dd|dfi|hfe|imd|ipf|mfi|mfm|td0|cqm|cqi|dsk|fdi|apd|zip",
+        "SHORTNM": "ACARC",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "Arculator|rpcemu|redsquirrel|ArcEM"
+    },
+    "Acorn - Atom": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "atom",
+        "MAMEOPTS": "<atom -flop<",
+        "SHORTNM": "ACATOM",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "atom|atomulator|MAME"
+    },
+    "Acorn - BBC": {
+        "EMUPRESET": "BeebEm",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "bbca",
+        "MAMEOPTS": "<bbca -[RTYP]<|<bbca -cass<|<bbca -cart1<",
+        "ROMXT": "ssd|bbc|img|dsd|fsd|wav|csw|uef|bin|rom|zip",
+        "SHORTNM": "ACBBC",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "BeebEm|bem|modelb|Horizon|MAME"
+    },
+    "Acorn - Electron": {
+        "EMUPRESET": "ElecEM",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "electron",
+        "MAMEOPTS": "<electron -[RTYP]<|<electron -cass<|<electron -cart<|<electron -flop<",
+        "ROMXT": "ssd|bbc|img|dsd|adf|ads|adm|adl|wav|csw|uef|bin|zip",
+        "SHORTNM": "ACELEC",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "ElectrEM|elk|elkulator|MAME"
+    },
+    "Acorn - FileStore": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "e01",
+        "MAMEOPTS": "<e01 -flop<",
+        "SHORTNM": "ACFILST",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "ACT - Apricot PC-Xi": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "apricot",
+        "MAMEOPTS": "<apricot -flop<",
+        "SHORTNM": "APRIC",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "ADC - Super Six": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "super6",
+        "MAMEOPTS": "<super6 -flop<",
+        "SHORTNM": "SUPRSIX",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Adobe - Flash": {
+        "EMUPRESET": "FlashRun",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "ROMXT": "swf|html|htm",
+        "SHORTNM": "AFLASH",
+        "SUPCORE": "",
+        "SUPEMU": "FlashRun|SWFOpener|FlashPlayer"
+    },
+    "Agat - 7": {
+        "SHORTNM": "AGAT7",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME|EMU"
+    },
+    "ALG - American Laser Games": {
+        "LNCHPRM": "$|1|1|0|1|0",
+        "SHORTNM": "ALAZG",
+        "SUPCORE": "daphne_libretro.dll|mame_libretro.dll",
+        "SUPEMU": "Hypseus|daphne"
+    },
+    "Altos - Series 5": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "altos5",
+        "MAMEOPTS": "<altos5 -flop<",
+        "SHORTNM": "ALTOSSV",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Ampro - Little Z80 Board": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "ampro",
+        "MAMEOPTS": "<ampro -flop<",
+        "SHORTNM": "AMPLZ",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Amstrad - CPC": {
+        "EMUARGS": "</A|<",
+        "EMUPRESET": "WinApe",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAME?EMUARGS": "<",
+        "MAMENM": "cpc6128p",
+        "MAMEOPTS": "<cpc6128p -[RTYP]<|<cpc6128p -cass<|cpc6128p -flop<",
+        "ROMXT": "dsc|dsk|arc|cdt|tzx|czx|voc|wav|cpr|bin|d77|d88|1dd|dfi|imd|ipf|mfi|mfm|td0|cqm|cqi|zip|kcr",
+        "SHORTNM": "AMSCPC",
+        "SUPCORE": "crocods_libretro.dll",
+        "SUPEMU": "WinApe|arnold|Arnimedes|caprice|no$cpc|cpce|javacpc|sugarbox|wincpc|MAME"
+    },
+    "Amstrad - GX4000": {
+        "EMUARGS": " \"",
+        "EMUPRESET": "WinApe",
+        "LNCHPRM": "$|1|1|1|1|0",
+        "MAMENM": "gx4000",
+        "MAMEOPTS": "<gx4000 -cart<",
+        "ROMXT": "bin|cpr|crt|zip",
+        "SHORTNM": "AMGX4K",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME|WinApe"
+    },
+    "Amstrad - Mega PC": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "megapc",
+        "MAMEOPTS": "<megapc -flop1<",
+        "SHORTNM": "AMSTRMPC",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "WinApe|arnold|caprice|MAME"
+    },
+    "Amstrad - PC1512 SD": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "pc1512",
+        "MAMEOPTS": "<pc1512 -flop<",
+        "SHORTNM": "AMSTP5SD",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "WinApe|arnold|caprice|MAME"
+    },
+    "Amstrad - PC1640 SD": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "pc1640",
+        "MAMEOPTS": "<pc1640 -flop<",
+        "SHORTNM": "AMSTP6SD",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "WinApe|arnold|caprice|MAME"
+    },
+    "Amstrad - PcW": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "pcw",
+        "MAMEOPTS": "<pcw -flop1<",
+        "SHORTNM": "AMSTPCW",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "joyce|WinApe|arnold|caprice|MAME"
+    },
+    "Amstrad - PcW16": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "pcw16",
+        "MAMEOPTS": "<pcw16 -flop<",
+        "SHORTNM": "AMSTPCWX",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "WinApe|arnold|caprice|MAME"
+    },
+    "Android - Android": {
+        "EMUPRESET": "Nox",
+        "LNCHPRM": "$|1|1|1|1|0",
+        "ROMXT": "apk",
+        "SHORTNM": "ANDRD",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "Nox|Bluestacks"
+    },
+    "APF - Imagination Machine": {
+        "EMUPRESET": "MAME",
+        "MAMENM": "apfimag",
+        "MAMEOPTS": "<apfimag -flop<"
+    },
+    "APF - M-1000": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "apfm1000",
+        "MAMEOPTS": "<apfm1000 -flop<",
+        "SHORTNM": "APFM1K",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Apogee - BK-01": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "apogee",
+        "MAMEOPTS": "<apogee -flop<",
+        "SHORTNM": "APOGBK",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "EMU|MAME"
+    },
+    "Apollo - Apollo": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "apollo",
+        "MAMEOPTS": "<apollo -flop<",
+        "SHORTNM": "APOLLO",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Apple - Bandai - Pippin": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "pippin",
+        "MAMEOPTS": "<pippin -cdrom<",
+        "SHORTNM": "BPIPN",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Apple - I": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "apple1",
+        "MAMEOPTS": "<apple1 -flop<",
+        "SHORTNM": "APLI",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "faux1|agat|apple1|MAME"
+    },
+    "Apple - II": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "apple2",
+        "MAMEOPTS": "<apple2 -[RTYP]<|<apple2 -cass<|<apple2 -flop1<",
+        "ROMXT": "bin|dsk|zip|nib|iie|d|po|gz|2img|2mg|hdv|rti|edd|d77|d88|1dd|dfi|hfe|imd|ipf|mfi|mfm|td0|cqm|cqi|wav",
+        "SHORTNM": "APLII",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "agat|aipc|MAME"
+    },
+    "Apple - IIe": {
+        "EMUPRESET": "AppleWin",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "apple2e",
+        "MAMEOPTS": "<apple2e -[RTYP]<|<apple2e -cass<|<apple2e -flop1<",
+        "ROMXT": "bin|dsk|zip|nib|iie|d|po|gz|2img|2mg|hdv|rti|edd|d77|d88|1dd|dfi|hfe|imd|ipf|mfi|mfm|td0|cqm|cqi|wav",
+        "SHORTNM": "APL2E",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "AppleWin|Bizhawk|virtu|aipc|gsport|MAME"
+    },
+    "Apple - IIgs": {
+        "EMUPRESET": "Kegs32",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "apple2gs",
+        "MAMEOPTS": "<apple2gs -flop1<",
+        "ROMXT": "do|dsk|bin|po|nib|fdi|td0|imd|cqm|d77|d88|1dd|img|image|dc|2img|2mg|zip",
+        "SHORTNM": "APL2GS",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "ActiveGS|Kegs32|kegs|gsport|MAME"
+    },
+    "Apple - III": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "apple3",
+        "MAMEOPTS": "<apple3 -flop<",
+        "SHORTNM": "APLIII",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Apple - Lisa": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "lisa",
+        "MAMEOPTS": "<lisa -flop1<|<lisa -flop2<",
+        "SHORTNM": "APLISAII",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "lisaem|lisa|MAME"
+    },
+    "Apple - Lisa 2": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "lisa2",
+        "MAMEOPTS": "<lisa2 -flop1<|<lisa2 -flop2<",
+        "SHORTNM": "APLISA",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "lisaem|lisa|MAME"
+    },
+    "Apple - Macintosh": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "mac128k",
+        "MAMEOPTS": "<mac128k -flop1<",
+        "SHORTNM": "APLMAC",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "pcemacplus|minivmac|gemulator|MAME"
+    },
+    "Atari - 2600": {
+        "EMUPRESET": "Stella",
+        "LNCHPRM": "$|1|1|1|1|0",
+        "MAMENM": "a2600",
+        "MAMEOPTS": "<a2600p -cart<|<a2600 -cart<",
+        "ROMXT": "z26|a26|zip|bin|rom|zip",
+        "SHORTNM": "AT26",
+        "SUPCORE": "stella_libretro.dll|",
+        "SUPEMU": "Stella|no$2k6|z26|MAME"
+    },
+    "Atari - 2600 - PAL": {
+        "EMUPRESET": "MAME",
+        "MAMENM": "a2600p",
+        "MAMEOPTS": "<a2600p -cart<"
+    },
+    "Atari - 5200": {
+        "Altirra?EMUOPTS": "</hardware:5200 /kernel:5200lle<|</f /hardware:5200 /kernel:5200lle<",
+        "EMUPRESET": "Altirra",
+        "LNCHPRM": "$|1|1|1|1|0",
+        "MAMENM": "a5200",
+        "MAMEOPTS": "<a5200 -cart<",
+        "ROMXT": "bin|rom|car|a52|zip",
+        "SHORTNM": "AT52",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "Altirra|atari++|Atari800winplus|kat5200|rainbow|jum52|MAME"
+    },
+    "Atari - 7800": {
+        "EMUPRESET": "prosystem",
+        "LNCHPRM": "$|1|1|1|1|0",
+        "MAMENM": "a7800",
+        "MAMEOPTS": "<a7800p -cart<|<a7800 -cart<",
+        "prosystem?EMUOPTS": "<-Fullscreen 0 -MenuEnabled 1 -Region auto -Zoom 3<|<-Fullscreen 1 -MenuEnabled 0 -Region auto<",
+        "ROMXT": "bin|a78|rom|zip",
+        "SHORTNM": "AT78",
+        "SUPCORE": "prosystem_libretro.dll",
+        "SUPEMU": "prosystem|bliss|emu7800|Bizhawk|MAME"
+    },
+    "Atari - 800": {
+        "Altirra?EMUOPTS": "</hardware:800xl</disk<|</hardware:800xl</tape<|</hardware:800xl</cart<",
+        "EMUPRESET": "Altirra",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "a800xl",
+        "MAMEOPTS": "<a800xl -[RTYP]<|<a800xl -flop1<|<a800xl -cart<|<a800xlp -flop1<|<a800xlp -cart<|<a800 -flop1<|<a800 -cart<|<a800pal -flop1<|<a800pal -cart<|<a800xe -flop1<|<a800xe -cart<",
+        "ROMXT": "atr|dsk|xfd|bin|rom|car|xex|wav|bas|cas|bin|zip|atx|pro|obx|com|zip",
+        "SHORTNM": "AT8H",
+        "SUPCORE": "atari800_libretro.dll",
+        "SUPEMU": "Altirra|Atari800|atari++|Atari800winplus|rainbow|gemulator|MAME"
+    },
+    "Atari - 800 - PAL": {
+        "Altirra?EMUOPTS": "</hardware:800xl</disk<|</hardware:800xl</tape<|</hardware:800xl</cart<",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMEOPTS": "<a800pal -[RTYP]<|<a800pal -flop1<|<a800pal -cart<|<a800xlp -flop1<|<a800xlp -cart<|<a800 -flop1<|<a800 -cart<|<a800pal -flop1<|<a800pal -cart<|<a800xe -flop1<|<a800xe -cart<",
+        "ROMXT": "atr|dsk|xfd|bin|rom|car|xex|wav|bas|cas|bin|zip|atx|pro|obx|com|zip",
+        "SHORTNM": "AT8P",
+        "SUPCORE": "atari800_libretro.dll",
+        "SUPEMU": "Altirra|Atari800|atari++|Atari800winplus|rainbow|gemulator|MAME"
+    },
+    "Atari - 8Bit": {
+        "Altirra?EMUOPTS": "</hardware:800xl</disk<|</hardware:800xl</tape<|</hardware:800xl</cart<",
+        "EMUPRESET": "Altirra",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "a800xl",
+        "MAMEOPTS": "<a800xl -[RTYP]<|<a800xl -flop1<|<a800xl -cart<|<a800xlp -flop1<|<a800xlp -cart<|<a800 -flop1<|<a800 -cart<|<a800pal -flop1<|<a800pal -cart<|<a800xe -flop1<|<a800xe -cart<",
+        "ROMXT": "atr|dsk|xfd|bin|rom|car|xex|wav|bas|cas|bin|zip|atx|pro|obx|com|zip",
+        "SHORTNM": "AT8B",
+        "SUPCORE": "atari800_libretro.dll",
+        "SUPEMU": "Altirra|Atari800|atari++|Atari800winplus|rainbow|gemulator|MAME"
+    },
+    "Atari - Falcon": {
+        "SHORTNM": "ATFAL",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "Hatari|MAME"
+    },
+    "Atari - Jaguar": {
+        "EMUPRESET": "BigPEmu",
+        "LNCHPRM": "$|1|1|1|1|0",
+        "MAMENM": "jaguar",
+        "MAMEOPTS": "<jaguar -cart<",
+        "ROMXT": "bin|rom|abs|jag|j64|prg|cof|zip",
+        "SHORTNM": "ATJAG",
+        "SUPCORE": "virtualjaguar_libretro.dll",
+        "SUPEMU": "BigPEmu|virtualJaguar|jagulator|projecttempest|MAME"
+    },
+    "Atari - Jaguar CD": {
+        "EMUPRESET": "ProjectTempest",
+        "LNCHPRM": "$|1|1|1|1|0",
+        "MAMENM": "jaguarcd",
+        "MAMEOPTS": "<jaguarcd -cdrom<",
+        "ROMXT": "iso|bin|cue|img|ccd|cdi|bin|rom|abs|jag|j64|prg|cof|zip",
+        "SHORTNM": "ATJAGCD",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "ProjectTempest|MAME"
+    },
+    "Atari - Lynx": {
+        "EMUPRESET": "Mednafen",
+        "LNCHPRM": "$|1|1|1|1|0",
+        "MAMENM": "lynx",
+        "MAMEOPTS": "<lynx -cart<",
+        "MEDNM": "lynx",
+        "ROMXT": "com|o|lnx|lyx|zip",
+        "SHORTNM": "ATLYNX",
+        "SUPCORE": "mednafen_lynx_libretro.dll|handy_libretro.dll",
+        "SUPEMU": "Mednafen|Bizhawk|MAME"
+    },
+    "Atari - Portfolio": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "pofo",
+        "MAMEOPTS": "<pofo -card<",
+        "SHORTNM": "ATPFOL",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Atari - ST": {
+        "EMUPRESET": "STeem",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAME?MAMEOPTS": "<st -[RTYP]<|<st -cart<|<st -flop1<",
+        "MAMENM": "st",
+        "ROMXT": "stx|st|msa|zip|ipf",
+        "SHORTNM": "ATST",
+        "SUPCORE": "hatari_libretro.dll",
+        "SUPEMU": "STeem|hatari|gemulator|sainT|MAME"
+    },
+    "Atari - XE": {
+        "Altirra?EMUOPTS": "</hardware:800xl</disk<|</hardware:800xl</tape<|</hardware:800xl</cart<",
+        "EMUPRESET": "Altirra",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "xegs",
+        "MAMEOPTS": "<xegs -[RTYP]<|<a800xlp -flop1<|<a800xlp -cart<|<a800 -flop1<|<a800 -cart<|<a800pal -flop1<|<a800pal -cart<|<a800xe -flop1<|<a800xe -cart<|<a800xl -flop1<|<a800xl -cart<|<xegs -cass1<|<xegs -flop1<",
+        "ROMXT": "atr|dsk|xfd|bin|rom|car|zip",
+        "SHORTNM": "ATXE",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "Altirra|atari++|Atari800winplus|MAME"
+    },
+    "Bally - Astrocade": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "astrocde",
+        "MAMEOPTS": "<astrocde -cart<|<astrocdw -cart<|<astrocdl -cart<|<astrocde -cart<",
+        "ROMXT": "bin|zip",
+        "SHORTNM": "BASTR",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Bandai - Gundam RX-78": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "rx78",
+        "MAMEOPTS": "<rx78 -cart<",
+        "SHORTNM": "BGUND",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Bandai - Playdia": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "playdia",
+        "MAMEOPTS": "<playdia -cdrom<",
+        "SHORTNM": "BPLAD",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Bandai - Super Note Club": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "snotec",
+        "MAMEOPTS": "<snotec<",
+        "SHORTNM": "BSUPRN",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Bandai - Super Vision 8000": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "omv2000",
+        "MAMEOPTS": "<omv2000 -cart<",
+        "SHORTNM": "BSUPRV",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Bandai - WonderSwan": {
+        "EMUPRESET": "Mednafen",
+        "LNCHPRM": "$|1|1|1|1|0",
+        "MAMENM": "wswan",
+        "MAMEOPTS": "<wswan -cart<",
+        "MEDNM": "wswan",
+        "ROMXT": "bin|zip|ws",
+        "SHORTNM": "BWSWAN",
+        "SUPCORE": "mednafen_wswan_libretro.dll",
+        "SUPEMU": "Mednafen|oswan|Bizhawk|bws|xe|MAME|byuu"
+    },
+    "Bandai - WonderSwan Color": {
+        "EMUPRESET": "Mednafen",
+        "LNCHPRM": "$|1|1|1|1|0",
+        "MAMENM": "wscolor",
+        "MAMEOPTS": "<wswan -cart<",
+        "MEDNM": "wswan",
+        "ROMXT": "bin|zip|ws|wsc",
+        "SHORTNM": "BWSWANC",
+        "SUPCORE": "mednafen_wswan_libretro.dll",
+        "SUPEMU": "Mednafen|oswan|Bizhawk|xe|bws|MAME|byuu"
+    },
+    "BBC - Bridge Companion": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "bbcbc",
+        "MAMEOPTS": "<bbcbc -flop<",
+        "SHORTNM": "BBCBR",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "BBC - Master": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "bbcm",
+        "MAMEOPTS": "<bbcm -flop<",
+        "SHORTNM": "BBCMAS",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "BBC - Master Compact": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "bbcmc",
+        "MAMEOPTS": "<bbcmc -flop<",
+        "SHORTNM": "BBCMC",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "BBC - Micro Model A": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "bbca",
+        "MAMEOPTS": "<bbca -flop<",
+        "SHORTNM": "BBCMA",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "BBC - Micro Model B": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "bbcb",
+        "MAMEOPTS": "<bbcb -flop<",
+        "SHORTNM": "BBCMB",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Belogic - Uzebox": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "uzebox",
+        "MAMEOPTS": "<uzebox -cart<",
+        "SHORTNM": "BELOUZ",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Benesse - Pocket Challenge V2": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "pockchalv2",
+        "MAMEOPTS": "<pockchalv2 -cart<",
+        "SHORTNM": "BELPCII",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME|byuu"
+    },
+    "Benesse - Pocket Challenge W": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "pockchalw",
+        "MAMEOPTS": "<pockchalw -cart<",
+        "SHORTNM": "BELPCW|byuu",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "BIOS - BIOS": {
+        "EMUPRESET": "MAME",
+        "MAMENM": "",
+        "MAMEOPTS": "",
+        "MEDNM": "",
+        "ROMXT": ""
+    },
+    "Bit Corp - Gamate": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "gamate",
+        "MAMEOPTS": "<gamate -cart<",
+        "SHORTNM": "BITCGA",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "BNPO - Bashkiria-2M": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "b2m",
+        "MAMEOPTS": "<b2m -flop<",
+        "SHORTNM": "BNPOB",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Bondwell - Bondwell 12": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "bw12",
+        "MAMEOPTS": "<bw12 -flop<",
+        "SHORTNM": "BOND12",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Bondwell - Bondwell 14": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "bw14",
+        "MAMEOPTS": "<bw14 -flop<",
+        "SHORTNM": "BOND14",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Bondwell - Bondwell 2": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "bw2",
+        "MAMEOPTS": "<bw2 -flop<",
+        "SHORTNM": "BOND2",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Cambridge Computers - Z88": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "z88",
+        "MAMEOPTS": "<z88 -cart1<",
+        "SHORTNM": "CAMBZ",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Camputers - Lynx": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "lynx128",
+        "MAMEOPTS": "<lynx128k -[RTYP]<|<lynx128k -cass<|<lynx128k -flop1<",
+        "ROMXT": "wav|tap|ldf|d77|d88|1dd|dfi|hfe|imd|ipf|mfi|mfm|td0|cqm|cqi|dsk|zip",
+        "SHORTNM": "CAMPLYNX",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "jynx|MAME"
+    },
+    "Canon - X-07": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "x07",
+        "MAMEOPTS": "<x07 -card<|<x07 -cass1<",
+        "SHORTNM": "CANX07",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Capcom Play System - CPS": {
+        "EMUPRESET": "FinalBurnAlpha",
+        "EXTRARC": "0",
+        "LNCHPRM": "$|0|0|0|0|0",
+        "NICEFLDR": "1",
+        "PEREMUCFG": "1",
+        "ROMXT": "zip",
+        "SETLST": "",
+        "SHORTNM": "CPS",
+        "SUPCORE": "fbalpha2012_cps1_libretro.dll|fbalpha2012_libretro.dll|mame2010_libretro.dll|mame2003_plus_libretro.dll|mame2003_libretro.dll|mame2000_libretro.dll|fbalpha_libretro.dll|mame2014_libretro.dll|mame2016_libretro.dll|mame_libretro.dll",
+        "SUPEMU": "FinalBurnalpha|FBNeo|callus|WinKawaks|ace|nebula|mame_arcade|MAME"
+    },
+    "Capcom Play System - CPS II": {
+        "EMUPRESET": "FinalBurnAlpha",
+        "EXTRARC": "0",
+        "LNCHPRM": "$|0|0|0|0|0",
+        "NICEFLDR": "1",
+        "ROMXT": "zip",
+        "SETLST": "",
+        "SHORTNM": "CPSII",
+        "SUPCORE": "fbalpha2012_cps2_libretro.dll|fbalpha2012_libretro.dll|mame2010_libretro.dll|mame2003_plus_libretro.dll|mame2003_libretro.dll|mame2000_libretro.dll|fbalpha_libretro.dll|mame2014_libretro.dll|mame2016_libretro.dll|mame_libretro.dll",
+        "SUPEMU": "FinalBurnalpha|FBNeo|ace|nebula|WinKawaks|mame_arcade|MAME"
+    },
+    "Capcom Play System - CPS III": {
+        "EMUPRESET": "cps3emulator",
+        "EXTRARC": "0",
+        "LNCHPRM": "$|0|0|0|0|0",
+        "NICEFLDR": "1",
+        "ROMXT": "chd|zip",
+        "SETLST": "",
+        "SHORTNM": "CPSIII",
+        "SUPCORE": "fbalpha2012_libretro.dll|mame2010_libretro.dll|mame2003_plus_libretro.dll|mame2003_libretro.dll|mame2000_libretro.dll|fbalpha_libretro.dll|mame2014_libretro.dll|mame2016_libretro.dll|mame_libretro.dll",
+        "SUPEMU": "FinalBurnAlpha|FBNeo|cps3emulator|mame_arcade|MAME"
+    },
+    "Casio - Loopy": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "casloopy",
+        "MAMEOPTS": "<casloopy -cart<",
+        "ROMXT": "bin|ic1|zip",
+        "SHORTNM": "CASLOOP",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Casio - PB-1000": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "pb1000",
+        "MAMEOPTS": "<pb1000<",
+        "ROMXT": "*",
+        "SHORTNM": "CASPB1K",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Casio - PB-2000C": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "pb2000c",
+        "MAMEOPTS": "<pb2000c -cart<",
+        "SHORTNM": "CASPB2KC",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Casio - PV-1000": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "pv1000",
+        "MAMEOPTS": "<pv1000 -cart<",
+        "ROMXT": "*",
+        "SHORTNM": "CASPV1K",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "pv1000|MAME"
+    },
+    "Casio - PV-2000": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "pv2000",
+        "MAMEOPTS": "<pv2000 -[RTYP]<|<pv2000 -cart<|<pv2000 -cass<",
+        "SHORTNM": "CASPV2K",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "pv2000|MAME"
+    },
+    "Cave Systems - Cave": {
+        "EMUARGS": "<-rp \"[RJMAMEROMPTH]\"",
+        "EMUOPTS": "<[RJMAMENM] -[MAMEMEDIA]<",
+        "EMUPRESET": "MAME - Arcade",
+        "EXTRARC": "0",
+        "LNCHPRM": "$|0|0|0|0|0",
+        "NICEFLDR": "1",
+        "ROMXT": "zip",
+        "RUNDIR": "0",
+        "SETLST": "",
+        "SHORTNM": "CAVE",
+        "SUPCORE": "fbalpha_libretro.dll|mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Chess-Master - Diamond Modules": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "chessmstdm",
+        "MAMEOPTS": "<chessmstdm -flop<",
+        "SHORTNM": "CHEDMOD",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Cinematronics - Laserdisc": {
+        "LNCHPRM": "$|1|1|0|1|0",
+        "ROMXT": "txt",
+        "SHORTNM": "CINLD",
+        "SUPCORE": "daphne_libretro.dll",
+        "SUPEMU": "Hypseus|daphne"
+    },
+    "Coleco - ADAM": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "adam",
+        "MAMEOPTS": "<adam -[RTYP]<|<adam -flop1<|<adam -cass1<|<adam -cart1<",
+        "SHORTNM": "COLADAM",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "adamemu|MAME"
+    },
+    "Coleco - ColecoVision": {
+        "BlueMSX?EMUOPTS": "</fullscreen /machine \"COL - Colecovision\" /rom1<|</machine \"COL - Colecovision\" /rom1zip<|</fullscreen /machine \"COL - Colecovision\" /rom1zip<|</machine \"COL - Colecovision\" /rom1<",
+        "EMUPRESET": "BlueMSX",
+        "LNCHPRM": "$|1|1|1|1|0",
+        "MAMENM": "coleco",
+        "MAMEOPTS": "<coleco -cart<|<colecp -cart<|<coleco -cart<",
+        "SHORTNM": "COLECO",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "BlueMSX|dsp|colecovision|colem|meka|koleko|MAME"
+    },
+    "Coleco - Colecovision - PAL": {
+        "BlueMSX?EMUOPTS": "</fullscreen /machine \"COL - Colecovision\" /rom1<|</machine \"COL - Colecovision\" /rom1zip<|</fullscreen /machine \"COL - Colecovision\" /rom1zip<|</machine \"COL - Colecovision\" /rom1<",
+        "EMUPRESET": "BlueMSX",
+        "LNCHPRM": "$|1|1|1|1|0",
+        "MAMENM": "colecop",
+        "MAMEOPTS": "<colecop -flop<",
+        "SHORTNM": "COLECOP",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "BlueMSX|colecovision|colem|meka|koleko|dsp|vdmgr|cogwheel|MAME"
+    },
+    "Commodore - 64": {
+        "EMUPRESET": "WinVICE",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "c64",
+        "MAMEOPTS": "<c64 -[RTYP]<|<c64 -cass<|<c64 -cart<|<c64 -flop<",
+        "ROMXT": "x64|t64|d64|g64|fdi|p00|prg|tap|wav|80|a0|e0|crt|g41|d77|d88|1dd|dfi|imd|ipf|mfi|mfm|td0|cqm|cqi|dsk|zip",
+        "SHORTNM": "COM64",
+        "SUPCORE": "vice_x64_libretro.dll",
+        "SUPEMU": "WinVICE|ccs64|no$c64|comeback64|dream64|emu64|hoxs64|vb64|frodo|hyper64|virtualc64|yape|micro64|MAME",
+        "WinVice?EMUOPTS": "<-autostart<"
+    },
+    "Commodore - 65": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "c65",
+        "MAMEOPTS": "<c65 -flop<",
+        "SHORTNM": "COM65",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "WinVICE|MAME"
+    },
+    "Commodore - Amiga": {
+        "EMUPRESET": "FS-UAE",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "a500n",
+        "MAMEOPTS": "<a500n -flop<|<a500 -flop<|<a500n -flop<|<a500pn -flop<|<a3000n -flop<|<a1200n -flop",
+        "SHORTNM": "AMIG",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "FS-UAE|WinUAE|winfellow|MAME"
+    },
+    "Commodore - Amiga 1000": {
+        "EMUPRESET": "FS-UAE",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "a1000n",
+        "MAMEOPTS": "<a1000n -flop<|<a1000 -flop<|<a1000n -flop<",
+        "SHORTNM": "AMIG1K",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "FS-UAE|WinUAE|winfellow|MAME"
+    },
+    "Commodore - Amiga 1200": {
+        "EMUPRESET": "FS-UAE",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "a1200n",
+        "MAMEOPTS": "<a1200 -flop<|<a1200n -flop1<",
+        "SHORTNM": "AMIG12",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "FS-UAE|WinUAE|winfellow|MAME"
+    },
+    "Commodore - Amiga 2000": {
+        "EMUPRESET": "FS-UAE",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "a2000n",
+        "MAMEOPTS": "<a2000 -flop<|<a2000n -flop<",
+        "SHORTNM": "AMIG2K",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "FS-UAE|WinUAE|winfellow|MAME"
+    },
+    "Commodore - Amiga 3000": {
+        "EMUPRESET": "FS-UAE",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "a3000n",
+        "MAMEOPTS": "<a3000 -flop<|<a3000n -flop<",
+        "SHORTNM": "AMIG3K",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "FS-UAE|WinUAE|winfellow|MAME"
+    },
+    "Commodore - Amiga a500": {
+        "SHORTNM": "CAM5H",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "FS-UAE|WinUAE|winfellow|MAME"
+    },
+    "Commodore - Amiga CD32": {
+        "EMUPRESET": "WinVICE",
+        "LNCHPRM": "$|1|1|1|1|0",
+        "MAMENM": "cd32",
+        "MAMEOPTS": "<cd32 -flop<|<cd32 -cdrom<",
+        "SHORTNM": "AMIGCD32",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "FS-UAE|WinUAE|MAME"
+    },
+    "Commodore - Amiga CDTV": {
+        "EMUPRESET": "FS-UAE",
+        "LNCHPRM": "$|1|1|1|1|0",
+        "MAMENM": "cdtv",
+        "MAMEOPTS": "<cdtv -[RTYP]<|<cdtv -cdrom<|<cdtv -flop<|<cdtvn -cdrom<|<cdtvn -flop<",
+        "SHORTNM": "AMIGCDTV",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "FS-UAE|WinUAE|MAME"
+    },
+    "Commodore - BX256-80HP": {
+        "LNCHPRM": "$|1|1|0|1|0",
+        "SHORTNM": "COMBX256",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Commodore - C128": {
+        "LNCHPRM": "$|1|1|0|1|0"
+    },
+    "Commodore - C16": {
+        "EMUPRESET": "WinVICE",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "c16",
+        "MAMEOPTS": "<c16 -cart",
+        "SHORTNM": "COMC16",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "WinVICE|MAME"
+    },
+    "Commodore - CBM-II": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "cbm2",
+        "MAMEOPTS": "<cbm2 -flop<",
+        "SHORTNM": "COMCBMII",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "WinVICE|MAME"
+    },
+    "Commodore - PET": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "pet8032",
+        "MAMEOPTS": "<pet8032 -[RTYP]<|<pet8032 -cart1<|<pet8032 -cass<|<pet8032 -flop1<",
+        "ROMXT": "d80|d77|d88|1dd|dfi|hfe|imd|ipf|mfi|mfm|td0|cqm|cqi|dsk|wav|tap|bin|rom|zip",
+        "SHORTNM": "COMPET",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "WinVICE|MAME"
+    },
+    "Commodore - PET - 8096": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "cbm8096",
+        "MAMEOPTS": "<cbm8096 -flop<",
+        "SHORTNM": "COMPET80",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "WinVICE|MAME"
+    },
+    "Commodore - PET - 8296": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "cbm8296",
+        "MAMEOPTS": "<cbm8296 -flop<",
+        "SHORTNM": "COMPET82",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "WinVICE|MAME"
+    },
+    "Commodore - Plus-4": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "plus4",
+        "MAMEOPTS": "<plus4 -[RTYP]<|<plus4 -cart<|<plus4 -cass<|<plus4 -flop<",
+        "SHORTNM": "COMPLUS",
+        "SUPCORE": "vice_xplus_libretro.dll",
+        "SUPEMU": "WinVICE|MAME"
+    },
+    "Commodore - VIC-10": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "vic10",
+        "MAMEOPTS": "<vic10 -[RTYP]<|<vic10 -cass1<|<vic10 -cart<",
+        "SHORTNM": "COMVIC10",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "WinVICE|MAME"
+    },
+    "Commodore - VIC-10 - Max Machine - UltiMax": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "vic10",
+        "MAMEOPTS": "<vic10 -[RTYP]<|<vic10 -cass1<|<vic10 -cart<",
+        "SHORTNM": "COMMAX",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "WinVICE|MAME"
+    },
+    "Commodore - VIC-1001": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "vic1001",
+        "MAMEOPTS": "<vic1001 -[RTYP]<|<vic1001 -cass1<|<vic1001 -flop1<|<vic1001 -cart<",
+        "SHORTNM": "COMVIC1K",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "WinVICE|MAME"
+    },
+    "Commodore - VIC-20": {
+        "EMUPRESET": "WinVICE",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "vic20",
+        "MAMEOPTS": "<vic20 -[RTYP]<|<vic20 -cass<|<vic20 -cart<|<vic20 -flop<",
+        "ROMXT": "wav|tap|d64|g64|g41|d77|d88|1dd|dfi|imd|ipf|mfi|mfm|td0|cqm|cqi|dsk .p00|prg|20|40|60|70|a0|b0|crt|zip",
+        "SUPCORE": "vice_xvic_libretro.dll",
+        "SUPEMU": "WinVICE|aipc|MAME",
+        "WinVice?EMUOPTS": "<-ntsc +confirmexit -saveres +warp -fullscreen -cartgeneric<|<-ntsc +confirmexit -saveres +warp -cartgeneric<"
+    },
+    "Commodore BX256-80HP": {
+        "EMUPRESET": "MAME",
+        "MAMENM": "bx256hp",
+        "MAMEOPTS": "<bx256hp -flop<"
+    },
+    "Compucolor - Compucolor II": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "compclr2",
+        "MAMEOPTS": "<compclr2 -flop<",
+        "SHORTNM": "COCOII",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "xroar|MAME"
+    },
+    "COMX - 35": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "comx35",
+        "MAMEOPTS": "<comx35 -flop<",
+        "SHORTNM": "COMX35",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "elf|emma02|MAME"
+    },
+    "Conitec - PROF-180": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "prof180",
+        "MAMEOPTS": "<prof180 -flop1<|<prof180 -flop2<",
+        "SHORTNM": "CONTPR180",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Conitec - PROF-80": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "prof80",
+        "MAMEOPTS": "<prof80 -flop1<|<prof80 -flop2<",
+        "SHORTNM": "CONTPR80",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Creatronic - Mega Duck": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "megaduck",
+        "MAMEOPTS": "<megaduck -cart<",
+        "ROMXT": "bin|zip",
+        "SHORTNM": "MEGADUCK",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Cybiko - Cybiko": {
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "cybikov2",
+        "MAMEOPTS": "<cybikov2 -quik<",
+        "ROMXT": "bin|nv",
+        "SHORTNM": "CYBKO",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "c4pc|MAME"
+    },
+    "Cybiko - Xtreme": {
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMEOPTS": "<cybikov2 -quik<",
+        "ROMXT": "bin|nv",
+        "SHORTNM": "CYBKX",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "c4pc|MAME"
+    },
+    "DAI - Personal Computer": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "dai",
+        "MAMEOPTS": "<dai -flop<",
+        "SHORTNM": "DAIPC",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "DEC - PDP-1": {
+        "SHORTNM": "DPDP1",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "SIMH|MAME"
+    },
+    "DEC - PDP-7": {
+        "SHORTNM": "DPDP7",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "SIMH|MAME"
+    },
+    "DEC - Rainbow 100": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "rainbow",
+        "MAMEOPTS": "<rainbow -flop1<|<rainbow -flop2<",
+        "SHORTNM": "DECRBOW",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "DGS - Dragon": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "dragon",
+        "MAMEOPTS": "<dragon -flop<",
+        "SHORTNM": "DGSDRG",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "DGS - Dragon 32-64": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "d64plus",
+        "MAMEOPTS": "<d64 -[RTYP]<|<d64 -cass<|<d64 -cart<|<d64 -flop1<",
+        "ROMXT": "wav|cas|dmk|jvc|dsk|vdk|sdf|d77|d88|1dd|dfi|hfe|imd|ipf|mfi|mfm|td0|cqm|cqi|ccc|rom|zip",
+        "SHORTNM": "DGSDRAG",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "xroar|MAME"
+    },
+    "Dick Smith Electronics - Super-80": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "super80",
+        "MAMEOPTS": "<super80 -cass<",
+        "SHORTNM": "DSM",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Dick Smith Electronics - VZ-200-300": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "vz",
+        "MAMEOPTS": "<vz -cass1<",
+        "SHORTNM": "DSMVZ",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Dimension - 68000": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "dim68k",
+        "MAMEOPTS": "<dim68k -flop<",
+        "SHORTNM": "DIMEN68",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Dragon - Alpha": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "dgnalpha",
+        "MAMEOPTS": "<dgnalpha -flop<",
+        "SHORTNM": "DRAGA",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Dragon - Beta": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "dgnbeta",
+        "MAMEOPTS": "<dgnbeta -flop<",
+        "SHORTNM": "DRAGB",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "EACA - Colour Genie EG2000": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "cgenie",
+        "MAMEOPTS": "<cgenie -flop<",
+        "SHORTNM": "ECGENIE",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "genious|MAME"
+    },
+    "EasyRPG - EasyRPG": {
+        "EMUPRESET": "easyrpg",
+        "LNCHPRM": "$|0|1|0|1|1",
+        "ROMXT": "lmt|ini",
+        "SHORTNM": "EZRPG",
+        "SUPCORE": "easyrpg_libretro.dll",
+        "SUPEMU": "easyrpg"
+    },
+    "eBooks - PDFs - Texts": {
+        "EMUPRESET": "mupdf",
+        "LNCHPRM": "$|1|1|0|1|1",
+        "ROMXT": "pdf|epub|fdf|xfdf|xdp|ppdf",
+        "SHORTNM": "MLTMED",
+        "SUPCORE": "",
+        "SUPEMU": "mupdf|Acrobat|foxit"
+    },
+    "Electronmash - Poisk-1": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "poisk1",
+        "MAMEOPTS": "<poisk1 -flop1<",
+        "SHORTNM": "ELPOISK",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Elektronika - BK-0010": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "bk0010",
+        "MAMEOPTS": "<bk0010 -flop<",
+        "SHORTNM": "ELKBK",
+        "SUPCORE": "bk_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Elektronska Industrija Nis - PeCom 32": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "pecom32",
+        "MAMEOPTS": "<pecom32 -cass<",
+        "SHORTNM": "EINP32",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Elektronska Industrija Nis - PeCom 64": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "pecom64",
+        "MAMEOPTS": "<pecom64 -cass<",
+        "SHORTNM": "EINP64",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Emerson - Arcadia 2001": {
+        "EMUPRESET": "WinArcadia",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "arcadia",
+        "SHORTNM": "EMARC",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "WinArcadia|tunix"
+    },
+    "Enterprise - 128": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "ep128",
+        "MAMEOPTS": "<ep128 -[RTYP]<|<ep128 -cass<|<ep128 -cart<",
+        "ROMXT": "wav|bin|rom|zip",
+        "SHORTNM": "ENT128",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "ep32|MAME|enter|ep128emu"
+    },
+    "Enterprise - 64": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "ep64",
+        "MAMEOPTS": "<ep64 -[RTYP]<|<ep64 -cass<|<ep64 -cart<",
+        "ROMXT": "wav|bin|rom|zip",
+        "SHORTNM": "ENT64",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "ep32|MAME|enter|ep128emu"
+    },
+    "Entex - Adventure Vision": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "advision",
+        "MAMEOPTS": "<advision -cart<",
+        "ROMXT": "bin|zip",
+        "SHORTNM": "EADVV",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "AdviEmulator|MAME"
+    },
+    "Epoch - Game Pocket Computer": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "gamepock",
+        "MAMEOPTS": "<gamepock -cart<",
+        "SHORTNM": "EGAMPC",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Epoch - Super Cassette Vision": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "scv",
+        "MAMEOPTS": "<scv -cart<",
+        "ROMXT": "bin|zip",
+        "SHORTNM": "ESCVIS",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "scv|MAME"
+    },
+    "Epson - CPM Systems": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "epson",
+        "MAMEOPTS": "<epson -flop<",
+        "SHORTNM": "EPCPM",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "EPSON - PX-4": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "px4",
+        "MAMEOPTS": "<px4 -cart<",
+        "SHORTNM": "EPX4",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "EPSON - PX-8": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "px8",
+        "MAMEOPTS": "<px8 -cart<",
+        "SHORTNM": "EPX8",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Epson - QX-10": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "qx10",
+        "MAMEOPTS": "<qx10 -flop1<",
+        "SHORTNM": "EPQX10",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "ES PEVM - EC 1841": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "ec1841",
+        "MAMEOPTS": "<ec1841 -flop<",
+        "SHORTNM": "ESPEVM",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Exelvision - EXL 100": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "exl100",
+        "MAMEOPTS": "<exl100 -cart<",
+        "ROMXT": "bin|rom|zip",
+        "SHORTNM": "EXL1",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "dcexel|MAME"
+    },
+    "Exidy - Sorcerer": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "sorcerer",
+        "MAMEOPTS": "<sorcerer -[RTYP]<|<sorcerer -flop<|<sorcerer -cart<|<sorcerer -cass<",
+        "SHORTNM": "EXIDSOR",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "sorcerer|MAME"
+    },
+    "Fairchild - Channel F": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|1|1|0",
+        "MAMENM": "channelf",
+        "MAMEOPTS": "<channelf -cart<",
+        "ROMXT": "bin|chf|zip",
+        "SHORTNM": "FCHANF",
+        "SUPCORE": "freechaf_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "FB Alpha - Arcade Games": {
+        "ARCLOC": "0",
+        "CONSOLID": "Individuate",
+        "EMUARGS": "<-rp \"[ROMPATH]\"|<-rp \"[EMUPATH]\\roms\"|<",
+        "EXT": "0",
+        "EXTRARC": "0",
+        "LNCHP": "0",
+        "LNCHPRM": "$|0|0|0|0|0",
+        "NICEFLD": "1",
+        "PATH": "0",
+        "PEREMUCFG": "1",
+        "PRECFG": "mame.ini|default.cfg",
+        "QUOTES": "0",
+        "ROMINJ": "%ROM%",
+        "ROMXT": "|zip|chd|7z|cmd",
+        "RUNDIR": "0",
+        "SHORTNM": "FBALPHA",
+        "SUBDS": "cheats:1|.patches:1|.snaps:1|.sstates:1|.Man:1|.Mem:1|.cfg:1|.ctrl:1|.hi:1|.ini:1|.inp:1",
+        "SUPCORE": "mame2014_libretro.dll|mame2010_libretro.dll|mame2003_plus_libretro.dll|mame2003_libretro.dll|mame2000_libretro.dll|mame2016_libretro.dll|mame_libretro.dll",
+        "SUPEMU": "FBNeo|FinalBurnalpha|mame_arcade|MAME|calice|ace|zinc"
+    },
+    "Fidelity - Fidelity SCC": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "fidel",
+        "MAMEOPTS": "<fidel -cart<",
+        "SHORTNM": "FIDSCC",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Fujitsu - FM Towns": {
+        "DISCMNT": "1",
+        "EMUPRESET": "UNZ",
+        "LNCHPRM": "$|1|1|0|1|1",
+        "MAMENM": "fmtowns",
+        "MAMEOPTS": "<fmtownsux -[RTYP]<|<fmtownsux -cdrm<|<fmtownsux -hard1<|<fmtownsux -memcard<|<fmtownsa -flop1<|<fmtownsa -cdrm<|<fmtownsa -hard1<|<fmtownsa -memcard<|<fmtownsmx -flop1<|<fmtownsmx -cdrm<|<fmtownsmx -hard1<|<fmtownsmx -memcard<|<fmtownssj -flop1<|<fmtownssj -cdrm<|<fmtownssj -hard1<|<fmtownssj -memcard<|<fmtownshr -flop1<|<fmtownshr -cdrm<|<fmtownshr -hard1<|<fmtownshr -memcard<|<fmtownsftv -flop1<|<fmtownsftv -cdrm<|<fmtownsftv -hard1<|<fmtownsftv -memcard<|<fmtmarty -flop1<|<fmtmarty -cdrm<|<fmtmarty -hard1<|<fmtmarty -memcard<|<fmtmarty2 -flop1<|<fmtmarty2 -cdrm<|<fmtmarty2 -hard1<|<fmtmarty2 -memcard<|<fmtownsux -flop1<",
+        "ROMXT": "bin|d77|d88|1dd|dfi|hfe|imd|ipf|mfi|mfm|td0|cqm|cqi|dsk|chd|cue|toc|nrg|gdi|iso|cdr|chd|hd|icm|zip|img",
+        "SHORTNM": "FFMTOWN",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "UNZ|xe|Tsugaru|MAME"
+    },
+    "Fujitsu - FM-7": {
+        "EMUPRESET": "XM7",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "fm7",
+        "MAMEOPTS": "<fm7 -[RTYP]<|<fm7 -flop1<|<fm7 -flop1<|<fm7740sx -flop1<|<fm7740sx -flop1<|<fm7av -flop1<",
+        "ROMXT": "wav|t77|d77|d88|1dd|dfi|imd|ipf|mfi|mfm|td0|cqm|cqi|dsk|zip",
+        "SHORTNM": "FFM7",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "fm7|fm77|XM7"
+    },
+    "Fujitsu - FM-77AV": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "fm77av",
+        "MAMEOPTS": "<fm77av -flop<",
+        "SHORTNM": "FM77AV",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "fm7|fm77|XM7|MAME"
+    },
+    "Fujitsu - FM-8": {
+        "LNCHPRM": "$|1|1|0|1|0",
+        "SHORTNM": "FM8",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "fm8"
+    },
+    "Fukutake Publishing - StudyBox": {
+        "EMUPRESET": "nestopia",
+        "LNCHPRM": "$|1|1|1|1|0",
+        "MAMENM": "famitwin",
+        "MAMEOPTS": "<famitwin -[RTYP]<|<fds -flop<|<fds -flop<|<famitwin -cart<",
+        "MEDNM": "nes",
+        "ROMXT": "nes|unif|unf|nsf|fam|fds|bin|zip",
+        "SHORTNM": "FPSBX",
+        "SUPCORE": "fceumm_libretro.dll|nestopia_libretro.dll|quicknes_libretro.dll|bnes_libretro.dll|mesen_libretro.dll",
+        "SUPEMU": "nestopia|virtuanes|xe|virtuanesplus|Mesen|BizHawk|no$nes|dsp|fceux|vdmgr|Mednafen|MAME|byuu"
+    },
+    "Funtech - Super Acan": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|1|1|0",
+        "MAMENM": "supracan",
+        "MAMEOPTS": "<supracan -cart<",
+        "ROMXT": "bin|zip",
+        "SHORTNM": "FSACAN",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAMEx"
+    },
+    "Galaksija - Galaksija Plus": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "galaxy",
+        "MAMEOPTS": "<galaxy -cass<",
+        "SHORTNM": "GALPLUS",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "galaxywin|MAME"
+    },
+    "Galeco - Galeco": {
+        "EMUPRESET": "Demul",
+        "LNCHPRM": "$|0|0|0|0|0",
+        "ROMXT": "zip",
+        "SETLST": "",
+        "SHORTNM": "GALEC",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "Demul|mame_arcade|MAME"
+    },
+    "GamePark - GP32": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "gp32",
+        "MAMEOPTS": "<gp32 -cart<",
+        "SHORTNM": "GP32",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "geepee32|MAME"
+    },
+    "GCE - Vectrex": {
+        "EMUPRESET": "ParaJVE",
+        "LNCHPRM": "$|1|1|1|1|0",
+        "MAMENM": "vectrex",
+        "MAMEOPTS": "<vectrex -cart<",
+        "ROMXT": "bin|gam|vec|zip",
+        "SHORTNM": "GVEXTR",
+        "SUPCORE": "vecx_libretro.dll",
+        "SUPEMU": "ParaJVE|vecxgl|infovectrex"
+    },
+    "Gimix - 6809 System": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "gimix",
+        "MAMEOPTS": "<gimix -flop1<",
+        "SHORTNM": "GIM68",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Hanimex - Pencil II": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "pencil2",
+        "MAMEOPTS": "<pencil2 -cart<",
+        "SHORTNM": "HANPII",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Hartung - Game Master": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "gmaster",
+        "MAMEOPTS": "<gmaster -cart<",
+        "ROMXT": "bin|zip",
+        "SHORTNM": "HGAMMAS",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Hawthorne Technology - TinyGiant HT68k": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "ht68k",
+        "MAMEOPTS": "<ht68k -flop1<",
+        "SHORTNM": "HAWTG",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "HP - HP 9835A-B Option": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "hp9835a",
+        "MAMEOPTS": "<hp9835a<",
+        "SHORTNM": "HP98B",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "HP - HP 9845A-S Option": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "hp9845a",
+        "MAMEOPTS": "<hp9845a<",
+        "SHORTNM": "HP98S",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "HP - HP 9845B-T-C Option": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "hp9845b",
+        "MAMEOPTS": "<hp9845b<",
+        "SHORTNM": "HP98C",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "HP - HP-85 Option": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "hp85",
+        "MAMEOPTS": "<hp85<",
+        "SHORTNM": "HP85",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "HP - Integral PC": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "hp",
+        "MAMEOPTS": "<hp -flop1<",
+        "SHORTNM": "HPIPC",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "IBM - Displaywriter": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "ibm6580",
+        "MAMEOPTS": "<ibm6580 -flop1<",
+        "SHORTNM": "IBMDW",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "IBM - PC 5140": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "ibm5140",
+        "MAMEOPTS": "<ibm5140 -flop<",
+        "SHORTNM": "IBMPC40",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "IBM - PC 5150": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "ibm5150",
+        "MAMEOPTS": "<ibm5150 -flop<",
+        "SHORTNM": "IBMPC50",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "IBM - PC 5170": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "ibm5170",
+        "MAMEOPTS": "<ibm5170 -flop<",
+        "SHORTNM": "IBMPC70",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "IBM - PC Jr": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "ibmpcjr",
+        "MAMEOPTS": "<ibmpcjr -[RTYP]<|<ibmpcjr -cart1<|<ibmpcjx -cass<|<ibmpcjx -cart1<|<ibmpcjx -flop1<|<ibmpcjr -cass<|<ibmpcjr -flop1<",
+        "ROMXT": "dsk|ima|img|ufi|360|d77|d88|1dd|dfi|hfe|imd|ipf|mfi|mfm|td0|cqm|cqi|zip",
+        "SHORTNM": "IPCJR",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "jr100|MAME"
+    },
+    "Incredible Technologies - Eagle": {
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMEOPTS": "iteagle",
+        "SHORTNM": "ITEAGLE",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Infocom - Z-Machine": {
+        "LNCHPRM": "$|1|1|0|1|0",
+        "ROMXT": "dat|zip|z1|z2|z3|z4|z5|z6|z7|z8",
+        "SHORTNM": "INFZM",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "Frotz|MAME"
+    },
+    "Interact - Family Computer": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "interact",
+        "MAMEOPTS": "<interact -cass<",
+        "SHORTNM": "INTFC",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "dchector|virtualinteract|MAME"
+    },
+    "Interon - VC4000": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "vc4000",
+        "MAMEOPTS": "<vc4000 -cart<",
+        "ROMXT": "bin|rom|zip",
+        "SHORTNM": "IVC4K",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "tunix|MAME"
+    },
+    "iQue - iQue": {
+        "EMUPRESET": "Project64",
+        "LNCHPRM": "$|1|1|1|1|0",
+        "MAMENM": "n64",
+        "MAMEOPTS": "<n64 -cart<",
+        "ROMXT": "n64|d64|z64|zip|usa|rom|pal|chd|hd",
+        "SHORTNM": "IQUE",
+        "SUPCORE": "parallel_n64_libretro.dll|mupen64_libretro.dll",
+        "SUPEMU": "Project64|Project64k|Apollo|1964|Mupen64Plus|Mupen64PlusPlus|BizHawk|MAME"
+    },
+    "Itautec - I-7000": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "i7000",
+        "MAMEOPTS": "<i7000 -card<",
+        "SHORTNM": "ITI7K",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Ithaca InterSystems - DPS-1": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "dps1",
+        "MAMEOPTS": "<dps1 -flop<",
+        "SHORTNM": "IIDPS",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "JPM - Give Us A Break": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "guab",
+        "MAMEOPTS": "<guab<",
+        "SHORTNM": "JGUAB",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "JungleTac Sport - Vii": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "vii",
+        "MAMEOPTS": "<vii -cart<",
+        "SHORTNM": "JUMSP",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Jupiter Cantab - Jupiter Ace": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "jupace",
+        "MAMEOPTS=<jupace -[RTYP]<|": "<jupace -dump<|<jupace -cass<",
+        "ROMXT": "wav|tap|ace|zip",
+        "SHORTNM": "JACE",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "vace|zesarux|vace3d|ACE32|eightyone|mzxx|zesarux|MAME"
+    },
+    "Kaypro - Kaypro II": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "kayproii",
+        "MAMEOPTS": "<kayproii -flop1<",
+        "SHORTNM": "KAYPROII",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Koei - PasoGo": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "pasogo",
+        "MAMEOPTS": "<pasogo -cart<",
+        "SHORTNM": "KOPASOGO",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Konami": {
+        "EMUPRESET": "MAME - Arcade",
+        "EXTRARC": "0",
+        "NICEFLDR": "1",
+        "SETLST": ""
+    },
+    "Konami - Bemani System 573 Analog": {
+        "EMUPRESET": "MAME - Arcade",
+        "EXTRARC": "1",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "NICEFLDR": "1",
+        "SETLST": "",
+        "SHORTNM": "KS573A",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Konami - Bemani System 573 Digital": {
+        "EMUPRESET": "MAME - Arcade",
+        "EXTRARC": "1",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "NICEFLDR": "1",
+        "SETLST": "",
+        "SHORTNM": "KS573D",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Konami - Picno": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "picno",
+        "MAMEOPTS": "<picno -cart<",
+        "ROMXT": "bin|zip",
+        "SHORTNM": "KONPIC",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Konami - System 573": {
+        "EMUPRESET": "MAME - Arcade",
+        "EXTRARC": "1",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "NICEFLDR": "1",
+        "SETLST": "",
+        "SHORTNM": "KS573",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Konami - System 573 Satelite Terminal": {
+        "EMUPRESET": "MAME - Arcade",
+        "EXTRARC": "1",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "NICEFLDR": "1",
+        "SETLST": "",
+        "SHORTNM": "KS573S",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Konami - System 573 Satellite Terminal": {
+        "ARCLOC": "0",
+        "CONSOLID": "Individuate",
+        "EMUARGS": "<-rp \"[ROMPATH]\"|<-rp \"[EMUPATH]\\roms\"|<",
+        "EXT": "0",
+        "EXTRARC": "0",
+        "LNCHP": "0",
+        "LNCHPRM": "$|0|0|0|0|0",
+        "NICEFLD": "1",
+        "PATH": "0",
+        "PEREMUCFG": "1",
+        "PRECFG": "mame.ini|default.cfg",
+        "QUOTES": "0",
+        "ROMINJ": "%ROM%",
+        "ROMXT": "|zip|chd|7z|cmd",
+        "RUNDIR": "0",
+        "SHORTNM": "KS573",
+        "SUBDS": "cheats:1|.patches:1|.snaps:1|.sstates:1|.Man:1|.Mem:1|.cfg:1|.ctrl:1|.hi:1|.ini:1|.inp:1",
+        "SUPCORE": "mame2014_libretro.dll|mame2010_libretro.dll|mame2003_plus_libretro.dll|mame2003_libretro.dll|mame2000_libretro.dll|mame2016_libretro.dll|mame_libretro.dll",
+        "SUPEMU": "mame_arcade|MAME|FBNeo|FinalBurnalpha|calice|ace|zinc"
+    },
+    "Kontron - PSI98": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "psi98",
+        "MAMEOPTS": "<psi98 -flop1<",
+        "SHORTNM": "KONPSI",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Korvet - PK8020 Korvet": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "korvet",
+        "MAMEOPTS": "<korvet -flop1<",
+        "SHORTNM": "KORVPK",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "LeapFrog - LeapPad": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "leapster",
+        "MAMEOPTS": "<leapster -cart<",
+        "SHORTNM": "LEAPST",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Leapfrog - Leapster Learning Game System": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "SHORTNM": "LEAPLGS",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "LeapFrog - My First LeapPad": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "leapster",
+        "MAMEOPTS": "<leapster -cart<",
+        "SHORTNM": "LEAPFST",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Lianozovo Electromechanical Factory - Mikrosha": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "mikrosha",
+        "MAMEOPTS": "<mikrosha -[RTYP]<|<mikrosha -cart<|<mikrosha -cass<",
+        "SHORTNM": "LEFMIK",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "LSI - Octopus": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "octopus",
+        "MAMEOPTS": "<octopus -flop1<",
+        "SHORTNM": "LSIOCT",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Luxor - ABC 1600": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "abc1600",
+        "MAMEOPTS": "<abc1600 -flop<",
+        "SHORTNM": "LUX16",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Luxor - ABC 80": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "abc80",
+        "MAMEOPTS": "<abc80 -flop<",
+        "SHORTNM": "LUX80",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Luxor - Video Entertainment System": {
+        "LNCHPRM": "$|1|1|0|1|0",
+        "SHORTNM": "LUXVES",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Magnavox - Odyssey": {
+        "EMUPRESET": "DOSBox-X",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "SHORTNM": "MODYS",
+        "SUPCORE": "",
+        "SUPEMU": "DOSBox-X|DOSBox"
+    },
+    "Magnavox - Odyssey2": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "odyssey2",
+        "MAMEOPTS": "<odyssey2 -cart<",
+        "ROMXT": "bin|rom|zip",
+        "SHORTNM": "MODYS2",
+        "SUPCORE": "o2em_libretro.dll",
+        "SUPEMU": "MAME|o2em"
+    },
+    "Magnavox - Odyssey3": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "odyssey3",
+        "MAMEOPTS": "<odyssey3 -cart<",
+        "ROMXT": "bin|rom|zip",
+        "SHORTNM": "MODYS3",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME|mame_libretro.dll"
+    },
+    "MAME - Arcade": {
+        "ARCLOC": "0",
+        "CONSOLID": "Individuate",
+        "EMUARGS": "<-rp \"[ROMPATH]\"|<-rp \"[EMUPATH]\\roms\"|<",
+        "EXT": "0",
+        "EXTRARC": "0",
+        "LNCHP": "0",
+        "LNCHPRM": "$|0|0|0|0|0",
+        "NICEFLD": "1",
+        "PATH": "0",
+        "PEREMUCFG": "1",
+        "PRECFG": "mame.ini|default.cfg",
+        "QUOTES": "0",
+        "ROMINJ": "%ROM%",
+        "ROMXT": "|zip|chd|7z|cmd",
+        "RUNDIR": "0",
+        "SHORTNM": "MAMARC",
+        "SUBDS": "cheats:1|.patches:1|.snaps:1|.sstates:1|.Man:1|.Mem:1|.cfg:1|.ctrl:1|.hi:1|.ini:1|.inp:1",
+        "SUPCORE": "mame2014.dll|mame2010_libretro.dll|mame2003_plus_libretro.dll|mame2003_libretro.dll|mame2000_libretro.dll|mame2016_libretro.dll|mame_libretro.dll",
+        "SUPEMU": "mame_arcade|MAME|FinalBurnalpha|FBNeo|calice|ace|zinc"
+    },
+    "MAME - System": {
+        "EMUARGS": "<-rp \"[EMUPATH]\\roms\"|<-rp \"[ROMPATH]\"|<-rp \"[EMUPATH]\\roms\"|<",
+        "EMUOPTS": "<[RJMAMESYS] -[RTYP]<",
+        "EXT": "1",
+        "EXTRARC": "0",
+        "LNCHP": "0",
+        "PATH": "1",
+        "PEREMUCFG": "1",
+        "PRECFG": "mame.ini|default.cfg",
+        "QUOTES": "1",
+        "ROMINJ": "%ROMF%",
+        "RUNDIR": "1",
+        "SHORTNM": "MESSYS",
+        "SUBDS": "cheats:1|.patches:1|.snaps:1|.sstates:1|.Man:1|.Mem:1|.cfg:1|.ctrl:1|.hi:1|.ini:1|.inp:1"
+    },
+    "Matra - Alice 32": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "alice32",
+        "MAMEOPTS": "<alice32 -flop<",
+        "SHORTNM": "MATAL32",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "alice32|DCAlice|DCMicroColor|MAME"
+    },
+    "Matra - Alice 90": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "alice90",
+        "MAMEOPTS": "<alice90 -flop<",
+        "SHORTNM": "MATAL90",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Mattel - Aquarius": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "aquarius",
+        "MAMEOPTS": "<aqaurius -[RTYP]<|<aqaurius -cass<|<aquarius -cart<",
+        "ROMXT": "wav|bin|zip",
+        "SHORTNM": "MAQUAR",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "Aqemu|vaquarius|MAME"
+    },
+    "Mattel - Hyperscan": {
+        "LNCHPRM": "$|1|1|0|1|",
+        "MAMENM": "hs",
+        "ROMXT": "bin|cue|iso",
+        "SHORTNM": "MHYPSCN",
+        "SUPCORE": "",
+        "SUPEMU": ""
+    },
+    "Mattel - Intellivision": {
+        "EMUPRESET": "Nostalgia",
+        "LNCHPRM": "$|1|1|1|1|0",
+        "MAMENM": "intv",
+        "MAMEOPTS": "<intv2 -cart<|<intv -cart<",
+        "ROMXT": "bin|int|rom|itv|zip",
+        "SHORTNM": "MINTEL",
+        "SUPCORE": "freeintv_libretro.dll",
+        "SUPEMU": "Nostalgia|jzintv|MAME"
+    },
+    "Mattel - Intellivision ECS": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|1|1|0",
+        "MAMENM": "intvecs",
+        "MAMEOPTS": "<intvecs -cart<",
+        "SHORTNM": "INTELECS",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Mattel - Juice Box": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "juicebox",
+        "MAMEOPTS": "<juicebox<",
+        "SHORTNM": "MATJB",
+        "SUPCORE": "freeintv_libretro.dll",
+        "SUPEMU": "Nostalgia|jzintv|MAME"
+    },
+    "MCA - Laserdisc Arcade": {
+        "LNCHPRM": "$|1|1|0|1|0",
+        "SHORTNM": "MCALD",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "daphne"
+    },
+    "Memorex - Video Information System": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "vis",
+        "MAMEOPTS": "<vis -cdrm<",
+        "SHORTNM": "MXVIS",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Memotech - MTX": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "mtx512",
+        "MAMEOPTS": "<mtx512 -[RTYP]<|<mtx512 -cass<|<mtx512 -dump<",
+        "ROMXT": "mtx|wav|zip",
+        "SHORTNM": "MMTX",
+        "SUPCORE": "",
+        "SUPEMU": "mtxemu|MAME|mame_libretro.dll"
+    },
+    "Mephisto - Super Mondial II": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "smondial2",
+        "MAMEOPTS": "<smondial2 -cart<",
+        "SHORTNM": "MSMII",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "MGT - Sam Coupe": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "samcoupe",
+        "MAMEOPTS": "<samcoupe -flop1[RTYP]<|<samcoupe -flop1<|<samcoupe -cass<",
+        "ROMXT": "mgt|dsk|d77|d88|1dd|dfi|hfe|imd|ipf|mfi|mfm|td0|cqm|cqi|wav|tzx|tap|blk",
+        "SHORTNM": "MSAMC",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "simcoupe|speccy|zesarux|Ascd|MAME"
+    },
+    "Microkey - Primo": {
+        "LNCHPRM": "$|1|1|0|1|0",
+        "SHORTNM": "MICPRI",
+        "SUPCORE": "",
+        "SUPEMU": "ultimo|MAME|mame_libretro.dll"
+    },
+    "Microsoft - DOS": {
+        "cmdfun": " 1",
+        "EMUPRESET": "DOSBox-X",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "ROMXT": "conf|exe|com|bat|cue|iso",
+        "SHORTNM": "MSDOS",
+        "SUPCORE": "dosbox_libretro.dll",
+        "SUPEMU": "DOSBox-X|DOSBox|DosPlus"
+    },
+    "Microsoft - MSX": {
+        "BlueMSX?EMUOPTS": "</machine \"MSX\" /[RTYP]<|</fullscreen /machine \"MSX\" /diskA<|</machine \"MSX\" /cas<|</fullscreen /machine \"MSX\" /cas<|</machine \"MSX\" /caszip<|</fullscreen /machine \"MSX\" /caszip<|</machine \"MSX\" /rom1<|</fullscreen /machine \"MSX\" /rom1<|</machine \"MSX\" /rom1zip<|</fullscreen /machine \"MSX\" /rom1zip<|</machine \"MSX\" /diskA<",
+        "EMUPRESET": "BlueMSX",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "canonv10",
+        "MAMEOPTS": "<canonv10 -[RTYP]<|<canonv10 -cart1<|<canonv10 -cass<|<canonv10 -flop1<",
+        "ROMXT": "dsk|dmk|d77|d88|1dd|dfi|hfe|imd|ipf|mfi|mfm|td0|cqm|cqi|mx1|bin|rom|wav|tap|cas.zip",
+        "SHORTNM": "MSX",
+        "SUPCORE": "bluemsx_libretro.dll|fmsx_libretro.dll",
+        "SUPEMU": "BlueMSX|msx1|no$msx|MAME|fmsx|finalburnalpha|FBNeo|vdmgr|nlmsx|Xspeccy|openMSX|byuu"
+    },
+    "Microsoft - MSX Turbo": {
+        "BlueMSX?EMUOPTS": "</fullscreen /machine \"MSXturboR\" /[RTYP]<</fullscreen /machine \"MSXturboR\" /rom1<|</machine \"MSXturboR\" /rom1zip<|</fullscreen /machine \"MSXturboR\" /rom1zip<|</machine \"MSXturboR\" /diskA<|</fullscreen /machine \"MSXturboR\" /diskA<|</machine \"MSXturboR\" /cas<|</fullscreen /machine \"MSXturboR\" /cas<|</machine \"MSXturboR\" /caszip<|</fullscreen /machine \"MSXturboR\" /caszip<|</machine \"MSXturboR\" /rom1<",
+        "EMUPRESET": "BlueMSX",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "fsa1st",
+        "MAMEOPTS": "<fsa1st -[RTYP]<|<fsa1st -cart1<|<fsa1st -cass<|<fsa1st -flop<",
+        "ROMXT": "dsk|dmk|d77|d88|1dd|dfi|hfe|imd|ipf|mfi|mfm|td0|cqm|cqi|mx1|bin|rom|wav|tap|cas.zip",
+        "SHORTNM": "MSXR",
+        "SUPCORE": "bluemsx_libretro.dll|fmsx_libretro.dll",
+        "SUPEMU": "BlueMSX|msx2p|no$msx|MAME|nlmsx|openMSX|EMU|fmsx|vdmgr"
+    },
+    "Microsoft - MSX TurboR": {
+        "BlueMSX?EMUOPTS": "</fullscreen /machine \"MSXturboR\" /[RTYP]<</fullscreen /machine \"MSXturboR\" /rom1<|</machine \"MSXturboR\" /rom1zip<|</fullscreen /machine \"MSXturboR\" /rom1zip<|</machine \"MSXturboR\" /diskA<|</fullscreen /machine \"MSXturboR\" /diskA<|</machine \"MSXturboR\" /cas<|</fullscreen /machine \"MSXturboR\" /cas<|</machine \"MSXturboR\" /caszip<|</fullscreen /machine \"MSXturboR\" /caszip<|</machine \"MSXturboR\" /rom1<",
+        "EMUPRESET": "BlueMSX",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "fsa1st",
+        "MAMEOPTS": "<fsa1st -[RTYP]<|<fsa1st -cart1<|<fsa1st -cass<|<fsa1st -flop<",
+        "ROMXT": "dsk|dmk|d77|d88|1dd|dfi|hfe|imd|ipf|mfi|mfm|td0|cqm|cqi|mx1|bin|rom|wav|tap|cas.zip",
+        "SHORTNM": "MSXR",
+        "SUPCORE": "bluemsx_libretro.dll|fmsx_libretro.dll",
+        "SUPEMU": "BlueMSX|msx2p|no$msx|MAME|nlmsx|openMSX|EMU|fmsx|vdmgr"
+    },
+    "Microsoft - MSX2": {
+        "BlueMSX?EMUOPTS": "</fullscreen /machine \"MSX2+\" /[RTYP]<|</fullscreen /machine \"MSX2+\" /rom1<|</machine \"MSX2+\" /rom1zip<|</fullscreen /machine \"MSX2+\" /rom1zip<|</machine \"MSX2+\" /diskA<|</fullscreen /machine \"MSX2+\" /diskA<|</machine \"MSX2+\" /caszip<|</fullscreen /machine \"MSX2+\" /caszip<|</machine \"MSX2+\" /cas<|</fullscreen /machine \"MSX2+\" /cas<|</machine \"MSX2+\" /rom1<",
+        "EMUPRESET": "BlueMSX",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "canonv30f",
+        "MAMEOPTS": "<canonv30f -[RTYP]<|<canonv30f -cart1<|<canonv30f -cass<|<canonv30f -flop1<",
+        "ROMXT": "dsk|dmk|d77|d88|1dd|dfi|hfe|imd|ipf|mfi|mfm|td0|cqm|cqi|mx1|bin|rom|wav|tap|cas.zip",
+        "SHORTNM": "MSX2",
+        "SUPCORE": "bluemsx_libretro.dll|fmsx_libretro.dll",
+        "SUPEMU": "BlueMSX|msx2|no$msx|MAME|openMSX|fmsx|nlmsx|EMU|byuu"
+    },
+    "Microsoft - MSX2+": {
+        "BlueMSX?EMUOPTS": "</fullscreen /machine \"MSX2+\" /[RTYP]<|</fullscreen /machine \"MSX2+\" /rom1<|</machine \"MSX2+\" /rom1zip<|</fullscreen /machine \"MSX2+\" /rom1zip<|</machine \"MSX2+\" /diskA<|</fullscreen /machine \"MSX2+\" /diskA<|</machine \"MSX2+\" /caszip<|</fullscreen /machine \"MSX2+\" /caszip<|</machine \"MSX2+\" /cas<|</fullscreen /machine \"MSX2+\" /cas<|</machine \"MSX2+\" /rom1<",
+        "EMUPRESET": "BlueMSX",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "hbf9sp",
+        "MAMEOPTS": "<hbf9sp -flop<",
+        "ROMXT": "dsk|dmk|d77|d88|1dd|dfi|hfe|imd|ipf|mfi|mfm|td0|cqm|cqi|mx1|bin|rom|wav|tap|cas.zip",
+        "SHORTNM": "MMSXP",
+        "SUPCORE": "bluemsx_libretro.dll|fmsx_libretro.dll",
+        "SUPEMU": "BlueMSX|msx2p|no$msx|MAME|fmsx|nlmsx|openMSX"
+    },
+    "Microsoft - Windows 3x": {
+        "cmdfun": " 1",
+        "EMUPRESET": "WinBox",
+        "ROMXT": "conf|lnk|exe|bat|cmd",
+        "SHORTNM": "MSWIN3X",
+        "SUPCORE": "",
+        "SUPEMU": "WinBox"
+    },
+    "Microsoft - XBOX": {
+        "EMUPRESET": "Cxbx",
+        "LNCHPRM": "$|1|1|1|1|0",
+        "SHORTNM": "MSXBOX",
+        "SUPCORE": "",
+        "SUPEMU": "Cxbx|cxbxreloaded|xqemu"
+    },
+    "Microsoft - XBOX 360": {
+        "EMUPRESET": "Xenia",
+        "LNCHPRM": "$|1|1|0|1|1",
+        "SHORTNM": "MS360",
+        "SUPCORE": "",
+        "SUPEMU": "Xenia"
+    },
+    "Microsoft - XBOX ONE": {
+        "EMUPRESET": "Xerg",
+        "LNCHPRM": "$|1|1|0|1|1",
+        "SHORTNM": "XBONE",
+        "SUPCORE": "",
+        "SUPEMU": "Xerg"
+    },
+    "Mikro - Mikro-80": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "mikro80",
+        "MAMEOPTS": "<mikro80 -cass1<",
+        "SHORTNM": "MKRO80",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Mikroelektronika - Pyldin-601": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "pyl601",
+        "MAMEOPTS": "<pyl601 -disk<",
+        "SHORTNM": "MIKPYL",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "MikroMikko - MikroMikko 1": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "mm1",
+        "MAMEOPTS": "<mm1 -flop1<",
+        "SHORTNM": "MIKMIK",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Millennium Systems - Wicat": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "wicat",
+        "MAMEOPTS": "<wicat -flop1<",
+        "SHORTNM": "MILWILC",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Milton Bradley - MicroVision": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "microvision",
+        "MAMEOPTS": "<microvision -cart<",
+        "SHORTNM": "MBMVIS",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "MITS - Altair 8800": {
+        "LNCHPRM": "$|1|1|0|1|0",
+        "SHORTNM": "MITSALT",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Mobile - J2ME": {
+        "EMUPRESET": "BSL",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "SHORTNM": "M2JME",
+        "SUPEMU": "BSL"
+    },
+    "Mobile - Palm OS": {
+        "EMUPRESET": "BSL",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "SHORTNM": "PALMOS",
+        "SUPEMU": "BSL"
+    },
+    "Mobile - Symbian": {
+        "EMUPRESET": "BSL",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "SHORTNM": "SYMBN",
+        "SUPEMU": "BSL"
+    },
+    "Morrow Designs - Micro Decision MD-2": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "md2",
+        "MAMEOPTS": "<md2 -flop1<",
+        "SHORTNM": "MDMD2",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Morrow Designs - Morrow MPZ80": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "mpz80",
+        "MAMEOPTS": "<mpz80 -flop<",
+        "SHORTNM": "MDMPZ",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "MOS Technology - KIM-1": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "kim1",
+        "MAMEOPTS": "<kim1 -cass<",
+        "SHORTNM": "MOSKIM",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Movies - Films": {
+        "EMUPRESET": "videoplayer",
+        "LNCHPRM": "$|1|1|0|1|1",
+        "ROMXT": "avi|mkv|mp4|mpeg|mpg|wmv|iso|cue|mov|mpv|m4v",
+        "SHORTNM": "MOVFILM",
+        "SUPCORE": "",
+        "SUPEMU": "videoplayer|retroarch|vlc|mplayerc|wmplayer"
+    },
+    "Nascom - I-II": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "nascom",
+        "MAMEOPTS": "<nascom2 -[RTYP]<|<nascom2 -flop1<|<nascom2 -socket<",
+        "SHORTNM": "NASCOM",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "NCR - Decision Mate V": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "dmv",
+        "MAMEOPTS": "<dmv -flop<",
+        "SHORTNM": "NCRDMV",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "NEC - Advanced Personal Computer": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "apc",
+        "MAMEOPTS": "<apc -flop<",
+        "SHORTNM": "NECAPC",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "NEC - PC Engine - JAP": {
+        "EMUPRESET": "Mednafen",
+        "LNCHPRM": "$|1|1|1|1|0",
+        "MAMENM": "pce",
+        "MAMEOPTS": "<pce -cart<",
+        "MEDNM": "pce",
+        "ROMXT": "bin|pce|zip",
+        "SHORTNM": "PCENJ",
+        "SUPCORE": "mednafen_pce_fast_libretro.dll",
+        "SUPEMU": "Mednafen|Ootake|pcengine|hu6280|turboengine|pcejin|hu6280|xe|BizHawk|magicengine|hugo|MAME|byuu"
+    },
+    "NEC - PC Engine - TurboGrafx 16": {
+        "EMUPRESET": "Mednafen",
+        "LNCHPRM": "$|1|1|1|1|0",
+        "MAMENM": "tg16",
+        "MAMEOPTS": "<tg16 -cart<|<pce -cart<",
+        "MEDNM": "pce",
+        "ROMXT": "bin|pce|zip",
+        "SHORTNM": "NPCENG",
+        "SUPCORE": "mednafen_pce_fast_libretro.dll",
+        "SUPEMU": "Mednafen|hu6280|Ootake|pcengine|fbneo|turboengine|xe|pcejin|BizHawk|hu6280|magicengine|hugo|MAME|finalburnalpha|byuu"
+    },
+    "NEC - PC Engine CD - TurboGrafx CD": {
+        "EMUPRESET": "Mednafen",
+        "LNCHPRM": "$|1|1|1|1|0",
+        "MAMENM": "tg16",
+        "MAMEOPTS": "<pce -cdrm<|<tg16 -cdrm<",
+        "MEDNM": "pce",
+        "ROMXT": "chd|cue|toc|nrg|gdi|iso|cdr|ccd|img",
+        "SHORTNM": "NPCECD",
+        "SUPCORE": "mednafen_pce_fast_libretro.dll",
+        "SUPEMU": "hu6280|Mednafen|Ootake|pcengine|turboengine|xe|pcejin|BizHawk|hu6280|magicengine|hugo|MAME|byuu"
+    },
+    "NEC - PC Engine SuperGrafx": {
+        "EMUPRESET": "Mednafen",
+        "LNCHPRM": "$|1|1|1|1|0",
+        "MAMENM": "sgx",
+        "MAMEOPTS": "<sgx -[RTYP]<|<sgx -cdrm<|<sgx -cart<",
+        "MEDNM": "pce",
+        "ROMXT": "chd|cue|toc|nrg|gdi|iso|cdr|sgx|pce|bin|zip|img",
+        "SHORTNM": "NSGX",
+        "SUPCORE": "mednafen_supergrafx_libretro.dll",
+        "SUPEMU": "Mednafen|Ootake|pcengine|turboengine|finalburnalpha|BizHawk|MAME|byuu"
+    },
+    "NEC - PC-6001": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "pc6001",
+        "MAMEOPTS": "<pc6001a -cart1<|<pc6001mk2 -cart1<|<pc6001sr -cart1<|<pc6001 -cart1<|<pc6601 -cart1<",
+        "ROMXT": "cas|p6|zip|bin",
+        "SHORTNM": "NPC6K1",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "pc6001|pc6601|MAME"
+    },
+    "NEC - PC-8201(A) Option": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "pc8201",
+        "MAMEOPTS": "<pc8201 -cart<",
+        "SHORTNM": "PC82A",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "xm8|Neko|m88|mx88|MAME"
+    },
+    "NEC - PC-FX": {
+        "EMUPRESET": "Mednafen",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "pcfx",
+        "MAMEOPTS": "<pcfxga -cdrm<|<pcfx -cdrm<",
+        "MEDNM": "pcfx",
+        "ROMXT": "chd|cue|toc|nrg|gdi|iso|cdr|ccd|img",
+        "SHORTNM": "NPCFX",
+        "SUPCORE": "mednafen_pcfx_libretro.dll",
+        "SUPEMU": "Mednafen|xe"
+    },
+    "NEC - PC88": {
+        "EMUPRESET": "m88",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "pc8801",
+        "MAMEOPTS": "<pc88va2 -[RTYP]<|<pc88va2 -cart<|<pc88va2 -flop1<|<pc88va -cart<|<pc88va -flop1<|<pc8801 -cart<|<pc8801 -flop1<|<pc8801mc -cart<|<pc8801mc -flop1<|<pc8801mh -cart<|<pc8801mh -flop1<|<pc8801mk2fr -cart<|<pc8801mk2fr -flop1<|<pc8801mk2mr -cart<|<pc8801mk2mr -flop1<|<pc8801mk2sr -cart<|<pc8801mk2sr -flop1<|<pc8801mk2 -cart<|<pc8801mk2 -flop1<|<pc8801fa -cart<|<pc8801fa -flop1<|<pc8801ma -cart<|<pc8801ma -flop1<|<pc8801ma2 -cart<|<pc8801ma2 -flop1<",
+        "PRECFG": "vaeg.ini",
+        "ROMXT": "wav|xdf|hdm|2hd|d77|d88|1dd|dfi|hfe|imd|ipf|mfi|mfm|td0|cqm|cqi|dsk|zip",
+        "SHORTNM": "NPC88",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "m88|mx88|xm8|W88|vaeg|MAME|Neko"
+    },
+    "NEC - PC88-VA": {
+        "EMUPRESET": "m88",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "pc88va",
+        "MAMEOPTS": "<pc88va2 -[RTYP]<|<pc88va2 -cart<|<pc88va2 -flop1<|<pc88va -cart<|<pc88va -flop1<|<pc8801 -cart<|<pc8801 -flop1<|<pc8801mc -cart<|<pc8801mc -flop1<|<pc8801mh -cart<|<pc8801mh -flop1<|<pc8801mk2fr -cart<|<pc8801mk2fr -flop1<|<pc8801mk2mr -cart<|<pc8801mk2mr -flop1<|<pc8801mk2sr -cart<|<pc8801mk2sr -flop1<|<pc8801mk2 -cart<|<pc8801mk2 -flop1<|<pc8801fa -cart<|<pc8801fa -flop1<|<pc8801ma -cart<|<pc8801ma -flop1<|<pc8801ma2 -cart<|<pc8801ma2 -flop1<",
+        "PRECFG": "vaeg.ini",
+        "ROMXT": "wav|xdf|hdm|2hd|d77|d88|1dd|dfi|hfe|imd|ipf|mfi|mfm|td0|cqm|cqi|dsk|zip",
+        "SHORTNM": "NPC88A",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "m88|mx88|xm8|W88|vaeg|MAME|Neko"
+    },
+    "NEC - PC8801": {
+        "EMUPRESET": "m88",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "pc8801",
+        "MAMEOPTS": "<pc8801 -[RTYP]<|<pc8801 -cart<|<pc8801 -flop1<|<pc8801mc -cart<|<pc8801mc -flop1<|<pc8801mh -cart<|<pc8801mh -flop1<|<pc8801mk2fr -cart<|<pc8801mk2fr -flop1<|<pc8801mk2mr -cart<|<pc8801mk2mr -flop1<|<pc8801mk2sr -cart<|<pc8801mk2sr -flop1<|<pc8801mk2 -cart<|<pc8801mk2 -flop1<|<pc8801fa -cart<|<pc8801fa -flop1<|<pc8801ma -cart<|<pc8801ma -flop1<|<pc8801ma2 -cart<|<pc8801ma2 -flop1<|<pc88va2 -cart<|<pc88va2 -flop1<|<pc88va -cart<|<pc88va -flop1<",
+        "ROMXT": "wav|xdf|hdm|2hd|d77|d88|1dd|dfi|hfe|imd|ipf|mfi|mfm|td0|cqm|cqi|dsk|zip",
+        "SHORTNM": "PC8801",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "m88|mx88|xm8|W88|vaeg|MAME|Neko"
+    },
+    "NEC - PC98": {
+        "EMUPRESET": "Neko",
+        "LNCHPRM": "$|1|0|1|1|1",
+        "MAMENM": "pc9821xs",
+        "MAMEOPTS": "<pc9821xs -[RTYP]<|<pc9821xs -hard<|<pc9821xs -cdrm<|<pc9821ne -flop1<|<pc9821ne -hard<|<pc9821ne -cdrm<|<pc9821ce2 -flop1<|<pc9821ce2 -hard<|<pc9821ce2 -cdrm<|<pc9821as -flop1<|<pc9821as -hard<|<pc9821as -cdrm<|<pc9821ap2 -flop1<|<pc9821ap2 -hard<|<pc9821ap2 -cdrm<|<pc9821 -flop1<|<pc9821 -hard<|<pc9821 -cdrm<|<pc9801vm -flop1<|<pc9801vm -hard<|<pc9801vm -cdrm<|<pc9801ux -flop1<|<pc9801ux -hard<|<pc9801ux -cdrm<|<pc9801rs -flop1<|<pc9801rs -hard<|<pc9801rs -cdrm<|<pc9801f -flop1<|<pc9801f -hard<|<pc9801bx2 -flop1<|<pc9801bx2 -hard<|<pc9801bx2 -cdrm<|<pc9821xs -flop1<",
+        "ROMXT": "dsk|ima|img|ufi|360|hdm|fdi|fdd|dcp|dcu|dip|nfd|d77|d88|1dd|dfi|hfe|imd|ipf|mfi|mfm|td0|cqm|cqi|zip",
+        "SHORTNM": "NPC98",
+        "SUPCORE": "np2kai_libretro.dll|nekop2_libretro.dll",
+        "SUPEMU": "Neko|vaeg|Anex86|SL9821|pc98do|pc98ha|pc98lt|pc9801|MAME"
+    },
+    "NEC - PC98 - Touhou": {
+        "EMUPRESET": "Anex86",
+        "LNCHPRM": "$|1|1|0|1|1",
+        "MAMENM": "pc9821xs",
+        "MAMEOPTS": "<pc9821xs -[RTYP]<|<pc9821xs -hard<|<pc9821xs -cdrm<|<pc9821ne -flop1<|<pc9821ne -hard<|<pc9821ne -cdrm<|<pc9821ce2 -flop1<|<pc9821ce2 -hard<|<pc9821ce2 -cdrm<|<pc9821as -flop1<|<pc9821as -hard<|<pc9821as -cdrm<|<pc9821ap2 -flop1<|<pc9821ap2 -hard<|<pc9821ap2 -cdrm<|<pc9821 -flop1<|<pc9821 -hard<|<pc9821 -cdrm<|<pc9801vm -flop1<|<pc9801vm -hard<|<pc9801vm -cdrm<|<pc9801ux -flop1<|<pc9801ux -hard<|<pc9801ux -cdrm<|<pc9801rs -flop1<|<pc9801rs -hard<|<pc9801rs -cdrm<|<pc9801f -flop1<|<pc9801f -hard<|<pc9801bx2 -flop1<|<pc9801bx2 -hard<|<pc9801bx2 -cdrm<|<pc9821xs -flop1<",
+        "ROMXT": "dsk|ima|img|ufi|360|hdm|fdi|fdd|dcp|dcu|dip|nfd|d77|d88|1dd|dfi|hfe|imd|ipf|mfi|mfm|td0|cqm|cqi|zip",
+        "SHORTNM": "TOUHOU",
+        "SUPCORE": "nekop2_libretro.dll|np2kai_libretro.dll",
+        "SUPEMU": "Anex86|Winx68k"
+    },
+    "NEC - PC9821": {
+        "EMUPRESET": "Neko",
+        "MAMENM": "pc9821xs",
+        "MAMEOPTS": "<pc9821xs -[RTYP]<|<pc9821xs -hard<|<pc9821xs -cdrm<|<pc9821ne -flop1<|<pc9821ne -hard<|<pc9821ne -cdrm<|<pc9821ce2 -flop1<|<pc9821ce2 -hard<|<pc9821ce2 -cdrm<|<pc9821as -flop1<|<pc9821as -hard<|<pc9821as -cdrm<|<pc9821ap2 -flop1<|<pc9821ap2 -hard<|<pc9821ap2 -cdrm<|<pc9821 -flop1<|<pc9821 -hard<|<pc9821 -cdrm<|<pc9801vm -flop1<|<pc9801vm -hard<|<pc9801vm -cdrm<|<pc9801ux -flop1<|<pc9801ux -hard<|<pc9801ux -cdrm<|<pc9801rs -flop1<|<pc9801rs -hard<|<pc9801rs -cdrm<|<pc9801f -flop1<|<pc9801f -hard<|<pc9801bx2 -flop1<|<pc9801bx2 -hard<|<pc9801bx2 -cdrm<|<pc9821xs -flop1<",
+        "ROMXT": "dsk|ima|img|ufi|360|hdm|fdi|fdd|dcp|dcu|dip|nfd|d77|d88|1dd|dfi|hfe|imd|ipf|mfi|mfm|td0|cqm|cqi|zip",
+        "SHORTNM": "NPC98",
+        "SUPCORE": "np2kai_libretro.dll|nekop2_libretro.dll",
+        "SUPEMU": "Neko|vaeg|Anex86|SL9821|pc98do|pc98ha|pc98lt|pc9801|MAME"
+    },
+    "NeXT - NeXTStation": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "next",
+        "MAMEOPTS": "<nextstc -flop1<|<nextstc -flop2<",
+        "SHORTNM": "NEXTST",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Nichibutsu - My Vision": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "myvision",
+        "MAMEOPTS": "<myvision -cart<",
+        "SHORTNM": "NICHMV",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Nintendo - e-Reader": {
+        "EMUPRESET": "VisualBoyAdvance-M",
+        "LNCHPRM": "$|1|1|1|1|0",
+        "MAMENM": "gba",
+        "MAMEOPTS": "<gba -cart<",
+        "MEDNM": "gba",
+        "ROMXT": "gba|gb|gbc|agb|bin|elf|mb|zip",
+        "SHORTNM": "NGBAEC",
+        "SUPCORE": "vbam_libretro.dll|mgba_libretro.dll|vba_next_libretro.dll",
+        "SUPEMU": "VisualBoyAdvance-M|VisualBoyAdvance|xe|Mednafen|BizHawk|boycottadv|firegb|mgba|no$gba|gbeplus|vgba|rascalboyadv|MAME|byuu"
+    },
+    "Nintendo - Famicom": {
+        "EMUPRESET": "nestopia",
+        "LNCHPRM": "$|1|1|1|1|0",
+        "MAMENM": "famicom",
+        "MAMEOPTS": "<famicom -cart<",
+        "MEDNM": "nes",
+        "ROMXT": "nes|unif|unf|nsf|fam|fds|bin|zip",
+        "SHORTNM": "NNFAM",
+        "SUPCORE": "fceumm_libretro.dll|nestopia_libretro.dll|quicknes_libretro.dll|bnes_libretro.dll|mesen_libretro.dll",
+        "SUPEMU": "nestopia|Mednafen|Mesen|xe|fceux|dsp|vdmgr|BizHawk|kindred|MAME|byuu"
+    },
+    "Nintendo - Family Computer Disk System": {
+        "EMUPRESET": "nestopia",
+        "LNCHPRM": "$|1|1|1|1|0",
+        "MAMENM": "famitwin",
+        "MAMEOPTS": "<famitwin -[RTYP]<|<fds -flop<|<fds -flop<|<famitwin -cart<",
+        "MEDNM": "nes",
+        "ROMXT": "nes|unif|unf|nsf|fam|fds|bin|zip",
+        "SHORTNM": "NNFDS",
+        "SUPCORE": "fceumm_libretro.dll|nestopia_libretro.dll|quicknes_libretro.dll|bnes_libretro.dll|mesen_libretro.dll",
+        "SUPEMU": "nestopia|virtuanes|xe|virtuanesplus|Mesen|BizHawk|no$nes|dsp|fceux|vdmgr|Mednafen|MAME|byuu"
+    },
+    "Nintendo - Game Boy": {
+        "EMUPRESET": "bgb",
+        "LNCHPRM": "$|1|1|1|1|0",
+        "MAMENM": "gameboy",
+        "MAMEOPTS": "<gbcolor -cart<|<supergb -cart<|<supergb2 -cart<|<gameboy -cart<",
+        "MEDNM": "gb",
+        "ROMXT": "gbc|gb|dmg|sgb|cgb|zip",
+        "SHORTNM": "NNGB",
+        "SUPCORE": "gambatte_libretro.dll|sameboy_libretro.dll|mgba_libretro.dll",
+        "SUPEMU": "bgb|Mednafen|zboy|mgba|dinoboy|dmgboy|no$gmb|kindred|BizHawk|xe|vgb|dsp|tgbdual|gbeplus|gest|sameboy|kigb|MAME|byuu"
+    },
+    "Nintendo - Game Boy Advance": {
+        "EMUPRESET": "VisualBoyAdvance-M",
+        "LNCHPRM": "$|1|1|1|1|0",
+        "MAMENM": "gba",
+        "MAMEOPTS": "<gba -cart<",
+        "MEDNM": "gba",
+        "ROMXT": "gba|gb|gbc|agb|bin|elf|mb|zip|gbz",
+        "SHORTNM": "NNGBA",
+        "SUPCORE": "vbam_libretro.dll|mgba_libretro.dll|vba_next_libretro.dll",
+        "SUPEMU": "VisualBoyAdvance-M|VisualBoyAdvance|xe|Mednafen|BizHawk|boycottadv|firegb|mgba|no$gba|gbeplus|vgba|rascalboyadv|MAME|byuu"
+    },
+    "Nintendo - Game Boy Color": {
+        "EMUPRESET": "bgb",
+        "LNCHPRM": "$|1|1|1|1|0",
+        "MAMENM": "gbcolor",
+        "MAMEOPTS": "<supergb -cart<|<supergb2 -cart<|<gbcolor -cart<",
+        "MEDNM": "gb",
+        "ROMXT": "gbc|gb|dmg|sgb|cgb|zip",
+        "SHORTNM": "NNGBC",
+        "SUPCORE": "gambatte_libretro.dll|sameboy_libretro.dll|mgba_libretro.dll",
+        "SUPEMU": "bgb|mgba|dinoboy|no$gmb|tgbdual|gbeplus|mednafen|xe|vgb|kigb|BizHawk|sameboy|dsp|MAME|byuu"
+    },
+    "Nintendo - GameCube": {
+        "EMUPRESET": "Dolphin",
+        "LNCHPRM": "$|1|1|1|1|0",
+        "PRECFG": "GCPadNew.ini|Hotkeys.ini|shad.ini",
+        "ROMXT": "dol|iso|gcm|ciso|wad|elf|wbfs|tgc|gcz|dff",
+        "SHORTNM": "NNGC",
+        "SUPCORE": "dolphin_libretro.dll",
+        "SUPEMU": "Dolphin|ishiiruka|supergamecube|ideas"
+    },
+    "Nintendo - Kiosk Compact Flash": {
+        "EMUPRESET": "Dolphin",
+        "LNCHPRM": "$|1|1|1|1|0",
+        "MAMENM": "wii",
+        "PRECFG": "gfx*.ini|Dolphin.ini|Hotkeys.ini|*New.ini|shad*.ini",
+        "ROMXT": "dol|iso|gcm|ciso|wad|elf|wbfs|tgc",
+        "SHORTNM": "NKCFL",
+        "SUPCORE": "dolphin_libretro.dll",
+        "SUPEMU": "Dolphin|ishiiruka|Dolwin"
+    },
+    "Nintendo - New Nintendo 3DS": {
+        "EMUPRESET": "Citra",
+        "LNCHPRM": "$|1|1|1|1|0",
+        "MAMENM": "3ds",
+        "ROMXT": " .3ds|3dsx|elf|axf|cci|cxi|app",
+        "SHORTNM": "NB3DS",
+        "SUPCORE": "citra_libretro.dll|citra_canary_libretro.dll",
+        "SUPEMU": "Citra|vvctre|tronds"
+    },
+    "Nintendo - Nintendo 3DS": {
+        "EMUPRESET": "Citra",
+        "LNCHPRM": "$|1|1|1|1|0",
+        "MAMENM": "3ds",
+        "ROMXT": " .3ds|3dsx|elf|axf|cci|cxi|app",
+        "SHORTNM": "NN3DS",
+        "SUPCORE": "citra_libretro.dll|citra_canary_libretro.dll",
+        "SUPEMU": "Citra|vvctre|tronds"
+    },
+    "Nintendo - Nintendo 64": {
+        "EMUPRESET": "Project64",
+        "LNCHPRM": "$|1|1|1|1|0",
+        "MAMENM": "n64",
+        "MAMEOPTS": "<n64 -cart<",
+        "ROMXT": "n64|d64|z64|zip|usa|rom|pal|chd|hd",
+        "SHORTNM": "NN64",
+        "SUPCORE": "parallel_n64_libretro.dll|mupen64_libretro.dll",
+        "SUPEMU": "Project64|Project64k|Apollo|1964|Mupen64Plus|Mupen64PlusPlus|BizHawk|MAME"
+    },
+    "Nintendo - Nintendo 64DD": {
+        "EMUPRESET": "Project64",
+        "LNCHPRM": "$|1|1|1|1|0",
+        "MAMENM": "n64dd",
+        "MAMEOPTS": "<n64dd -[RTYP]<|<n64dd -cart<|<n64dd -disk<",
+        "ROMXT": "n64|d64|z64|zip|usa|rom|pal|chd|hd",
+        "SHORTNM": "N64DD",
+        "SUPCORE": "parallel_n64_libretro.dll|mupen64_libretro.dll",
+        "SUPEMU": "Project64|Project64k|Mupen64Plus|Mupen64PlusPlus|MAME"
+    },
+    "Nintendo - Nintendo DS": {
+        "EMUPRESET": "Desmume",
+        "LNCHPRM": "$|1|1|1|1|0",
+        "ROMXT": "zip|nds|ds|7z|gz|rar|gba|srl|bin",
+        "SHORTNM": "NNDS",
+        "SUPCORE": "desmume_libretro.dll|desmume2012_libtro.dll|melonds_libretro.dll",
+        "SUPEMU": "Desmume|ideas|No$GBA|medusa|melonds|noods"
+    },
+    "Nintendo - Nintendo DS Decrypted": {
+        "EMUPRESET": "Desmume",
+        "LNCHPRM": "$|1|1|1|1|0",
+        "ROMXT": " .zip|nds|ds|7z|gz|rar|gba|srl",
+        "SHORTNM": "NNDSD",
+        "SUPCORE": "desmume_libretro.dll|desmume2012_libtro.dll|melonds_libretro.dll",
+        "SUPEMU": "Desmume|medusa|melonds|gbeplus|No$GBA|noods"
+    },
+    "Nintendo - Nintendo DSi": {
+        "EMUPRESET": "Melonds",
+        "LNCHPRM": "$|1|1|1|1|0",
+        "ROMXT": " .zip|nds|ds|7z|gz|rar|gba|srl",
+        "SHORTNM": "NNDSI",
+        "SUPCORE": "desmume_libretro.dll|desmume2012_libtro.dll|melonds_libretro.dll",
+        "SUPEMU": "Melonds|Desmume|ideas|No$GBA|medusa|noods"
+    },
+    "Nintendo - Nintendo Entertainment System": {
+        "EMUPRESET": "nestopia",
+        "LNCHPRM": "$|1|1|1|1|0",
+        "MAMENM": "nes",
+        "MAMEOPTS": "<nes -cart<|<nespal -cart<|<nes -cart<",
+        "MEDNM": "nes",
+        "ROMXT": "nes|unif|unf|nsf|fam|fds|bin|zip|qd",
+        "SHORTNM": "NNES",
+        "SUPCORE": "nestopia_libretro.dll|fceumm_libretro.dll|mesen_libretro.dll|bnes_libretro.dll|quicknes_libretro.dll",
+        "SUPEMU": "nestopia|virtuanes|rocknes|virtuanesplus|Mesen|Mednafen|dsp|xe|aprnes|BizHawk|kindred|no$nes|fceux|vdmgr|MAME|byuu"
+    },
+    "Nintendo - Nintendo Entertainment System - PAL": {
+        "EMUPRESET": "nestopia",
+        "LNCHPRM": "$|1|1|1|1|0",
+        "MAMENM": "nespal",
+        "MAMEOPTS": "<nespal -cart<",
+        "SHORTNM": "NESPAL",
+        "SUPCORE": "nestopia_libretro.dll|fceumm_libretro.dll|mesen_libretro.dll|bnes_libretro.dll|quicknes_libretro.dll",
+        "SUPEMU": "nestopia|virtuanes|virtuanesplus|dsp|xe|aprnes|BizHawk|kindred|Mesen|no$nes|vdmgr|fceux|Mednafen|MAME|byuu"
+    },
+    "Nintendo - Nintendo Switch": {
+        "LNCHPRM": "$|1|1|0|1|1",
+        "SHORTNM": "NSWTCH",
+        "SUPCORE": "",
+        "SUPEMU": "yuzu|ryujinx"
+    },
+    "Nintendo - Pokemon Mini": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|1|1|0",
+        "MAMENM": "pokemini",
+        "MAMEOPTS": "<pokemini -cart<",
+        "ROMXT": "bin|min|zip",
+        "SHORTNM": "NPOK",
+        "SUPCORE": "pokemini_libretro.dll",
+        "SUPEMU": "minimon|pokemini|MAME"
+    },
+    "Nintendo - Satellaview": {
+        "EMUPRESET": "snes9x",
+        "LNCHPRM": "$|1|1|1|1|0",
+        "MAMENM": "snes",
+        "MAMEOPTS": "<snes -cart<|<snespal -cart<|<snes -cart<",
+        "ROMXT": "sfc|zip|smc",
+        "SHORTNM": "NNSAT",
+        "SUPCORE": "bsnes_mercury_performance_libretro.dll|bsnes_performance_libretro.dll|bsnes_balanced_libretro.dll|bsnes_mercury_balanced_libretro.dll|bsnes_accuracy_libretro.dll",
+        "SUPEMU": "snes9x|snes9k|MAME"
+    },
+    "Nintendo - Sufami Turbo": {
+        "SHORTNM": "NSUFM",
+        "SUPCORE": "snes9x_libretro.dll|snes9x2002_libretro.dll|snes9x2005_libretro.dll|snes9x2010_libretro.dll||bsnes_accuracy_libretro.dll|bsnes_balanced_libretro.dll|bsnes_cplusplus98_libretro.dll|bsnes_mercury_accuracy_libretro.dll|bsnes_mercury_balanced_libretro.dll|bsnes_mercury_performance_libretro.dll|bsnes_performance_libretro.dll|higan_sfc_libretro.dll|higan_sfc_balanced_libretro.dll",
+        "SUPEMU": "snes9x|bsnes|mesen-s|snes9k|Mednafen|no$sns|MAME|zsnes|kindred|BizHawk|xe|zmz|snesgt"
+    },
+    "Nintendo - Super Famicom": {
+        "EMUPRESET": "snes9x",
+        "LNCHPRM": "$|1|1|1|1|0",
+        "MAMENM": "snes",
+        "MAMEOPTS": "<snes -cart<|<snespal -cart<|<snes -cart<",
+        "MEDNM": "snes",
+        "ROMXT": "sfc|bml|smc|zip",
+        "SHORTNM": "NSFAM",
+        "SUPCORE": "snes9x_libretro.dll|snes9x2002_libretro.dll|snes9x2005_libretro.dll|snes9x2010_libretro.dll||bsnes_accuracy_libretro.dll|bsnes_balanced_libretro.dll|bsnes_cplusplus98_libretro.dll|bsnes_mercury_accuracy_libretro.dll|bsnes_mercury_balanced_libretro.dll|bsnes_mercury_performance_libretro.dll|bsnes_performance_libretro.dll|higan_sfc_libretro.dll|higan_sfc_balanced_libretro.dll|mesen-s_libretro.dll",
+        "SUPEMU": "snes9x|mesen-s|snes9k|bsnes|Mednafen|xe|MAME|BizHawk|kindred|neusnem|zmz|zsnes|byuu"
+    },
+    "Nintendo - Super Game Boy": {
+        "EMUPRESET": "bgb",
+        "LNCHPRM": "$|1|1|1|1|0",
+        "MAMENM": "supergb",
+        "MAMEOPTS": "<supergb2 -cart<|<supergb -cart<",
+        "MEDNM": "gb",
+        "ROMXT": "gbc|gb|dmg|sgb|cgb|zip",
+        "SHORTNM": "NSGB",
+        "SUPCORE": "higan_sfc_libretro.dll|higan_sfc_balanced_libretro.dll|bsnes_mercury_performance_libretro.dll|bsnes_performance_libretro.dll|bsnes_balanced_libretro.dll|bsnes_mercury_balanced_libretro.dll|bsnes_accuracy_libretro.dll",
+        "SUPEMU": "Visualboyadvance-M|Visualboyadvance|bgb|kigb|gest|mgba|tgbdual|BizHawk|MAME|byuu"
+    },
+    "Nintendo - Super Nintendo Entertainment System": {
+        "EMUPRESET": "snes9x",
+        "LNCHPRM": "$|1|1|1|1|0",
+        "MAMENM": "snes",
+        "MAMEOPTS": "<snes -cart<|<snespal -cart<|<snes -cart<",
+        "MEDNM": "snes",
+        "ROMXT": "sfc|bml|smc|zip|fig|gd3|gd7|dx2|bsx|swc",
+        "SHORTNM": "NSNES",
+        "SUPCORE": "snes9x_libretro.dll|snes9x2002_libretro.dll|snes9x2005_libretro.dll|snes9x2010_libretro.dll||bsnes_accuracy_libretro.dll|bsnes_balanced_libretro.dll|bsnes_cplusplus98_libretro.dll|bsnes_mercury_accuracy_libretro.dll|bsnes_mercury_balanced_libretro.dll|bsnes_mercury_performance_libretro.dll|bsnes_performance_libretro.dll|higan_sfc_libretro.dll|higan_sfc_balanced_libretro.dll|mesen-s_libretro.dll",
+        "SUPEMU": "snes9x|mesen-s|snes9k|bsnes|Mednafen|no$sns|MAME|zsnes|kindred|BizHawk|xe|zmz|snesgt|byuu"
+    },
+    "Nintendo - Super Nintendo Entertainment System - PAL": {
+        "EMUPRESET": "snes9x",
+        "LNCHPRM": "$|1|1|1|1|0",
+        "MAMENM": "snespal",
+        "MAMEOPTS": "<snespal -cart<",
+        "ROMXT": "smc|sfc|swc|fig|bs|st|zip",
+        "SHORTNM": "SNESPAL",
+        "SUPCORE": "snes9x_libretro.dll|snes9x2002_libretro.dll|snes9x2005_libretro.dll|snes9x2010_libretro.dll||bsnes_accuracy_libretro.dll|bsnes_balanced_libretro.dll|bsnes_cplusplus98_libretro.dll|bsnes_mercury_accuracy_libretro.dll|bsnes_mercury_balanced_libretro.dll|bsnes_mercury_performance_libretro.dll|bsnes_performance_libretro.dll|higan_sfc_libretro.dll|higan_sfc_balanced_libretro.dll",
+        "SUPEMU": "snes9x|mesen-s|snes9k|Mednafen|no$sns|MAME|zsnes|xe|BizHawk|zmz|snesgt|byuu"
+    },
+    "Nintendo - Virtual Boy": {
+        "EMUPRESET": "Mednafen",
+        "LNCHPRM": "$|1|1|1|1|0",
+        "MAMENM": "vboy",
+        "MAMEOPTS": "<vboy -cart<",
+        "MEDNM": "vb",
+        "ROMXT": "vb|vboy|bin|zip",
+        "SHORTNM": "NNVB",
+        "SUPCORE": "mednafen_vb_libretro.dll",
+        "SUPEMU": "Mednafen|realityboy|vbjin|retroarch|MAME"
+    },
+    "Nintendo - Wii": {
+        "EMUPRESET": "Dolphin",
+        "LNCHPRM": "$|1|1|1|1|0",
+        "MAMENM": "wii",
+        "PRECFG": "gfx*.ini|*New.ini|shad*.ini",
+        "ROMXT": "dol|iso|gcm|ciso|wad|elf|wbfs|tgc|gcz|dff",
+        "SHORTNM": "NNWII",
+        "SUPCORE": "dolphin_libretro.dll",
+        "SUPEMU": "Dolphin|ishiiruka|Dolwin"
+    },
+    "Nintendo - Wii U": {
+        "EMUPRESET": "CEMU",
+        "LNCHPRM": "$|1|1|1|1|0",
+        "MAMENM": "wiiu",
+        "SHORTNM": "NNWIIU",
+        "SUPCORE": "",
+        "SUPEMU": "CEMU|decaf"
+    },
+    "Nintendo - WiiWare": {
+        "EMUPRESET": "Dolphin",
+        "LNCHPRM": "$|1|1|1|1|0",
+        "MAMENM": "wii",
+        "PRECFG": "gfx*.ini|Dolphin.ini|Hotkeys.ini|*New.ini|shad*.ini",
+        "ROMXT": "dol|iso|gcm|ciso|wad|elf|wbfs|tgc",
+        "SHORTNM": "NNWIIW",
+        "SUPCORE": "dolphin_libretro.dll",
+        "SUPEMU": "Dolphin|ishiiruka"
+    },
+    "Nokia - N-Gage": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|1",
+        "SHORTNM": "NNGAGE",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "EKA2L1"
+    },
+    "Northstar - Advantage": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "advantage",
+        "MAMEOPTS": "<advantage -flop<",
+        "SHORTNM": "NSTADV",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Northstar - Horizon": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "horizon",
+        "MAMEOPTS": "<horizon -flop1<",
+        "SHORTNM": "NSTHOR",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "NPO - Elektronika MS 1502": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "mc1502",
+        "MAMEOPTS": "<mc1502 -flop1<",
+        "SHORTNM": "NPOELMS",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Nuova Elettronica - Z80NE": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "z80ne",
+        "MAMEOPTS": "<z80ne -cass1<",
+        "SHORTNM": "NUEZ80",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Olivetti - M20": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "m20",
+        "MAMEOPTS": "<m20 -flop1<|<m20 -flop2<",
+        "SHORTNM": "OLIVM",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Olivetti - Prodest PC 128": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "pro128",
+        "MAMEOPTS": "<pro128 -[RTYP]<|<pro128 -flop1<|<pro128 -cass<|<pro128 -cart<",
+        "SHORTNM": "OLIVPC128",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Olivetti - Prodest PC 128S": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "pro128s",
+        "MAMEOPTS": "<pro128s -flop1<",
+        "SHORTNM": "OLIVPCS",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Ondra - Ondra ViLi": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "ondra",
+        "MAMEOPTS": "<ondra -cass<",
+        "SHORTNM": "ONVILI",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Open - Beats of Rage": {
+        "EMUPRESET": "openbeatsofrage",
+        "LNCHPRM": "$|1|1|1|1|0",
+        "ROMXT": "bor|pak",
+        "SHORTNM": "OBOR",
+        "SUPCORE": "mame_libretrol.dll",
+        "SUPEMU": "openbeatsofrage"
+    },
+    "Orion - Orion 128": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "orionide",
+        "MAMEOPTS": "<orionide -flop<|<orionide -cass<|<orionide -cart<",
+        "SHORTNM": "OR128",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "EMU|MAME"
+    },
+    "Orion - Orion Pro": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "orionpro",
+        "MAMEOPTS": "<orionpro -disk<",
+        "SHORTNM": "ORIONP",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "EMU|MAME"
+    },
+    "Osborne - Osborne-1": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "osborne1",
+        "MAMEOPTS": "<osborne1 -flop1<",
+        "SHORTNM": "OSBR1",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Osborne - Osborne-2": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "osborne2",
+        "MAMEOPTS": "<osborne2 -flop1<",
+        "SHORTNM": "OSBR2",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Osborne 4 - Vixen": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "vixen",
+        "MAMEOPTS": "<vixen -flop1<",
+        "SHORTNM": "OSB4V",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Otrona - Attache": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "attache",
+        "MAMEOPTS": "<attache -flop<",
+        "SHORTNM": "OTRAT",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Ouya - Ouya": {
+        "EMUPRESET": "Nox",
+        "LNCHPRM": "$|1|1|1|1|0",
+        "ROMXT": "apk",
+        "SHORTNM": "ANDRD",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "Nox|Bluestacks"
+    },
+    "Palson - CX 3000 Tele Computer": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "cx3000tc",
+        "MAMEOPTS": "<cx3000tc -flop<",
+        "SHORTNM": "PALCX3K",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Panasonic - JR-200": {
+        "LNCHPRM": "$|1|1|0|1|0",
+        "SHORTNM": "PANJR2",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "vpanajr|MAME"
+    },
+    "Patisonic - Aleste 520EX": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "aleste",
+        "MAMEOPTS": "<aleste -flop<",
+        "SHORTNM": "PATAL",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "PEL Varazdin - Orao": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "orao",
+        "MAMEOPTS": "<orao -cass1<",
+        "SHORTNM": "PVORAO",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Peripheral Technology - PT68K2": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "pt68k2",
+        "MAMEOPTS": "<pt68k2 -flop1<",
+        "SHORTNM": "PERT68K",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Philips - CD-I": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|1|1|0",
+        "MAMENM": "cdi910",
+        "MAMEOPTS": "<cd910 -cdrm<|<cd490a -cdrm<",
+        "ROMXT": "chd|cue|toc|nrg|gdi|iso|cdr|img",
+        "SHORTNM": "PCDI",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "wcdi|MAME"
+    },
+    "Philips - P2000": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "pc2000",
+        "MAMEOPTS": "<pc2000 -cart<",
+        "ROMXT": "bin|zip",
+        "SHORTNM": "PPC2K",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Philips - VG-5000": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "vg5k",
+        "MAMEOPTS": "<vg5k -cart<",
+        "ROMXT": "wav|k7|zip",
+        "SHORTNM": "PVG5K",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "dcvg5k|MAME"
+    },
+    "Philips - Videopac+": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "videopac",
+        "MAMEOPTS": "<videopac -cart<",
+        "ROMXT": "bin|rom,zip",
+        "SHORTNM": "PVIDPAC",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "o2em|MAME"
+    },
+    "PopCap - PopCap": {
+        "EMUPRESET": "BSL",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "ROMXT": "lnk|exe|bat|cmd|jar",
+        "SHORTNM": "POPCAP",
+        "SUPCORE": "",
+        "SUPEMU": "BSL"
+    },
+    "PPG - Waveterm A": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "waveterm",
+        "MAMEOPTS": "<waveterm -flop1<",
+        "SHORTNM": "PPGWAV",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Processor Technology Corporation - SOL-20": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "sol20",
+        "MAMEOPTS": "<sol20 -cass<",
+        "SHORTNM": "PTCSOL",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Psion - Organiser I": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "psion1",
+        "MAMEOPTS": "<psion1 -cart<",
+        "SHORTNM": "PSIORG",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Psion - Organiser II": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "psion2",
+        "MAMEOPTS": "<psion2 -cart<",
+        "SHORTNM": "PSIORG2",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "RCA - CHIP 8": {
+        "LNCHPRM": "$|1|1|0|1|0",
+        "SHORTNM": "RCACHP8",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "elf|FishNChips|sharpchip8|MAME"
+    },
+    "RCA - Studio II": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "studio2",
+        "MAMEOPTS": "<studio2 -cart<",
+        "ROMXT": "st2|bin|rom|zip",
+        "SHORTNM": "RSTUDII",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "elf|FishNChips|sharpchip8|MAME"
+    },
+    "RCA - Superchip": {
+        "LNCHPRM": "$|1|1|0|1|0",
+        "SHORTNM": "RCASUP",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "FishNChips|sharpchip8|MAME"
+    },
+    "RCA - VIP": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "vip",
+        "MAMEOPTS": "<vip -cass<",
+        "SHORTNM": "RCAVIP",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "RCA Studio II - Victory MPT-02": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "studio2",
+        "MAMEOPTS": "<studio2 -cart<",
+        "SHORTNM": "RCAVICT",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Research Machines - Nimbus": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "nimbus",
+        "MAMEOPTS": "<nimbus -flop1<",
+        "SHORTNM": "RMNIMB",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Robotron - KC Compact": {
+        "LNCHPRM": "$|1|1|0|1|0",
+        "SHORTNM": "ROBKCC",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "kcemu|EMU|MAME"
+    },
+    "Robotron - Z9001": {
+        "LNCHPRM": "$|1|1|0|1|0",
+        "SHORTNM": "ROBZ9K1",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Rockwell - AIM 65": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "aim65",
+        "MAMEOPTS": "<aim65 -flop<",
+        "SHORTNM": "ROCKAIM",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "ROLM - CBX 9751": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "r9751",
+        "MAMEOPTS": "<r9751 -flop<",
+        "SHORTNM": "ROLMCBX",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Rowtron - Television Computer System": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "rwtrntcs",
+        "MAMEOPTS": "<rwtrntcs -cart<",
+        "SHORTNM": "ROWTCS",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Sage Technology - Sage II": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "sage2",
+        "MAMEOPTS": "<sage2 -flop1<|<sage2 -flop2<",
+        "SHORTNM": "STSAGE2",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "SAM SKB VM - Partner-01.01": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "partner",
+        "MAMEOPTS": "<partner -[RTYP]<|<partner -cass<|<partner -flop<",
+        "SHORTNM": "SAMSKBVMP",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Sammy - Atomiswave": {
+        "Demul?EMUOPTS=<-run=awave -rom": "",
+        "EMUPRESET": "Demul",
+        "EXT": "0",
+        "EXTRARC": "0",
+        "LNCHPRM": "$|0|0|0|0|0",
+        "NICEFLDR": "1",
+        "PATH": "0",
+        "QUOTES": "0",
+        "ROMNAME": "0",
+        "ROMXT": "zip",
+        "RUNDIR": "0",
+        "SETLST": "",
+        "SHORTNM": "SATOM",
+        "SUPCORE": "flycast_libretro.dll|mame2014_libretro.dll|mame2010_libretro.dll|mame2003_plus_libretro.dll|mame2003_libretro.dll|mame2000_libretro.dll|mame2016_libretro.dll|mame_libretro.dll",
+        "SUPEMU": "flycast|redream|Demul|mame_arcade"
+    },
+    "Samsung - SPC-1000": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "spc1000",
+        "MAMEOPTS": "<spc1000 -cass<",
+        "SHORTNM": "SAMSPC1K",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Samsung - SPC-1500": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "spc1500",
+        "MAMEOPTS": "<spc1500 -cass<",
+        "SHORTNM": "SAMSPC15",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "San Bergmans - Izabella Malcolm - SITCOM": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "sitcom",
+        "MAMEOPTS": "<sitcom -flash1<",
+        "SHORTNM": "SBIZMSITC",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Sanyo - MBC-200 - 1200": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "mbc200",
+        "MAMEOPTS": "<mbc200 -flop1<",
+        "SHORTNM": "SMBC2",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Sanyo - MBC-55x": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "mbc55x",
+        "MAMEOPTS": "<mbc55x -flop1<",
+        "SHORTNM": "SMBC55",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Sanyo - PHC-25": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "phc25",
+        "MAMEOPTS": "<phc25 -cass<",
+        "SHORTNM": "SPHC25",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "ScummVM - ScummVM": {
+        "cmdfun": " 1",
+        "EMUPRESET": "ScummVM",
+        "LNCHPRM": "$|1|1|0|1|1",
+        "SHORTNM": "SCUMV",
+        "SUPCORE": "scummvm_libretro.dll",
+        "SUPEMU": "ScummVM"
+    },
+    "Sega - 32X": {
+        "EMUPRESET": "Fusion",
+        "Fusion?EMUOPTS": "<-FullScreen -32X<|<-32X<",
+        "LNCHPRM": "$|1|1|1|1|0",
+        "MAMENM": "32x",
+        "MAMEOPTS": "<32x -cart<|<32xe -cart<|<32xj -cart<|<32x_mcd -cart<|<32x_mcd -cdrm<|<32x_mcdj -cdrm<|<32x_mcdj -cart<|<32x_scd -cdrm<|<32x_scd -cart<|<32x -cart<",
+        "ROMXT": "bin,32x|zip|chd|cue|toc|nrg|gdi|iso|cdr|img",
+        "SHORTNM": "SG32X",
+        "SUPCORE": "picodrive_libretro.dll",
+        "SUPEMU": "Fusion|gensplus|gens|MAME"
+    },
+    "Sega - 32X - JAP": {
+        "EMUPRESET": "fusion",
+        "LNCHPRM": "$|1|1|1|1|0",
+        "MAMENM": "32xj",
+        "MAMEOPTS": "<32xj -cart<",
+        "ROMXT": "bin,32x|zip|chd|cue|toc|nrg|gdi|iso|cdr|img",
+        "SHORTNM": "32XJ",
+        "SUPCORE": "picodrive_libretro.dll",
+        "SUPEMU": "Fusion|gensplus|gens|MAME"
+    },
+    "Sega - 32X - PAL": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|1|1|0",
+        "MAMENM": "32xe",
+        "MAMEOPTS": "<32xe -cart<",
+        "ROMXT": "bin,32x|zip|chd|cue|toc|nrg|gdi|iso|cdr|img",
+        "SHORTNM": "32XP",
+        "SUPCORE": "picodrive_libretro.dll",
+        "SUPEMU": "Fusion|gensplus|gens|MAME"
+    },
+    "Sega - Beena": {
+        "EMUPRESET": "MAME",
+        "Fusion?EMUOPTS": "<-FullScreen -gen<|<-gen<",
+        "LNCHPRM": "$|1|1|1|1|0",
+        "MAMENM": "beena",
+        "MAMEOPTS": "<beena -cart<",
+        "ROMXT": "pco|pic|zip|bin|md",
+        "SHORTNM": "SBEENA",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Sega - Chihiro": {
+        "EMUPRESET": "Cxbx",
+        "LNCHPRM": "$|1|1|1|1|0",
+        "SHORTNM": "SEGCHI",
+        "SUPCORE": "",
+        "SUPEMU": "Cxbx|cxbxreloaded|xqemu"
+    },
+    "Sega - Dreamcast": {
+        "Demul?EMUOPTS=<-run=dc -image": "\"[CMDLINELOC]\"",
+        "EMUPRESET": "Demul",
+        "LNCHPRM": "$|1|1|1|1|0",
+        "MAMENM": "dc",
+        "MAMEOPTS": "<dc -cdrm<|<dcjp -cdrm<|<dceu -cdrm<|<dc -cdrm<",
+        "ROMXT": "chd|cue|toc|nrg|gdi|iso|cdr|img ",
+        "RUNDIR": "0",
+        "SHORTNM": "SDREAM",
+        "SUPCORE": "flycast_libretro.dll|flycast_gles2_libretro.dll|redream_libretro.dll",
+        "SUPEMU": "redream|flycast|Demul|NullDC|chankast|reicast|Makaron"
+    },
+    "Sega - Game Gear": {
+        "EMUPRESET": "Fusion",
+        "Fusion?EMUOPTS": "<-FullScreen -gg<|<-gg<",
+        "LNCHPRM": "$|1|1|1|1|0",
+        "MAMENM": "gamegear",
+        "MAMEOPTS": "<gamegeaj -cart<|<gamegear -cart<",
+        "MEDNM": "gg",
+        "ROMXT": " .gg|bin|zip",
+        "SHORTNM": "SGG",
+        "SUPCORE": "genesis_plus_gx_libretro.dll|gearboy_libretro.dll|blastem_libretro.dll",
+        "SUPEMU": "Fusion|mednafen|dega|emukon|twombit|gamegear|mesadx|gensplus|xe|osmose|gearsystem|meka|osmose|cogwheel|regen|emukon|MAME|byuu"
+    },
+    "Sega - Game Gear - JAP": {
+        "EMUPRESET": "fusion",
+        "LNCHPRM": "$|1|1|1|1|0",
+        "MAMENM": "gamegearj",
+        "MAMEOPTS": "<gamegearj -cart<",
+        "SHORTNM": "SGGJ",
+        "SUPCORE": "genesis_plus_gx_libretro.dll|gearboy_libretro.dll|blastem_libretro.dll",
+        "SUPEMU": "Fusion|mednafen|dega|emukon|twombit|gamegear|mesadx|xe|gensplus|osmose|gearsystem|cogwheel|meka|osmose|regen|emukon|MAME|byuu"
+    },
+    "Sega - Hikaru": {
+        "EMUPRESET": "Demul",
+        "EXTRARC": "0",
+        "LNCHPRM": "$|0|0|0|0|0",
+        "ROMXT": "zip",
+        "SETLST": "",
+        "SHORTNM": "HIKAR",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "Demul|mame_arcade|MAME"
+    },
+    "Sega - Mark III - JPN": {
+        "EMUPRESET": "fusion",
+        "LNCHPRM": "$|1|1|1|1|0",
+        "MAMENM": "smsj",
+        "MAMEOPTS": "<smsj -cart<",
+        "SHORTNM": "SMSJ",
+        "SUPCORE": "genesis_plus_gx_libretro.dll|blastem_libretro.dll",
+        "SUPEMU": "Fusion|mednafen|twombit|dega|emukon|gensplus|dsp|gearsystem|mesadx|kindred|xe|mastersystem|cogwheel|regen|meka|osmose|emukon|MAME|byuu"
+    },
+    "Sega - Master System - Mark III": {
+        "EMUPRESET": "Fusion",
+        "Fusion?EMUOPTS": "<-FullScreen -sms<|<-sms<",
+        "LNCHPRM": "$|1|1|1|1|0",
+        "MAMENM": "sms",
+        "MAMEOPTS": "<sms -cart<|<sms1br -cart<|<sms1pal -cart<|<sms1paln -cart<|<sg1000m3 -cart<|<smsj -cart<|<smspal -cart<|<sms1 -cart<",
+        "MEDNM": "sms",
+        "ROMXT": "sms|bin|zip",
+        "SHORTNM": "SEGMS",
+        "SUPCORE": "genesis_plus_gx_libretro.dll|blastem_libretro.dll",
+        "SUPEMU": "Fusion|mednafen|twombit|dega|dsp|emukon|gensplus|kindred|gearsystem|osmose|xe|mesadx|cogwheel|mastersystem|regen|meka|emukon|osmose|MAME|byuu"
+    },
+    "Sega - Master System - PAL": {
+        "EMUPRESET": "fusion",
+        "LNCHPRM": "$|1|1|1|1|0",
+        "MAMENM": "smspal",
+        "MAMEOPTS": "<smspal -cart<",
+        "SHORTNM": "SMSP",
+        "SUPCORE": "genesis_plus_gx_libretro.dll|blastem_libretro.dll",
+        "SUPEMU": "Fusion|mednafen|twombit|dega|emukon|dsp|gensplus|gearsystem|kindred|mesadx|xe|osmose|mastersystem|cogwheel|regen|meka|osmose|emukon|MAME|byuu"
+    },
+    "Sega - Mega Drive - Genesis": {
+        "EMUPRESET": "Fusion",
+        "Fusion?EMUOPTS": "<-FullScreen -gen<|<-gen<",
+        "LNCHPRM": "$|1|1|1|1|0",
+        "MAMENM": "genesis",
+        "MAMEOPTS": "<genesis -cart<| <genesis_tmss -cart<|<genesisp -cart<|<genesispf -cart<|<genesispg -cart<|<megadriv -cart<|<megadrij -cart<|<genesis -cart<",
+        "MEDNM": "md",
+        "ROMXT": "bin|zip|smd|md|gen",
+        "SHORTNM": "SMEGAD",
+        "SUPCORE": "genesis_plus_gx_libretro.dll|blastem_libretro.dll|picodrive_libretro.dll",
+        "SUPEMU": "Fusion|blastem|mednafen|gens|gensgs|dgen|gensplus|regen|xe|exodus|genesisplus|MAME|byuu"
+    },
+    "Sega - Mega Drive - PAL": {
+        "EMUPRESET": "fusion",
+        "LNCHPRM": "$|1|1|1|1|0",
+        "MAMENM": "megadriv",
+        "MAMEOPTS": "<megadriv -cart<",
+        "SHORTNM": "SMDP",
+        "SUPCORE": "genesis_plus_gx_libretro.dll|picodrive_libretro.dll|blastem_libretro.dll",
+        "SUPEMU": "Fusion|blastem|mednafen|gens|gensgs|dgen|gensplus|regen|genesisplus|exodus|xe|MAME|byuu"
+    },
+    "Sega - Mega-CD - Sega CD": {
+        "EMUPRESET": "Fusion",
+        "Fusion?EMUOPTS": "<-FullScreen -gen<|<-gen<",
+        "LNCHPRM": "$|1|1|1|1|0",
+        "MAMENM": "megacd",
+        "MAMEOPTS": "<32x_scd -cdrm<|<megacd -cdrm<|<megacda -cdrm<|<megacdj -cdrm<|<megacd2 -cdrm<|<megacd2j -cdrm<|<32x_mcd -cdrm<|<32x_mcdj -cdrm<|<segacd -cdrm<",
+        "MEDNM": "md",
+        "ROMXT": "chd|cue|toc|nrg|gdi|iso|cdr|img",
+        "SHORTNM": "SMEGCD",
+        "SUPCORE": "genesis_plus_gx_libretro.dll|blastem_libretro.dll|picodrive_libretro.dll",
+        "SUPEMU": "Fusion|gens|gensgs|gensplus|MAME|xe|mednafen"
+    },
+    "Sega - MegaTech": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|0|0|0|0|0",
+        "MAMENM": "megatech",
+        "MAMEOPTS": "<megatech -cart<",
+        "SHORTNM": "SEGMT",
+        "SUPCORE": "genesis_plus_gx_libretro.dll|blastem_libretro.dll|picodrive_libretro.dll",
+        "SUPEMU": "Fusion|blastem|mednafen|gens|gensgs|dgen|gensplus|regen|genesisplus|MAME"
+    },
+    "Sega - Model 1": {
+        "LNCHPRM": "$|0|0|0|0|0",
+        "SHORTNM": "SMOD1",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "modeller|MAME"
+    },
+    "Sega - Model 2": {
+        "EMUPRESET": "m2emulator",
+        "EXTRARC": "0",
+        "LNCHPRM": "$|0|0|0|0|0",
+        "MAMEOPTS": "<segamod2 -cart<",
+        "NICEFLDR": "1",
+        "ROMXT": "zip",
+        "SETLST": "",
+        "SHORTNM": "SMOD2",
+        "SUPCORE": "mame_libretro.dlls",
+        "SUPEMU": "m2emulator|MAME"
+    },
+    "Sega - Model 3": {
+        "EMUPRESET": "supermodel",
+        "EXTRARC": "0",
+        "LNCHPRM": "$|1|0|0|0|0",
+        "MAMENM": "supmodel",
+        "MAMEOPTS": "<segamod3 -cart<",
+        "NICEFLDR": "1",
+        "ROMXT": "zip",
+        "SETLST": "",
+        "SHORTNM": "SMOD3",
+        "SUPCORE": "",
+        "SUPEMU": "supermodel"
+    },
+    "Sega - NAOMI": {
+        "Demul?EMUOPTS=<-run=naomi -rom": "",
+        "EMUPRESET": "flycast",
+        "EXT": "0",
+        "EXTRARC": "0",
+        "flycast?EMUOPTS": "<",
+        "LNCHPRM": "$|0|0|0|0|0",
+        "MAMENM": "naomi",
+        "MAMEOPTS": "<naomi -[RTYP]<|<naomi -cdrm<|<naomi2 -cdrm<|<naomigd -gdrm<",
+        "NICEFLDR": "1",
+        "PATH": "0",
+        "QUOTES": "0",
+        "ROMNAME": "0",
+        "ROMXT": "zip|chd|lst|bin|cue",
+        "RUNDIR": "0",
+        "SETLST": "",
+        "SHORTNM": "SNAOMI",
+        "SUPCORE": "flycast_libretro.dll|mame2014_libretro.dll|mame2010_libretro.dll|mame2003_plus_libretro.dll|mame2003_libretro.dll|mame2000_libretro.dll|mame2016_libretro.dll",
+        "SUPEMU": "flycast|reicast|Demul|redream|NullDC|mame_arcade|MAME|Makaron"
+    },
+    "Sega - PICO": {
+        "EMUPRESET": "fusion",
+        "Fusion?EMUOPTS": "<-FullScreen -gen<|<-gen<",
+        "LNCHPRM": "$|1|1|1|1|0",
+        "MAMENM": "picou",
+        "MAMEOPTS": "<picoj -cart<|<picou -cart<|<pico -cart<",
+        "ROMXT": "pco|pic|zip|bin|md",
+        "SHORTNM": "SPICO",
+        "SUPCORE": "picodrive_libretro.dll",
+        "SUPEMU": "Fusion|picodrive|MAME"
+    },
+    "Sega - Saturn": {
+        "DISCMNT": "1",
+        "EMUPRESET": "SSF",
+        "LNCHPRM": "$|1|1|1|1|0",
+        "MAMENM": "saturnu",
+        "MAMEOPTS": "<saturn -[RTYP]<|<saturn -cart<|<saturneu -cdrm<|<saturneu -cart<|<saturnjp -cdrm<|<saturnjp -cart<|<saturn -cdrm<",
+        "MEDNM": "ss",
+        "ROMXT": "chd|cue|toc|nrg|gdi|iso|cdr|md5|cdi|img",
+        "RUNDIR": "0",
+        "SHORTNM": "SEGSAT",
+        "SUPCORE": "mednafen_saturn_libretro.dll|yabause_libretro.dll|yabasanshiro_libretro.dll",
+        "SUPEMU": "SSF|Mednafen|kronos|Yabause|nova|BizHawk|MAME"
+    },
+    "Sega - SC-3000": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "sc3000",
+        "MAMEOPTS": "<sc3000 -[RTYP]<|<sc3000 -cass<|<sc3000h -cart<|<sc3000h -cass<|<sf7000 -flop<|<sf7000 -cass<|<sc3000 -cart<",
+        "ROMXT": "bin|sg|sc|wav|bit|zip",
+        "SHORTNM": "SSC3K",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "meka|sc3000|regen|vdmgr|MAME"
+    },
+    "Sega - SF-7000": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "sf7000",
+        "MAMEOPTS": "<sf7000 -[RTYP]<|<sf7000 -cass<|<sc3000 -cart<|<sc3000 -cass<|<sc3000h -cart<|<sc3000h -cass<|<sf7000 -flop<",
+        "ROMXT": "sf7|d77|d88|1dd|dfi|hfe|imd|ipf|mfi|mfm|td0|cqm|cqi|dsk|wav|bit|zip",
+        "SHORTNM": "SSF7K",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "meka|MAME"
+    },
+    "Sega - SG-1000": {
+        "BlueMSX?EMUOPTS": "</fullscreen /machine \"SEGA -SG-1000\" /rom1<|</machine \"SEGA -SG-1000\" /rom1zip<|</fullscreen /machine \"SEGA -SG-1000\" /rom1zip<|</machine \"SEGA -SG-1000\" /rom1<",
+        "EMUPRESET": "Fusion",
+        "Fusion?EMUOPTS": "<-FullScreen<|<",
+        "LNCHPRM": "$|1|1|1|1|0",
+        "MAMENM": "sg1000",
+        "MAMEOPTS": "<sg1000m2 -cart<|<sg1000m2 -cass<|<sg1000m3 -cart<|<sg1000m3 -card<|<sg1000 -cart<",
+        "ROMXT": "bin|sg|zip|wav|bit|sms",
+        "SHORTNM": "SSG1K",
+        "SUPCORE": "genesis_plus_gx_libretro.dll",
+        "SUPEMU": "Fusion|meka|regen|twombit|coolcv|Bizhawk|BlueMSX|xe|vdmgr|cogwheel|MAME|byuu"
+    },
+    "Sega - STV": {
+        "EMUPRESET": "SSF",
+        "LNCHPRM": "$|1|1|0|1|0"
+    },
+    "Sega - Super Control Station": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMEOPTS": "<sf7000 -[RTYP]<|<sf7000 -cass<|<sc3000 -cart<|<sc3000 -cass<|<sc3000h -cart<|<sc3000h -cass<|<sf7000 -flop<",
+        "ROMXT": "sf7|d77|d88|1dd|dfi|hfe|imd|ipf|mfi|mfm|td0|cqm|cqi|dsk|wav|bit|zip",
+        "SHORTNM": "SSCONTS",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Sega - Titan Video": {
+        "EMUPRESET": "SSF",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "stv",
+        "MAMEOPTS": "<stv -cart<",
+        "SHORTNM": "SEGSTV",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "SSF|MAME"
+    },
+    "Sega - Visual Memory Unit": {
+        "EMUPRESET": "directvms",
+        "LNCHPRM": "$|1|1|1|1|0",
+        "MAMENM": "svmu",
+        "MAMEOPTS": "<svmu -quik<",
+        "SHORTNM": "SEGVMU",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "directvms|softvms|dreamvmu|MAME"
+    },
+    "Seiko - Ruputer": {
+        "LNCHPRM": "$|1|1|0|1|0",
+        "SHORTNM": "SRPUT",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "aurex|MAME"
+    },
+    "Sharp - MZ-2000": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "mz2000",
+        "MAMEOPTS": "<mz2000 -[RTYP]<|<mz2000 -flop1<|<mz2000 -cass1<",
+        "SHORTNM": "SHRPMZ2K",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "emuz2000|MAME"
+    },
+    "Sharp - MZ-2500": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "mz2500",
+        "MAMEOPTS": "<mz2500 -flop1<",
+        "SHORTNM": "SHRPMZ25",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Sharp - MZ-700": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "mz700",
+        "MAMEOPTS": "<mz700j -cass<|<mz700 -cass<",
+        "ROMXT": "wav|m12|mzf|mzt|zip",
+        "SHORTNM": "SMZ7H",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "mzxx|mz700win|mz700|MAME"
+    },
+    "Sharp - MZ-800": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "mz800",
+        "MAMEOPTS": "<mz800 -cass<",
+        "ROMXT": "wav|m12|mzf|mzt|zip",
+        "SHORTNM": "SMZ8H",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "mzxx|mz800|MAME"
+    },
+    "Sharp - X1": {
+        "EMUPRESET": "X1turbo",
+        "LNCHPRM": "$|1|1|1|1|0",
+        "MAMENM": "x1",
+        "MAMEOPTS": "<x1twin -[RTYP]<|<x1twin -cart<|<x1twin -cass<|<x1turbo -flop1<|<x1 -flop1<|<x1 -cart<|<x1 -cass<|<x1turbo -flop1<|<x1turbo -cass<|<x1turbo -cart<|<x1turbo40 -flop1<|<x1turbo40 -cass<|<x1turbo40 -cart<|<x1twin -flop1<",
+        "ROMXT": "2d|d77|d88|1dd|dfi|hfe|imd|ipf|mfi|mfm|td0|cqm|cqi|dsk|bin|rom|wav|tap|zip",
+        "SHORTNM": "SHARPX1",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "X1turbo|x1|x1twin|winX1|MAME"
+    },
+    "Sharp - X68000": {
+        "EMUPRESET": "XM6",
+        "LNCHPRM": "$|1|1|1|1|0",
+        "MAMENM": "x68000",
+        "MAMEOPTS": "<x68ksupr -[RTYP]<|<x68ksupr -hard1<|<x68ksupr -cdrm<|<x68kvi -flop1<|<x68kvi -hard1<|<x68kvi -cdrm<|<x68030 -flop1<|<x68030 -hard1<|<x68030 -cdrm<|<x68000 -flop1<|<x68000 -hard1<|<x68000 -cdrm<|<x68k -flop1<|<x68k -hard1<|<x68k -cdrm<|<x68ksupr -flop1<",
+        "ROMXT": "xdf|hdm|2hd|dim|d77|d88|1dd|dfi|hfe|imd|ipf|mfi|mfm|td0|cqm|cqi|dsk|bin|zip|hdf|chd|cue|toc|nrg|gdi|iso|cdr|hdi|hd",
+        "SHORTNM": "SHARPX68K",
+        "SUPCORE": "px68k_libretro.dll",
+        "SUPEMU": "XM6|Anex86|Winx68k|ex68|MAME"
+    },
+    "Signetics - Pipbug": {
+        "LNCHPRM": "$|1|1|0|1|0",
+        "SHORTNM": "SPIPB",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "winarcadia|MAME"
+    },
+    "Sinclair - QL": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "ql",
+        "MAMEOPTS": "<ql -[RTYP]<|<ql -cass<|<ql_us -cart<|<ql_us -cass<|<ql_de -cart<|<ql_de -cass<|<ql_dk -cart<|<ql_dk -cass<|<ql_es -cart<|<ql_es -cass<|<ql_fr -cart<|<ql_fr -cass<|<ql_gr -cart<|<ql_se -cass<|<ql_se -cart<|<ql_it -cass<|<ql_gr -cass<|<ql_it -cart<|<ql_it -cass<",
+        "ROMXT": "mdv|zip|rom|bin",
+        "SHORTNM": "SINQL",
+        "SUPCORE": "fuse_libretro.dll",
+        "SUPEMU": "ql2k|MAME"
+    },
+    "Sinclair - ZX Spectrum +3": {
+        "EMUPRESET": "ZXSpin",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "spec128",
+        "MAMEOPTS": "<spec128 -[RTYP]<|spec128 -cass<|<spec128 -dump<|<spec128 -cart<|<specpls3 -flop1<",
+        "ROMXT": "bin|rom|ach|frz|plusd.prg|sem|sit|sna|snp|snx|sp|z80|zx|wav|tzx|tap|blk|zip",
+        "SHORTNM": "SINZXS",
+        "SUPCORE": "fuse_libretro.dll|crocods_libretro.dll",
+        "SUPEMU": "ZXSpin|jvz200|Ascd|zesarux|no$zx|dsp|tunix|ep128emu|mzxx|MAME|EMU"
+    },
+    "Sinclair - ZX80": {
+        "EMUPRESET": "ZXSpin",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "zx80",
+        "MAMEOPTS": "<zx80 -cass1<",
+        "ROMXT": "wav|p|80|tzx|zip",
+        "SHORTNM": "SINCZX80",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "ZXSpin|jvz200|zesarux|no$zx|MAME"
+    },
+    "Sinclair - ZX81": {
+        "EMUPRESET": "ZXSpin",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "zx81",
+        "MAMEOPTS": "<zx81 -cass1<",
+        "ROMXT": "wav|p|81|tzx|zip",
+        "SHORTNM": "SINZX81",
+        "SUPCORE": "81_libretro.dll",
+        "SUPEMU": "ZXSpin|eightyone|zesarux|mzxx|MAME"
+    },
+    "Small Systems Engineering - SSE Softbox": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "softbox",
+        "MAMEOPTS": "<softbox -flop1<",
+        "SHORTNM": "SSESOFT",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "SNK - Hyper Neo-Geo 64": {
+        "EMUPRESET": "MAME",
+        "EXTRARC": "0",
+        "LNCHPRM": "$|0|0|0|0|0",
+        "MAMENM": "hng64",
+        "NICEFLDR": "1",
+        "ROMXT": "zip|chd",
+        "SETLST": "",
+        "SHORTNM": "HYPNEO",
+        "SUPCORE": "mame2010_libretro.dll|mame2003_plus_libretro.dll|mame2003_libretro.dll|mame2000_libretro.dll|mame2014_libretro.dll|mame2016_libretro.dll",
+        "SUPEMU": "mame_arcade|MAME"
+    },
+    "SNK - Neo Geo AES": {
+        "EMUPRESET": "FinalBurnAlpha",
+        "EXTRARC": "0",
+        "LNCHPRM": "$|0|0|0|0|0",
+        "MAMENM": "neogeo",
+        "NICEFLDR": "1",
+        "ROMXT": "zip|chd",
+        "SETLST": "",
+        "SHORTNM": "SNEOAES",
+        "SUPCORE": "fbalpha2012_neogeo_libretro.dll|fbalpha2012_libretro.dll|mame2010_libretro.dll|mame2003_plus_libretro.dll|mame2003_libretro.dll|mame2000_libretro.dll|fbalpha_libretro.dll|mame2014_libretro.dll|mame2016_libretro.dll",
+        "SUPEMU": "FinalBurnAlpha|FBNeo|xe|WinKawaks|aes4all|nebula|ngae|mame_arcade|MAME"
+    },
+    "SNK - Neo Geo CD": {
+        "EMUPRESET": "NeoRaine",
+        "LNCHPRM": "$|1|1|1|1|0",
+        "MAMENM": "neocd",
+        "MAMEOPTS": "<neocd -cdrm<",
+        "ROMXT": "zip|chd|cue|iso|bin",
+        "SHORTNM": "SNEOCD",
+        "SUPCORE": "neocd_libretro.dll|fbneo_libretro.dll",
+        "SUPEMU": "NeoRaine|neosdl|ncdz|xe|mame_arcade|MAME"
+    },
+    "SNK - Neo Geo MVS": {
+        "EMUPRESET": "FinalBurnAlpha",
+        "EXTRARC": "0",
+        "LNCHPRM": "$|0|0|0|0|0",
+        "MAMENM": "neogeo",
+        "NICEFLDR": "1",
+        "ROMXT": "zip|chd",
+        "SETLST": "",
+        "SHORTNM": "SNEOMVS",
+        "SUPCORE": "fbalpha2012_neogeo_libretro.dll|fbalpha2012_libretro.dll|mame2010_libretro.dll|mame2003_plus_libretro.dll|mame2003_libretro.dll|mame2000_libretro.dll|fbalpha_libretro.dll|mame2014_libretro.dll|mame2016_libretro.dll|mame_libretro.dll",
+        "SUPEMU": "FinalBurnAlpha|FBNeo|xe|WinKawaks|aes4all|nebula|ngae|mame_arcade|MAME"
+    },
+    "SNK - Neo Geo Pocket": {
+        "EMUPRESET": "Mednafen",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "ngp",
+        "MAMEOPTS": "<ngp -cart<",
+        "MEDNM": "ngp",
+        "ROMXT": "bin|ngp|npc|ngc|zip",
+        "SHORTNM": "SNEOPKT",
+        "SUPCORE": "mednafen_ngp_libretro.dll",
+        "SUPEMU": "Mednafen|neopop|koyote|neopopcott|xe|vdmgr|MAME|byuu"
+    },
+    "SNK - Neo Geo Pocket Color": {
+        "EMUPRESET": "Mednafen",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "ngpc",
+        "MAMEOPTS": "<ngpc -cart<",
+        "MEDNM": "ngp",
+        "ROMXT": "bin|ngp|npc|ngc|zip",
+        "SHORTNM": "SNEOPKTC",
+        "SUPCORE": "mednafen_ngp_libretro.dll",
+        "SUPEMU": "Mednafen|koyote|race|neopopcott|neopop|MAME|byuu"
+    },
+    "Sony - Playstation": {
+        "EMUPRESET": "duckstation",
+        "LNCHPRM": "$|1|1|1|1|0",
+        "MAMENM": "psu",
+        "MAMEOPTS": "<psu -[RTYP]<|<psu -cdrm<|<psj -cdrm<|<psa -cdrm<|<psu -memc1<|<pse -memc1<|<psj -memc1<|<psa -memc1<|<pse -cdrm<",
+        "MEDNM": "psx",
+        "ROMXT": "cue|iso|bin|nrg|mdf|img|pbp|elf|gcm|toc|m3u|ccd|exe",
+        "SHORTNM": "SPLAY",
+        "SUPCORE": "duckstation_libretro.dll|mednafen_psx_libretro.dll|pcsx_rearmed_libretro.dll|mednafen_psx_hw_libretro.dll",
+        "SUPEMU": "duckstation|pcsxr|psxfin|xebra|Mednafen|pcsxredux|AdriPSX|Bizhawk|no$psx|hpsx|epsxe"
+    },
+    "Sony - Playstation - PAL": {
+        "EMUPRESET": "duckstation",
+        "LNCHPRM": "$|1|1|1|1|0",
+        "MAMENM": "pse",
+        "MAMEOPTS": "<pse -[RTYP]<|<pse -cdrm<|<psj -cdrm<|<psa -cdrm<|<psu -memc1<|<pse -memc1<|<psj -memc1<|<psa -memc1<|<psu -cdrm<",
+        "MEDNM": "psx",
+        "ROMXT": "cue|iso|bin|nrg|mdf|img|pbp|elf|gcm",
+        "SHORTNM": "SPALAY",
+        "SUPCORE": "duckstation_libretro.dll|mednafen_psx_libretro.dll|pcsx_rearmed_libretro.dll|mednafen_psx_hw_libretro.dll",
+        "SUPEMU": "duckstation|pcsxr|psxfin|xebra|Mednafen|pcsxredux|AdriPSX|Bizhawk|no$psx|hpsx|epsxe"
+    },
+    "Sony - Playstation 2": {
+        "EMUOPTS": "<--no-gui<",
+        "EMUPRESET": "pcsx2",
+        "LNCHPRM": "$|1|1|1|1|0",
+        "ROMXT": " .iso|bin|ccd|nrg|ccd|mdf|img",
+        "SHORTNM": "SPS2",
+        "SUPCORE": "",
+        "SUPEMU": "pcsx2|Play|hpsx"
+    },
+    "Sony - Playstation 3": {
+        "EMUPRESET": "rcps3",
+        "LNCHPRM": "$|1|1|0|1|1",
+        "ROMXT": " .elf,eboot.bin,boot.bin",
+        "SHORTNM": "SPLAY3",
+        "SUPCORE": "",
+        "SUPEMU": "rpcs3|nucleus|shortwave"
+    },
+    "Sony - Playstation 4": {
+        "EMUPRESET": "gcps4",
+        "LNCHPRM": "$|1|1|0|1|1",
+        "ROMXT": " .elf|bin",
+        "SHORTNM": "SPLAY4",
+        "SUPCORE": "",
+        "SUPEMU": "gpcs4|PS4Delta"
+    },
+    "Sony - Playstation Mobile": {
+        "EMUPRESET": "PPSSPP",
+        "LNCHPRM": "$|1|1|1|1|0",
+        "SHORTNM": "SPLAYM",
+        "SUPCORE": "pkg",
+        "SUPEMU": "PPSSPP|vita3k"
+    },
+    "Sony - Playstation Portable": {
+        "EMUPRESET": "PPSSPP",
+        "LNCHPRM": "$|1|1|1|1|0",
+        "ROMXT": "iso|cso|jso|pbp|img|pkg",
+        "SHORTNM": "SPLAYP",
+        "SUPCORE": "ppsspp_libretro.dll",
+        "SUPEMU": "PPSSPP|jpcsp|cpspemu"
+    },
+    "Sony - Playstation Vita": {
+        "EMUPRESET": "vita3k",
+        "LNCHPRM": "$|1|1|1|1|0",
+        "ROMXT": "psv|pkg|vpk",
+        "SHORTNM": "SPLAYV",
+        "SUPCORE": "",
+        "SUPEMU": "vita3k"
+    },
+    "Sony - Pocketstation": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "pockstat",
+        "MAMEOPTS": "<pockstat -cart<",
+        "ROMXT": "gme|zip",
+        "SHORTNM": "SPKSTAT",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "pkemu|pk201|xebra|MAME"
+    },
+    "Sony - SMC777": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "smc777",
+        "MAMEOPTS": "<smc777 -flop1<",
+        "SHORTNM": "SSMC777",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Sord - M5": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "m5",
+        "MAMEOPTS": "<m5 -[RTYP]<|<m5 -cass<|<m5 -flop1<|<m5p -cart<|<m5p -cass<|<m5p -flop1<|<m5 -cart<",
+        "ROMXT": "bin|rom|wav|cas|dsk|d77|d88|1dd|dfi|hfe|imd|ipf|mfi|mfm|td0|cqm|cqi|zip",
+        "SHORTNM": "SORDM5",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "m5|MAME"
+    },
+    "Soviet - Radio-86RK": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "radio86",
+        "MAMEOPTS": "<radio86 -cass<",
+        "SHORTNM": "RAD86RK",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Soviet - Specialist": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "special",
+        "MAMEOPTS": "<special -[RTYP]<|<special -flop<|<special -cass<",
+        "SHORTNM": "SOVSPEC",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Soviet - UT-88": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "ut88",
+        "MAMEOPTS": "<ut88 -cass<",
+        "SHORTNM": "SOVUT88",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Soviet - Vector 06c": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "vector06",
+        "MAMEOPTS": "<vector06 -flop<",
+        "SHORTNM": "SOVVEC",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "EMU|MAME"
+    },
+    "SpectraVision - Spectravideo": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "SHORTNM": "SPECTRAV",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "BlueMSX|MAME"
+    },
+    "Spectravision - SVI-318": {
+        "BlueMSX?EMUOPTS": "</machine \"SVI - Spectravideo SVI-318\" /fullscreen /diskA<|/machine \"SVI - Spectravideo SVI-318\" /fullscreen /cas<|</machine \"SVI - Spectravideo SVI-318\" /fullscreen /rom1<",
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "svi318",
+        "MAMEOPTS": "<svi318 -[RTYP]<|<svi318 -cass1<|<svi318 -cart<|<svi318 -flop<",
+        "SHORTNM": "SPECSVI",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "BlueMSX|MAME"
+    },
+    "Streets Of Rage - Remake": {
+        "EMUPRESET": "StreetsOfRageRemake",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "ROMXT": "sor",
+        "SHORTNM": "SORR",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "StreetsOfRageRemake"
+    },
+    "Taito - Taito Type X": {
+        "EMUPRESET": "BSL",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "ROMXT": "lnk|exe|bat|cmd|jar",
+        "SHORTNM": "TAITOTX",
+        "SUPCORE": "",
+        "SUPEMU": "TypeXtra|BSL"
+    },
+    "Tandberg - TDV 2324": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "tdv2324",
+        "MAMEOPTS": "<tdv2324 -flop<",
+        "SHORTNM": "TANTDV",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Tandy - 1000": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "t1000",
+        "MAMEOPTS": "<t1000 -flop1<",
+        "SHORTNM": "TAN1K",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Tandy - 200 Option": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "tandy200",
+        "MAMEOPTS": "<tandy200 -cart<",
+        "SHORTNM": "TAN2HO",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Tandy - 2000": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "tandy2k",
+        "MAMEOPTS": "<tandy2k -flop1<",
+        "SHORTNM": "TAN2K",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Tandy - 6000": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "tandy6k",
+        "MAMEOPTS": "<tandy6k -flop<",
+        "SHORTNM": "TAN6K",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Tandy - MC-10": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "mc10",
+        "MAMEOPTS": "<mc10 -cass1<",
+        "SHORTNM": "TANMC",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Tandy - Radio Shack - Color Computer": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "coco",
+        "MAMEOPTS": "<coco -flop<",
+        "SHORTNM": "TANCOCO",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Tandy - TRS-80 Model 100 Option": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "trsm100",
+        "MAMEOPTS": "<trsm100 -cart<",
+        "SHORTNM": "TTRS1H",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Tandy - TRS-80 Model II": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "trs80m2",
+        "MAMEOPTS": "<trs80m2 -flop1<",
+        "SHORTNM": "TTRSMII",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Tangerine - Microtan 65": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "microtan",
+        "MAMEOPTS": "<microtan -[RTYP]<|<microtan -cass<|<microtan -dump<|<microtan -cart<",
+        "ROMXT": "m65|wav|bin|zip",
+        "SHORTNM": "TMIC65",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Tangerine - Oric Atmos": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "orica",
+        "MAMEOPTS": "<oric1 -cass<|<orica -cass<",
+        "ROMXT": "wav|tap|zip",
+        "SHORTNM": "TOATMOS",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "oricutron|MAME|euphoric"
+    },
+    "Tatung - Einstein TC-01": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "einstein",
+        "MAMEOPTS": "<einstein -flop<",
+        "SHORTNM": "TEINST",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Technosys - Aamber Pegasus": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "pegasus",
+        "MAMEOPTS": "<pegasus -cart<",
+        "SHORTNM": "TAPEG",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Tektronix - Tektronix 4052": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "tek4052",
+        "MAMEOPTS": "<tek4052 -cart<",
+        "SHORTNM": "TEKTRON",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Telcon - Zorba": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "zorba",
+        "MAMEOPTS": "<zorba -flop1<",
+        "SHORTNM": "TELZOR",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Telenova - Compis": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "compis",
+        "MAMEOPTS": "<compis -flop<",
+        "SHORTNM": "TELCPIS",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Television - Series": {
+        "EMUPRESET": "videoplayer",
+        "LNCHPRM": "$|1|1|0|1|1",
+        "ROMXT": "avi|mkv|mp4|mpeg|mpg|wmv|iso|cue|mov|mpv|m4v",
+        "SHORTNM": "TVSERIES",
+        "SUPCORE": "",
+        "SUPEMU": "videoplayer|retroarch|vlc|mplayerc|wmplayer"
+    },
+    "Tesla - PMD-85": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "pmd853",
+        "MAMEOPTS": "<pmd853 -cass<",
+        "SHORTNM": "TESPMD",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "pmd85|MAME"
+    },
+    "Texas Instruments - Compact Computer 40": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "cc40",
+        "MAMEOPTS": "<cc40 -flop<",
+        "SHORTNM": "TICC40",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Texas Instruments - Language Tutor": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "lantutor",
+        "MAMEOPTS": "<lantutor -cart<",
+        "SHORTNM": "TILTUT",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Texas Instruments - Speak and Read": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "snread",
+        "MAMEOPTS": "<snread -cart<",
+        "SHORTNM": "TISPKR",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Texas Instruments - Speak and Spell": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "snspell",
+        "MAMEOPTS": "<snspell -cart<",
+        "SHORTNM": "TISPNS",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Texas Instruments - TI-73": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "ti73",
+        "MAMEOPTS": "<ti73 -cart<",
+        "SHORTNM": "TI73",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Texas Instruments - TI-74": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "ti74",
+        "MAMEOPTS": "<ti74 -cart<",
+        "SHORTNM": "TI74",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Texas Instruments - TI-80": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "ti80",
+        "MAMEOPTS": "<ti80 -cart<",
+        "SHORTNM": "TI80",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Texas Instruments - TI-81": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "ti81",
+        "MAMEOPTS": "<ti81 -cart<",
+        "SHORTNM": "TI81",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Texas Instruments - TI-82": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "ti82",
+        "MAMEOPTS": "<ti82 -cart<",
+        "SHORTNM": "TI82",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Texas Instruments - TI-83": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "ti83",
+        "MAMEOPTS": "<ti83 -cart<",
+        "SHORTNM": "TI83",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Texas Instruments - TI-92": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "ti92",
+        "MAMEOPTS": "<ti92 -cart<",
+        "SHORTNM": "TI92",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Texas Instruments - TI-95": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "ti95",
+        "MAMEOPTS": "<ti95 -cart<",
+        "SHORTNM": "TI95",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Texas Instruments - TI-99": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "ti99",
+        "MAMEOPTS": "<ti99 -cart<",
+        "SHORTNM": "TI99",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "win994a|classic99|ti994w|MAME"
+    },
+    "Texas Instruments - TI-99-4A": {
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "ti99",
+        "MAMEOPTS": "<ti99 -cart<",
+        "SHORTNM": "TI994A",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "win994a|classic99|ti994w|MAME"
+    },
+    "Texas Instruments - Touch and Tell": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "tntell",
+        "MAMEOPTS": "<tntell -cart<",
+        "SHORTNM": "TITNT",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "The 3DO Company - 3DO": {
+        "EMUPRESET": "4DO",
+        "LNCHPRM": "$|1|1|1|1|0",
+        "MAMENM": "3do",
+        "MAMEOPTS": "<3do_m2 -cdrm<|<3do_pal -cdrm<|<3do -cdrm<",
+        "ROMXT": "chd|cue|toc|nrg|gdi|iso|cdr|img|cdi",
+        "SHORTNM": "T3DO",
+        "SUPCORE": "opera_libretro.dll",
+        "SUPEMU": "4DO|3doPlay|freedo|phoenix|MAME"
+    },
+    "Thomson - M05": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "mo5",
+        "MAMEOPTS": "<mo5 -[RTYP]<|<mo5 -cart<|<mo5 -cass<|<mo5e -flop1<|<mo5e -cart<|<mo5e -cass<|<mo5nr -flop1<|<mo5nr -cart<|<mo5nr -cass<|<mo6 -flop1<|<mo6 -cart<|<mo6 -cass<|<mo5 -flop1<",
+        "ROMXT": "wav|k5|k7|fd|sap|qd|fdi|td0|imd|cqm|dsk|d77|d88|1dd|m5|rom|zip",
+        "SHORTNM": "TMO5",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "dcmo5|dcmoto|MAME"
+    },
+    "Thomson - MO6": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "mo6",
+        "MAMEOPTS": "<mo6 -[RTYP]<|<mo6 -flop1<|<mo6 -cass<",
+        "SHORTNM": "TMO6",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Thomson - To7": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "to7",
+        "MAMEOPTS": "<to7 -[RTYP]<|<to7 -flop1<|<to7 -cass<|<to7 -cart<|<to770 -flop1<|<to770 -cass<|<to770 -cart<|<to7 -flop1<",
+        "ROMXT": "m7|rom|wav|k7|fd|sap|qd|fdi|td0|imd|cqm|dsk|d77|d88|1dd|zip",
+        "SHORTNM": "TMO7",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Thomson - TO7": {
+        "EMUPRESET": "MAME",
+        "MAMENM": "to7",
+        "MAMEOPTS": "<to7 -[RTYP]<|<to7 -cass<|<to7 -cart<|<to7 -flop1<"
+    },
+    "Thomson - TO7 - TO7-70": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "to770",
+        "MAMEOPTS": "<to770 -[RTYP]<|<to770 -cart<|<to770 -cass<|<to770 -flop1<",
+        "SHORTNM": "TTO7",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Thomson - TO7 - TO7-70A": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "to770a",
+        "MAMEOPTS": "<to770a -[RTYP]<|<to770a -cass<|<to770a -flop1<|<to770a -cart<",
+        "SHORTNM": "TTO7A",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Thomson - To8": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "to8",
+        "MAMEOPTS": "<to8 -[RTYP]<|<to8 -flop1<|<to8 -cass<|<to8d -flop1<|<to8d -cass<|<to8d -cart<|<to8 -cart<",
+        "ROMXT": "m7|rom|wav|k7|fd|sap|qd|fdi|td0|imd|cqm|dsk|d77|d88|1dd|zip",
+        "SHORTNM": "TMO8",
+        "SUPCORE": "theodore_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Thomson - TO8": {
+        "EMUPRESET": "MAME",
+        "MAMENM": "to8",
+        "MAMEOPTS": "<to8 -[RTYP]<|<to8 -flop1<|<to8 -cass<"
+    },
+    "Tiger - Game.com": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|1|1|0",
+        "MAMENM": "gamecom",
+        "MAMEOPTS": "<gamecom -cart<",
+        "SHORTNM": "TIGAME",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "gamecomemu|MAME"
+    },
+    "Tiger - Gizmondo": {
+        "LNCHPRM": "$|1|1|1|1|0",
+        "SHORTNM": "TIGTEL",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Tiger - K28 7-232": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "k28m2",
+        "MAMEOPTS": "<k28m2 -cart<",
+        "SHORTNM": "TIGK28",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Tiki Data A-S - TIKI 100": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "tiki100",
+        "MAMEOPTS": "<tiki100 -flop1<",
+        "SHORTNM": "TIKI1H",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "TimeTop - GameKing": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "gameking",
+        "MAMEOPTS": "<gameking -cart<",
+        "SHORTNM": "TTGAM",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "TimeTop - GameKing 3": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "gameking3",
+        "MAMEOPTS": "<gameking3 -cart<",
+        "SHORTNM": "TTGAM3",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Timex - Sinclair TS-2068 DOCK": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "timex",
+        "MAMEOPTS": "<timex -cart<",
+        "SHORTNM": "TIIMSTS",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Tomy - KISS-Site": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|",
+        "ROMXT": "wav|iso|bin|cue",
+        "SHORTNM": "TOMKIS",
+        "SUPCORE": "",
+        "SUPEMU": ""
+    },
+    "Tomy - Prin-C": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "princ",
+        "MAMEOPTS": "<princ<",
+        "SHORTNM": "TOMYPR",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Tomy - Tutor - Pyuuta": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "tutor",
+        "MAMEOPTS": "<tutor -cart<",
+        "SHORTNM": "TOMYPU",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Toshiba - Pasopia": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "pasopia7",
+        "MAMEOPTS": "<pasopia7 -flop1<pasopia7 -flop2<pasopia7lcd -flop1<pasopia7lcd -flop2<",
+        "ROMXT": "d77|d88|1dd|dfi|hfe|imd|ipf|mfi|mfm|td0|cqm|cqi|dsk|wav|bin|zip",
+        "SHORTNM": "PASOPIA",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Toshiba - Visicom": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "visicom",
+        "MAMEOPTS": "<visicom -cart<",
+        "SHORTNM": "TOSHVIS",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Triumph-Adler - Alphatronic PC": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "alphatro",
+        "MAMEOPTS": "<alphatro -flop<",
+        "SHORTNM": "TRADLPC",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "TRQ - Video Computer H-21": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "h21",
+        "MAMEOPTS": "<h21 -cart<",
+        "SHORTNM": "TRQVC",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Tsukuda - Othello Multivision": {
+        "?MAMEOPS": "<omv2000 -cart<",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "omv2000",
+        "ROMXT": "bin|sg",
+        "SHORTNM": "OTHLM",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Unisonic - Champion 2711": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "unichamp",
+        "MAMEOPTS": "<unichamp -cart<",
+        "SHORTNM": "UNICHAM",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "University of Cambridge - EDSAC": {
+        "LNCHPRM": "$|1|1|0|1|",
+        "ROMXT": "txt",
+        "SHORTNM": "EDSAC",
+        "SUPCORE": "",
+        "SUPEMU": "EdsacSim"
+    },
+    "V. I. Lenin - L'vov-Lviv": {
+        "LNCHPRM": "$|1|1|0|1|0",
+        "SHORTNM": "VILELOV",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "emu"
+    },
+    "V. I. Lenin - PK-01 Lviv": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "lviv",
+        "MAMEOPTS": "<lviv -cass1<|<lviv -cass2<|<lviv -cass<",
+        "SHORTNM": "VILENPK",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "VEB Mikroelektronik - KC 85": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "kc",
+        "MAMEOPTS": "<kc -[RTYP]<|<kc -flop<|<kc -cart<|<kc -cass<",
+        "SHORTNM": "VEBMIK",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Victor Business Products - Victor 9000 - ACT Sirius 1": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "victor9k",
+        "MAMEOPTS": "<victor9k -flop1<",
+        "SHORTNM": "VBPAS",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Video - Media": {
+        "EMUPRESET": "videoplayer",
+        "LNCHPRM": "$|1|1|0|1|1",
+        "ROMXT": "avi|mkv|mp4|mpeg|mpg|wmv|iso|cue|mov|mpv|m4v|f4v|f4f|3gp|ogm|flv|mp3|flac|ogg|m4a|webm|3g2|vob|asf|divx|m2p|m2ts|ps|ts|mxf|wma|wav",
+        "SHORTNM": "MLTMED",
+        "SUPCORE": "",
+        "SUPEMU": "videoplayer|retroarch|vlc|mplayerc|wmplayer"
+    },
+    "Video Technology - Socrates": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "socrates",
+        "MAMEOPTS": "<socrates -cart<",
+        "SHORTNM": "VTSOCR",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "VideoBrain - FamilyComputer": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "vidbrain",
+        "MAMEOPTS": "<vidbrain -cart<",
+        "ROMXT": "bin|zip",
+        "SHORTNM": "VIFAMC",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Videoton - TV-Computer": {
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "tvc",
+        "MAMEOPTS": "<tvc -[RTYP]<|<tvc -cass1<|<tvc -flop1<|<tvc<",
+        "SHORTNM": "VIDTVC",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "winTVC|MAME"
+    },
+    "Visual Technology - Visual 1050": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "v1050",
+        "MAMEOPTS": "<v1050 -flop1<",
+        "SHORTNM": "VIDVIS",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "VM Labs - Nuon": {
+        "LNCHPRM": "$|1|1|0|1|",
+        "MAMENM": "",
+        "ROMXT": "dvd|iso",
+        "SHORTNM": "VMNUON",
+        "SUPCORE": "",
+        "SUPEMU": ""
+    },
+    "Voltmace - Database": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "database",
+        "MAMEOPTS": "<database -flop<",
+        "SHORTNM": "VOLDAT",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "VTech - CreatiVision": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "crvision",
+        "MAMEOPTS": "<crvision -[RTYP]<|<crvision -cass<|<crvision -cart<",
+        "ROMXT": "wav|bin|rom|zip",
+        "SHORTNM": "CRVIS",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "funnymu|creativision|MAME"
+    },
+    "VTech - Genius 6": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "genius6",
+        "MAMEOPTS": "<genius<",
+        "SHORTNM": "VTECGEN6",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "VTech - Genius Junior Movie": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "gjmovie",
+        "MAMEOPTS": "<gjmovie<",
+        "SHORTNM": "VTECJM",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "VTech - Genius Leader 6000SL": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "gl6000sl",
+        "MAMEOPTS": "<gl6000sl -cart<",
+        "SHORTNM": "VTECGLD",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "VTech - Genius Leader Color": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "glcolor",
+        "MAMEOPTS": "<glcolor<",
+        "SHORTNM": "VTECGLDC",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "VTech - Laser 100": {
+        "LNCHPRM": "$|1|1|0|1|0",
+        "SHORTNM": "VLAS1",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "Winvz300|MAME"
+    },
+    "VTech - Laser 200": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "laser200",
+        "MAMEOPTS": "<laser210 -[RTYP]<|<laser210 -dump<|<laser200 -cass<|<laser200 -dump<|<laser210 -cass<",
+        "ROMXT": "vz|rom|cas|zip",
+        "SHORTNM": "VLAS2H",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "Winvz300|jvz200|tunix|MAME"
+    },
+    "VTech - Laser 2001": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "laser2001",
+        "MAMEOPTS": "<laser2001 -cart<",
+        "SHORTNM": "VTECL2K1",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "VTech - Laser 310": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "laser310",
+        "MAMEOPTS": "<laser310 -[RTYP]<|<laser310 -dump<|<laser310 -cass<",
+        "ROMXT": "vz|rom|cas|zip",
+        "SHORTNM": "VLAS310",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "Winvz300|jvz200|tunix|MAME"
+    },
+    "VTech - Mobigo": {
+        "SHORTNM": "MOBIGO"
+    },
+    "VTech - PreComputer 1000": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "gl2000",
+        "MAMEOPTS": "<gl2000<",
+        "SHORTNM": "VTPREC1K",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "VTech - V.Smile": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "vsmile",
+        "MAMEOPTS": "<vsmilepro -[RTYP]<|<vsmilepro -cdrm<|<vsmile -cart<|<vsmileb -cart<|<vsmilef -cart<|<vsmileg -cart<|<vsmilepro -cart<",
+        "ROMXT": "bin|zip|chd|cue|toc|nrg|gdi|iso|cdr",
+        "SHORTNM": "VVSMILE",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Wang Laboratories - Wang PC": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "wangpc",
+        "MAMEOPTS": "<wangpc -flop1<",
+        "SHORTNM": "WANGPC",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Watara - SuperVision": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|1|1|0",
+        "MAMENM": "svision",
+        "MAMEOPTS": "<svisionn -[RTYP]<|<svisionn -cart<|<svisionp -cart<|<svisions -cart<|<svision -cart<",
+        "ROMXT": "bin|ws|sv|zip",
+        "SHORTNM": "WSUPRV",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "wataroo|potator|MAME"
+    },
+    "WaveMate - Bullet": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "wmbullet",
+        "MAMEOPTS": "<wmbullet -flop1<",
+        "SHORTNM": "WAVEB",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Windows - Games": {
+        "cmdfun": " 1",
+        "EMUPRESET": "DosBox-X",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "ROMXT": "lnk|exe|bat|cmd|jar|com|conf",
+        "SHORTNM": "WINGAME",
+        "SUPCORE": "",
+        "SUPEMU": "DOSBox-X|DoxBox|WinBox|BSL|FMBocks|x86box"
+    },
+    "WRITENAMETOBAT": {
+        "ROMINJ": "\"%ROMFN%\""
+    },
+    "Xerox - 820": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "x820ii",
+        "MAMEOPTS": "<x820ii -flop<",
+        "SHORTNM": "XER82",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "Yamaha - Sega - Copera": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "copera",
+        "MAMEOPTS": "<copera -flop<",
+        "SHORTNM": "YSCOP",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    },
+    "ZAPiT Games - Game Wave Family Entertainment System": {
+        "LNCHPRM": "$|1|1|0|1|0",
+        "SHORTNM": "ZPGAMW"
+    },
+    "Zeebo - Zeebo": {
+        "LNCHPRM": "$|1|1|0|1|0",
+        "SHORTNM": "ZEBO",
+        "SUPCORE": "",
+        "SUPEMU": ""
+    },
+    "ZPA Novy Bor - IQ 151": {
+        "EMUPRESET": "MAME",
+        "LNCHPRM": "$|1|1|0|1|0",
+        "MAMENM": "iq151",
+        "MAMEOPTS": "<iq151 -[RTYP]<|<iq151 -flop<|<iq151 -cart<",
+        "SHORTNM": "ZPANBIQ",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": "MAME"
+    }
+}

@@ -17,12 +17,7 @@ from ui.tabs.systems_tab import SystemsTab
 from ui.tabs.main_tab import MainTab
 from ui.tabs.emulators_tab import EmulatorsTab
 from ui.tabs.settings_tab import SettingsTab
-from ui.tabs.playlists_tab import PlaylistsTab
-from ui.tabs.frontends_tab import FrontendsTab
-from ui.tabs.utilities_tab import UtilitiesTab
 from ui.tabs.artwork_tab import ArtworkTab
-from ui.tabs.dat_repo_tab import DatRepoTab
-from ui.tabs.jackets_tab import JacketsTab
 from utils.paths import app_home, img_dir
 
 
@@ -71,17 +66,12 @@ class MainWindow(QMainWindow):
         self._settings_tab = SettingsTab(self)
         self._main_tab = MainTab(self)
         self._systems_tab = SystemsTab(self)
-        self._playlists_tab = PlaylistsTab(self)
-        self._dat_repo_tab = DatRepoTab(self)
-        self._jackets_tab = JacketsTab(self)
-        self._frontends_tab = FrontendsTab(self)
+        self._emulators_tab = EmulatorsTab(self)
         self._artwork_tab = ArtworkTab(self)
-        self._utilities_tab = UtilitiesTab(self)
         
         self._tabs_list = [
             self._settings_tab, self._main_tab, self._systems_tab,
-            self._playlists_tab, self._frontends_tab, self._artwork_tab,
-            self._dat_repo_tab, self._jackets_tab, self._utilities_tab
+            self._emulators_tab, self._artwork_tab
         ]
 
     def _register_tabs(self):
@@ -91,9 +81,6 @@ class MainWindow(QMainWindow):
             title = tab.__class__.__name__.replace("Tab", "")
             if title == "Main": title = "MAIN"
             elif title == "Systems": title = "Emu:Sys"
-            elif title == "DatRepo": title = "DAT:Repo"
-            elif title == "Utilities": title = "Util"
-            
             self._tabs.addTab(tab, title)
 
         # Match the hardcoded indices used in _restore_geometry

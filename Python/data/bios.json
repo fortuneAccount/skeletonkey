@@ -107,59 +107,6 @@
           {"path": "retroarch/system", "name": "pcfx.rom", "hash": "AC3ED590"}
         ]
       }
-    },
-    "Atari - 2600": {
-      "stella": {
-        "required_files": []
-      },
-      "prosystem": {
-        "required_files": [
-          {"path": "retroarch/system", "name": "7800 BIOS (U).rom", "hash": "D5B61170"}
-        ]
-      }
-    },
-    "Atari - Lynx": {
-      "handy": {
-        "required_files": [
-          {"path": "retroarch/system", "name": "lynxboot.img", "hash": "0D973C9D"}
-        ]
-      }
-    },
-    "Atari - Jaguar": {
-      "virtualjaguar": {
-        "required_files": []
-      }
-    },
-    "Commodore - 64": {
-      "vice_x64": {
-        "required_files": []
-      }
-    },
-    "Commodore - Amiga": {
-      "puae": {
-        "required_files": []
-      },
-      "winuae": {
-        "required_files": [
-          {"path": "retroarch/system", "name": "kickstart.rom", "hash": ""}
-        ]
-      }
-    },
-    "Nintendo - Nintendo 64": {
-      "mupen64plus": {
-        "required_files": []
-      },
-      "parallel_n64": {
-        "required_files": []
-      }
-    },
-    "Nintendo - SNES": {
-      "bsnes": {
-        "required_files": []
-      },
-      "snes9x": {
-        "required_files": []
-      }
     }
   }
 }

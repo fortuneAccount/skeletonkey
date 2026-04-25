@@ -1,28 +1,19 @@
 """
 data/launch_params.py
 
-Parses launchparams.set / launchparams.ini.
-
-Each line in [LAUNCHPARAMS] has the format:
-    System Name=$|jacketize|extract|explode|runrom|clean
-
-where each field after $ is 0 or 1.
+Provides per-system launch parameter lookup from JSON.
 """
-import configparser
-from dataclasses import dataclass
+import json
+from dataclasses import dataclass, asdict
 from pathlib import Path
 from core.config import global_config
-
-
-def _home() -> Path:
-    return Path(__file__).resolve().parent.parent.parent
+from utils.paths import app_root
 
 
 @dataclass
 class LaunchParams:
     system: str
     override: str = "$"     # custom override string (rarely used)
-    jacketize: bool = True  # inject per-game emulator config
     extract: bool = True    # extract archive before launch
     explode: bool = False   # extract all files (not just the ROM)
     runrom: bool = True     # pass ROM path to emulator
@@ -32,11 +23,7 @@ class LaunchParams:
 class LaunchParamsRegistry:
     """
     Provides per-system launch parameter lookup.
-
-    Priority: generated/launchparams.ini (user) > assets/launchparams.set (defaults)
     """
-
-    SECTION = "LAUNCHPARAMS"
 
     def __init__(self, home: Path | None = None):
         self._home = home or global_config().home
@@ -48,46 +35,16 @@ class LaunchParamsRegistry:
     # ------------------------------------------------------------------
 
     def _load(self):
-        parser = configparser.RawConfigParser(strict=False)
-        parser.optionxform = str  # type: ignore[assignment]
-
-        default_set = self._home / "assets" / "launchparams.set"
-        if default_set.exists():
+        """Load user launch parameters from JSON."""
+        path = self._home / "launchparams.json"
+        if path.exists():
             try:
-                parser.read(default_set, encoding="utf-8-sig")
-            except UnicodeDecodeError:
-                parser.read(default_set, encoding="utf-16")
-
-        user_ini = self._home / "launchparams.ini"
-        if user_ini.exists():
-            try:
-                parser.read(user_ini, encoding="utf-8-sig")
-            except UnicodeDecodeError:
-                parser.read(user_ini, encoding="utf-16")
-
-        if not parser.has_section(self.SECTION):
-            return
-
-        for system, raw in parser.items(self.SECTION):
-            lp = self._parse(system, raw.strip('"'))
-            self._data[system] = lp
-
-    @staticmethod
-    def _parse(system: str, raw: str) -> LaunchParams:
-        parts = raw.split("|")
-
-        def _bool(idx: int) -> bool:
-            return parts[idx].strip() == "1" if idx < len(parts) else False
-
-        return LaunchParams(
-            system=system,
-            override=parts[0] if parts else "$",
-            jacketize=_bool(1),
-            extract=_bool(2),
-            explode=_bool(3),
-            runrom=_bool(4),
-            clean=_bool(5),
-        )
+                with open(path, "r", encoding="utf-8") as f:
+                    raw_data = json.load(f)
+                    for name, fields in raw_data.items():
+                        self._data[name] = LaunchParams(**fields)
+                return
+            except Exception: pass
 
     # ------------------------------------------------------------------
     # Public API
@@ -101,23 +58,11 @@ class LaunchParamsRegistry:
         self._data[params.system] = params
 
     def save(self):
-        parser = configparser.RawConfigParser()
-        parser.optionxform = str  # type: ignore[assignment]
-        parser.add_section(self.SECTION)
-        for system, lp in self._data.items():
-            val = "|".join([
-                lp.override,
-                "1" if lp.jacketize else "0",
-                "1" if lp.extract else "0",
-                "1" if lp.explode else "0",
-                "1" if lp.runrom else "0",
-                "1" if lp.clean else "0",
-            ])
-            parser.set(self.SECTION, system, f'"{val}"')
-        dest = self._home / "launchparams.ini"
-        dest.parent.mkdir(parents=True, exist_ok=True)
-        with open(dest, "w", encoding="utf-8") as fh:
-            parser.write(fh)
+        """Save user launch parameters to JSON."""
+        dest = self._home / "launchparams.json"
+        serializable = {name: asdict(lp) for name, lp in self._data.items()}
+        with open(dest, "w", encoding="utf-8") as f:
+            json.dump(serializable, f, indent=4)
 
     def all_systems(self) -> list[str]:
         return sorted(self._data.keys())

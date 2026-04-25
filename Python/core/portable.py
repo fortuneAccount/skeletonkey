@@ -7,18 +7,17 @@ Replaces PortableUtil.ahk.
 Handles path migration when the application is moved to a new drive/directory.
 """
 import os
-import shutil
 from pathlib import Path
 
 from core.config import Config, global_config
-
+from utils.paths import app_root
 # Config file extensions that may contain absolute paths
-_CFG_EXTENSIONS = {".ini", ".cfg", ".config", ".conf", ".xml", ".settings", ".opt"}
+_CFG_EXTENSIONS = {".json", ".config", ".conf", ".settings", ".opt"}
 
 # Core config files that live in the app home directory
 _CORE_CFG_FILES = [
-    "ovr.ini", "hashdb.ini", "Assignments.ini",
-    "AppParams.ini", "Settings.ini", "config.cfg",
+    "apps.json", "Assignments.json", "launchparams.json",
+    "Settings.json", "systems.json"
 ]
 
 
@@ -30,7 +29,7 @@ class PortableUtil:
     """
 
     def __init__(self, home: Path | None = None):
-        self._home = home or Path(__file__).resolve().parent.parent
+        self._home = home or app_root()
         self._settings = global_config()
 
     # ------------------------------------------------------------------
@@ -41,7 +40,6 @@ class PortableUtil:
         self,
         old_prefix: str,
         new_prefix: str,
-        also_migrate_playlists: bool = True,
     ) -> list[str]:
         """
         Replace *old_prefix* with *new_prefix* in all config and playlist files.
@@ -64,14 +62,6 @@ class PortableUtil:
                 if f.suffix.lower() in _CFG_EXTENSIONS:
                     if self._replace_in_file(f, old_prefix, new_prefix):
                         modified.append(str(f))
-
-        # Playlists
-        if also_migrate_playlists:
-            systems_dir = self._settings.get("GLOBAL", "systems_directory", "")
-            if systems_dir:
-                for lpl in Path(systems_dir).rglob("*.lpl"):
-                    if self._replace_in_file(lpl, old_prefix, new_prefix):
-                        modified.append(str(lpl))
 
         return modified
 
@@ -110,8 +100,6 @@ class PortableUtil:
             text = path.read_text(encoding="utf-8", errors="replace")
             if old not in text:
                 return False
-            backup = path.with_suffix(path.suffix + ".bak")
-            shutil.copy2(path, backup)
             path.write_text(text.replace(old, new), encoding="utf-8")
             return True
         except Exception:

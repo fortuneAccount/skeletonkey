@@ -6,7 +6,7 @@ Mirrors the home / source / binhome pattern from working.ahk.
 
 Directory structure:
   skeletonkey/          - Root (portable mode)
-    assets/             - .set files, templates, default configs
+    assets/             - master JSON data and templates
     generated/         - User-generated configs, overrides, INI files
     Python/             - Python source code
     img/                - Icons and images
@@ -19,7 +19,7 @@ import sys
 from pathlib import Path
 
 
-def app_home() -> Path:
+def app_root() -> Path:
     """
     Return the application root directory.
 
@@ -38,9 +38,31 @@ def app_home() -> Path:
     return base
 
 
+def app_home() -> Path:
+    """Alias for app_root() to maintain backward compatibility."""
+    return app_root()
+
+
+def config_home() -> Path:
+    """Determine writable config location based on portable status."""
+    root = app_root()
+    # 1. Check for portable flag in root
+    if (root / "portable.txt").exists():
+        return root
+    
+    # 2. Check for portable flag in AppData (fallback)
+    appdata = Path(os.environ.get("APPDATA", str(root))) / "skeletonkey"
+    if (appdata / "portable.txt").exists():
+        return appdata
+
+    # 3. Default to AppData if not explicitly portable
+    appdata.mkdir(parents=True, exist_ok=True)
+    return appdata
+
+
 def assets_dir() -> Path:
-    """Return the assets directory containing .set files and templates."""
-    return app_home() / "assets"
+    """Return the assets directory containing master JSON templates."""
+    return app_root() / "assets"
 
 
 def generated_dir() -> Path:
@@ -75,7 +97,7 @@ def joy_cfgs_dir() -> Path:
 
 def resolve_arch(path: str, bits: int = 64) -> str:
     """
-    Replace the [ARCH] placeholder used in EmuParts.set.
+    Replace the [ARCH] placeholder used in emulator archive strings.
 
     e.g. "mame-[ARCH].7z" → "mame-x64.7z"  (bits=64)
          "mame-[ARCH].7z" → "mame-x86.7z"  (bits=32)
@@ -103,3 +125,10 @@ def find_binary(name: str) -> Path | None:
         if f.name.lower() == name.lower():
             return f
     return None
+
+
+def check_paths_exist(path_str: str, separator: str = "|") -> bool:
+    """Return True if at least one path in the delimited string exists on disk."""
+    if not path_str:
+        return False
+    return any(Path(p.strip()).exists() for p in path_str.split(separator) if p.strip())

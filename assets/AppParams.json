@@ -1,0 +1,4831 @@
+[
+  "EMULATOR_PARAMATERS": {
+    ""3doplay": {
+"per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "EKA2L1": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "Nox": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "archie": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "aprnes": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "ex68": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "zmz": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "easyrpg": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "pcae": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "bws": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "byuu": {
+    "per_game_configurations": "0",
+    "options": " --fullscreen ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "oswan": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "funnymu": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "medusa": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "Mess": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "minimon": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "dcexel": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "BigPEmu": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "enter": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "tunix": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "joyce": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "ccs31": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "pokemini": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "SIMH": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "nanowasp": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "ubee512": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "sheepshaver": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "calcem": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "Play": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "hpsx": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "Makaron": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "vdmgr": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "psxjin": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "nucleus": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "koleko": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "mz700win": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "galaxywin": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "geepee32": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "race!": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "ngae": {
+    "per_game_configurations": "0",
+    "options": " --StartLoadFile ",
+    "arguments": " --StartFullScreen",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "ncdz": {
+    "per_game_configurations": "0",
+    "options": " --StartLoadFile ",
+    "arguments": " --StartFullScreen",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "neopopcott": {
+    "per_game_configurations": "0",
+    "options": " --StartLoadFile ",
+    "arguments": " --StartFullScreen",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "race!": {
+    "per_game_configurations": "0",
+    "options": " --StartLoadFile ",
+    "arguments": " --StartFullScreen",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "koyote": {
+    "per_game_configurations": "0",
+    "options": " --StartLoadFile ",
+    "arguments": " --StartFullScreen",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "wataroo": {
+    "per_game_configurations": "0",
+    "options": " --StartLoadFile ",
+    "arguments": " --StartFullScreen",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "winvz300": {
+    "per_game_configurations": "0",
+    "options": " --StartLoadFile ",
+    "arguments": " --StartFullScreen",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "AdviEmulator": {
+    "per_game_configurations": "0",
+    "options": " --StartLoadFile ",
+    "arguments": " --StartFullScreen",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "4DO": {
+    "per_game_configurations": "0",
+    "options": " --StartLoadFile ",
+    "arguments": " --StartFullScreen",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "Altirra": {
+    "per_game_configurations": "0",
+    "options": " /rom1 ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "Anex86": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "AppleWin": {
+    "per_game_configurations": "0",
+    "options": " -d1 ",
+    "arguments": " -no-printscreen-dlg",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "Arculator": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "Atari800": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "Atari800win": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "BSL": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "1",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "BeebEm": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "SWFOpener": {
+    "per_game_configurations": "0",
+    "options": " -full -sa ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "Bizhawk": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "Bliss": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "BlueMSX": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "CD-I": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "CEMU": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "decaf": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "Citra": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "vvctre": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "Colem": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "Cxbx": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "WinBox": {
+    "per_game_configurations": "0",
+    "options": " -conf ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "DOSBox": {
+    "per_game_configurations": "0",
+    "options": " -conf ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "DOSBox-X": {
+    "per_game_configurations": "0",
+    "options": " -conf ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "DesMume": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "NooDS": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "Dolwin": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "Dolphin": {
+    "per_game_configurations": "0",
+    "options": " -b -e ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "1",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "DosPlus": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "EMU7800": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "ElectrEm": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "FMBochs": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "FMBocks": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "FS-UAE": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "FishNChips": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "FlashRun": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "FlashPlayer": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "Fusion": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": " -Auto",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "Ishiiruka": {
+    "per_game_configurations": "0",
+    "options": " --exec=",
+    "arguments": " --batch",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "Kegs32": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "M71": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "Mesen": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": " /fullscreen /Region=Auto /DoNotSaveSettings /FullscreenForceIntegerScale=true /UseExclusiveFullscreen=true",
+    "extension": "0",
+    "run_location": "1",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "Neko": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "NeoRaine": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "No$GBA": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "Nostalgia": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "NullDC": {
+    "per_game_configurations": "0",
+    "options": " -config nullDC_GUI:Fullscreen=1  -config ImageReader:LoadDefaultImage=1 -config ImageReader:defaultImage=",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "1964": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "Apollo": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "AdriPSX": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "ActiveGS": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "vaeg": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "ACE32": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "3DNes": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "Ootake": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "Oricutron": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "SL9821": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "SNESGT": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "SSF": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "SSFLoader": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "SimCoupe": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "Stella": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "Supermodel": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": " -fullscreen",
+    "extension": "0",
+    "run_location": "1",
+    "no_path": "1",
+    "no_quotes": "1",
+  },
+  "TypeXtra": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "Unz": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "VirtuaNes": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "VisualBoyAdvance-M": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "VisualBoyAdvance": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "WinAPE": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": " /A",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "ultimo": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "speccy": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "mtxemu": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "dcmicrocolor": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "DCAlice": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "WinArcadia": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "aes4all": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "WinKawaks": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "1",
+    "run_location": "0",
+    "no_path": "1",
+    "no_quotes": "1",
+  },
+  "WinUAE": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "WinVICE": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "WinX68k": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "X1turbo": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "XM6": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "XM7": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "Xroar": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "Yabause": {
+    "per_game_configurations": "0",
+    "options": " --iso=",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "ZXSpin": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "Zsnes": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "mesen-s": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "ace": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "1",
+    "run_location": "0",
+    "no_path": "1",
+    "no_quotes": "1",
+  },
+  "apemuw": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "rainbow": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "coolcv": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "dsp": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "xe": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "sainT": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "pcemacplus": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "minivmac": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "gemulator": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "lisa": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "lisaem": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "agat": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "gsport": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "virtu": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "faux1": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "bem": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "modelb": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "aqemu": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "arnold": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "atari++": {
+    "per_game_configurations": "0",
+    "options": " -machine XL -image.1 ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "atari800winplus": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "atom": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "atomulator": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "bgb": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "blastem": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "boycottadv": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "bsnes": {
+    "per_game_configurations": "0",
+    "options": " --fullscreen ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "calice": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "1",
+    "run_location": "0",
+    "no_path": "1",
+    "no_quotes": "1",
+  },
+  "callus": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "ccs64": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": " -window -autorun",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "chankast": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "colecovision": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "comeback64": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "cpce": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "cps3emulator": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "1",
+    "run_location": "0",
+    "no_path": "1",
+    "no_quotes": "1",
+  },
+  "creativisionemulator": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "dega": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "demul": {
+    "per_game_configurations": "0",
+    "options": "<-run=dc -image=",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "dgen": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "dinoboy": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "directvms": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "dmgboy": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "dream64": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "ePSXe": {
+    "per_game_configurations": "0",
+    "options": " -nogui -slowboot -loadbin ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "1",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "eightyone": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "elkulator": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "dchector": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "virtualinteract": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "galaxy": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "vecxgl": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "infovectrex": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "ep32": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "c4pc": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "ep128emu": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "winfellow": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "minus4": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "vic20emu": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "einweggerat": {
+    "per_game_configurations": "0",
+    "options": " -r ",
+    "arguments": " -c \"[CUSTMARG]\"",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "elf": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "emma02": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "em7": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "StreetsOfRageRemake": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "emu64": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "kindred": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "neusnem": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "vbjin": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "emukon": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "realityboy": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "euphoric": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "fceux": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "finalburnalpha": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "FBNeo": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "Duckstation": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "firegb": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "fm7": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "fm77": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "fm77av": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "fm77av40": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "fm77av40ex": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "fm8": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "fmsx": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "freedo": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "frodo": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "gSport": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "gamecomemu": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "gamegear": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "gbeplus": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "gearsystem": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "genesisplus": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "gens": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "gensgs": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "gensplus": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "gest": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "hatari": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "horizon": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "hoxs64": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "hugo": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "hyper64": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "ideas": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "intv": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "jagulator": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "javacpc": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "jpcsp": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "jr100": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "jum52": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "jvz200": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "jynx": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "jzintv": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "kat5200": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "kegs": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "kigb": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "m2emulator": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "1",
+    "run_location": "0",
+    "no_path": "1",
+    "no_quotes": "1",
+  },
+  "m5": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "m88": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "macmini": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "MAME": {
+    "per_game_configurations": "0",
+    "options": "[CUSTMOPT]",
+    "arguments": "[CUSTMARG]",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "MAME_SYSTEM": {
+    "per_game_configurations": "0",
+    "options": "[CUSTMOPT]",
+    "arguments": " -rp \"[EMUPATH]\roms\"",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "MAME_Arcade": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": " -rp \"[ROMPATH]\"",
+    "extension": "1",
+    "run_location": "0",
+    "no_path": "1",
+    "no_quotes": "1",
+  },
+  "mastersystem": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "mednafen": {
+    "per_game_configurations": "0",
+    "options": "[CUSTMOPT]",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "1",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "meka": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "melonDS": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "mesadx": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "mgba": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "micro64": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "msx1": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "msx2": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "msx2p": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "mupen64plus": {
+    "per_game_configurations": "0",
+    "options": " -nogui -f -g ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "mupen64plusplus": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "mx88": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "mz700": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "mz800": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "mzxx": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "nebula": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "1",
+    "run_location": "0",
+    "no_path": "1",
+    "no_quotes": "1",
+  },
+  "neocd": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "neopop": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "nestopia": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "rocknes": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "next": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "no$2k6": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "no$c64": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "no$cpc": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "no$gmb": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "no$msx": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "no$nes": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "no$psx": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "no$sns": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "no$zx": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "nova": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "openmsx": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "osmose": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "ParaJVE": {
+    "per_game_configurations": "0",
+    "options": " fullscreen=true -game=",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "PC6001VW": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "PC6001VX": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "pc6001": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "pc6001mk2": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "openbeatsofrage": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "pc6001mk2sr": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "pc6601": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "pc6601sr": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "pc8001mk2sr": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "pc8201": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "pc8201a": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "pc8801ma": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "pc8801ma": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "pc9801": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "pc9801e": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "pc9801u": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "pc9801vf": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "pc9801vm": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "pc98do": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "pc98ha": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "pc98lt": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "pcengine": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "pcsxr": {
+    "per_game_configurations": "0",
+    "options": " -nogui -cdfile ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "phoenix": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "PPSSPP": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "PPSSPPWindows": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "Pcsx2": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "PicoDrive": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "ProSystem": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "Project64": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "ProjectTempest": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "potator": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "project64k": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "psxfin": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "pv1000": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "pv2000": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "ql2k": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "rainbow": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "raine": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "1",
+    "run_location": "0",
+    "no_path": "1",
+    "no_quotes": "1",
+  },
+  "rascalboyadv": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "reicast": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "flycast": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "flycast-dojo": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "Tsugaru": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "redream": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "redsquirrel": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "regen": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "retroArch": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "apfemu": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "aipc": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "alice32": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "rpcemu": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "apple1": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "ASCD": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "Arnimedes": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "ArcEM": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "rpcs3": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "PS4Delta": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "gcps4": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "saint": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "sc3000": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "scummvm": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "scv": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "sharpchip8": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "snes9x": {
+    "per_game_configurations": "0",
+    "options": "[CUSTMOPT]",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "snes9k": {
+    "per_game_configurations": "0",
+    "options": "[CUSTMOPT]",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "softvms": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "sorcerer": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "steem": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "stem": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "sugarbox": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "supergcube": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "tgbdual": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "tronds": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "twombit": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "vace": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "vace3d": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "vaquarius": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "o2em": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "vpanajr": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "dcvg5k": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "kcemu": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "dreamvmu": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "gearsystem": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "osmose": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "exodus": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "modeller": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "vb64": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "spudace": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "vgb": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "vgba": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "virtu": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "virtualapf": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "virtualjaguar": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "virtuanesplus": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "vita3k": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "wincpc": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "cxbxreloaded": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "cpspemu": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "jpcsp": {
+    "per_game_configurations": "0",
+    "options": " -r -f ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "cogwheel": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "pcsp": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "pk201": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "pkemu": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "zinc": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "tilem": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "pmd85": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "win994a": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "ti994w": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "classic99": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "emu": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "xemu": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "xqemu": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "Hypseus": {
+    "per_game_configurations": "0",
+    "options": "<singe vldp -blend_sprites -gamepad -vertical_stretch -fullscreen_window -framefile \"[ROMPATH]\[ROMNAME].txt\" -script \"[ROMPATH]\[ROMNAME].singe\"",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "daphne": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "dcmoto": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "dcmo5": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "winfellow": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "winTVC": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "mupdf": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "Acrobat": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "foxit": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "videostream": {
+    "per_game_configurations": "0",
+    "options": " --no-video-deco --qt-minimal-view --qt-video-autoresize --align=0 --autoscale --fullscreen ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "videoplayer": {
+    "per_game_configurations": "0",
+    "options": "[CUSTMOPT]--no-video-deco --qt-minimal-view --qt-video-autoresize --align=0 --autoscale --fullscreen ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "x1": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "x1twin": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "x86Box": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "x88": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "xe": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "xebra": {
+    "per_game_configurations": "0",
+    "options": " -IMG ",
+    "arguments": " -RUN1 -FULL",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "turboengine": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "hu6280": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "PCEJin": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "xm8": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "nlmsx": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "yape": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "ryujinx": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "yuzu": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "z26": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "zboy": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "zesarux": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "zinc": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments="--use-config-file="[EMUPATH]\zcfg\defaultzinc.cfg"--use-renderer-cfg-file="[EMUPATH]\renderer.cfg"--renderer": "[
+      EMUPATH
+    ]
+    \d3d_renderer.znc\"",
+    "extension": "1",
+    "run_location": "0",
+    "no_path": "1",
+    "no_quotes": "1",
+  },
+  "Bluestacks": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "Xenia": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "Xspeccy": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "adamemu": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "aurex": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "caprice": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "creativision": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "elk": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "emuz2000": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "genious": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "magicengine": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "neosdl": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "race": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "shortwave": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "supergamecube": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "virtualc64": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "w88": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "wcdi": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "winx1": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "zesaurux": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "3dmoo": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "arcade64": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "atariplusplus": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "babbage2nd": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "bmjr": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "caprice32": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "dhector": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "EdsacSim": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "emu2001": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "EmuCon": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "ex80": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "familybasic": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "fm16pi": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "fmr30_i286": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "fmr30_i86": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "fmr50_i286": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "fmr50_i386": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "fmr50_i486": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "fmr60": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "fmr70": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "fmr80": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "fp1100": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "fp200": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "Frotz": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "fsa1": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "Genieous": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "gpcs4": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "hc20": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "hc40": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "hc80": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "hola": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "homelab": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "HT1080Z": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "hx20": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "jx": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "KEmulator": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "kronos": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "m88x": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "map1010": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "Mednafen-server": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "multi8": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "mycomz80a": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "mz1200": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "mz1500": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "mz2200": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "mz2500": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "mz2800": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "mz3500": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "mz5500": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "mz6500": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "mz80a": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "mz80b": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "mz80k": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "neocdsdl": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "pasopia7": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "pasopia7lcd": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "pasopia": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "pc100": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "pc2001": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "pcsxredux": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "phc20": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "phc25": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "Play!": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "pom1": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "px7": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "pyuta": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "qc10": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "qc10cms": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "rx78": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "sameboy": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "smb80te": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "smc70": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "smc777": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "t2k": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "takeda": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "tk80bs": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "tk85": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "vbarr": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "virtpanajr": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "vivanono": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "vzem": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "x07": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "yalky": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "ys6464a": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "z80tvgame_i8255": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+  "z80tvgame_z80pio": {
+    "per_game_configurations": "0",
+    "options": " ",
+    "arguments": "",
+    "extension": "0",
+    "run_location": "0",
+    "no_path": "0",
+    "no_quotes": "0"
+  },
+}
+]

@@ -1,60 +1,66 @@
-"""
-data/assignments.py
-
-Consolidated JSON database for system-emulator associations.
-Replaces the legacy Assignments.ini and Assignments.set files.
-
-Each system entry stores:
-  - assigned_emulator: The chosen executable or core
-  - extensions: List of supported ROM extensions for this system
-  - required_files: List of BIOS or firmware files needed
-"""
 import json
+from dataclasses import dataclass, field
 from pathlib import Path
 from core.config import global_config
-from data.systems import SystemRegistry
+from utils.paths import app_root
 
+@dataclass
+class AssignmentEntry:
+    """Represents emulator assignments for a system."""
+    system: str
+    emulators: list[str] = field(default_factory=list)
 
-def _home() -> Path:
-    return Path(__file__).resolve().parent.parent.parent
+    @property
+    def primary(self) -> str:
+        """The most recently assigned (priority) emulator."""
+        return self.emulators[-1] if self.emulators else ""
 
+    def __str__(self) -> str:
+        """Legacy pipe-delimited string representation."""
+        return "|".join(self.emulators)
 
 class AssignmentRegistry:
-    """
-    Maps system names to their assigned emulator or RetroArch core.
-
-    get_assignment(system) returns the user override if set, otherwise
-    the default core from [ASSIGNMENTS].
-    """
-
-    SEC_OVERRIDES = "OVERRIDES"
-    SEC_ASSIGNMENTS = "ASSIGNMENTS"
+    """Manages mappings between systems and their assigned emulators."""
 
     def __init__(self, home: Path | None = None):
-        # Now wraps SystemRegistry to access unified data
-        self._systems = SystemRegistry(home)
+        self._home = home or global_config().home
+        self._data: dict[str, AssignmentEntry] = {}
+        self._load()
 
-    # ------------------------------------------------------------------
-    # Public API
-    # ------------------------------------------------------------------
+    def _load(self):
+        path = self._home / "Assignments.json"
+        if not path.exists():
+            return
+        try:
+            with open(path, "r", encoding="utf-8") as f:
+                raw = json.load(f)
+                for sys_name, emus in raw.items():
+                    # Handle both list and legacy pipe-string formats
+                    emu_list = emus if isinstance(emus, list) else [e.strip() for e in emus.split("|") if e.strip()]
+                    self._data[sys_name] = AssignmentEntry(system=sys_name, emulators=emu_list)
+        except Exception:
+            pass
 
-    def get_assignment(self, system: str) -> str:
-        """Return the emulator/core assigned to *system* from unified JSON."""
-        sys_data = self._systems._data.get(system, {})
-        return sys_data.get("assigned_emulator", "")
+    def get_assignment(self, system: str) -> AssignmentEntry:
+        """Return the assignment entry for a system, or an empty one if none exists."""
+        if not system or system == ":=:System List:=:":
+            return AssignmentEntry(system="")
+        return self._data.get(system, AssignmentEntry(system=system))
 
-    def set_override(self, system: str, emulator: str):
-        """Set a user override for *system*."""
-        if system not in self._systems._data: self._systems._data[system] = {}
-        self._systems._data[system]["assigned_emulator"] = emulator
+    def set_override(self, system: str, emulator_pipe_or_list):
+        """Set or update the emulator list for a system."""
+        if isinstance(emulator_pipe_or_list, str):
+            emu_list = [e.strip() for e in emulator_pipe_or_list.split("|") if e.strip()]
+        else:
+            emu_list = emulator_pipe_or_list
+        self._data[system] = AssignmentEntry(system=system, emulators=emu_list)
 
     def clear_override(self, system: str):
-        if system in self._systems._data:
-            self._systems._data[system]["assigned_emulator"] = ""
+        if system in self._data:
+            del self._data[system]
 
     def save(self):
-        """Save through the unified system registry."""
-        self._systems.save()
-
-    def all_systems(self) -> list[str]:
-        return self._systems.all_systems()
+        path = self._home / "Assignments.json"
+        out = {k: v.emulators for k, v in self._data.items()}
+        with open(path, "w", encoding="utf-8") as f:
+            json.dump(out, f, indent=4)

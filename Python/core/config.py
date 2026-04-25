@@ -1,8 +1,7 @@
 """
 core/config.py
 
-Centralised INI-based settings manager.
-Replaces the AHK gets.ahk / sets.ahk pattern of IniRead / IniWrite calls.
+Centralised  AHK gets.ahk / sets.ahk pattern of IniRead / IniWrite calls.
 
 All paths are resolved relative to the application home directory so the
 app remains portable.
@@ -12,28 +11,11 @@ import os
 from pathlib import Path
 
 
-def _home() -> Path:
-    """Return the application root directory (parent of the Python folder)."""
-    return Path(__file__).resolve().parent.parent.parent
-
-def _get_config_root() -> Path:
-    """Determine config location based on portable status."""
-    home = _home()
-    # Enable portable mode by default on first run if no config exists
-    portable_flag = home / "portable.txt"
-    if not portable_flag.exists() and not (Path(os.environ.get("APPDATA", "")) / "skeletonkey").exists():
-        portable_flag.write_text(f"{home}\ntrue", encoding="utf-8")
-
-    if (home / "portable.txt").exists():
-        return home
-    appdata = Path(os.environ.get("APPDATA", str(home))) / "skeletonkey"
-    appdata.mkdir(parents=True, exist_ok=True)
-    return appdata
-
+from utils.paths import config_home
 
 class Config:
     """
-    Thin wrapper around configparser that mirrors the AHK IniRead/IniWrite API.
+    Manager for JSON-based settings files.
 
     Usage:
         cfg = Config()
@@ -42,21 +24,14 @@ class Config:
         cfg.save()
     """
 
-    # Canonical INI files used by the application
-    # User-modified configs go in generated/ directory
-    SETTINGS_FILE = "Settings.ini"
-    ASSIGNMENTS_FILE = "Assignments.ini"
-    EMUCFG_FILE = "emucfgpresets.ini"
-    SYSLOC_FILE = "SystemLocations.ini"
-    APPS_FILE = "apps.ini"
-    LAUNCHPARAMS_FILE = "launchparams.ini"
-    LKUP_FILE = "lkup.ini"
-    SYSINT_FILE = "sysint.ini"
-    ARCORG_FILE = "arcorg.ini"
+    SETTINGS_FILE = "Settings.json"
+    ASSIGNMENTS_FILE = "Assignments.json"
+    APPS_FILE = "apps.json"
+    LAUNCHPARAMS_FILE = "launchparams.json"
 
     def __init__(self, filename: str = SETTINGS_FILE, home: Path | None = None):
-        self._home = home or _get_config_root()
-        self._path = self._home / filename.replace(".ini", ".json")
+        self._home = home or config_home()
+        self._path = self._home / filename
         self._data = {}
         self._load()
 
@@ -65,7 +40,7 @@ class Config:
     # ------------------------------------------------------------------
 
     def _load(self):
-        """Load JSON data with legacy INI fallback if necessary."""
+        """Load settings from the JSON file."""
         if not self._path.exists():
             return
         try:
@@ -128,7 +103,7 @@ _global_cfg: Config | None = None
 
 
 def global_config() -> Config:
-    """Return the application-wide Settings.ini config (lazy singleton)."""
+    """Return the application-wide Settings.json config (lazy singleton)."""
     global _global_cfg
     if _global_cfg is None:
         _global_cfg = Config(Config.SETTINGS_FILE)

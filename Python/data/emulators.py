@@ -10,15 +10,11 @@ keymappers in the format:
 Each section ([EMULATORS], [FRONTENDS], [UTILITIES], [KEYMAPPERS]) is
 parsed into typed dataclasses.
 """
-import configparser
+import json
 from dataclasses import dataclass, field
 from pathlib import Path
 from core.config import Config
-
-
-def _home() -> Path:
-    return Path(__file__).resolve().parent.parent.parent
-
+from utils.paths import app_root
 
 @dataclass
 class EmuEntry:
@@ -31,6 +27,8 @@ class EmuEntry:
     extensions: list[str] = field(default_factory=list) # Supported ROM extensions
     required_files: list[str] = field(default_factory=list) # Bios/Firmware requirements
     category: str = "emulator"  # emulator | frontend | utility | keymapper
+    pre_cfg: str = ""
+    post_cfg: str = ""
 
 
 class EmuRegistry:
@@ -41,16 +39,9 @@ class EmuRegistry:
     a pipe-delimited record, not a key=value pair.  We parse it manually.
     """
 
-    _SECTION_MAP = {
-        "[EMULATORS]": "emulator",
-        "[FRONTENDS]": "frontend",
-        "[UTILITIES]": "utility",
-        "[KEYMAPPERS]": "keymapper",
-    }
-
     def __init__(self, home: Path | None = None):
-        self._home = home or _home()
-        self._apps_cfg = Config(Config.APPS_FILE, home=self._home)
+        self._app_root = app_root()
+        self._apps_cfg = Config(Config.APPS_FILE)
         self._entries: dict[str, EmuEntry] = {}
         self._load()
 
@@ -59,59 +50,27 @@ class EmuRegistry:
     # ------------------------------------------------------------------
 
     def _load(self):
-        src = self._home / "assets" / "EmuParts.set"
-        if not src.exists():
-            return
+        src_json = self._app_root / "assets" / "emulators.json"
 
-        current_category = "emulator"
-         # Resilient loading for AHK-generated files
-        try:
-            content = src.read_text(encoding="utf-8-sig")
-        except UnicodeDecodeError:
-            content = src.read_text(encoding="utf-16")
-
-        for raw_line in content.splitlines():
-            line = raw_line.strip()
-            if not line or line.startswith(";"):
-                continue
-            if line in self._SECTION_MAP:
-                current_category = self._SECTION_MAP[line]
-                continue
-            entry = self._parse_line(line, current_category)
-            if entry:
-                self._entries[entry.name.lower()] = entry
-
-    def reload(self):
-        self._entries.clear()
-        self._apps_cfg.reload()
-        self._load()
-
-    @staticmethod
-    def _parse_line(line: str, category: str) -> EmuEntry | None:
-        parts = line.split("<")
-        if not parts:
-            return None
-        name = parts[0].strip()
-        if not name:
-            return None
-
-        def _get(idx: int) -> str:
-            return parts[idx].strip() if idx < len(parts) else ""
-
-        def _split_pipe(s: str) -> list[str]:
-            return [x for x in s.split("|") if x]
-
-        return EmuEntry(
-            name=name,
-            archive=_get(1),
-            exe=_get(2),
-            configs=_split_pipe(_get(3)),
-            save_states=_split_pipe(_get(4)),
-            save_data=_split_pipe(_get(5)),
-            extensions=_split_pipe(_get(6)),
-            required_files=_split_pipe(_get(7)),
-            category=category,
-        )
+        if src_json.exists():
+            try:
+                with open(src_json, "r", encoding="utf-8") as f:
+                    emu_data = json.load(f)
+                    for name, info in emu_data.items():
+                        self._entries[name.lower()] = EmuEntry(
+                            name=name,
+                            archive=info.get("URLPTH", ""),
+                            exe=info.get("EXENAM", ""),
+                            configs=info.get("CFGPTH", "").split("|"),
+                            save_states=info.get("SaveStates", "").split("|"),
+                            save_data=info.get("SaveData", "").split("|"),
+                            extensions=info.get("EMUEXT", "").replace('"', '').split(","),
+                            category=info.get("category", "emulator"),
+                            pre_cfg=info.get("RJPRECFG", ""),
+                            post_cfg=info.get("RJPOSTCFG", "")
+                        )
+            except (json.JSONDecodeError, OSError):
+                pass
 
     # ------------------------------------------------------------------
     # Public API
@@ -125,12 +84,6 @@ class EmuRegistry:
 
     def emulators(self) -> list[EmuEntry]:
         return self.by_category("emulator")
-
-    def frontends(self) -> list[EmuEntry]:
-        return self.by_category("frontend")
-
-    def utilities(self) -> list[EmuEntry]:
-        return self.by_category("utility")
 
     def keymappers(self) -> list[EmuEntry]:
         return self.by_category("keymapper")
@@ -147,7 +100,7 @@ class EmuRegistry:
         for entry in self.by_category(category):
             section = "KEYMAPPERS" if category == "keymapper" else category.upper() + "S"
             exe_path_str = self._apps_cfg.get(section, entry.name)
-            if exe_path_str and Path(exe_path_str).exists():
+            if exe_path_str and Path(exe_path_str.strip('"')).exists():
                 installed.append(entry)
         return installed
 
