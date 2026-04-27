@@ -41,6 +41,10 @@ class AssignmentRegistry:
         except Exception:
             pass
 
+    def reload(self):
+        self._data.clear()
+        self._load()
+
     def get_assignment(self, system: str) -> AssignmentEntry:
         """Return the assignment entry for a system, or an empty one if none exists."""
         if not system or system == ":=:System List:=:":

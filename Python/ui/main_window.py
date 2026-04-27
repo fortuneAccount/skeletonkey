@@ -80,7 +80,7 @@ class MainWindow(QMainWindow):
             # Map class names to AHK labels
             title = tab.__class__.__name__.replace("Tab", "")
             if title == "Main": title = "MAIN"
-            elif title == "Systems": title = "Emu:Sys"
+            elif title == "Systems": title = "Systems"
             self._tabs.addTab(tab, title)
 
         # Match the hardcoded indices used in _restore_geometry

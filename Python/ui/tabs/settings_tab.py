@@ -142,6 +142,13 @@ class SettingsTab(BaseTab):
         self._cfg = global_config()
         self._build_ui()
         self._load_values()
+        
+        if not self._cfg.path.exists():
+            self._save()
+        
+        # Persist defaults to disk on first initialization
+        if not self._cfg.path.exists():
+            self._save()
 
     # ------------------------------------------------------------------
     # UI construction
@@ -217,16 +224,15 @@ class SettingsTab(BaseTab):
 
         opts = QGroupBox("App Options")
         opts_layout = QVBoxLayout(opts)
-        self._portable_chk = QCheckBox("Portable mode")
-        self._portable_chk.toggled.connect(self._on_portable_toggled)
         self._always_on_top_chk = QCheckBox("Always On Top")
         self._logging_chk = QCheckBox("Enable Logging")
         self._auto_pgs_chk = QCheckBox("Auto-Load Per-Game Settings")
+        self._validate_bios_chk = QCheckBox("Validate BIOS files on launch")
 
-        opts_layout.addWidget(self._portable_chk)
         opts_layout.addWidget(self._always_on_top_chk)
         opts_layout.addWidget(self._logging_chk)
         opts_layout.addWidget(self._auto_pgs_chk)
+        opts_layout.addWidget(self._validate_bios_chk)
         mid_row.addWidget(opts)
 
         appr = QGroupBox("Appearance")
@@ -301,10 +307,10 @@ class SettingsTab(BaseTab):
             self._cfg.get("OPTIONS", "temp_location", fallback=""))
 
         # Load booleans
-        self._portable_chk.setChecked((self._cfg.home / "portable.txt").exists())
         self._always_on_top_chk.setChecked(self._cfg.get("GLOBAL", "AlwaysOnTop", fallback="0") == "1")
         self._logging_chk.setChecked(self._cfg.get("GLOBAL", "Logging", fallback="1") == "1")
         self._auto_pgs_chk.setChecked(self._cfg.get("GLOBAL", "AutoLoad_PerGameSettings", fallback="1") == "1")
+        self._validate_bios_chk.setChecked(self._cfg.get("GLOBAL", "validate_bios", fallback="0") == "1")
         self._dyn_trans_chk.setChecked(self._cfg.get("GLOBAL", "Dynamic_Transparency", fallback="0") == "1")
         self._trans_slider.setValue(int(self._cfg.get("GLOBAL", "Transparency", fallback="255")))
 
@@ -338,24 +344,6 @@ class SettingsTab(BaseTab):
                     shutil.copy(src, conf_dir / "Assignments.json")
                 self.set_status("Associations restored to default.")
 
-    def _on_portable_toggled(self, checked: bool):
-        """Create or remove portable.txt with project path and state in root and AppData."""
-        project_root = app_home()
-        appdata_dir = Path(os.environ.get("APPDATA", "")) / "skeletonkey"
-        
-        content = f"{project_root}\n{str(checked).lower()}"
-        targets = [project_root / "portable.txt", appdata_dir / "portable.txt"]
-
-        if checked:
-            for p in targets:
-                try:
-                    p.parent.mkdir(parents=True, exist_ok=True)
-                    p.write_text(content, encoding="utf-8")
-                except Exception: pass
-        else:
-            for p in targets:
-                if p.exists(): p.unlink()
-
     def _browse_cache(self):
         current = self._cache_dir.text() or str(Path.home())
         chosen = QFileDialog.getExistingDirectory(
@@ -374,13 +362,14 @@ class SettingsTab(BaseTab):
         self._cfg.set("GLOBAL", "AlwaysOnTop", "1" if self._always_on_top_chk.isChecked() else "0")
         self._cfg.set("GLOBAL", "Logging", "1" if self._logging_chk.isChecked() else "0")
         self._cfg.set("GLOBAL", "AutoLoad_PerGameSettings", "1" if self._auto_pgs_chk.isChecked() else "0")
+        self._cfg.set("GLOBAL", "validate_bios", "1" if self._validate_bios_chk.isChecked() else "0")
         self._cfg.set("GLOBAL", "Dynamic_Transparency", "1" if self._dyn_trans_chk.isChecked() else "0")
         self._cfg.set("GLOBAL", "Transparency", str(self._trans_slider.value()))
         self._cfg.save()
         self.set_status("Settings saved.")
         main_win = self.window()
-        if hasattr(main_win, "refresh_all_tabs"):
-            main_win.refresh_all_tabs()
+        if main_win is not None and hasattr(main_win, "refresh_all_tabs"):
+            main_win.refresh_all_tabs()  # type: ignore[attr-defined]
 
     # ------------------------------------------------------------------
     # Public helpers (called by other tabs)

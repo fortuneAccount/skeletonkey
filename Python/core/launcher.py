@@ -11,6 +11,7 @@ behaviour (e.g. process suspend/resume) is gated behind sys.platform checks.
 import hashlib
 import os
 import subprocess
+import shlex
 import sys
 from dataclasses import dataclass, field
 from pathlib import Path
@@ -103,7 +104,14 @@ class Launcher:
         self._start_keymapper()
 
         cmd = self._build_command()
-        cwd = self.cfg.working_dir or str(Path(self.cfg.emulator_path).parent)
+        # Ensure the executable exists and path is clean
+        exe_path = Path(self.cfg.emulator_path.strip('"'))
+        if not exe_path.exists():
+            raise FileNotFoundError(f"Emulator executable not found: {exe_path}")
+
+        cwd = self.cfg.working_dir or str(exe_path.parent)
+        if not Path(cwd).exists():
+            cwd = None # Fallback to system default if specific CWD is missing
 
         self._proc = subprocess.Popen(cmd, cwd=cwd, shell=False)
         exit_code = self._proc.wait()
@@ -135,13 +143,13 @@ class Launcher:
 
         parts = [self.cfg.emulator_path]
         if self.cfg.options:
-            parts += self.cfg.options.split()
+            parts += shlex.split(self.cfg.options)
         if self.cfg.use_quotes:
             parts.append(rom)
         else:
             parts.append(rom)
         if self.cfg.arguments:
-            parts += self.cfg.arguments.split()
+            parts += shlex.split(self.cfg.arguments)
         return parts
 
     def _start_keymapper(self):
@@ -316,12 +324,13 @@ def verify_bios(emu_name: str, system: str, app_home: Path) -> BiosStatus:
     """
     import json
 
+    from core.config import global_config
+    if global_config().get("GLOBAL", "validate_bios", fallback="0") != "1":
+        return BiosStatus(missing=[], present=[], errors=[])
+
     bios_json = assets_dir() / "bios.json"
     if not bios_json.exists():
-        # Fallback to internal data folder if assets are missing
-        bios_json = app_root() / "Python" / "data" / "bios.json"
-        if not bios_json.exists():
-            return BiosStatus(missing=[], present=[], errors=["BIOS database not found"])
+        return BiosStatus(missing=[], present=[], errors=["BIOS database not found"])
 
     try:
         with open(bios_json, "r", encoding="utf-8") as f:
@@ -331,11 +340,27 @@ def verify_bios(emu_name: str, system: str, app_home: Path) -> BiosStatus:
             raise ValueError("BIOS database format mismatch (expected dictionary)")
             
         entries = bios_data.get("entries", {})
+        if not isinstance(entries, dict):
+            raise ValueError("'entries' section is not a dictionary")
     except Exception as e:
         return BiosStatus(missing=[], present=[], errors=[f"Failed to load BIOS data: {e}"])
 
-    system_entry = entries.get(system, {})
-    emu_entry = system_entry.get(emu_name.lower(), {})
+    # If auditing, check global entries or iterate systems
+    emu_entry = {}
+    if system == "Audit-Mode":
+        for s_data in entries.values():
+            if emu_name.lower() in s_data:
+                emu_entry = s_data.get(emu_name.lower())
+                break
+    else:
+        system_entry = entries.get(system)
+        if not isinstance(system_entry, dict):
+            system_entry = {}
+        emu_entry = system_entry.get(emu_name.lower())
+
+    if not isinstance(emu_entry, dict):
+        emu_entry = {}
+        
     required = emu_entry.get("required_files", [])
 
     if not required:

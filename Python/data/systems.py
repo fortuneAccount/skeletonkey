@@ -13,6 +13,7 @@ from pathlib import Path
 from dataclasses import dataclass, field, asdict
 from core.config import global_config
 from utils.paths import app_root
+from utils.paths import app_root, assets_dir
 
 
 @dataclass
@@ -25,7 +26,6 @@ class SystemEntry:
     supported_emus: list[str] = field(default_factory=list)
     supported_cores: list[str] = field(default_factory=list)
     emu_reset: str = ""  # EMUPRESET - preferred emulator
-    fe_name: str = ""
 
     @property
     def rom_path_list(self) -> list[str]:
@@ -53,7 +53,8 @@ class SystemRegistry:
 
     def _load_master_list(self):
         """Load the master list of supported systems from the new Systems.json asset."""
-        master_json = self._app_root / "assets" / "systems.json"
+        master_json = self._app_root / "assets" / "Systems.json"
+        master_json = assets_dir() / "Systems.json"
         if not master_json.exists():
             return
 
@@ -80,8 +81,7 @@ class SystemRegistry:
                         extensions=extensions,
                         supported_emus=[x.strip() for x in info.get("supported_emus", info.get("SUPEMU", "")).split("|") if x.strip()],
                         supported_cores=[x.strip() for x in info.get("supported_cores", info.get("SUPCORE", "")).split("|") if x.strip()],
-                        emu_reset=info.get("EMUPRESET", ""),
-                        fe_name=info.get("fe_name", info.get("FENAM", ""))
+                        emu_reset=info.get("EMUPRESET", "")
                     )
         except Exception:
             pass

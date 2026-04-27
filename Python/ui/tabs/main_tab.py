@@ -80,17 +80,6 @@ class MainTab(BaseTab):
         # ── Row 1: System selector + source toggle + mini button ──────
         row1 = QHBoxLayout()
 
-        # Playlist / Folder radio toggle
-        self._rad_playlist = QRadioButton("Playlist")
-        self._rad_folder = QRadioButton("Folder")
-        self._rad_folder.setChecked(True)
-        src_group = QButtonGroup(self)
-        src_group.addButton(self._rad_playlist)
-        src_group.addButton(self._rad_folder)
-        self._rad_playlist.toggled.connect(self._on_source_toggled)
-        row1.addWidget(self._rad_playlist)
-        row1.addWidget(self._rad_folder)
-
         # System dropdown
         self._system_ddl = QComboBox()
         self._system_ddl.setMinimumWidth(260)
@@ -178,11 +167,20 @@ class MainTab(BaseTab):
         self._recurse_chk.setToolTip("Searches subdirectories for matching files")
         search_ctrl.addWidget(self._recurse_chk)
 
-        # Location dropdown (mirrors SRCHLOCDL)
-        self._srch_loc_ddl = QComboBox()
-        self._srch_loc_ddl.setMinimumWidth(200)
-        self._srch_loc_ddl.setToolTip("Target playlist or system directory to search within")
-        search_ctrl.addWidget(self._srch_loc_ddl)
+        # Filtered / Unfiltered radio buttons
+        self._rad_filtered = QRadioButton("Filtered")
+        self._rad_unfiltered = QRadioButton("Unfiltered")
+        self._rad_filtered.setChecked(True)
+        self._rad_filtered.setToolTip("Respect 'Exclude Systems' list in Settings")
+        self._rad_unfiltered.setToolTip("Search all systems and directories")
+        
+        self._search_filter_grp = QButtonGroup(self)
+        self._search_filter_grp.addButton(self._rad_filtered)
+        self._search_filter_grp.addButton(self._rad_unfiltered)
+        self._search_filter_grp.buttonClicked.connect(self._search_roms)
+        
+        search_ctrl.addWidget(self._rad_filtered)
+        search_ctrl.addWidget(self._rad_unfiltered)
 
         # Search text input
         self._srch_edit = QLineEdit()
@@ -255,6 +253,8 @@ class MainTab(BaseTab):
     def refresh_ui(self):
         """Public entry point for global refreshes."""
         self._systems.reload()
+        self._assignments.reload()
+        self._emus.reload()
         self._populate_systems()
         current_sys = self._system_ddl.currentText()
         if current_sys and current_sys != ":=:System List:=:":
@@ -294,70 +294,61 @@ class MainTab(BaseTab):
             self._system_ddl.setItemData(idx, QBrush(Qt.GlobalColor.gray), Qt.ItemDataRole.ForegroundRole)
             
         self._system_ddl.blockSignals(False)
+        self._search_roms() # Update ROM list based on current filters
 
-        # Mirror system list into search location dropdown
-        self._srch_loc_ddl.clear()
-        self._srch_loc_ddl.addItem(":=:System List:=:")
-        for name in self._systems.all_systems():
-            entry = self._systems._data.get(name)
-            # ONLY populate search with identified/active systems
-            if entry and any(Path(p).exists() for p in entry.rom_path_list):
-                self._srch_loc_ddl.addItem(name)
 
     def _populate_cores(self, system: str):
         """Fill the core dropdown for the given system."""
         self._core_ddl.blockSignals(True)
         self._core_ddl.clear()
 
-        assigned = self._assignments.get_assignment(system)
-        # Prioritize most recently assigned (invert the list)
-        # e.g., ["CoreA", "CoreB"] means CoreB is preferred, CoreA is fallback
-        associated = list(reversed(assigned.emulators))
-
-        # Get all installed emulators
-        installed = [e.name for e in self._emus.get_installed_executables("emulator")]
-        
-        # Try both "retroArch" (as in apps.ini) and "retroarch"
         apps = self._emus._apps_cfg
-        ra_path = apps.get("EMULATORS", "retroArch") or apps.get("EMULATORS", "retroarch")
-        
-        if not ra_path:
-            ra_path = self._cfg.get("EMULATORS", "retroarch")
+        apps.reload()
 
-        if ra_path and Path(ra_path).exists():
-            cores_dir = Path(ra_path).parent / "cores"
-            if cores_dir.exists():
-                # Get core names without _libretro.dll suffix
-                for f in cores_dir.glob("*_libretro.dll"):
-                    core_name = f.stem.replace("_libretro", "")
-                    if core_name not in installed:
-                        installed.append(core_name)
+        # 1. Map installed items from apps.json: {lowercase_name: display_name}
+        # Strictly include only items that have a defined path that exists on disk.
+        installed_map = {}
+        for section in ["EMULATORS", "CORES"]:
+            for name, path in apps.items(section):
+                p_str = path.strip('"')
+                if p_str and Path(p_str).exists():
+                    installed_map[name.lower()] = name
 
-        installed = list(set(installed))
-        
-        # Get BIOS status for each emulator to use for color coding
-        bios_status_by_emu = {}
-        for n in installed:
-            status = verify_bios(n, system, app_home())
-            bios_status_by_emu[n] = status
+        # 2. Gather candidates from system metadata and user overrides
+        assigned = self._assignments.get_assignment(system)
+        sys_entry = self._systems._data.get(system)
 
-        # 1. Associated emulators at the top with default font color
-        valid_assoc = [n for n in associated if n in installed]
-        for n in valid_assoc:
+        # User assignments come first, followed by system defaults
+        candidates = list(reversed(assigned.emulators))
+        if sys_entry:
+            if sys_entry.emu_reset:
+                candidates.append(sys_entry.emu_reset)
+            candidates.extend(sys_entry.supported_emus)
+            candidates.extend(sys_entry.supported_cores)
+
+        # 3. Separate into 'Associated' and 'Other' while filtering against installed_map
+        associated_names = []
+        for name in candidates:
+            low_name = name.lower()
+            if low_name in installed_map:
+                actual_name = installed_map.pop(low_name)
+                if actual_name not in associated_names:
+                    associated_names.append(actual_name)
+
+        # 4. Populate Dropdown: Associated (Top)
+        for n in associated_names:
             self._core_ddl.addItem(n)
-            self._apply_bios_color(n, bios_status_by_emu.get(n))
-            if n in installed:
-                installed.remove(n)
-            
-        if valid_assoc and installed:
+            self._apply_bios_color(n, verify_bios(n, system, app_home()))
+
+        if associated_names and installed_map:
             self._core_ddl.insertSeparator(self._core_ddl.count())
 
-        # 2. Others below in gray (not associated)
-        remaining = sorted(installed)
-        for n in remaining:
+        # 5. Populate Dropdown: Other Installed (Bottom, grayed out)
+        for low_name in sorted(installed_map.keys()):
+            n = installed_map[low_name]
             idx = self._core_ddl.count()
             self._core_ddl.addItem(n)
-            self._apply_bios_color(n, bios_status_by_emu.get(n))
+            self._apply_bios_color(n, verify_bios(n, system, app_home()))
             self._core_ddl.setItemData(idx, QBrush(Qt.GlobalColor.gray), Qt.ItemDataRole.ForegroundRole)
 
         self._core_ddl.blockSignals(False)
@@ -377,47 +368,51 @@ class MainTab(BaseTab):
             self._core_ddl.setItemData(idx, QBrush(QColor(255, 200, 100)), Qt.ItemDataRole.BackgroundRole)
         # Green (default) for present/OK
 
-    def _populate_roms(self, system: str):
-        """Load ROM list for the selected system."""
+    def _populate_roms(self, system: str = None):
+        """Load ROM list. If no system provided, perform a global search."""
         self._rom_list.clear()
         self._all_rom_items.clear()
-        self._srch_edit.clear()
 
-        entry = self._systems._data.get(system)
-        if not entry or not entry.rom_paths:
-            return
-
-        valid_paths = [Path(p) for p in entry.rom_path_list if Path(p).exists()]
-        if not valid_paths:
-            self.set_status(f"ROM directory not found: {entry.rom_paths}")
-            return
-
+        search_term = self._srch_edit.text().strip().lower()
+        is_filtered = self._rad_filtered.isChecked()
+        excluded_str = self._cfg.get("GLOBAL", "exclude_systems", fallback="")
+        excluded = [s.strip().lower() for s in excluded_str.split("|") if s.strip()] if is_filtered else []
+        
+        # If search is global (no specific system), iterate through all known systems
+        systems_to_scan = [system] if system else self._systems.all_systems()
+        
         recurse = self._recurse_chk.isChecked()
         pattern = "**/*" if recurse else "*"
+        found_count = 0 
         
-        found_files = []
-        for base_p in valid_paths:
-            for f in base_p.glob(pattern):
-                if f.is_file():
-                    # Filter by ROMXT extensions if defined
+        for sys_name in systems_to_scan:
+            if system is None and sys_name.lower() in excluded:
+                continue
+                
+            entry = self._systems._data.get(sys_name)
+            if not entry or not entry.rom_paths: continue
+            
+            valid_paths = [Path(p) for p in entry.rom_path_list if Path(p).exists()]
+            
+            for base_p in valid_paths:
+                for f in base_p.glob(pattern):
+                    if not f.is_file(): continue
+                    
+                    # Filter by search term and extensions
+                    if search_term and search_term not in f.name.lower():
+                        continue
+                        
                     if entry.extensions:
                         ext = f.suffix.lower().lstrip('.')
-                        if ext in [e.lower() for e in entry.extensions]:
-                            found_files.append((f, base_p))
-                    else:
-                        found_files.append((f, base_p))
+                        if ext not in [e.lower() for e in entry.extensions]:
+                            continue
+                    display = str(f.relative_to(base_p)) if recurse else f.name
+                    item = QListWidgetItem(f"[{sys_name}] {display}" if not system else display)
+                    item.setData(Qt.ItemDataRole.UserRole, str(f))
+                    item.setData(Qt.ItemDataRole.UserRole + 1, sys_name) # Store source system
+                    self._rom_list.addItem(item)
+                    found_count += 1
 
-        # Sort combined results by filename
-        found_files.sort(key=lambda x: x[0].name)
-
-        for f, base_p in found_files:
-            display = str(f.relative_to(base_p)) if recurse else f.name
-            self._all_rom_items.append(str(f))
-            item = QListWidgetItem(display)
-            item.setData(Qt.ItemDataRole.UserRole, str(f))
-            self._rom_list.addItem(item)
-
-        self.set_status(f"{len(found_files)} ROMs found in {system}")
 
     def _restore_last(self):
         """Restore last used system and ROM from config."""
@@ -434,11 +429,6 @@ class MainTab(BaseTab):
     # ------------------------------------------------------------------
     # Slots
     # ------------------------------------------------------------------
-
-    def _on_source_toggled(self, checked: bool):
-        system = self._system_ddl.currentText()
-        if system and system != ":=:System List:=:":
-            self._populate_roms(system)
 
     def _on_system_changed(self, system: str):
         if not system or system == ":=:System List:=:":
@@ -462,7 +452,11 @@ class MainTab(BaseTab):
 
     def _set_rom_from_item(self, item: QListWidgetItem):
         path = item.data(Qt.ItemDataRole.UserRole) or item.text()
+        sys_source = item.data(Qt.ItemDataRole.UserRole + 1)
         self._rom_cbx.setCurrentText(path)
+        if sys_source and sys_source != self._system_ddl.currentText():
+            idx = self._system_ddl.findText(sys_source)
+            if idx >= 0: self._system_ddl.setCurrentIndex(idx)
         self._cfg.set("GLOBAL", "last_rom", path)
 
     def _filter_roms(self, text: str):
@@ -473,7 +467,7 @@ class MainTab(BaseTab):
             item.setHidden(text not in item.text().lower())
 
     def _search_roms(self):
-        self._filter_roms(self._srch_edit.text())
+        self._populate_roms(None) # Global search
 
     def _browse_rom(self):
         path, _ = QFileDialog.getOpenFileName(
@@ -518,10 +512,13 @@ class MainTab(BaseTab):
     # ------------------------------------------------------------------
 
     def _launch(self):
-        rom_path = self._rom_cbx.currentText().strip()
-        if not rom_path:
+        rom_text = self._rom_cbx.currentText().strip()
+        if not rom_text:
             QMessageBox.information(self, "No ROM", "Select a ROM first.")
             return
+            
+        # Resolve to absolute path to ensure RetroArch and emulators find the file
+        rom_path = str(Path(rom_text).absolute())
 
         system = self._system_ddl.currentText()
         emu_name = self._core_ddl.currentText().strip()
@@ -541,22 +538,45 @@ class MainTab(BaseTab):
             if response == QMessageBox.StandardButton.No:
                 return
 
+        apps = self._emus._apps_cfg
         emu_entry = self._emus.get(emu_name)
-        if not emu_entry or not emu_entry.exe:
-            QMessageBox.warning(
-                self, "No Emulator",
-                f"No executable found for '{emu_name}'.\n"
-                "Check the Emulators tab.")
-            return
-
-        emu_dir = app_home() / "Emulators" / emu_entry.name
-        emu_exe = str(emu_dir / emu_entry.exe)
-
         lp = self._launch_params.get(system) if system else None
         options = (self._cust_opts_cbx.currentText().strip()
                    if self._cust_switch_chk.isChecked() else "")
         arguments = (self._cust_args_cbx.currentText().strip()
                      if self._cust_switch_chk.isChecked() else "")
+
+        # Priority 1: Check if selection is a RetroArch core
+        core_path = apps.get("CORES", emu_name).strip('"')
+        if core_path and Path(core_path).exists():
+            ra_exe = apps.get("EMULATORS", "retroArch").strip('"') or \
+                     apps.get("EMULATORS", "retroarch").strip('"')
+            
+            if not ra_exe or not Path(ra_exe).exists():
+                ra_exe = self._cfg.get("EMULATORS", "retroarch").strip('"')
+            
+            if not ra_exe or not Path(ra_exe).exists():
+                QMessageBox.warning(self, "RetroArch Missing", "RetroArch executable not found. Cannot launch core.")
+                return
+            
+            emu_exe = ra_exe
+            emu_dir = Path(ra_exe).parent
+            # Ensure core path is absolute and quoted for RetroArch
+            options = f'-L "{Path(core_path).absolute()}" {options}'.strip()
+        else:
+            # Priority 2: Standalone emulator (either detected or local fallback)
+            emu_exe = apps.get("EMULATORS", emu_name).strip('"')
+            if emu_exe and Path(emu_exe).exists():
+                emu_dir = Path(emu_exe).parent
+            elif emu_entry and emu_entry.exe:
+                emu_dir = app_home() / "Emulators" / emu_entry.name
+                emu_exe = str(emu_dir / emu_entry.exe)
+
+        if not emu_exe or not Path(emu_exe).exists():
+            QMessageBox.warning(self, "No Emulator", 
+                                f"No executable or core found for '{emu_name}'.\n"
+                                "Check the Emulators tab.")
+            return
 
         cfg = LaunchConfig(
             emulator_path=emu_exe,
@@ -647,7 +667,7 @@ class MainTab(BaseTab):
         else:
             system = self._system_ddl.currentText()
             entry = self._systems._data.get(system)
-            path = Path(entry.rom_path_list[0]) if entry and entry.rom_path_list else Path(".")
+            path = Path(entry.rom_path_list[0]) if entry and entry.rom_path_list and Path(entry.rom_path_list[0]).exists() else Path(".")
             
         if path.exists():
             if path.is_file():
