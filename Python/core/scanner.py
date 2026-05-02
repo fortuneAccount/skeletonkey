@@ -1,4 +1,5 @@
 from data.systems import SystemEntry
+import logging
 import string
 import fnmatch
 import platform
@@ -52,9 +53,8 @@ class SystemScanner:
     def detect_systems(self, root_dir: Path | None = None, log_callback=None):
         """Scan directories for folders matching fuzzy patterns."""
         def _log(msg):
-            full_msg = f"DEBUG: {msg}"
-            if log_callback: log_callback(full_msg)
-            else: print(full_msg)
+            if log_callback: log_callback(msg)
+            else: logging.debug(msg)
 
         targets = [root_dir] if root_dir else self._get_targets_for_detection()
         fuz_path = assets_dir() / "fuzsyslk.json"

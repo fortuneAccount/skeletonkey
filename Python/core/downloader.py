@@ -112,16 +112,17 @@ class DownloadWorker(QObject):
         proc = subprocess.Popen(
             cmd, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True
         )
-        for line in proc.stdout:
-            if self._cancelled:
-                proc.terminate()
-                return False
-            pct = _parse_aria2c_progress(line)
-            if pct is not None:
-                self.progress.emit(pct)
-            spd = _parse_aria2c_speed(line)
-            if spd:
-                self.speed.emit(spd)
+        if proc.stdout:
+            for line in proc.stdout:
+                if self._cancelled:
+                    proc.terminate()
+                    return False
+                pct = _parse_aria2c_progress(line)
+                if pct is not None:
+                    self.progress.emit(pct)
+                spd = _parse_aria2c_speed(line)
+                if spd:
+                    self.speed.emit(spd)
         proc.wait()
         if status_file.exists():
             status_file.unlink(missing_ok=True)

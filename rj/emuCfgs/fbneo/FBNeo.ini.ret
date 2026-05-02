@@ -310,7 +310,7 @@ nLoadMenuFavoritesFilter 0
 nLoadMenuFamilyFilter 0
 
 // The paths to search for rom zips (include trailing backslash)
-szAppRomPaths[0] [ROMPATHR]/
+szAppRomPaths[0] [ROMPATH]/
 szAppRomPaths[1] 
 szAppRomPaths[2] 
 szAppRomPaths[3] 

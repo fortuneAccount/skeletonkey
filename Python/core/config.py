@@ -7,11 +7,15 @@ All paths are resolved relative to the application home directory so the
 app remains portable.
 """
 import json
+import logging
 import os
+import tempfile
 from pathlib import Path
 
 
 from utils.paths import config_home
+
+logger = logging.getLogger(__name__)
 
 class Config:
     """
@@ -46,7 +50,12 @@ class Config:
         try:
             with open(self._path, "r", encoding="utf-8") as f:
                 self._data = json.load(f)
-        except (json.JSONDecodeError, IOError):
+                logger.debug(f"Loaded config from {self._path}")
+        except json.JSONDecodeError as e:
+            logger.error(f"JSON decode error in {self._path}: {e}")
+            self._data = {}
+        except IOError as e:
+            logger.error(f"IO error reading {self._path}: {e}")
             self._data = {}
 
     def reload(self):
@@ -76,8 +85,16 @@ class Config:
     def save(self):
         """Persist all in-memory changes back to disk."""
         self._path.parent.mkdir(parents=True, exist_ok=True)
-        with open(self._path, "w", encoding="utf-8") as fh:
-            json.dump(self._data, fh, indent=4)
+        # Atomic save: write to temp file first to prevent 0-byte corruption on crash
+        fd, temp_path = tempfile.mkstemp(dir=self._path.parent, suffix=".tmp")
+        try:
+            with os.fdopen(fd, 'w', encoding='utf-8') as fh:
+                json.dump(self._data, fh, indent=4)
+            os.replace(temp_path, self._path)
+        except Exception as e:
+            if os.path.exists(temp_path):
+                os.remove(temp_path)
+            logger.error(f"Failed to save config {self._path}: {e}")
 
     def sections(self) -> list[str]:
         return list(self._data.keys())
@@ -94,6 +111,34 @@ class Config:
     @property
     def home(self) -> Path:
         return self._home
+
+
+def setup_logging(cfg: Config):
+    """Configure application logging based on config settings."""
+    log_level_str = cfg.get("GLOBAL", "Logging", fallback="1")
+    log_level = logging.INFO if log_level_str == "1" else logging.DEBUG
+    
+    # Create logger
+    logger = logging.getLogger()
+    logger.setLevel(log_level)
+    
+    # Remove existing handlers
+    for handler in logger.handlers[:]:
+        logger.removeHandler(handler)
+    
+    # Console handler
+    console_handler = logging.StreamHandler()
+    console_handler.setLevel(log_level)
+    formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+    console_handler.setFormatter(formatter)
+    logger.addHandler(console_handler)
+    
+    # File handler
+    log_file = cfg.home / "skeletonkey.log"
+    file_handler = logging.FileHandler(log_file)
+    file_handler.setLevel(log_level)
+    file_handler.setFormatter(formatter)
+    logger.addHandler(file_handler)
 
 
 # ---------------------------------------------------------------------------

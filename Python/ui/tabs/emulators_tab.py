@@ -23,11 +23,11 @@ from utils.paths import app_home, bin_dir, resolve_arch, check_paths_exist, app_
 
 
 class EmulatorsTab(BaseTab):
-    def __init__(self, parent=None):
+    def __init__(self, systems: SystemRegistry, emus: EmuRegistry, parent=None):
         super().__init__(parent)
         self._cfg = global_config()
-        self._emus = EmuRegistry()
-        self._systems = SystemRegistry()
+        self._emus = emus
+        self._systems = systems
         self._active_worker: DownloadWorker | None = None
         self._build_ui()
         self._populate()
@@ -117,6 +117,14 @@ class EmulatorsTab(BaseTab):
         self._config_path_combo = _PathCombo("Configs")
         form.addRow("Config Paths:", self._config_path_combo)
 
+        self._opts_combo = QComboBox()
+        self._opts_combo.setEditable(True)
+        form.addRow("Default Options:", self._opts_combo)
+
+        self._args_combo = QComboBox()
+        self._args_combo.setEditable(True)
+        form.addRow("Default Arguments:", self._args_combo)
+
         self._ext_edit = QLineEdit()
         form.addRow("Supported Ext:", self._ext_edit)
 
@@ -178,6 +186,18 @@ class EmulatorsTab(BaseTab):
         self._systems.reload()
         self._cfg.reload()
         self._populate()
+
+    def select_emulator(self, name: str):
+        """Programmatically select an emulator in the list, clearing filters first."""
+        self._clear_search()
+        self._filter_detected_btn.setChecked(False)
+        self._filter_missing_preset_btn.setChecked(False)
+        self._apply_filters()
+
+        items = self._emu_list.findItems(name, Qt.MatchFlag.MatchExactly)
+        if items:
+            self._emu_list.setCurrentItem(items[0])
+            self._emu_list.scrollToItem(items[0])
 
     def _show_context_menu(self, pos):
         item = self._emu_list.itemAt(pos)
@@ -284,7 +304,9 @@ class EmulatorsTab(BaseTab):
             exe=self._exe_label_edit.text(),
             archive=self._archive_edit.text(),
             extensions=[x.strip() for x in self._ext_edit.text().split(",") if x.strip()],
-            required_files=[x.strip() for x in self._req_files_edit.toPlainText().split("\n") if x.strip()]
+            required_files=[x.strip() for x in self._req_files_edit.toPlainText().split("\n") if x.strip()],
+            options=self._opts_combo.currentText(),
+            arguments=self._args_combo.currentText()
         )
         self._emus.add_custom(entry)
 
@@ -327,6 +349,9 @@ class EmulatorsTab(BaseTab):
         self._exe_label_edit.setText(entry.exe)
         self._archive_edit.setText(entry.archive)
         self._config_path_combo.set_paths(entry.configs)
+        # Strictly map 'options' and 'arguments' from assets/emulators.json
+        self._opts_combo.setCurrentText(str(getattr(entry, 'options', "")))
+        self._args_combo.setCurrentText(str(getattr(entry, 'arguments', "")))
         self._ext_edit.setText(", ".join(entry.extensions))
         
         reqs = []

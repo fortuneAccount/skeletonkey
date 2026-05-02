@@ -36,10 +36,10 @@ ARTWORK_TYPES = [
 
 
 class ArtworkTab(BaseTab):
-    def __init__(self, parent=None):
+    def __init__(self, systems: SystemRegistry, parent=None):
         super().__init__(parent)
         self._cfg = global_config()
-        self._systems = SystemRegistry()
+        self._systems = systems
         self._build_ui()
         self._populate_systems()
 

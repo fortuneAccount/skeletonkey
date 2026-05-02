@@ -9,8 +9,8 @@ so the same code works on Windows, Linux and macOS.  Platform-specific
 behaviour (e.g. process suspend/resume) is gated behind sys.platform checks.
 """
 import hashlib
-import os
 import subprocess
+import logging
 import shlex
 import sys
 from dataclasses import dataclass, field
@@ -18,6 +18,8 @@ from pathlib import Path
 from typing import NamedTuple
 from utils.paths import assets_dir, app_root, check_paths_exist
 from utils.archive import extract
+
+logger = logging.getLogger(__name__)
 
 class BiosRequirement(NamedTuple):
     """Single BIOS file requirement."""
@@ -104,6 +106,9 @@ class Launcher:
         self._start_keymapper()
 
         cmd = self._build_command()
+        # Log the command itself to the primary log file
+        logger.info(f"Executing launch command: {' '.join(cmd)}")
+
         # Ensure the executable exists and path is clean
         exe_path = Path(self.cfg.emulator_path.strip('"'))
         if not exe_path.exists():
@@ -113,7 +118,24 @@ class Launcher:
         if not Path(cwd).exists():
             cwd = None # Fallback to system default if specific CWD is missing
 
-        self._proc = subprocess.Popen(cmd, cwd=cwd, shell=False)
+        # Redirect stdout/stderr to capture output in the log
+        self._proc = subprocess.Popen(
+            cmd, 
+            cwd=cwd, 
+            shell=False,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.STDOUT,
+            text=True,
+            encoding='utf-8',
+            errors='replace',
+            bufsize=1
+        )
+        
+        # Pipe output lines to the logger
+        if self._proc.stdout:
+            for line in self._proc.stdout:
+                logger.info(f"[Process Output] {line.rstrip()}")
+
         exit_code = self._proc.wait()
 
         # Cleanup if required
@@ -133,6 +155,23 @@ class Launcher:
     # Internal helpers
     # ------------------------------------------------------------------
 
+    def _replace_tags(self, text: str) -> str:
+        """Dynamically replaces [ROMPATH], [ROMNAME], [ROMFILE], and [EMUPATH] tags."""
+        if not text:
+            return ""
+        rom_p = Path(self.cfg.rom_path)
+        emu_p = Path(self.cfg.emulator_path.strip('"'))
+        # Replacements using pathlib components
+        replacements = {
+            "[ROMPATH]": str(rom_p.parent),
+            "[ROMNAME]": rom_p.stem,
+            "[ROMFILE]": rom_p.name,
+            "[EMUPATH]": str(emu_p.parent)
+        }
+        for tag, val in replacements.items():
+            text = text.replace(tag, val)
+        return text
+
     def _build_command(self) -> list[str]:
         rom = self.cfg.rom_path
 
@@ -141,15 +180,18 @@ class Launcher:
         if not self.cfg.include_extension:
             rom = Path(rom).stem
 
+        is_posix = sys.platform != "win32"
         parts = [self.cfg.emulator_path]
         if self.cfg.options:
-            parts += shlex.split(self.cfg.options)
+            opts = self._replace_tags(self.cfg.options)
+            parts += shlex.split(opts, posix=is_posix)
         if self.cfg.use_quotes:
             parts.append(rom)
         else:
             parts.append(rom)
         if self.cfg.arguments:
-            parts += shlex.split(self.cfg.arguments)
+            args = self._replace_tags(self.cfg.arguments)
+            parts += shlex.split(args, posix=is_posix)
         return parts
 
     def _start_keymapper(self):

@@ -4,10 +4,13 @@ data/launch_params.py
 Provides per-system launch parameter lookup from JSON.
 """
 import json
+import logging
 from dataclasses import dataclass, asdict
 from pathlib import Path
 from core.config import global_config
 from utils.paths import app_root
+
+logger = logging.getLogger(__name__)
 
 
 @dataclass
@@ -18,6 +21,8 @@ class LaunchParams:
     explode: bool = False   # extract all files (not just the ROM)
     runrom: bool = True     # pass ROM path to emulator
     clean: bool = False     # delete extracted files after launch
+    options: str = ""       # system-specific override options
+    arguments: str = ""     # system-specific override arguments
 
 
 class LaunchParamsRegistry:
@@ -44,7 +49,8 @@ class LaunchParamsRegistry:
                     for name, fields in raw_data.items():
                         self._data[name] = LaunchParams(**fields)
                 return
-            except Exception: pass
+            except Exception as e:
+                logger.error(f"Error processing launch param value: {e}")
 
     # ------------------------------------------------------------------
     # Public API

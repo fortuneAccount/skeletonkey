@@ -132,3 +132,41 @@ def check_paths_exist(path_str: str, separator: str = "|") -> bool:
     if not path_str:
         return False
     return any(Path(p.strip()).exists() for p in path_str.split(separator) if p.strip())
+
+
+def parse_delimited_list(value: str | list, separator: str = "|") -> list[str]:
+    """
+    Parse a delimited string or return list as-is.
+    Efficiently handles pipe-delimited strings throughout the app.
+    
+    Args:
+        value: String like "a|b|c" or already a list
+        separator: Delimiter character (default: pipe)
+    
+    Returns:
+        List of stripped, non-empty strings
+    """
+    if isinstance(value, list):
+        return value
+    if not isinstance(value, str):
+        return []
+    return [item.strip() for item in value.split(separator) if item.strip()]
+
+
+def parse_delimited_paths(value: str | list, separator: str = "|", check_exists: bool = False) -> list[Path]:
+    """
+    Parse a delimited string of paths.
+    
+    Args:
+        value: String like "/path/a|/path/b" or list of paths
+        separator: Delimiter character (default: pipe)
+        check_exists: Only return paths that exist
+    
+    Returns:
+        List of Path objects
+    """
+    items = parse_delimited_list(value, separator)
+    paths = [Path(p) for p in items]
+    if check_exists:
+        paths = [p for p in paths if p.exists()]
+    return paths

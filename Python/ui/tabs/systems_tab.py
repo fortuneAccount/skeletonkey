@@ -18,194 +18,25 @@ from PyQt6.QtWidgets import (
 
 from core.config import global_config
 from core.launcher import Launcher, LaunchConfig, suspend_frontends, resume_frontends
-from data.systems import SystemRegistry
+from data.systems import SystemRegistry, SystemEntry
 from core.scanner import SystemScanner
+import os
 import re
+import string
+import threading
+from concurrent.futures import ThreadPoolExecutor
 from core.config import Config
 from data.assignments import AssignmentRegistry
 from data.launch_params import LaunchParamsRegistry
-from ui.tabs.settings_tab import _PathCombo, _load_paths, _save_paths
 from data.emulators import EmuRegistry
 from ui.tabs.base_tab import BaseTab
 from utils.paths import app_home, check_paths_exist, img_dir
 
 
-def match_emu_exe(entry, path: Path) -> bool:
-    """
-    Check if executable matches emulator entry using hierarchical matching rules.
-    
-    Matching hierarchy (broadest to most specific):
-    1. Broadest matching: emulator name in exe + dir conditions with flexible delimiters
-    2. Refined matching: emulator name in exe + exact folder name match  
-    3. Further refined: folder begins/ends with emulator name + exe contains name
-    4. Further refined: exact EXENAM match + parent dir contains emulator name  
-    5. Final match: exact EXENAM + exact parent directory name match
-    """
-    file_name = path.name.lower()
-    file_stem = path.stem.lower()
-    
-    # Ignore common non-emulator executables to prevent false positives
-    if any(x in file_name for x in ['unins', 'setup', 'vcredist', 'dxwebsetup', 
-                                     'crashpad', 'updater', 'orgview', 'helper', 
-                                     'tool', 'config', 'debug', 'test', 'utility', 
-                                     'shipping', 'batchfile']):
-        return False
 
-    exe_name = entry.exe.lower()
-    exe_stem = Path(exe_name).stem.lower() if '.' in exe_name else exe_name
-    
-    # Handle [ARCH] placeholder - replace with common patterns
-    arch_patterns = []
-    if '[arch]' in exe_name:
-        base = exe_name.replace('[arch]', '{}')
-        arch_patterns = [base.format(''), base.format('x64'), base.format('x86'),
-                        base.format('64'), base.format('32'), base.format('win'),
-                        base.format('amd64')]
-        # Also handle EXENAM with [ARCH] in stem
-        if exe_stem:
-            base_stem = exe_stem.replace('[arch]', '{}')
-            arch_patterns.extend([base_stem.format(''), base_stem.format('x64'),
-                                 base_stem.format('x86'), base_stem.format('64'),
-                                 base_stem.format('32'), base_stem.format('win'),
-                                 base_stem.format('amd64')])
-    
-    dir_name = path.parent.name.lower()
-    name_low = entry.name.lower()
-    
-    # Broad terms that can precede or follow the emulator name
-    broad_terms = ['-', '_', ' ', '(', ')', '.']
-    broad_suffixes = ['-', '_', ' ', '(', ')', '.', 'x64', '64', '32', 
-                     'win', 'amd64', 'x86', 'qt', 'sdl', 'avx', 'sse']
-    dir_suffixes = ['x64', '64', '32', 'win', 'amd64', 'x86', 'qt', 
-                   'sdl', 'avx', 'sse']
-    
-    # Helper functions for matching
-    def has_delim_or_suffix(s, delims, suffixes):
-        for d in delims:
-            if s.startswith(d) or s.endswith(d):
-                return True
-        for suf in suffixes:
-            if s.endswith(suf):
-                return True
-        return False
-    
-    def has_exact_delim_or_suffix(s, delims, suffixes):
-        return has_delim_or_suffix(s, delims, suffixes)
-    
-    # For very short names like 'xe', require a whole-word match to avoid path collisions (e.g. nxengine)
-    if len(name_low) <= 2:
-        exe_contains_name = bool(re.search(rf'\b{re.escape(name_low)}\b', file_stem))
-        dir_contains_name = bool(re.search(rf'\b{re.escape(name_low)}\b', dir_name))
-    else:
-        exe_contains_name = name_low in file_stem
-        dir_contains_name = name_low in dir_name
-    exact_exe_match = (file_name == exe_name)
-    
-    # ============================================================
-    # Level 1: Broadest matching (most permissive)
-    # ============================================================
-    # EXE condition: emulator name in exe stem
-    # DIR condition: emulator name in parent dir  
-    # Both must have delimiter/suffix patterns
-    if exe_contains_name and dir_contains_name:
-        exe_has_delim = has_delim_or_suffix(file_stem, broad_terms, broad_suffixes)
-        dir_has_delim = has_delim_or_suffix(dir_name, broad_terms, dir_suffixes)
-        
-        if exe_has_delim and dir_has_delim:
-            # Handle [ARCH] pattern matches
-            if arch_patterns and any(file_name == p.lower() for p in arch_patterns):
-                return True
-            return True
-    
-    # Also check [ARCH] patterns directly
-    if arch_patterns and any(file_name == p.lower() for p in arch_patterns):
-        if dir_contains_name and has_delim_or_suffix(dir_name, broad_terms, dir_suffixes):
-            return True
-    
-    # ============================================================
-    # Level 2: Refined matching
-    # ============================================================
-    # EXE: emulator name in exe stem with delimiters
-    # DIR: folder name EXACTLY matches emulator name
-    if exe_contains_name and dir_name == name_low:
-        if has_exact_delim_or_suffix(file_stem, broad_terms, broad_suffixes):
-            if arch_patterns and any(file_name == p.lower() for p in arch_patterns):
-                return True
-            return True
-    
-    # ============================================================
-    # Level 3: Further refined
-    # ============================================================
-    # DIR: folder begins or ends with emulator name + delimiter
-    # EXE: emulator name in exe stem
-    dir_begins = False
-    dir_ends = False
-    for term in broad_terms + dir_suffixes:
-        if dir_name.startswith(name_low + term):
-            dir_begins = True
-            break
-        if dir_name.endswith(term + name_low):
-            dir_begins = True
-            break
-    for term in broad_terms:
-        if dir_name.startswith(term + name_low):
-            dir_begins = True
-            break
-        if dir_name.endswith(name_low + term):
-            dir_ends = True
-            break
-    
-    if (dir_begins or dir_ends) and exe_contains_name:
-        return True
-    
-    # ============================================================
-    # Level 4: Further refined
-    # ============================================================
-    # EXE: exact EXENAM match
-    # DIR: parent dir contains emulator name with delimiters
-    if exact_exe_match and dir_contains_name:
-        if has_exact_delim_or_suffix(dir_name, broad_terms, dir_suffixes):
-            return True
-    
-    # ============================================================
-    # Level 5: Final match (most strict)
-    # ============================================================
-    # EXE: exact EXENAM match
-    # DIR: parent dir EXACTLY matches emulator name
-    if exact_exe_match and dir_name == name_low:
-        return True
-    
-    # ============================================================
-    # Strict fallback: only match [ARCH] patterns or exact exe name
-    # ============================================================
-    # [ARCH] placeholder patterns - STRICT match only
-    if '[arch]' in exe_name:
-        if any(file_name == p.lower() for p in arch_patterns):
-            return True
-    
-    # Exact executable name match
-    if exact_exe_match:
-        return True
-    
-    return False
-
-
-class _LaunchThread(QThread):
-    """Run a ROM launch in a background thread so the UI stays responsive."""
-    finished = pyqtSignal(int)
-
-    def __init__(self, launcher: Launcher):
-        super().__init__()
-        self._launcher = launcher
-
-    def run(self):
-        suspend_frontends()
-        code = self._launcher.launch()
-        resume_frontends()
-        self.finished.emit(code)
+from ui.tabs.settings_tab import _PathCombo, _save_paths
 
 class DetectionWorker(QThread):
-    """Handles the heavy lifting of system and emulator discovery in the background."""
     progress = pyqtSignal(int)
     log = pyqtSignal(str)
     finished = pyqtSignal()
@@ -218,199 +49,242 @@ class DetectionWorker(QThread):
         self.assignments = assignments
         self._apps_cfg = Config(Config.APPS_FILE)
         self._is_cancelled = False
+        self._claimed_dirs = set()
+
+        # Comprehensive exclusion list to filter non-emulator executables
+        self.exclusion_list = [
+            "tool", "util", "debug", "crack", "patch", "addon", "dlc",
+            "test", "unins", "config", "shipping", "settings", "helper", "updater", "sync", "agent",
+            "setup", "webview", "crashhandler", "redist", "plugin", "licens", "gmlive", "dxweb",
+            "ffmp", "ffpr", "dotnet", "crashsend", "crashreport", "dump", "devcon", "errmsg",
+            "dll", "install", "ndp48", "jpg", "png", "app.publish"
+        ]
 
     def cancel(self):
         self._is_cancelled = True
+    def _is_fuzzy_match(self, p_name: str, entry_exe: str) -> bool:
+        """
+        Matches based on: (opt sep) + base_stem + (opt sep) + (opt arch) + .* + .exe
+        """
+        p_name_lower = p_name.lower()
+        if any(keyword in p_name_lower for keyword in self.exclusion_list):
+            return False
+
+        exe_name_lower = Path(entry_exe).name.lower()
+        if p_name_lower == exe_name_lower: # Exact Match
+            return True
+
+        stem = Path(exe_name_lower).stem
+        sep = r"[\s\.\-_)]"
+        arch = r"(?:x64|x86|64|32|win|amd|sse|avx)"
+        
+        # Derive base_stem by stripping arch suffixes from metadata stem (e.g. mame64 -> mame)
+        base_stem = re.sub(rf"(?:{sep}|{arch})+$", "", stem, flags=re.IGNORECASE)
+
+        # Implementation of requested regex: (opt sep) + base_stem + (opt sep) + (opt arch) + .* + .exe
+        pattern = rf"^(?:{sep}*)?{re.escape(base_stem)}(?:{sep}*)?(?:{arch})?.*\.exe$"
+        return bool(re.match(pattern, p_name_lower, re.IGNORECASE))
+
+    def _get_claim_root(self, path: Path, roots: list[Path]) -> Path | None:
+        """Identify the top-level folder inside an emu_root or drive root to claim."""
+        try:
+            p = path.resolve()
+            for r in roots:
+                if str(p).lower().startswith(str(r).lower()):
+                    relative = p.relative_to(r)
+                    if relative.parts: return (r / relative.parts[0]).resolve()
+            drive_root = Path(p.anchor)
+            relative = p.relative_to(drive_root)
+            if relative.parts: return (drive_root / relative.parts[0]).resolve()
+        except: pass
+        return None
 
     def run(self):
         if self._is_cancelled: return
         
-        # 1. Discover primary directories FIRST (populates config with emu_roots paths)
-        try:
-            self.log.emit("Indexing drives for primary ROM/Emu roots...")
-            self.progress.emit(10)
-            
-            found_sys_roots, found_emu_roots = self.scanner.discover_primary_dirs()
-            for r in found_sys_roots + found_emu_roots:
-                self.log.emit(f"Discovered primary root: {r}")
-        except Exception as e:
-            self.log.emit(f"ERROR in step 1: {str(e)}")
-            self.finished.emit()
-            return
+        self._claimed_dirs.clear()
+        self._apps_cfg.reload()
 
-        if self._is_cancelled: return
-        self.progress.emit(25)
+        # Ensure search roots are defined. If empty, perform primary environment discovery.
+        emu_roots_str = self.cfg.get("GLOBAL", "emulators_directory", fallback="").strip()
+        sys_roots_str = self.cfg.get("GLOBAL", "systems_directory", fallback="").strip()
+        if not emu_roots_str or not sys_roots_str:
+            self.log.emit("Missing directory configuration. Performing primary drive scan...")
+            self.scanner.discover_primary_dirs()
+            self.cfg.reload()
+            emu_roots_str = self.cfg.get("GLOBAL", "emulators_directory", fallback="").strip()
 
-        # 2. Emulator Detection
-        try:
-            self.log.emit("Scanning for Emulators...")
-            self.progress.emit(40)
+        emu_roots = [Path(p).resolve() for p in emu_roots_str.split("|") if p.strip() and Path(p).exists()]
+        drives = [Path(f"{d}:/") for d in string.ascii_uppercase if os.path.exists(f"{d}:/")] if os.name == 'nt' else [Path("/")]
+        
+        all_emus = self.emus.by_category("emulator")
+        emus_to_find = {e.name.lower(): e for e in all_emus}
 
-            emu_dirs_raw = self.cfg.get("GLOBAL", "emulators_directory", fallback="")
-            established = [Path(p.strip()) for p in emu_dirs_raw.split('|') if p.strip() and Path(p.strip()).exists()]
-            
-            # Drive roots
-            import os, string
-            drives = [Path(f"{d}:/") for d in string.ascii_uppercase if os.path.exists(f"{d}:/")] if os.name == 'nt' else [Path("/")]
-                
-            # Drive roots: Search inside folders that match emulator names
-            for d in drives:
-                if self._is_cancelled: break
-                try:
-                    for item in d.iterdir():
-                        if not item.is_dir(): continue
-                        for entry in self.emus.by_category("emulator"):
-                            # Whole-word check for short names to avoid 'xe' matching 'nxengine'
-                            name_low = entry.name.lower()
-                            if len(name_low) <= 2:
-                                folder_match = bool(re.search(rf'\b{re.escape(name_low)}\b', item.name.lower()))
+        # 0. Pre-index existing apps.json to claim their directories
+        for sect in ["EMULATORS", "CORES", "UTILITIES"]:
+            for name, path_str in self._apps_cfg.items(sect):
+                p_path = Path(path_str.strip('"'))
+                if p_path.exists():
+                    claim = self._get_claim_root(p_path, emu_roots)
+                    if claim: self._claimed_dirs.add(claim)
+                    emus_to_find.pop(name.lower(), None)
+
+        # Phase 1: Search Drive Roots + Common generic roots (\emu, \emulators)
+        self.log.emit("Phase 1: Searching drive roots for emulators...")
+        generic_roots = ["emu", "emulators", "rom programs", "bin"]
+        
+        for d in drives:
+            if self._is_cancelled: break
+            try:
+                # Check drive root directly and children of generic folders like C:\emu
+                targets = [d] + [d / g for g in generic_roots if (d / g).exists()]
+                for target in targets:
+                    for item in target.iterdir():
+                        if not item.is_dir() or item.name.startswith('$'): continue
+                        item_res = item.resolve()
+                        if item_res in self._claimed_dirs: continue
+                        
+                        name_low = item.name.lower()
+                        if name_low in emus_to_find: # Folder matches emulator name
+                            entry = emus_to_find[name_low]
+                            exe_path = item / entry.exe
+                            if exe_path.exists():
+                                self._register_app(entry.name, exe_path)
+                                self.log.emit(f"Found {entry.name}: {exe_path}")
+                                del emus_to_find[name_low]
+                                self._claimed_dirs.add(item_res)
                             else:
-                                folder_match = name_low in item.name.lower()
-                            
-                            if folder_match:
-                                # Search root of folder and first-level subdirectories (e.g. /bin)
-                                for p in list(item.glob("*.exe")) + list(item.glob("*/*.exe")):
-                                    if match_emu_exe(entry, p):
+                                # Fuzzy scan matching folder if exact EXENAM is missing
+                                for p in item.rglob("*.exe"):
+                                    if self._is_fuzzy_match(p.name, entry.exe):
                                         self._register_app(entry.name, p)
-                                        self.log.emit(f"Found {entry.name}: {p}")
+                                        self.log.emit(f"Found {entry.name} (Fuzzy): {p}")
+                                        del emus_to_find[name_low]
+                                        self._claimed_dirs.add(item_res)
                                         break
-                except (PermissionError, OSError): continue
             
-            if self._is_cancelled: return
+            except (PermissionError, OSError): continue
+        self.progress.emit(40)
 
-            for root in established:
-                if self._is_cancelled: break
-                try:
-                    for p in root.rglob("*.exe"):
-                        for entry in self.emus.by_category("emulator"):
-                            if match_emu_exe(entry, p):
-                                self._register_app(entry.name, p)
-                                self.log.emit(f"Found {entry.name}: {p}")
-                                break
-                except (PermissionError, OSError): continue
-            
-            # Persist all identified emulators to apps.json once
-            self._apps_cfg.save()
+        # Phase 2: Global recursive scan of emu_roots
+        self.log.emit(f"Phase 2: Scanning emu_roots for {len(emus_to_find)} remaining emulators...")
+        for root in emu_roots:
+            if self._is_cancelled: break
+            try:
+                for p in root.rglob("*.exe"):
+                    if self._is_cancelled: break
+                    # Check if this file is in a folder already claimed by another emulator
+                    if any(str(p.resolve()).lower().startswith(str(c).lower()) for c in self._claimed_dirs):
+                        continue
 
-            # 2.5 Discover RetroArch Cores
-            ra_path_str = self._apps_cfg.get("EMULATORS", "retroArch") or self._apps_cfg.get("EMULATORS", "retroarch")
-            if ra_path_str:
-                self.log.emit("Scanning for RetroArch Cores...")
-                ra_path = Path(ra_path_str.strip('"'))
-                cores_dir = ra_path.parent / "cores"
-                if cores_dir.exists():
-                    found_cores = 0
-                    for f in cores_dir.glob("*.dll"):
-                        core_key = f.stem.replace("_libretro", "")
-                        self._apps_cfg.set("CORES", core_key, f'"{f}"')
-                        found_cores += 1
-                    if found_cores > 0:
-                        self.log.emit(f"Detected {found_cores} RetroArch cores.")
-                        self._apps_cfg.save()
+                    # Sort by name length descending to ensure specific emulators (VisualBoyAdvance-M) match before generic ones
+                    for name in sorted(emus_to_find.keys(), key=len, reverse=True):
+                        entry = emus_to_find[name]
+                        if self._is_fuzzy_match(p.name, entry.exe):
+                            self._register_app(entry.name, p)
+                            self.log.emit(f"Found {entry.name} (Fuzzy): {p}")
+                            claim = self._get_claim_root(p, emu_roots)
+                            if claim: self._claimed_dirs.add(claim)
+                            emus_to_find.pop(name)
+                            break
+            except (PermissionError, OSError): continue
+        
+        # Phase 3: RetroArch Core Detection
+        ra_path = self._apps_cfg.get("EMULATORS", "retroArch") or self._apps_cfg.get("EMULATORS", "retroarch")
+        if ra_path:
+            self.log.emit("Phase 3: Detecting RetroArch cores...")
+            cores_dir = Path(ra_path.strip('"')).parent / "cores"
+            if cores_dir.exists():
+                for f in cores_dir.glob("*.dll"):
+                    core_key = f.stem.replace("_libretro", "")
+                    self._apps_cfg.set("CORES", core_key, f'"{f}"')
+                    self.log.emit(f"  Detected Core: {core_key}")
+                self._apps_cfg.save()
 
-        except Exception as e:
-            self.log.emit(f"ERROR in step 2: {str(e)}")
-            self.finished.emit()
-            return
-
-        if self._is_cancelled: return
-        self.progress.emit(60)
-
-        # 3. System Detection
+        # Phase 4: System Discovery
+        self.log.emit("Phase 4: Matching identified folders against known systems...")
+        self.progress.emit(80)
         try:
-            self.log.emit("Matching identified folders against known systems...")
             self.scanner.detect_systems(log_callback=lambda msg: self.log.emit(msg))
-            
-            if self._is_cancelled: return
-            self.progress.emit(75)
             self.scanner.exact_match_scan("Systems")
             self.scanner._registry.save()
-        except Exception as e:
-            self.log.emit(f"ERROR in step 3: {str(e)}")
-            self.finished.emit()
-            return
-
-        # 4. Auto-associate emulators with systems
-        if self._is_cancelled: return
-        try:
+            
+            # Auto-associate emulators with systems
             self.log.emit("Auto-assigning emulators to systems...")
-            self.progress.emit(85)
             self._auto_assign_emulators()
         except Exception as e:
-            self.log.emit(f"ERROR in step 4: {str(e)}")
-            self.finished.emit()
-            return
+            self.log.emit(f"Error during system discovery: {e}")
 
+        self.log.emit(f"Discovery process finished. {len(self._claimed_dirs)} directories indexed.")
         self.progress.emit(100)
-        self.log.emit("Discovery complete.")
         self.finished.emit()
 
     def _register_app(self, name: str, path: Path):
         """Update internal apps configuration with found executable path."""
         self._apps_cfg.set("EMULATORS", name, f'"{path}"')
+        self._apps_cfg.save()
 
     def _auto_assign_emulators(self):
         """Auto-assign emulators to systems based on EMUPRESET and SUPEMU."""
         try:
-            # Get installed emulators from apps.json
             self._apps_cfg.reload()
             installed_emus = {k.lower(): k for k, v in self._apps_cfg.items("EMULATORS")}
             installed_cores = {k.lower(): k for k, v in self._apps_cfg.items("CORES")}
             
             if not installed_emus:
-                self.log.emit("No emulators installed - skipping auto-association.")
                 return
 
-            # Get all systems from the registry
             for sys_name, entry in self.scanner._registry._data.items():
-                if not entry.supported_emus and not entry.emu_reset and not entry.supported_cores:
+                # Skip systems without ROM paths (not discovered)
+                if not entry.rom_paths:
                     continue
                 
                 assigned = False
-                
-                # First try EMUPRESET (preferred emulator)
+                # 1. Try EMUPRESET
                 if entry.emu_reset and entry.emu_reset.lower() in installed_emus:
                     self.assignments.set_override(sys_name, installed_emus[entry.emu_reset.lower()])
-                    self.log.emit(f"Assigned {entry.emu_reset} to {sys_name} (EMUPRESET)")
                     assigned = True
                 
+                # 2. Try SUPEMU
                 if not assigned and entry.supported_emus:
                     for emu_name in entry.supported_emus:
                         if emu_name.lower() in installed_emus:
                             self.assignments.set_override(sys_name, installed_emus[emu_name.lower()])
-                            self.log.emit(f"Assigned {emu_name} to {sys_name} (SUPEMU)")
                             assigned = True
                             break
 
-                # Finally try SUPCORE (if matches a detected RetroArch core)
+                # 3. Try SUPCORE
                 if not assigned and entry.supported_cores:
                     for core_name in entry.supported_cores:
                         if core_name.lower() in installed_cores:
                             self.assignments.set_override(sys_name, "retroArch")
-                            self.log.emit(f"Assigned retroArch to {sys_name} via {core_name} (SUPCORE)")
                             assigned = True
                             break
                 
-                if not assigned:
-                    self.log.emit(f"No suitable emulator found for {sys_name}")
-            
-            # Save assignments
             self.assignments.save()
         except Exception as e:
             self.log.emit(f"ERROR in auto-assignment: {str(e)}")
-            import traceback
-            self.log.emit(traceback.format_exc())
+
+class _LaunchThread(QThread):
+    finished = pyqtSignal(int)
+    def __init__(self, launcher):
+        super().__init__()
+        self._launcher = launcher
+    def run(self):
+        from core.launcher import suspend_frontends, resume_frontends
+        suspend_frontends(); code = self._launcher.launch(); resume_frontends()
+        self.finished.emit(code)
 
 
 class SystemsTab(BaseTab):
-    def __init__(self, parent=None):
+    def __init__(self, systems: SystemRegistry, emus: EmuRegistry, assignments: AssignmentRegistry, launch_params: LaunchParamsRegistry, parent=None):
         super().__init__(parent)
         self._cfg = global_config()
-        self._systems = SystemRegistry()
+        self._systems = systems
         self._scanner = SystemScanner(self._systems)
-        self._assignments = AssignmentRegistry()
-        self._launch_params = LaunchParamsRegistry()
-        self._emus = EmuRegistry()
+        self._assignments = assignments
+        self._launch_params = launch_params
+        self._emus = emus
         self._launch_thread: _LaunchThread | None = None
         self._detection_worker: DetectionWorker | None = None
         self._first_run_dialog: QProgressDialog | None = None
@@ -426,44 +300,22 @@ class SystemsTab(BaseTab):
             self._start_detection_process(is_first_run=True)
 
     def _start_detection_process(self, is_first_run=False):
-        """Trigger the consolidated background detection worker with progress splash."""
+        """Trigger background detection and route all output to Activity Log."""
         main_win = self.window()
         if is_first_run and hasattr(main_win, "_tabs") and hasattr(main_win, "_settings_tab"):
             main_win._tabs.setCurrentWidget(main_win._settings_tab)
 
-        # Initialize modal Progress dialog with image
-        self._first_run_dialog = QProgressDialog(self.window())
-        self._first_run_dialog.setWindowTitle("skeletonKey - Environment Discovery")
-        self._first_run_dialog.setLabelText("Initializing Environment...")
-        self._first_run_dialog.setWindowModality(Qt.WindowModality.WindowModal)
-        self._first_run_dialog.setRange(0, 100)
-        self._first_run_dialog.setAutoClose(True)
-
-        # Add custom splash image to dialog layout
-        layout = self._first_run_dialog.layout()
-        if layout:
-            splash_label = QLabel()
-            pix = QPixmap(str(img_dir() / "splash.png"))
-            if not pix.isNull():
-                splash_label.setPixmap(pix.scaledToWidth(400, Qt.TransformationMode.SmoothTransformation))
-                splash_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
-                layout.insertWidget(0, splash_label)
-
-        self._first_run_dialog.resize(450, 300)
-        
-        # Setup Worker Thread
         self._detection_worker = DetectionWorker(self._scanner, self._emus, self._cfg, self._assignments)
-        self._detection_worker.log.connect(self._first_run_dialog.setLabelText)
-        self._detection_worker.progress.connect(self._first_run_dialog.setValue)
+        
+        # Route progress and log directly to the Settings tab UI
+        if hasattr(main_win, "_settings_tab"):
+            self._detection_worker.log.connect(main_win._settings_tab.append_log)
+            self._detection_worker.progress.connect(main_win._settings_tab.set_progress)
+
         self._detection_worker.finished.connect(self._on_first_run_finished)
-        
-        self._first_run_dialog.canceled.connect(self._detection_worker.cancel)
-        
         self._detection_worker.start()
-        self._first_run_dialog.show()
 
     def _on_first_run_finished(self):
-        """Cleanup after background detection completes."""
         if self._cfg.get("GLOBAL", "first_run") == "1":
             self._cfg.set("GLOBAL", "first_run", "0")
         self._cfg.save()
@@ -471,9 +323,6 @@ class SystemsTab(BaseTab):
         main_win = self.window()
         if hasattr(main_win, "refresh_all_tabs"):
             main_win.refresh_all_tabs()
-        
-        if self._first_run_dialog:
-            self._first_run_dialog.close()
 
     # ------------------------------------------------------------------
     # UI construction
@@ -558,11 +407,19 @@ class SystemsTab(BaseTab):
 
         self._emu_combo = QComboBox()
         self._emu_combo.setEditable(True)
+        self._emu_combo.currentTextChanged.connect(self._on_emu_changed)
         self._form.addRow("Emulator:", self._emu_combo)
+
+        self._emu_opts_edit = QLineEdit()
+        self._form.addRow("Options:", self._emu_opts_edit)
+
+        self._emu_args_edit = QLineEdit()
+        self._form.addRow("Arguments:", self._emu_args_edit)
 
         # Action Buttons Row
         action_row = QHBoxLayout()
         self._select_btn = QPushButton("Select")
+        self._select_btn.clicked.connect(self._on_select_emu_clicked)
         self._assign_btn = QPushButton("Assign")
         self._assign_btn.clicked.connect(self._save_assignment)
         self._clear_emu_btn = QPushButton("Clear")
@@ -722,6 +579,10 @@ class SystemsTab(BaseTab):
 
         self._emu_combo.addItems(supported)
 
+        # Clear options/args fields before updating
+        self._emu_opts_edit.clear()
+        self._emu_args_edit.clear()
+
         # Sync the combo box to the currently assigned emulator
         if not is_custom:
             idx = self._emu_combo.findText(assigned.primary)
@@ -729,30 +590,27 @@ class SystemsTab(BaseTab):
                 self._emu_combo.setCurrentIndex(idx)
             else:
                 self._emu_combo.setCurrentText(assigned.primary)
+                
+            # Explicitly trigger option loading for the selected emulator
+            self._on_emu_changed(self._emu_combo.currentText())
+
         self._emu_combo.blockSignals(False)
 
         self._populate_roms(self._rom_path_combo.current_path())
         self._update_field_styling()
 
-    def _populate_roms(self, rom_dir: str):
-        self._rom_list.clear()
-        if not rom_dir:
-            return
-        p = Path(rom_dir)
-        if not p.exists():
-            return
-        for f in sorted(p.iterdir()):
-            if f.is_file():
-                self._rom_list.addItem(f.name)
-
-    # ------------------------------------------------------------------
-    # Actions
-    # ------------------------------------------------------------------
+    def _on_emu_changed(self, emu_name: str):
+        """Load options/arguments for the selected emulator from systems metadata."""
+        system_item = self._item_list.currentItem()
+        if not system_item or not emu_name: return
+        
+        opts, args = self._systems.get_emu_metadata(system_item.text(), emu_name)
+        self._emu_opts_edit.setText(opts[0] if opts else "")
+        self._emu_args_edit.setText(args[0] if args else "")
 
     def _show_context_menu(self, pos):
         item = self._item_list.itemAt(pos)
         if not item or item.text() == "Add Custom": return
-        
         menu = QMenu(self)
         del_act = menu.addAction(f"Delete '{item.text()}'")
         del_act.triggered.connect(lambda: self._delete_system(item.text()))
@@ -806,6 +664,18 @@ class SystemsTab(BaseTab):
     def _on_delete_emu_clicked(self):
         pass
 
+    def _on_select_emu_clicked(self):
+        """Switch to the Emulators tab and select the current emulator."""
+        emu_name = self._emu_combo.currentText().strip()
+        if not emu_name:
+            return
+
+        main_win = self.window()
+        # MainWindow defines _tabs and _emulators_tab
+        if main_win and hasattr(main_win, "_tabs") and hasattr(main_win, "_emulators_tab"):
+            main_win._tabs.setCurrentWidget(main_win._emulators_tab)
+            main_win._emulators_tab.select_emulator(emu_name)
+
     def _edit_system_path(self):
         system = self._item_list.currentItem()
         if not system:
@@ -826,11 +696,23 @@ class SystemsTab(BaseTab):
         self._assignments.save()
         self._systems.set_path(name, _save_paths(self._rom_path_combo.paths()))
         
-        # Save custom metadata if it's a new entry
-        if name not in self._systems._data:
-            from data.systems import SystemEntry
-            self._systems._data[name] = SystemEntry(name=name, extensions=[x.strip() for x in self._ext_edit.text().split(",") if x.strip()])
-            
+        # Update metadata in SystemRegistry including options and arguments
+        if name in self._systems._data:
+            entry = self._systems._data[name]
+            if emu:
+                entry.extra_metadata[f"{emu}_EMUOPTS"] = self._emu_opts_edit.text().strip()
+                entry.extra_metadata[f"{emu}_EMUARGS"] = self._emu_args_edit.text().strip()
+        else:
+            extra = {}
+            if emu:
+                extra[f"{emu}_EMUOPTS"] = self._emu_opts_edit.text().strip()
+                extra[f"{emu}_EMUARGS"] = self._emu_args_edit.text().strip()
+            self._systems._data[name] = SystemEntry(
+                name=name, 
+                extensions=[x.strip() for x in self._ext_edit.text().split(",") if x.strip()],
+                extra_metadata=extra
+            )
+
         self._systems.save()
         self.set_status(f"Saved System: {name} → {emu}")
         

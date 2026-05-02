@@ -6,19 +6,23 @@ Mirrors the multi-tab GUI from working.ahk.
 """
 from pathlib import Path
 
-from PyQt6.QtCore import Qt
+from PyQt6.QtCore import Qt, QCoreApplication
 from PyQt6.QtGui import QIcon
 from PyQt6.QtWidgets import (
-    QMainWindow, QTabWidget, QStatusBar, QLabel, QWidget,
+    QSizePolicy, QMainWindow, QTabWidget, QStatusBar, QLabel, QWidget,
 )
 
-from core.config import global_config
+from core.config import global_config, setup_logging
 from ui.tabs.systems_tab import SystemsTab
 from ui.tabs.main_tab import MainTab
 from ui.tabs.emulators_tab import EmulatorsTab
 from ui.tabs.settings_tab import SettingsTab
 from ui.tabs.artwork_tab import ArtworkTab
 from utils.paths import app_home, img_dir
+from data.systems import SystemRegistry
+from data.emulators import EmuRegistry
+from data.assignments import AssignmentRegistry
+from data.launch_params import LaunchParamsRegistry
 
 
 class MainWindow(QMainWindow):
@@ -27,6 +31,12 @@ class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
         self._cfg = global_config()
+        setup_logging(self._cfg)
+        # Create shared registries
+        self._systems = SystemRegistry()
+        self._emus = EmuRegistry()
+        self._assignments = AssignmentRegistry()
+        self._launch_params = LaunchParamsRegistry()
         self._setup_window()
         self._build_ui()
         self._register_tabs()
@@ -64,10 +74,10 @@ class MainWindow(QMainWindow):
         self.setCentralWidget(self._tabs)
         
         self._settings_tab = SettingsTab(self)
-        self._main_tab = MainTab(self)
-        self._systems_tab = SystemsTab(self)
-        self._emulators_tab = EmulatorsTab(self)
-        self._artwork_tab = ArtworkTab(self)
+        self._main_tab = MainTab(self._systems, self._emus, self._assignments, self._launch_params, self)
+        self._systems_tab = SystemsTab(self._systems, self._emus, self._assignments, self._launch_params, self)
+        self._emulators_tab = EmulatorsTab(self._systems, self._emus, self)
+        self._artwork_tab = ArtworkTab(self._systems, self)
         
         self._tabs_list = [
             self._settings_tab, self._main_tab, self._systems_tab,
@@ -75,23 +85,36 @@ class MainWindow(QMainWindow):
         ]
 
     def _register_tabs(self):
-        """Add instantiated tabs to the QTabWidget and set index references."""
+        """Add instantiated tabs to the QTabWidget and create a dynamic mapping."""
+        self._tab_map = {}  # Maps tab class instance to tab index
+        
         for tab in self._tabs_list:
-            # Map class names to AHK labels
+            # Map class names to display labels
             title = tab.__class__.__name__.replace("Tab", "")
             if title == "Main": title = "MAIN"
+            elif title == "Settings": title = "Settings"
             elif title == "Systems": title = "Systems"
-            self._tabs.addTab(tab, title)
-
-        # Match the hardcoded indices used in _restore_geometry
-        self._settings_tab_index = 0
-        self._main_tab_index = 1
+            elif title == "Emulators": title = "Emulators"
+            elif title == "Artwork": title = "Artwork"
+            
+            index = self._tabs.addTab(tab, title)
+            self._tab_map[tab.__class__.__name__] = index
+            
+            # Also store instance references for backward compatibility
+            if isinstance(tab, SettingsTab):
+                self._settings_tab_index = index
+            elif isinstance(tab, MainTab):
+                self._main_tab_index = index
 
     def refresh_all_tabs(self):
         """Trigger a UI refresh on all tabs to reflect data changes."""
         for tab in self._tabs_list:
             if hasattr(tab, "refresh_ui"):
                 tab.refresh_ui()
+        # Trigger layout adjustment after content refresh
+        if self.layout():
+            self.layout().activate()
+            QCoreApplication.processEvents()  # Allow UI to update
 
     def _restore_geometry(self):
         w = int(self._cfg.get("GUI", "width", fallback="1024"))
@@ -119,15 +142,70 @@ class MainWindow(QMainWindow):
     def apply_settings(self):
         """Apply global settings like transparency and stay-on-top."""
         # Always on top (mirrors ALWOTP in AHK)
+        self._cfg.reload() # Ensure latest settings are loaded
         aot = self._cfg.get("GLOBAL", "AlwaysOnTop", fallback="0") == "1"
+        flags = self.windowFlags()
         if aot:
-            self.setWindowFlags(self.windowFlags() | Qt.WindowType.WindowStaysOnTopHint)
+            flags |= Qt.WindowType.WindowStaysOnTopHint
         else:
-            self.setWindowFlags(self.windowFlags() & ~Qt.WindowType.WindowStaysOnTopHint)
+            flags &= ~Qt.WindowType.WindowStaysOnTopHint
+            
+        if flags != self.windowFlags():
+            self.setWindowFlags(flags)
+            self.show()  # Required after changing window flags
 
         # Window Transparency (mirrors TRANSLID in AHK)
         alpha = int(self._cfg.get("GLOBAL", "Transparency", fallback="255"))
         self.setWindowOpacity(alpha / 255.0)
+        self._full_opacity = alpha / 255.0 # Store full opacity for dynamic transparency
+
+    def set_mini_mode(self, enabled: bool):
+        """Toggle visibility of navigation tabs and allow window to shrink."""
+        self._tabs.tabBar().setVisible(not enabled)
+        
+        # Relax constraints on other tabs to allow the window to shrink
+        for i in range(self._tabs.count()):
+            tab = self._tabs.widget(i)
+            if tab != self._main_tab:
+                if enabled:
+                    tab.setMinimumSize(0, 0)
+                    tab.setSizePolicy(QSizePolicy.Policy.Ignored, QSizePolicy.Policy.Ignored)
+                else:
+                    tab.setSizePolicy(QSizePolicy.Policy.Preferred, QSizePolicy.Policy.Preferred)
+
+        if enabled:
+            self.setMinimumSize(0, 0)
+            self._tabs.setMinimumSize(0, 0)
+        else:
+            self.setMinimumSize(1024, 768)
+            self._tabs.setMinimumSize(self._tabs.sizeHint())
+
+        self.layout().activate()
+        self.adjustSize()
+        if enabled:
+            self.resize(0, 0) # Force to smallest possible size based on constraints
+        else:
+            self.resize(1024, 768)
+
+    def focusInEvent(self, event):
+        """Restore full opacity when window gains focus."""
+        super().focusInEvent(event)
+        # Ensure latest settings are loaded
+        self._cfg.reload()
+        if self._cfg.get("GLOBAL", "Dynamic_Transparency", fallback="0") == "1":
+            self.setWindowOpacity(self._full_opacity)
+
+    def focusOutEvent(self, event):
+        """Reduce opacity when window loses focus, if dynamic transparency is enabled."""
+        super().focusOutEvent(event)
+        # Ensure latest settings are loaded
+        self._cfg.reload()
+        if self._cfg.get("GLOBAL", "Dynamic_Transparency", fallback="0") == "1":
+            # Reduce to 50% of full opacity, or a minimum of 0.1
+            reduced_opacity = max(0.1, self._full_opacity * 0.5)
+            self.setWindowOpacity(reduced_opacity)
+
+
 
     # ------------------------------------------------------------------
     # Events

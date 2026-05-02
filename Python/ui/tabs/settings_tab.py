@@ -22,7 +22,6 @@ from PyQt6.QtWidgets import (
     QComboBox, QSizePolicy, QLabel, QSlider, QLineEdit, QMessageBox
 )
 from PyQt6.QtWidgets import QPlainTextEdit, QProgressBar
-import os
 
 from core.config import global_config
 from ui.tabs.base_tab import BaseTab
@@ -143,10 +142,7 @@ class SettingsTab(BaseTab):
         self._build_ui()
         self._load_values()
         
-        if not self._cfg.path.exists():
-            self._save()
-        
-        # Persist defaults to disk on first initialization
+        # Persist defaults to disk if this is a fresh install
         if not self._cfg.path.exists():
             self._save()
 
@@ -239,6 +235,7 @@ class SettingsTab(BaseTab):
         appr_layout = QVBoxLayout(appr)
         self._trans_slider = QSlider(Qt.Orientation.Horizontal)
         self._trans_slider.setRange(10, 255)
+        self._trans_slider.valueChanged.connect(self._on_trans_changed)
         appr_layout.addWidget(QLabel("Window Transparency:"))
         appr_layout.addWidget(self._trans_slider)
         self._dyn_trans_chk = QCheckBox("Dynamic Transparency")
@@ -273,7 +270,8 @@ class SettingsTab(BaseTab):
         """Thread-safe-ish append to the log viewer."""
         from datetime import datetime
         timestamp = datetime.now().strftime("%H:%M:%S")
-        self._log_text.appendPlainText(f"[{timestamp}] {message}")
+        if hasattr(self, "_log_text"):
+            self._log_text.appendPlainText(f"[{timestamp}] {message}")
 
     def set_progress(self, value: int):
         """Update the activity progress bar."""
@@ -313,6 +311,14 @@ class SettingsTab(BaseTab):
         self._validate_bios_chk.setChecked(self._cfg.get("GLOBAL", "validate_bios", fallback="0") == "1")
         self._dyn_trans_chk.setChecked(self._cfg.get("GLOBAL", "Dynamic_Transparency", fallback="0") == "1")
         self._trans_slider.setValue(int(self._cfg.get("GLOBAL", "Transparency", fallback="255")))
+
+    def _on_trans_changed(self, value: int):
+        """Apply transparency in real-time."""
+        self._cfg.set("GLOBAL", "Transparency", str(value))
+        main_win = self.window()
+        if main_win and hasattr(main_win, "apply_settings"):
+            main_win._full_opacity = value / 255.0 # Update stored full opacity immediately
+            main_win.apply_settings()
 
     def _on_reset_clicked(self):
         target = self._reset_ddl.currentText()

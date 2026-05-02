@@ -1,8 +1,11 @@
 import json
+import logging
 from dataclasses import dataclass, field
 from pathlib import Path
 from core.config import global_config
 from utils.paths import app_root
+
+logger = logging.getLogger(__name__)
 
 @dataclass
 class AssignmentEntry:
@@ -38,8 +41,8 @@ class AssignmentRegistry:
                     # Handle both list and legacy pipe-string formats
                     emu_list = emus if isinstance(emus, list) else [e.strip() for e in emus.split("|") if e.strip()]
                     self._data[sys_name] = AssignmentEntry(system=sys_name, emulators=emu_list)
-        except Exception:
-            pass
+        except Exception as e:
+            logger.error(f"Failed to load assignments: {e}")
 
     def reload(self):
         self._data.clear()

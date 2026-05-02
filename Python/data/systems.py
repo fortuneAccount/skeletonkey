@@ -6,13 +6,14 @@ and user path overrides from systems.json (generated).
 """
 import json
 import fnmatch
+import logging
 import platform
 import string
+import re
 from typing import Any
 from pathlib import Path
 from dataclasses import dataclass, field, asdict
 from core.config import global_config
-from utils.paths import app_root
 from utils.paths import app_root, assets_dir
 
 
@@ -20,18 +21,19 @@ from utils.paths import app_root, assets_dir
 class SystemEntry:
     """Typed representation of a system/console and its associated paths/metadata."""
     name: str
-    rom_paths: str = ""
+    rom_paths: list[str] = field(default_factory=list)
     platform: str = ""
     extensions: list[str] = field(default_factory=list)
     supported_emus: list[str] = field(default_factory=list)
     supported_cores: list[str] = field(default_factory=list)
     emu_reset: str = ""  # EMUPRESET - preferred emulator
+    # Dynamic fields like MAME_EMUOPTS, Altirra_EMUARGS, etc.
+    extra_metadata: dict[str, Any] = field(default_factory=dict)
 
     @property
     def rom_path_list(self) -> list[str]:
         """Return the ROM paths as a cleaned list."""
-        if not self.rom_paths: return []
-        return [p.strip() for p in self.rom_paths.split('|') if p.strip()]
+        return self.rom_paths
 
 
 class SystemRegistry:
@@ -53,7 +55,6 @@ class SystemRegistry:
 
     def _load_master_list(self):
         """Load the master list of supported systems from the new Systems.json asset."""
-        master_json = self._app_root / "assets" / "Systems.json"
         master_json = assets_dir() / "Systems.json"
         if not master_json.exists():
             return
@@ -66,25 +67,38 @@ class SystemRegistry:
                 for name, info in systems_dict.items():
                     if not isinstance(info, dict):
                         continue
-                        
-                    # Handle both comma and pipe delimiters for extensions
-                    romxt_raw = info.get("extensions", info.get("RJROMXT", info.get("ROMXT", "")))
-                    if "|" in romxt_raw:
-                        extensions = [x.strip() for x in romxt_raw.split("|") if x.strip()]
-                    else:
-                        extensions = [x.strip() for x in romxt_raw.split(",") if x.strip()]
                     
+                    def _get_list(key_list):
+                        """Handle both lists and delimited strings in metadata."""
+                        for k in key_list:
+                            val = info.get(k)
+                            if isinstance(val, list):
+                                return [str(x).strip() for x in val]
+                            if isinstance(val, str) and val:
+                                sep = "|" if "|" in val else ","
+                                return [x.strip() for x in val.split(sep) if x.strip()]
+                        return []
+                        
+                    extensions = _get_list(["extensions", "RJROMXT", "ROMXT"])
+                    
+                    extra = {}
+                    for k, v in info.items():
+                        k_up = k.upper()
+                        if k_up.endswith("OPTS") or k_up.endswith("ARGS") or k_up == "LAST_EMU":
+                            extra[k] = v
+
                     self._data[name] = SystemEntry(
                         name=name,
-                        rom_paths="",
+                        rom_paths=[],
                         platform=info.get("platform", info.get("SHORTNM", "")),
                         extensions=extensions,
-                        supported_emus=[x.strip() for x in info.get("supported_emus", info.get("SUPEMU", "")).split("|") if x.strip()],
-                        supported_cores=[x.strip() for x in info.get("supported_cores", info.get("SUPCORE", "")).split("|") if x.strip()],
-                        emu_reset=info.get("EMUPRESET", "")
+                        supported_emus=_get_list(["supported_emus", "SUPEMU"]),
+                        supported_cores=_get_list(["supported_cores", "SUPCORE"]),
+                        emu_reset=info.get("EMUPRESET", ""),
+                        extra_metadata=extra
                     )
-        except Exception:
-            pass
+        except Exception as e:
+            logging.error(f"Error loading system entry from master list: {e}")
 
     def _load(self):
         """Load user systems.json with resilient handling for mangled or corrupt entries."""
@@ -97,18 +111,29 @@ class SystemRegistry:
                 user_data = json.load(f)
                 systems_dict = user_data.get("systems", user_data)
                 for name, info in systems_dict.items():
-                    if isinstance(info, str):
-                        info = {"rom_paths": info}
+                    raw_paths = info if isinstance(info, (str, list)) else info.get("rom_paths", [])
                     
+                    def _parse_paths(val):
+                        if isinstance(val, list): return [str(x).strip() for x in val]
+                        if isinstance(val, str): return [x.strip() for x in val.split('|') if x.strip()]
+                        return []
+
+                    path_list = _parse_paths(raw_paths)
+                    
+                    extra = {}
+                    if isinstance(info, dict):
+                        for k, v in info.items():
+                            k_up = k.upper()
+                            if k_up.endswith("OPTS") or k_up.endswith("ARGS") or k_up == "LAST_EMU":
+                                extra[k] = v
+
                     if name in self._data:
-                        self._data[name].rom_paths = info.get("rom_paths", "")
+                        self._data[name].rom_paths = path_list
+                        self._data[name].extra_metadata.update(extra)
                     else:
-                        self._data[name] = SystemEntry(
-                            name=name,
-                            rom_paths=info.get("rom_paths", "")
-                        )
+                        self._data[name] = SystemEntry(name=name, rom_paths=path_list, extra_metadata=extra)
         except (json.JSONDecodeError, KeyError, IOError, AttributeError) as e:
-            print(f"DEBUG: Resilient load active. Skipping mangled user file: {e}")
+            logging.debug(f"Resilient load active. Skipping mangled user file: {e}")
             # If corrupted, we continue with the master list data already in self._data
             return
 
@@ -129,20 +154,33 @@ class SystemRegistry:
     def get_path(self, system: str) -> str:
         """Return the pipe-delimited ROM directories for *system*."""
         entry = self._data.get(system)
-        return entry.rom_paths if entry else ""
+        return "|".join(entry.rom_paths) if entry else ""
 
-    def set_path(self, system: str, path: str):
+    def set_path(self, system: str, path: str | list[str]):
         """Update the ROM directory for *system* in memory."""
         if system not in self._data:
             self._data[system] = SystemEntry(name=system)
-        self._data[system].rom_paths = path
+        if isinstance(path, str):
+            self._data[system].rom_paths = [p.strip() for p in path.split('|') if p.strip()]
+        else:
+            self._data[system].rom_paths = path
 
     def save(self):
         """Persist unified systems data to JSON."""
         dest = self._user_home / "systems.json"
         dest.parent.mkdir(parents=True, exist_ok=True)
         # Filter to only save systems that have ROM paths defined
-        to_save = {s.name: asdict(s) for s in self._data.values() if s.rom_paths}
+        to_save = {}
+        for name, entry in self._data.items():
+            if entry.rom_paths or entry.extra_metadata or entry.extensions:
+                data = {
+                    "rom_paths": entry.rom_paths,
+                    "extensions": entry.extensions,
+                    "platform": entry.platform
+                }
+                data.update(entry.extra_metadata)
+                to_save[name] = data
+
         with open(dest, "w", encoding="utf-8") as f:
             json.dump(to_save, f, indent=4)
 
@@ -151,3 +189,48 @@ class SystemRegistry:
 
     def __contains__(self, system: str) -> bool:
         return system in self._data
+
+    def get_emu_metadata(self, system: str, emu_name: str) -> tuple[list[str], list[str]]:
+        """
+        Retrieve options and arguments for a system/emulator combination.
+        Handles fuzzy matching (e.g. MAMEOPTS for 'mame-x64') and core names.
+        """
+        entry = self._data.get(system)
+        if not entry or not emu_name:
+            return [], []
+
+        def split_val(v):
+            if not v: return []
+            if isinstance(v, list):
+                return [str(x) for x in v if str(x)]
+            return [x for x in re.split(r'[<|\n]', str(v)) if x]
+
+        # Derive a base name for matching (e.g. 'mame_libretro' -> 'mame', 'mame64' -> 'mame')
+        clean_emu = emu_name.lower().replace("_libretro", "")
+        clean_emu = re.sub(r"[\s\.\-_)]?(?:x64|x86|64|32|win|amd|sse|avx).*", "", clean_emu)
+
+        opts = []
+        args = []
+
+        # 1. Exact matches for user-saved LAST_EMU specific keys
+        for k, v in entry.extra_metadata.items():
+            k_low = k.lower()
+            if k_low == f"{emu_name}_emuopts".lower():
+                opts.extend(split_val(v))
+            elif k_low == f"{emu_name}_emuargs".lower():
+                args.extend(split_val(v))
+
+        # 2. Fuzzy matches for asset-defined keys (e.g. MAMEOPTS)
+        for k, v in entry.extra_metadata.items():
+            k_low = k.lower()
+            # Skip if already added as an exact match
+            if k_low == f"{emu_name}_emuopts".lower() or k_low == f"{emu_name}_emuargs".lower():
+                continue
+            
+            if clean_emu in k_low or k_low in ["emuopts", "emuargs"]:
+                if "opts" in k_low:
+                    opts.extend(split_val(v))
+                elif "args" in k_low:
+                    args.extend(split_val(v))
+        
+        return opts, args

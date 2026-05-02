@@ -13,6 +13,7 @@ Mirrors the ":=: MAIN :=:" tab from working.ahk, including:
   - Mini-mode toggle
   - Right-click context menu on ROM list
 """
+import re
 import subprocess
 from pathlib import Path
 
@@ -54,14 +55,14 @@ class _LaunchThread(QThread):
 class MainTab(BaseTab):
     """Primary ROM launcher tab."""
 
-    def __init__(self, parent=None):
+    def __init__(self, systems: SystemRegistry, emus: EmuRegistry, assignments: AssignmentRegistry, launch_params: LaunchParamsRegistry, parent=None):
         super().__init__(parent)
         self._cfg = global_config()
-        self._systems = SystemRegistry()
-        self._assignments = AssignmentRegistry()
-        self._launch_params = LaunchParamsRegistry()
-        self._emus = EmuRegistry()
-        self._cores = CoreRegistry()
+        self._systems = systems
+        self._assignments = assignments
+        self._launch_params = launch_params
+        self._emus = emus
+        self._cores = self._emus._cores
         self._launch_thread: _LaunchThread | None = None
         self._all_rom_items: list[str] = []
         self._build_ui()
@@ -130,6 +131,7 @@ class MainTab(BaseTab):
         self._core_ddl = QComboBox()
         self._core_ddl.setMinimumWidth(160)
         self._core_ddl.setToolTip("Select an emulator or RetroArch core to use for the launch")
+        self._core_ddl.currentTextChanged.connect(self._on_core_changed)
         row2.addWidget(self._core_ddl)
 
         # LAUNCH button
@@ -216,6 +218,7 @@ class MainTab(BaseTab):
         sw_layout.setContentsMargins(0, 0, 0, 0)
 
         self._cust_switch_chk = QCheckBox("Custom Switches")
+        self._cust_switch_chk.setChecked(True)
         self._cust_switch_chk.setToolTip("Enables custom options/arguments replacing [CUSTMOPT] and [CUSTMARG]")
         self._cust_switch_chk.toggled.connect(self._toggle_custom_switches)
         sw_layout.addWidget(self._cust_switch_chk)
@@ -224,25 +227,23 @@ class MainTab(BaseTab):
         self._cust_opts_cbx.setEditable(True)
         self._cust_opts_cbx.setMinimumWidth(140)
         self._cust_opts_cbx.setToolTip("Custom options specified after the executable and before the ROM path")
-        self._cust_opts_cbx.setEnabled(False)
+        self._cust_opts_cbx.setEnabled(True)
         sw_layout.addWidget(self._cust_opts_cbx)
 
         self._cust_args_cbx = QComboBox()
         self._cust_args_cbx.setEditable(True)
         self._cust_args_cbx.setMinimumWidth(120)
         self._cust_args_cbx.setToolTip("Custom launch arguments")
-        self._cust_args_cbx.setEnabled(False)
+        self._cust_args_cbx.setEnabled(True)
         sw_layout.addWidget(self._cust_args_cbx)
 
         sw_layout.addStretch()
 
-        # Auto-launch checkbox (mirrors AUTOLNCH)
-        self._auto_launch_chk = QCheckBox("Auto-Launch")
-        self._auto_launch_chk.setChecked(
-            self._cfg.get("GLOBAL", "auto_exec", fallback="0") == "1")
-        self._auto_launch_chk.setToolTip("Automatically launch ROMs when dropped or selected")
-        self._auto_launch_chk.toggled.connect(self._save_auto_launch)
-        sw_layout.addWidget(self._auto_launch_chk)
+        self._reset_switches_btn = QToolButton()
+        self._reset_switches_btn.setText("R")
+        self._reset_switches_btn.setToolTip("Reset switches to asset defaults")
+        self._reset_switches_btn.clicked.connect(self._reset_switches)
+        sw_layout.addWidget(self._reset_switches_btn)
 
         root.addWidget(self._switches_frame)
 
@@ -305,61 +306,145 @@ class MainTab(BaseTab):
         apps = self._emus._apps_cfg
         apps.reload()
 
-        # 1. Map installed items from apps.json: {lowercase_name: display_name}
-        # Strictly include only items that have a defined path that exists on disk.
-        installed_map = {}
-        for section in ["EMULATORS", "CORES"]:
-            for name, path in apps.items(section):
-                p_str = path.strip('"')
-                if p_str and Path(p_str).exists():
-                    installed_map[name.lower()] = name
+        # 1. Separate installed items to prevent name collisions
+        inst_emus = {}
+        for name, path in apps.items("EMULATORS"):
+            p_str = path.strip('"')
+            if p_str and Path(p_str).exists():
+                inst_emus[name.lower()] = name
+        
+        inst_cores = {}
+        for name, path in apps.items("CORES"):
+            p_str = path.strip('"')
+            if p_str and Path(p_str).exists():
+                inst_cores[name.lower()] = name
 
-        # 2. Gather candidates from system metadata and user overrides
+        # 2. Gather candidates with explicit type tracking
         assigned = self._assignments.get_assignment(system)
         sys_entry = self._systems._data.get(system)
 
-        # User assignments come first, followed by system defaults
-        candidates = list(reversed(assigned.emulators))
-        if sys_entry:
-            if sys_entry.emu_reset:
-                candidates.append(sys_entry.emu_reset)
-            candidates.extend(sys_entry.supported_emus)
-            candidates.extend(sys_entry.supported_cores)
+        # Build candidates list: (display_name, is_core)
+        candidates = []
+        
+        # User assignments
+        for name in reversed(assigned.emulators):
+            low = name.lower()
+            if low in inst_emus:
+                candidates.append((inst_emus[low], False))
+            
+            # Robust core matching for assignments
+            match = None
+            for k in [low, low.replace("_libretro", ""), f"{low}_libretro"]:
+                if k in inst_cores:
+                    match = inst_cores[k]
+                    break
+            if not match:
+                for k, real_name in inst_cores.items():
+                    if low in k or k in low:
+                        match = real_name
+                        break
+            if match:
+                candidates.append((match, True))
 
-        # 3. Separate into 'Associated' and 'Other' while filtering against installed_map
+        if sys_entry:
+            # Preferred emulator/core (emu_reset)
+            if sys_entry.emu_reset:
+                low = sys_entry.emu_reset.lower()
+                if low in inst_emus: candidates.append((inst_emus[low], False))
+                for k in [low, low.replace("_libretro", ""), f"{low}_libretro"]:
+                    if k in inst_cores:
+                        candidates.append((inst_cores[k], True))
+                        break
+            
+            # Supported emulators
+            for name in sys_entry.supported_emus:
+                low = name.lower()
+                if low in inst_emus:
+                    candidates.append((inst_emus[low], False))
+            
+            # Supported cores
+            for name in sys_entry.supported_cores:
+                low = name.lower()
+                match = None
+                for k in [low, low.replace("_libretro", ""), f"{low}_libretro"]:
+                    if k in inst_cores:
+                        match = inst_cores[k]
+                        break
+                if not match:
+                    for k, real_name in inst_cores.items():
+                        if low in k or k in low:
+                            match = real_name
+                            break
+                if match:
+                    candidates.append((match, True))
+
+        # 3. Filter duplicates and cleanup tracking maps
         associated_names = []
-        for name in candidates:
-            low_name = name.lower()
-            if low_name in installed_map:
-                actual_name = installed_map.pop(low_name)
-                if actual_name not in associated_names:
-                    associated_names.append(actual_name)
+        seen = set()
+
+        def _remove_inst(name, is_core):
+            name_low = name.lower()
+            if is_core:
+                # Clean up inst_cores more aggressively to handle substring matches
+                keys_to_del = [k for k in inst_cores if k == name_low or k in name_low or name_low in k]
+                for k in keys_to_del: inst_cores.pop(k, None)
+            else:
+                inst_emus.pop(name_low, None)
+
+        for name, is_core in candidates:
+            key = (name.lower(), is_core)
+            if key not in seen:
+                associated_names.append((name, is_core))
+                seen.add(key)
+                _remove_inst(name, is_core)
 
         # 4. Populate Dropdown: Associated (Top)
-        for n in associated_names:
+        for n, is_core in associated_names:
             self._core_ddl.addItem(n)
-            self._apply_bios_color(n, verify_bios(n, system, app_home()))
+            idx = self._core_ddl.count() - 1
+            self._core_ddl.setItemData(idx, is_core, Qt.ItemDataRole.UserRole)
+            self._apply_bios_color(n, verify_bios(n, system, app_home()), is_core=is_core)
 
-        if associated_names and installed_map:
+        if associated_names and (inst_emus or inst_cores):
             self._core_ddl.insertSeparator(self._core_ddl.count())
 
         # 5. Populate Dropdown: Other Installed (Bottom, grayed out)
-        for low_name in sorted(installed_map.keys()):
-            n = installed_map[low_name]
-            idx = self._core_ddl.count()
+        for low_name in sorted(inst_emus.keys()):
+            n = inst_emus[low_name]
             self._core_ddl.addItem(n)
-            self._apply_bios_color(n, verify_bios(n, system, app_home()))
+            idx = self._core_ddl.count() - 1
+            self._core_ddl.setItemData(idx, False, Qt.ItemDataRole.UserRole)
             self._core_ddl.setItemData(idx, QBrush(Qt.GlobalColor.gray), Qt.ItemDataRole.ForegroundRole)
+
+        for low_name in sorted(inst_cores.keys()):
+            n = inst_cores[low_name]
+            self._core_ddl.addItem(n)
+            idx = self._core_ddl.count() - 1
+            self._core_ddl.setItemData(idx, True, Qt.ItemDataRole.UserRole)
+            self._apply_bios_color(n, verify_bios(n, system, app_home()), is_core=True)
+            self._core_ddl.setItemData(idx, QBrush(Qt.GlobalColor.gray), Qt.ItemDataRole.ForegroundRole)
+
+        # Select last used emulator if available in user metadata
+        if sys_entry:
+            last_emu = sys_entry.extra_metadata.get("LAST_EMU")
+            if last_emu:
+                idx = self._core_ddl.findText(last_emu)
+                if idx >= 0:
+                    self._core_ddl.setCurrentIndex(idx)
 
         self._core_ddl.blockSignals(False)
 
-    def _apply_bios_color(self, emu_name: str, status):
+    def _apply_bios_color(self, emu_name: str, status, is_core: bool = False):
         """Apply color coding based on BIOS status."""
         if not status:
             return
         
         idx = self._core_ddl.count() - 1
         
+        if is_core:
+            # Cores are blue
+            self._core_ddl.setItemData(idx, QBrush(Qt.GlobalColor.blue), Qt.ItemDataRole.ForegroundRole)
+
         if status.errors:
             # Red for hash mismatches/errors
             self._core_ddl.setItemData(idx, QBrush(QColor(255, 100, 100)), Qt.ItemDataRole.BackgroundRole)
@@ -368,7 +453,7 @@ class MainTab(BaseTab):
             self._core_ddl.setItemData(idx, QBrush(QColor(255, 200, 100)), Qt.ItemDataRole.BackgroundRole)
         # Green (default) for present/OK
 
-    def _populate_roms(self, system: str = None):
+    def _populate_roms(self, system: str | None = None):
         """Load ROM list. If no system provided, perform a global search."""
         self._rom_list.clear()
         self._all_rom_items.clear()
@@ -418,7 +503,12 @@ class MainTab(BaseTab):
         """Restore last used system and ROM from config."""
         last_sys = self._cfg.get("GLOBAL", "last_system", fallback="")
         if last_sys:
-            idx = self._system_ddl.findText(last_sys)
+            # Case-insensitive restoration
+            last_sys_low = last_sys.lower()
+            idx = -1
+            for i in range(self._system_ddl.count()):
+                if self._system_ddl.itemText(i).lower() == last_sys_low:
+                    idx = i; break
             if idx >= 0:
                 self._system_ddl.setCurrentIndex(idx)
 
@@ -436,6 +526,7 @@ class MainTab(BaseTab):
             return
         self._populate_cores(system)
         self._populate_roms(system)
+        self._update_switches(system)
         self._cfg.set("GLOBAL", "last_system", system)
 
     def _on_rom_double_clicked(self, item: QListWidgetItem):
@@ -450,12 +541,94 @@ class MainTab(BaseTab):
         else:
             self._launch_btn.setEnabled(False)
 
+    def _on_core_changed(self, emu_name: str):
+        """Sync custom switches when the emulator or core selection changes."""
+        if not emu_name or "Separator" in emu_name: return
+        system = self._system_ddl.currentText()
+        if not system or system == ":=:System List:=:":
+            return
+        self._update_switches(system)
+
+    def _update_switches(self, system: str):
+        """Populate Custom Switches boxes with registry data for the system/emu."""
+        # Block signals and clear existing items to allow multi-select logic
+        self._cust_opts_cbx.blockSignals(True)
+        self._cust_args_cbx.blockSignals(True)
+        self._cust_opts_cbx.clear()
+        self._cust_args_cbx.clear()
+
+        def split_val(v):
+            if not v: return []
+            # Metadata uses < or | as item delimiters
+            if isinstance(v, list):
+                return [str(x) for x in v if str(x)]
+            return [x for x in re.split(r'[<|\n]', str(v)) if x]
+
+        opts_list = []
+        args_list = []
+
+        # 1. Check for system-specific overrides in LaunchParams
+        lp = self._launch_params.get(system)
+        if lp:
+            opts_list.extend(split_val(getattr(lp, 'options', getattr(lp, 'opts', ""))))
+            args_list.extend(split_val(getattr(lp, 'arguments', getattr(lp, 'args', ""))))
+        
+        idx = self._core_ddl.currentIndex()
+        is_core = self._core_ddl.itemData(idx, Qt.ItemDataRole.UserRole)
+        emu_name = self._core_ddl.currentText()
+
+        # 1.5 Check SystemRegistry for emulator-specific options (Assets or User)
+        m_opts, m_args = self._systems.get_emu_metadata(system, emu_name)
+        opts_list.extend(m_opts)
+        args_list.extend(m_args)
+
+        # 2. Fallback to the selected emulator's global defaults if overrides are empty
+        if not opts_list and not args_list and emu_name:
+            if not is_core:
+                emu_entry = self._emus.get(emu_name)
+                if emu_entry:
+                    opts_list.extend(split_val(getattr(emu_entry, 'options', getattr(emu_entry, 'opts', ""))))
+                    args_list.extend(split_val(getattr(emu_entry, 'arguments', getattr(emu_entry, 'args', ""))))
+            else:
+                # 3. Check Core Registry if still empty (likely a RetroArch core)
+                core_entry = self._cores.get(emu_name)
+                if core_entry:
+                    opts_list.extend(split_val(core_entry.get("options", "")))
+                    args_list.extend(split_val(core_entry.get("arguments", "")))
+
+        # Deduplicate while preserving priority order
+        def dedup(seq):
+            seen = set()
+            return [x for x in seq if not (x in seen or seen.add(x))]
+
+        self._cust_opts_cbx.addItems(dedup(opts_list))
+        self._cust_args_cbx.addItems(dedup(args_list))
+
+        # Initialize default selection
+        if self._cust_opts_cbx.count() > 0:
+            self._cust_opts_cbx.setCurrentIndex(0)
+        else:
+            self._cust_opts_cbx.setCurrentText("")
+
+        if self._cust_args_cbx.count() > 0:
+            self._cust_args_cbx.setCurrentIndex(0)
+        else:
+            self._cust_args_cbx.setCurrentText("")
+        
+        self._cust_opts_cbx.blockSignals(False)
+        self._cust_args_cbx.blockSignals(False)
+
     def _set_rom_from_item(self, item: QListWidgetItem):
         path = item.data(Qt.ItemDataRole.UserRole) or item.text()
         sys_source = item.data(Qt.ItemDataRole.UserRole + 1)
         self._rom_cbx.setCurrentText(path)
         if sys_source and sys_source != self._system_ddl.currentText():
-            idx = self._system_ddl.findText(sys_source)
+            # Case-insensitive system selection
+            sys_source_low = sys_source.lower()
+            idx = -1
+            for i in range(self._system_ddl.count()):
+                if self._system_ddl.itemText(i).lower() == sys_source_low:
+                    idx = i; break
             if idx >= 0: self._system_ddl.setCurrentIndex(idx)
         self._cfg.set("GLOBAL", "last_rom", path)
 
@@ -468,6 +641,20 @@ class MainTab(BaseTab):
 
     def _search_roms(self):
         self._populate_roms(None) # Global search
+
+    def _reset_switches(self):
+        """Clear manual overrides and revert to asset-defined switches."""
+        system = self._system_ddl.currentText()
+        if not system or system == ":=:System List:=:":
+            return
+
+        # Remove override from LaunchParams to trigger fallback to metadata
+        if system in self._launch_params._data:
+            del self._launch_params._data[system]
+            self._launch_params.save()
+
+        self._update_switches(system)
+        self.set_status(f"Reset custom switches for {system}")
 
     def _browse_rom(self):
         path, _ = QFileDialog.getOpenFileName(
@@ -493,19 +680,19 @@ class MainTab(BaseTab):
         self._cust_opts_cbx.setEnabled(enabled)
         self._cust_args_cbx.setEnabled(enabled)
 
-    def _save_auto_launch(self, checked: bool):
-        self._cfg.set("GLOBAL", "auto_exec", "1" if checked else "0")
-        self._cfg.save()
-
     def _toggle_mini(self):
         """Collapse/expand the search group (mini-mode)."""
-        grp = self.findChild(QGroupBox, "")
-        # Walk children to find the search group
+        is_mini = False
         for child in self.findChildren(QGroupBox):
             if child.title() == "SEARCH":
                 child.setVisible(not child.isVisible())
-                self._mini_btn.setText("+" if not child.isVisible() else "−")
+                is_mini = not child.isVisible()
+                self._mini_btn.setText("+" if is_mini else "−")
                 break
+
+        main_win = self.window()
+        if main_win and hasattr(main_win, "set_mini_mode"):
+            main_win.set_mini_mode(is_mini)
 
     # ------------------------------------------------------------------
     # Launch
@@ -541,14 +728,17 @@ class MainTab(BaseTab):
         apps = self._emus._apps_cfg
         emu_entry = self._emus.get(emu_name)
         lp = self._launch_params.get(system) if system else None
-        options = (self._cust_opts_cbx.currentText().strip()
+        options = (self._cust_opts_cbx.currentText()
                    if self._cust_switch_chk.isChecked() else "")
-        arguments = (self._cust_args_cbx.currentText().strip()
+        arguments = (self._cust_args_cbx.currentText()
                      if self._cust_switch_chk.isChecked() else "")
 
-        # Priority 1: Check if selection is a RetroArch core
-        core_path = apps.get("CORES", emu_name).strip('"')
-        if core_path and Path(core_path).exists():
+        idx = self._core_ddl.currentIndex()
+        is_core = self._core_ddl.itemData(idx, Qt.ItemDataRole.UserRole)
+
+        # Priority 1: Check if selection is explicitly a RetroArch core
+        core_path = apps.get("CORES", emu_name).strip('"') if is_core else ""
+        if is_core and core_path and Path(core_path).exists():
             ra_exe = apps.get("EMULATORS", "retroArch").strip('"') or \
                      apps.get("EMULATORS", "retroarch").strip('"')
             
@@ -587,12 +777,25 @@ class MainTab(BaseTab):
             include_path=lp.runrom if lp else True,
             working_dir=str(emu_dir),
         )
+
+        # Update system metadata with current configuration for next run
+        sys_entry = self._systems._data.get(system)
+        if sys_entry:
+            sys_entry.extra_metadata["LAST_EMU"] = emu_name
+            sys_entry.extra_metadata[f"{emu_name}_EMUOPTS"] = options
+            sys_entry.extra_metadata[f"{emu_name}_EMUARGS"] = arguments
+            self._systems.save()
+
         launcher = Launcher(cfg)
         self._launch_thread = _LaunchThread(launcher)
         self._launch_thread.finished.connect(self._on_launch_finished)
         self._launch_thread.start()
         self._launch_btn.setEnabled(False)
-        self.set_status(f"Launching {Path(rom_path).name} with {emu_name}…")
+        
+        rom_p = Path(rom_path)
+        emu_p = Path(emu_exe)
+        cmd_display = f"#{rom_p.parent}/{emu_p.parent}>{emu_p.name} {options} {rom_p.parent}\\\\{rom_p.name} {arguments}".strip()
+        self.set_status(cmd_display)
 
     def _on_launch_finished(self, exit_code: int):
         self._launch_btn.setEnabled(True)

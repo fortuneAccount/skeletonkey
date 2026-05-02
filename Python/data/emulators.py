@@ -1,9 +1,13 @@
 
 import json
+import logging
 from dataclasses import dataclass, field, asdict
 from pathlib import Path
 from core.config import Config, global_config
 from utils.paths import app_root, assets_dir
+from data.cores import CoreRegistry
+
+logger = logging.getLogger(__name__)
 
 @dataclass
 class EmuEntry:
@@ -21,6 +25,8 @@ class EmuEntry:
     is_custom: bool = False
     pre_cfg: str = ""
     post_cfg: str = ""
+    options: str = ""
+    arguments: str = ""
 
 
 class EmuRegistry:
@@ -29,6 +35,7 @@ class EmuRegistry:
         self._home = home or global_config().home
         self._apps_cfg = Config(Config.APPS_FILE)
         self._entries: dict[str, EmuEntry] = {}
+        self._cores = CoreRegistry()
         self._custom_path = self._home / "custom_emulators.json"
         self._load()
 
@@ -44,19 +51,39 @@ class EmuRegistry:
                 with open(src_json, "r", encoding="utf-8") as f:
                     emu_data = json.load(f)
                     for name, info in emu_data.items():
+                        def _parse_list(key):
+                            val = info.get(key)
+                            if isinstance(val, list):
+                                return [str(v).strip() for v in val]
+                            if isinstance(val, str) and val:
+                                return [p.strip() for p in val.split("|") if p.strip()]
+                            return []
+
+                        def _parse_exts():
+                            val = info.get("EMUEXT")
+                            if isinstance(val, list):
+                                return [str(v).strip().lower() for v in val]
+                            if isinstance(val, str) and val:
+                                # Handle legacy string formatting with mixed delimiters
+                                cleaned = val.replace('"', '').replace("|", ",")
+                                return [p.strip().lower() for p in cleaned.split(",") if p.strip()]
+                            return []
+
                         self._entries[name.lower()] = EmuEntry(
                             name=name,
                             archive=info.get("URLPTH", ""),
                             exe=info.get("EXENAM", ""),
-                            configs=[p.strip() for p in info.get("CFGPTH", "").split("|") if p.strip()],
-                            save_states=[p.strip() for p in info.get("STATEPTH", "").split("|") if p.strip()],
-                            save_data=[p.strip() for p in info.get("MEMPTH", "").split("|") if p.strip()],
+                            configs=_parse_list("CFGPTH"),
+                            save_states=_parse_list("STATEPTH"),
+                            save_data=_parse_list("MEMPTH"),
                             bios_path=info.get("BIOSPTH", ""),
                             firmware=info.get("FIRMWARE", ""),
-                            extensions=[p.strip().lower() for p in info.get("EMUEXT", "").replace('"', '').replace("|", ",").split(",") if p.strip()],
+                            extensions=_parse_exts(),
                             category=info.get("category", "emulator"),
                             pre_cfg=info.get("RJPRECFG", ""),
-                            post_cfg=info.get("RJPOSTCFG", "")
+                            post_cfg=info.get("RJPOSTCFG", ""),
+                            options=info.get("options", ""),
+                            arguments=info.get("arguments", "")
                         )
             except (json.JSONDecodeError, OSError):
                 pass
@@ -80,11 +107,13 @@ class EmuRegistry:
                         extensions=info.get("extensions", []),
                         required_files=info.get("required_files", []),
                         category=info.get("category", "emulator"),
-                        is_custom=True
+                        is_custom=True,
+                        options=info.get("options", ""),
+                        arguments=info.get("arguments", "")
                     )
                     self._entries[name.lower()] = entry
-        except Exception:
-            pass
+        except Exception as e:
+            logger.error(f"Error loading emulator entries: {e}")
 
     def reload(self):
         self._apps_cfg.reload()
@@ -118,7 +147,8 @@ class EmuRegistry:
         return self._entries.get(name.lower())
 
     def by_category(self, category: str) -> list[EmuEntry]:
-        return [e for e in self._entries.values() if e.category == category]
+        cat_low = category.lower()
+        return [e for e in self._entries.values() if e.category.lower() == cat_low]
 
     def emulators(self) -> list[EmuEntry]:
         return self.by_category("emulator")
@@ -137,7 +167,10 @@ class EmuRegistry:
         installed = []
         for entry in self.by_category(category):
             section = "KEYMAPPERS" if category == "keymapper" else category.upper() + "S"
-            exe_path_str = self._apps_cfg.get(section, entry.name)
+            # Case-insensitive lookup in apps configuration
+            all_apps = self._apps_cfg.items(section)
+            exe_path_str = next((v for k, v in all_apps if k.lower() == entry.name.lower()), None)
+            
             if exe_path_str and Path(exe_path_str.strip('"')).exists():
                 installed.append(entry)
         return installed
