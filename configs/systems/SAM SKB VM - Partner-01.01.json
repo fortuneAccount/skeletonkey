@@ -1,0 +1,10 @@
+{
+    "rom_paths": [],
+    "extensions": [],
+    "platform": "SAMSKBVMP",
+    "MAME_EMUOPTS": [
+        " partner -[RTYP] ",
+        " partner -cass ",
+        " partner -flop "
+    ]
+}

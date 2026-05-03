@@ -1,0 +1,6 @@
+{
+    "rom_paths": [],
+    "extensions": [],
+    "platform": "OLIVPCS",
+    "MAME_EMUOPTS": " pro128s -flop1 "
+}

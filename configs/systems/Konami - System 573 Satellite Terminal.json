@@ -1,0 +1,14 @@
+{
+    "rom_paths": [],
+    "extensions": [
+        "7z",
+        "chd",
+        "cmd",
+        "zip"
+    ],
+    "platform": "KS573",
+    "EMUARGS": [
+        " -rp \": [EMUPATH]/roms\"",
+        " -rp \": [ROMPATH]\""
+    ]
+}

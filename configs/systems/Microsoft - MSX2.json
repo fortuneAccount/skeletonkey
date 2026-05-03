@@ -1,0 +1,46 @@
+{
+    "rom_paths": [],
+    "extensions": [
+        "1dd",
+        "bin",
+        "cas",
+        "zip",
+        "cqi",
+        "cqm",
+        "d77",
+        "d88",
+        "dfi",
+        "dmk",
+        "dsk",
+        "hfe",
+        "imd",
+        "ipf",
+        "mfi",
+        "mfm",
+        "mx1",
+        "rom",
+        "tap",
+        "td0",
+        "wav"
+    ],
+    "platform": "MSX2",
+    "BlueMSX_EMUOPTS": [
+        " /fullscreen /machine \"MSX2+\" /[RTYP] ",
+        " /fullscreen /machine \"MSX2+\" /cas ",
+        " /fullscreen /machine \"MSX2+\" /caszip ",
+        " /fullscreen /machine \"MSX2+\" /diskA ",
+        " /fullscreen /machine \"MSX2+\" /rom1 ",
+        " /fullscreen /machine \"MSX2+\" /rom1zip ",
+        " /machine \"MSX2+\" /cas ",
+        " /machine \"MSX2+\" /caszip ",
+        " /machine \"MSX2+\" /diskA ",
+        " /machine \"MSX2+\" /rom1 ",
+        " /machine \"MSX2+\" /rom1zip "
+    ],
+    "MAME_EMUOPTS": [
+        " canonv30f -[RTYP] ",
+        " canonv30f -cart1 ",
+        " canonv30f -cass ",
+        " canonv30f -flop1 "
+    ]
+}

@@ -1,0 +1,6 @@
+{
+    "rom_paths": [],
+    "extensions": [],
+    "platform": "MDMD2",
+    "MAME_EMUOPTS": " md2 -flop1 "
+}

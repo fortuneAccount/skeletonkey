@@ -395,6 +395,7 @@ class SystemsTab(BaseTab):
         self._form.addRow("Alias:", self._rename_row)
 
         self._rom_path_combo = _PathCombo("ROMs")
+        self._rom_path_combo._combo.currentTextChanged.connect(self._populate_roms)
         self._form.addRow("ROM Path:", self._rom_path_combo)
 
         self._ext_edit = QLineEdit()
@@ -447,7 +448,7 @@ class SystemsTab(BaseTab):
         right_layout.addWidget(self._launch_btn)
 
         splitter.addWidget(right)
-        splitter.setSizes([250, 750])
+        splitter.setSizes([200, 600])
 
     # ------------------------------------------------------------------
     # Data population
@@ -548,10 +549,12 @@ class SystemsTab(BaseTab):
         # Reset fields
         self._ext_edit.clear()
         self._req_files_edit.setPlainText("")
+        self._rom_path_combo._combo.blockSignals(True)
         self._rom_path_combo.set_paths([])
 
         entry = self._systems._data.get(name)
         if not entry and not is_custom:
+            self._rom_path_combo._combo.blockSignals(False)
             return
 
         if entry:
@@ -559,6 +562,7 @@ class SystemsTab(BaseTab):
             self._ext_edit.setText(", ".join(entry.extensions))
             self._req_files_edit.setPlainText("\n".join(entry.supported_cores))
             self._rename_edit.setText(entry.platform)
+        self._rom_path_combo._combo.blockSignals(False)
 
         self._emu_combo.blockSignals(True)
         self._emu_combo.clear()
@@ -607,6 +611,28 @@ class SystemsTab(BaseTab):
         opts, args = self._systems.get_emu_metadata(system_item.text(), emu_name)
         self._emu_opts_edit.setText(opts[0] if opts else "")
         self._emu_args_edit.setText(args[0] if args else "")
+
+    def _populate_roms(self, rom_dir: str):
+        """List files in the selected ROM directory filtering by extension."""
+        self._rom_list.clear()
+        if not rom_dir:
+            return
+            
+        path = Path(rom_dir)
+        if not path.exists() or not path.is_dir():
+            return
+            
+        ext_str = self._ext_edit.text().lower()
+        exts = [x.strip() for x in ext_str.split(",") if x.strip()]
+            
+        try:
+            # Sort files alphabetically
+            items = sorted([f for f in path.iterdir() if f.is_file()], key=lambda x: x.name.lower())
+            for item in items:
+                if not exts or item.suffix.lower().lstrip('.') in exts:
+                    self._rom_list.addItem(item.name)
+        except (PermissionError, OSError):
+            pass
 
     def _show_context_menu(self, pos):
         item = self._item_list.itemAt(pos)
@@ -700,13 +726,13 @@ class SystemsTab(BaseTab):
         if name in self._systems._data:
             entry = self._systems._data[name]
             if emu:
-                entry.extra_metadata[f"{emu}_EMUOPTS"] = self._emu_opts_edit.text().strip()
-                entry.extra_metadata[f"{emu}_EMUARGS"] = self._emu_args_edit.text().strip()
+                entry.extra_metadata[f"{emu}_opts"] = self._emu_opts_edit.text().strip()
+                entry.extra_metadata[f"{emu}_args"] = self._emu_args_edit.text().strip()
         else:
             extra = {}
             if emu:
-                extra[f"{emu}_EMUOPTS"] = self._emu_opts_edit.text().strip()
-                extra[f"{emu}_EMUARGS"] = self._emu_args_edit.text().strip()
+                extra[f"{emu}_opts"] = self._emu_opts_edit.text().strip()
+                extra[f"{emu}_args"] = self._emu_args_edit.text().strip()
             self._systems._data[name] = SystemEntry(
                 name=name, 
                 extensions=[x.strip() for x in self._ext_edit.text().split(",") if x.strip()],

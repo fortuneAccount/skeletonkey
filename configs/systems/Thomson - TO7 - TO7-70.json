@@ -1,0 +1,11 @@
+{
+    "rom_paths": [],
+    "extensions": [],
+    "platform": "TTO7",
+    "MAME_EMUOPTS": [
+        " to770 -[RTYP] ",
+        " to770 -cart ",
+        " to770 -cass ",
+        " to770 -flop1 "
+    ]
+}

@@ -1,0 +1,26 @@
+{
+    "rom_paths": [
+        "D:\\Console\\Sega - Mega Drive - Genesis"
+    ],
+    "extensions": [
+        "bin",
+        "gen",
+        "md",
+        "smd",
+        "zip"
+    ],
+    "platform": "SMEGAD",
+    "Fusion_EMUOPTS": [
+        " -FullScreen -gen ",
+        " -gen "
+    ],
+    "MAME_EMUOPTS": [
+        " genesis -cart ",
+        " genesis_tmss -cart ",
+        " genesisp -cart ",
+        " genesispf -cart ",
+        " genesispg -cart ",
+        " megadrij -cart ",
+        " megadriv -cart "
+    ]
+}

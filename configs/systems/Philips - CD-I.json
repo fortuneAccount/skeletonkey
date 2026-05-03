@@ -1,0 +1,18 @@
+{
+    "rom_paths": [],
+    "extensions": [
+        "cdr",
+        "chd",
+        "cue",
+        "gdi",
+        "img",
+        "iso",
+        "nrg",
+        "toc"
+    ],
+    "platform": "PCDI",
+    "MAME_EMUOPTS": [
+        " cd490a -cdrm ",
+        " cd910 -cdrm "
+    ]
+}

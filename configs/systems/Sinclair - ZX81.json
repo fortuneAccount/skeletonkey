@@ -1,0 +1,12 @@
+{
+    "rom_paths": [],
+    "extensions": [
+        "81",
+        "p",
+        "tzx",
+        "wav",
+        "zip"
+    ],
+    "platform": "SINZX81",
+    "MAME_EMUOPTS": " zx81 -cass1 "
+}

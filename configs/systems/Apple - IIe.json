@@ -1,0 +1,37 @@
+{
+    "rom_paths": [],
+    "extensions": [
+        "1dd",
+        "2img",
+        "2mg",
+        "bin",
+        "cqi",
+        "cqm",
+        "d",
+        "d77",
+        "d88",
+        "dfi",
+        "dsk",
+        "edd",
+        "gz",
+        "hdv",
+        "hfe",
+        "iie",
+        "imd",
+        "ipf",
+        "mfi",
+        "mfm",
+        "nib",
+        "po",
+        "rti",
+        "td0",
+        "wav",
+        "zip"
+    ],
+    "platform": "APL2E",
+    "MAME_EMUOPTS": [
+        " apple2e -[RTYP] ",
+        " apple2e -cass ",
+        " apple2e -flop1 "
+    ]
+}

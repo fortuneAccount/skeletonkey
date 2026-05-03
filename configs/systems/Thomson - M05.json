@@ -1,0 +1,38 @@
+{
+    "rom_paths": [],
+    "extensions": [
+        "1dd",
+        "cqm",
+        "d77",
+        "d88",
+        "dsk",
+        "fd",
+        "fdi",
+        "imd",
+        "k5",
+        "k7",
+        "m5",
+        "qd",
+        "rom",
+        "sap",
+        "td0",
+        "wav",
+        "zip"
+    ],
+    "platform": "TMO5",
+    "MAME_EMUOPTS": [
+        " mo5 -[RTYP] ",
+        " mo5 -cart ",
+        " mo5 -cass ",
+        " mo5 -flop1 ",
+        " mo5e -cart ",
+        " mo5e -cass ",
+        " mo5e -flop1 ",
+        " mo5nr -cart ",
+        " mo5nr -cass ",
+        " mo5nr -flop1 ",
+        " mo6 -cart ",
+        " mo6 -cass ",
+        " mo6 -flop1 "
+    ]
+}

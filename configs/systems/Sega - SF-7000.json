@@ -1,0 +1,32 @@
+{
+    "rom_paths": [],
+    "extensions": [
+        "1dd",
+        "bit",
+        "cqi",
+        "cqm",
+        "d77",
+        "d88",
+        "dfi",
+        "dsk",
+        "hfe",
+        "imd",
+        "ipf",
+        "mfi",
+        "mfm",
+        "sf7",
+        "td0",
+        "wav",
+        "zip"
+    ],
+    "platform": "SSF7K",
+    "MAME_EMUOPTS": [
+        " sc3000 -cart ",
+        " sc3000 -cass ",
+        " sc3000h -cart ",
+        " sc3000h -cass ",
+        " sf7000 -[RTYP] ",
+        " sf7000 -cass ",
+        " sf7000 -flop "
+    ]
+}

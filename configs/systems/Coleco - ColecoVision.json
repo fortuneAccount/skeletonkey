@@ -1,0 +1,16 @@
+{
+    "rom_paths": [],
+    "extensions": [],
+    "platform": "COLECO",
+    "BlueMSX_EMUOPTS": [
+        " /fullscreen /machine \"COL - Colecovision\" /rom1 ",
+        " /fullscreen /machine \"COL - Colecovision\" /rom1zip ",
+        " /machine \"COL - Colecovision\" /rom1 ",
+        " /machine \"COL - Colecovision\" /rom1zip "
+    ],
+    "MAME_EMUOPTS": [
+        " coleco -cart ",
+        " coleco -cart ",
+        " colecp -cart "
+    ]
+}

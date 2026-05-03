@@ -1,0 +1,11 @@
+{
+    "rom_paths": [],
+    "extensions": [],
+    "platform": "COMVIC1K",
+    "MAME_EMUOPTS": [
+        " vic1001 -[RTYP] ",
+        " vic1001 -cart ",
+        " vic1001 -cass1 ",
+        " vic1001 -flop1 "
+    ]
+}

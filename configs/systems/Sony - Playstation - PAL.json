@@ -1,0 +1,26 @@
+{
+    "rom_paths": [],
+    "extensions": [
+        "bin",
+        "cue",
+        "elf",
+        "gcm",
+        "img",
+        "iso",
+        "mdf",
+        "nrg",
+        "pbp"
+    ],
+    "platform": "SPALAY",
+    "MAME_EMUOPTS": [
+        " psa -cdrm ",
+        " psa -memc1 ",
+        " pse -[RTYP] ",
+        " pse -cdrm ",
+        " pse -memc1 ",
+        " psj -cdrm ",
+        " psj -memc1 ",
+        " psu -cdrm ",
+        " psu -memc1 "
+    ]
+}

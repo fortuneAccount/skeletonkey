@@ -1,0 +1,9 @@
+{
+    "rom_paths": [],
+    "extensions": [
+        "htm",
+        "html",
+        "swf"
+    ],
+    "platform": "AFLASH"
+}

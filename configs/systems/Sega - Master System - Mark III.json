@@ -1,0 +1,23 @@
+{
+    "rom_paths": [],
+    "extensions": [
+        "bin",
+        "sms",
+        "zip"
+    ],
+    "platform": "SEGMS",
+    "Fusion_EMUOPTS": [
+        " -FullScreen -sms ",
+        " -sms "
+    ],
+    "MAME_EMUOPTS": [
+        " sg1000m3 -cart ",
+        " sms -cart ",
+        " sms1 -cart ",
+        " sms1br -cart ",
+        " sms1pal -cart ",
+        " sms1paln -cart ",
+        " smsj -cart ",
+        " smspal -cart "
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "rom_paths": [],
+    "extensions": [
+        "bin",
+        "ws",
+        "zip"
+    ],
+    "platform": "BWSWAN",
+    "MAME_EMUOPTS": " wswan -cart "
+}

@@ -1,0 +1,45 @@
+{
+    "rom_paths": [],
+    "extensions": [
+        "1dd",
+        "bin",
+        "cas",
+        "zip",
+        "cqi",
+        "cqm",
+        "d77",
+        "d88",
+        "dfi",
+        "dmk",
+        "dsk",
+        "hfe",
+        "imd",
+        "ipf",
+        "mfi",
+        "mfm",
+        "mx1",
+        "rom",
+        "tap",
+        "td0",
+        "wav"
+    ],
+    "platform": "MSXR",
+    "BlueMSX_EMUOPTS": [
+        " /fullscreen /machine \"MSXturboR\" /[RTYP]  /fullscreen /machine \"MSXturboR\" /rom1 ",
+        " /fullscreen /machine \"MSXturboR\" /cas ",
+        " /fullscreen /machine \"MSXturboR\" /caszip ",
+        " /fullscreen /machine \"MSXturboR\" /diskA ",
+        " /fullscreen /machine \"MSXturboR\" /rom1zip ",
+        " /machine \"MSXturboR\" /cas ",
+        " /machine \"MSXturboR\" /caszip ",
+        " /machine \"MSXturboR\" /diskA ",
+        " /machine \"MSXturboR\" /rom1 ",
+        " /machine \"MSXturboR\" /rom1zip "
+    ],
+    "MAME_EMUOPTS": [
+        " fsa1st -[RTYP] ",
+        " fsa1st -cart1 ",
+        " fsa1st -cass ",
+        " fsa1st -flop "
+    ]
+}

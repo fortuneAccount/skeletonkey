@@ -1,0 +1,15 @@
+{
+    "rom_paths": [],
+    "extensions": [
+        "7z",
+        "bin",
+        "ds",
+        "gba",
+        "gz",
+        "nds",
+        "rar",
+        "srl",
+        "zip"
+    ],
+    "platform": "NNDS"
+}

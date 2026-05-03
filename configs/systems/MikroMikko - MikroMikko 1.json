@@ -1,0 +1,6 @@
+{
+    "rom_paths": [],
+    "extensions": [],
+    "platform": "MIKMIK",
+    "MAME_EMUOPTS": " mm1 -flop1 "
+}

@@ -1,0 +1,16 @@
+{
+    "rom_paths": [],
+    "extensions": [],
+    "platform": "SPECSVI",
+    "BlueMSX_EMUOPTS": [
+        " /machine \"SVI - Spectravideo SVI-318\" /fullscreen /diskA ",
+        " /machine \"SVI - Spectravideo SVI-318\" /fullscreen /rom1 ",
+        "/machine \"SVI - Spectravideo SVI-318\" /fullscreen /cas "
+    ],
+    "MAME_EMUOPTS": [
+        " svi318 -[RTYP] ",
+        " svi318 -cart ",
+        " svi318 -cass1 ",
+        " svi318 -flop "
+    ]
+}

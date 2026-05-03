@@ -3,12 +3,15 @@ ui/tabs/emulators_tab.py
 
 Emulators tab – browse, download and configure emulators.
 """
+import shutil
+import hashlib
 from pathlib import Path
+import re
 
 from PyQt6.QtCore import Qt, QThread, pyqtSignal
 from PyQt6.QtWidgets import (
     QWidget, QVBoxLayout, QHBoxLayout, QSplitter,
-    QListWidget, QLabel, QPushButton, QLineEdit,
+    QListWidget, QListWidgetItem, QLabel, QPushButton, QLineEdit,
     QGroupBox, QFormLayout, QProgressBar, QMessageBox, QMenu,
     QComboBox, QPlainTextEdit, QFileDialog, QToolButton
 )
@@ -20,7 +23,17 @@ from data.systems import SystemRegistry
 from ui.tabs.base_tab import BaseTab
 from ui.tabs.settings_tab import _PathCombo
 from utils.paths import app_home, bin_dir, resolve_arch, check_paths_exist, app_root
+from PyQt6.QtGui import QColor, QBrush
 
+def _get_file_hash(path: Path) -> str:
+    """Calculate MD5 hash of a file."""
+    if not path.exists():
+        return ""
+    h = hashlib.md5()
+    with path.open("rb") as f:
+        for chunk in iter(lambda: f.read(8192), b""):
+            h.update(chunk)
+    return h.hexdigest()
 
 class EmulatorsTab(BaseTab):
     def __init__(self, systems: SystemRegistry, emus: EmuRegistry, parent=None):
@@ -29,6 +42,8 @@ class EmulatorsTab(BaseTab):
         self._emus = emus
         self._systems = systems
         self._active_worker: DownloadWorker | None = None
+        self._is_fallback_active = False
+        self._romjacket_repo = "https://github.com/romjacket/romjacket-emulators/raw/master"
         self._build_ui()
         self._populate()
 
@@ -138,9 +153,12 @@ class EmulatorsTab(BaseTab):
         self._save_btn.clicked.connect(self._save_emu_path)
         self._audit_btn = QPushButton("Audit BIOSes")
         self._audit_btn.clicked.connect(self._audit_bioses)
+        self._reset_btn = QPushButton("Reset Defaults")
+        self._reset_btn.clicked.connect(self._reset_emu_defaults)
 
         act_row.addWidget(self._save_btn)
         act_row.addWidget(self._audit_btn)
+        act_row.addWidget(self._reset_btn)
         rl.addLayout(act_row)
 
         # Arch selector
@@ -174,7 +192,7 @@ class EmulatorsTab(BaseTab):
         rl.addStretch()
 
         splitter.addWidget(right)
-        splitter.setSizes([280, 720])
+        splitter.setSizes([200, 600])
 
     # ------------------------------------------------------------------
     # Data
@@ -286,10 +304,42 @@ class EmulatorsTab(BaseTab):
             QMessageBox.information(self, f"BIOS Audit: {name}", "\n".join(results))
 
     def _populate(self):
+        """Fill the emulator list and apply status-based coloring."""
         self._emu_list.clear()
         self._emu_list.addItem("Add Custom")
         for entry in self._emus.emulators():
             self._emu_list.addItem(entry.name)
+        self._update_item_styles()
+
+    def _update_item_styles(self):
+        """Apply Yellow (Downloaded) or Green (Installed) colors to the list items."""
+        download_store = app_root() / "downloaded"
+        apps = self._emus._apps_cfg
+        apps.reload()
+
+        for i in range(self._emu_list.count()):
+            item = self._emu_list.item(i)
+            name = item.text()
+            if name == "Add Custom": continue
+            
+            entry = self._emus.get(name)
+            if not entry: continue
+
+            # 1. Check if installed (registered in apps.json and file exists)
+            installed_path = apps.get("EMULATORS", name)
+            is_installed = installed_path and Path(installed_path.strip('"')).exists()
+
+            # 2. Check if downloaded (archive exists in store)
+            bits = 64 if self._arch_combo.currentIndex() == 0 else 32
+            archive_url = resolve_arch(entry.archive, bits)
+            is_downloaded = (download_store / Path(archive_url).name).exists()
+
+            if is_installed:
+                item.setForeground(QBrush(QColor(40, 167, 69))) # Green
+            elif is_downloaded:
+                item.setForeground(QBrush(QColor(255, 193, 7))) # Yellow
+            else:
+                item.setForeground(QBrush(Qt.GlobalColor.white))
 
     def _save_emu_path(self):
         """Persist the manually entered or browsed executable path to apps.json."""
@@ -298,6 +348,18 @@ class EmulatorsTab(BaseTab):
         if not name:
             return
         
+        # Helper to join all combo items with delimiter to preserve multiple choices
+        def get_combo_val(cb):
+            items = [cb.itemText(i) for i in range(cb.count())]
+            curr = cb.currentText()
+            # Ensure the current text is at the top of the saved choices
+            if curr and curr in items:
+                items.remove(curr)
+                items.insert(0, curr)
+            elif curr:
+                items.insert(0, curr)
+            return "<".join([i for i in items if i.strip()])
+        
         # Use registry helper for persistence
         entry = EmuEntry(
             name=name,
@@ -305,8 +367,8 @@ class EmulatorsTab(BaseTab):
             archive=self._archive_edit.text(),
             extensions=[x.strip() for x in self._ext_edit.text().split(",") if x.strip()],
             required_files=[x.strip() for x in self._req_files_edit.toPlainText().split("\n") if x.strip()],
-            options=self._opts_combo.currentText(),
-            arguments=self._args_combo.currentText()
+            options=get_combo_val(self._opts_combo),
+            arguments=get_combo_val(self._args_combo)
         )
         self._emus.add_custom(entry)
 
@@ -324,6 +386,45 @@ class EmulatorsTab(BaseTab):
         main_win = self.window()
         if hasattr(main_win, "_systems_tab"):
             main_win._systems_tab._start_detection_process(is_first_run=False)
+
+    def _reset_emu_defaults(self):
+        """Revert options and arguments to the original asset metadata."""
+        name = self._name_edit.text().strip()
+        if not name: return
+        
+        from utils.paths import assets_dir
+        import json
+        src_json = assets_dir() / "emulators.json"
+        if not src_json.exists(): return
+        
+        try:
+            with open(src_json, "r", encoding="utf-8") as f:
+                emu_data = json.load(f)
+                asset_info = emu_data.get(name)
+                if not asset_info:
+                    QMessageBox.information(self, "Reset", f"No asset defaults found for '{name}'.")
+                    return
+                
+                def split_val(v):
+                    if not v: return []
+                    if isinstance(v, list):
+                        return [str(x) for x in v if str(x)]
+                    return [x for x in re.split(r'[<|\n]', str(v)) if x]
+
+                # Update UI Combos
+                self._opts_combo.blockSignals(True)
+                self._opts_combo.clear()
+                self._opts_combo.addItems(split_val(asset_info.get("options", "")))
+                self._opts_combo.blockSignals(False)
+
+                self._args_combo.blockSignals(True)
+                self._args_combo.clear()
+                self._args_combo.addItems(split_val(asset_info.get("arguments", "")))
+                self._args_combo.blockSignals(False)
+                
+                self.set_status(f"Restored asset defaults for {name}")
+        except Exception as e:
+            self.set_status(f"Reset failed: {e}")
 
     def _on_emu_selected(self, name: str):
         is_custom = (name == "Add Custom")
@@ -349,9 +450,30 @@ class EmulatorsTab(BaseTab):
         self._exe_label_edit.setText(entry.exe)
         self._archive_edit.setText(entry.archive)
         self._config_path_combo.set_paths(entry.configs)
-        # Strictly map 'options' and 'arguments' from assets/emulators.json
-        self._opts_combo.setCurrentText(str(getattr(entry, 'options', "")))
-        self._args_combo.setCurrentText(str(getattr(entry, 'arguments', "")))
+
+        def split_val(v):
+            if not v: return []
+            if isinstance(v, list):
+                return [str(x) for x in v if str(x)]
+            return [x for x in re.split(r'[<|\n]', str(v)) if x]
+
+        # Strictly map 'options' and 'arguments' into selectable combobox items
+        self._opts_combo.blockSignals(True)
+        self._opts_combo.clear()
+        opts = split_val(getattr(entry, 'options', ""))
+        self._opts_combo.addItems(opts)
+        if opts:
+            self._opts_combo.setCurrentIndex(0)
+        self._opts_combo.blockSignals(False)
+
+        self._args_combo.blockSignals(True)
+        self._args_combo.clear()
+        args = split_val(getattr(entry, 'arguments', ""))
+        self._args_combo.addItems(args)
+        if args:
+            self._args_combo.setCurrentIndex(0)
+        self._args_combo.blockSignals(False)
+
         self._ext_edit.setText(", ".join(entry.extensions))
         
         reqs = []
@@ -374,8 +496,8 @@ class EmulatorsTab(BaseTab):
     # Actions
     # ------------------------------------------------------------------
 
-    def _download(self):
-        name = self._emu_list.currentItem()
+    def _download(self, url_override: str = None):
+        name = self._emu_list.currentItem() if not url_override else self._name_edit.text()
         if not name:
             return
         entry = self._emus.get(name.text())
@@ -385,14 +507,24 @@ class EmulatorsTab(BaseTab):
             return
 
         bits = 64 if self._arch_combo.currentIndex() == 0 else 32
-        archive_url = resolve_arch(entry.archive, bits)
+        archive_url = url_override if url_override else resolve_arch(entry.archive, bits)
+
+        filename = Path(archive_url).name
+        download_store = app_root() / "downloaded"
+        cached_file = download_store / filename
+
+        if cached_file.exists():
+            self.set_status(f"Using cached archive: {filename}")
+            self._on_download_finished(True, cached_path=cached_file)
+            return
 
         dest_dir = self._install_path.text() or str(
             app_home() / "Emulators" / entry.name)
-        filename = Path(archive_url).name
-
-        self._active_worker = DownloadWorker(
-            url=archive_url, target_dir=dest_dir, filename=filename)
+        
+        # Prepend base URL if the archive path is relative and not an override
+        if not archive_url.startswith("http") and not url_override:
+            archive_url = f"https://www.google.com/search?q={entry.name}+portable+download" # Placeholder logic for 'preferred'
+        self._active_worker = DownloadWorker(url=archive_url, target_dir=dest_dir, filename=filename)
         self._active_worker.progress.connect(self._progress.setValue)
         self._active_worker.speed.connect(self._speed_label.setText)
         self._active_worker.finished.connect(self._on_download_finished)
@@ -408,19 +540,84 @@ class EmulatorsTab(BaseTab):
         self._download_btn.setEnabled(True)
         self._cancel_btn.setEnabled(False)
 
-    def _on_download_finished(self, success: bool):
+    def _on_download_finished(self, success: bool, cached_path: Path = None):
         self._download_btn.setEnabled(True)
         self._cancel_btn.setEnabled(False)
-        if success:
-            # Auto-extract
-            name = self._emu_list.currentItem()
-            if name:
-                entry = self._emus.get(name.text())
+
+        if not success and not self._is_fallback_active:
+            # Attempt fallback to romjacket repository
+            item = self._emu_list.currentItem()
+            if item:
+                entry = self._emus.get(item.text())
                 if entry:
-                    dest = self._install_path.text()
-                    archive = str(Path(dest) / Path(entry.archive).name)
+                    bits = 64 if self._arch_combo.currentIndex() == 0 else 32
+                    rel_path = resolve_arch(entry.archive, bits)
+                    fallback_url = f"{self._romjacket_repo}/{rel_path}"
+                    self.set_status(f"Primary download failed. Trying RomJacket fallback...")
+                    self._is_fallback_active = True
+                    self._download(url_override=fallback_url)
+                    return
+
+        self._is_fallback_active = False # Reset state
+
+        if success:
+            self._progress.setValue(100)
+            self._speed_label.setText("Finished")
+            # Auto-extract
+            item = self._emu_list.currentItem()
+            if item:
+                name = item.text()
+                entry = self._emus.get(name)
+                if entry:
+                    dest_dir = Path(self._install_path.text())
+                    bits = 64 if self._arch_combo.currentIndex() == 0 else 32
+                    archive_url = resolve_arch(entry.archive, bits)
+                    
+                    archive_path = cached_path or (dest_dir / Path(archive_url).name)
+                    
                     from utils.archive import extract
-                    extract(archive, dest)
-            self.set_status("Download complete.")
+                    if archive_path.exists() and extract(str(archive_path), str(dest_dir)):
+                        # 1. Register path to apps.json
+                        exe_path = dest_dir / entry.exe
+                        if not exe_path.exists():
+                            # Search subdirectories if exe isn't at the root of the extract folder
+                            found_exes = list(dest_dir.rglob(entry.exe))
+                            if found_exes:
+                                exe_path = found_exes[0]
+
+                        if exe_path.exists():
+                            self._emus._apps_cfg.set("EMULATORS", name, f'"{exe_path}"')
+                            self._emus._apps_cfg.save()
+
+                        # 2. Move compressed binary to 'downloaded' folder in root
+                        download_store = app_root() / "downloaded"
+                        download_store.mkdir(exist_ok=True)
+                        storage_path = download_store / archive_path.name
+                        
+                        if not cached_path:
+                            try:
+                                # Rotation: .7z -> .7z.bak
+                                if storage_path.exists():
+                                    if _get_file_hash(archive_path) == _get_file_hash(storage_path):
+                                        archive_path.unlink()
+                                        self.set_status(f"Installed {name} (archive is unchanged).")
+                                        return
+                                
+                                bak_path = Path(str(storage_path) + ".bak")
+                                if storage_path.exists():
+                                    if bak_path.exists():
+                                        bak_path.unlink()
+                                    storage_path.rename(bak_path)
+                                
+                                shutil.move(str(archive_path), str(storage_path))
+                                self.set_status(f"Installed {name} and archived installer.")
+                            except Exception as e:
+                                self.set_status(f"Installed {name}, but archive rotation failed: {e}")
+                        else:
+                            self.set_status(f"Installed {name} from cache.")
+                        
+                        self._update_item_styles()
+                    else:
+                        self.set_status(f"Extraction failed for {name}: {archive_path}")
         else:
             self.set_status("Download failed.")

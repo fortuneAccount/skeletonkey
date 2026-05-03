@@ -13,10 +13,12 @@ import subprocess
 import logging
 import shlex
 import sys
+import os
+import shutil
 from dataclasses import dataclass, field
 from pathlib import Path
 from typing import NamedTuple
-from utils.paths import assets_dir, app_root, check_paths_exist
+from utils.paths import assets_dir, app_root, check_paths_exist, emu_cfgs_dir
 from utils.archive import extract
 
 logger = logging.getLogger(__name__)
@@ -65,11 +67,43 @@ class Launcher:
 
     def __init__(self, cfg: LaunchConfig):
         self.cfg = cfg
+        self._rom_path = Path(cfg.rom_path)
+        self._rom_dir = self._rom_path.parent
+        self._title = self._rom_path.stem
         self._proc: subprocess.Popen | None = None
 
     # ------------------------------------------------------------------
     # Public API
     # ------------------------------------------------------------------
+
+    def _prepare_sandbox(self, system_name: str, emu_name: str):
+        """
+        Resolves configuration based on new priority:
+        Priority 1: path/to/$system/$Title/ (ROM-local)
+        Priority 2: downloaded/$system/$Title/ (App-local cache)
+        Priority 3: assets/emuCfgs/ (Template)
+        """
+        # 1. Determine local sandbox location (Priority 1)
+        local_pkg = self._rom_dir / self._title
+        download_pkg = app_root() / "downloaded" / system_name / self._title
+        
+        # Choose primary sandbox (Priority 1 preferred)
+        sandbox_dir = local_pkg if local_pkg.exists() else download_pkg
+        sandbox_dir.mkdir(parents=True, exist_ok=True)
+
+        # 2. Redirect standard env vars
+        os.environ["XDG_CONFIG_HOME"] = str(sandbox_dir)
+        os.environ["XDG_DATA_HOME"] = str(sandbox_dir / "saves")
+
+        # 3. Stage template if no config exists in the sandbox yet
+        # We check for a generic config extension like .ini or .cfg
+        if not any(sandbox_dir.glob("*.ini")) and not any(sandbox_dir.glob("*.cfg")):
+            template = emu_cfgs_dir() / f"{emu_name}.cfg"
+            if template.exists():
+                shutil.copy(template, sandbox_dir / template.name)
+                logger.info(f"Staged template {template.name} to {sandbox_dir}")
+
+        logger.info(f"Sandbox prepared at {sandbox_dir}")
 
     def _resolve_rom_path(self, path_str: str) -> str:
         """
@@ -93,6 +127,9 @@ class Launcher:
         """
         self.cfg.rom_path = self._resolve_rom_path(self.cfg.rom_path)
         
+        # Prepare the isolated environment
+        self._prepare_sandbox()
+
         # Handle Archive Extraction if required
         original_rom = Path(self.cfg.rom_path)
         if self.cfg.extract_rom and original_rom.suffix.lower() in ('.zip', '.7z', '.rar'):

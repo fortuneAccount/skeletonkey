@@ -1,0 +1,18 @@
+{
+    "rom_paths": [],
+    "extensions": [
+        "bin",
+        "32x",
+        "cdr",
+        "chd",
+        "cue",
+        "gdi",
+        "img",
+        "iso",
+        "nrg",
+        "toc",
+        "zip"
+    ],
+    "platform": "32XP",
+    "MAME_EMUOPTS": " 32xe -cart "
+}

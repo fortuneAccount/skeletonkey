@@ -1,0 +1,6 @@
+{
+    "rom_paths": [],
+    "extensions": [],
+    "platform": "FIDSCC",
+    "MAME_EMUOPTS": " fidel -cart "
+}

@@ -1,0 +1,11 @@
+{
+    "rom_paths": [],
+    "extensions": [
+        "bat",
+        "cmd",
+        "exe",
+        "jar",
+        "lnk"
+    ],
+    "platform": "POPCAP"
+}

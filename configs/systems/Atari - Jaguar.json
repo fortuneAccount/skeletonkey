@@ -1,0 +1,15 @@
+{
+    "rom_paths": [],
+    "extensions": [
+        "abs",
+        "bin",
+        "cof",
+        "j64",
+        "jag",
+        "prg",
+        "rom",
+        "zip"
+    ],
+    "platform": "ATJAG",
+    "MAME_EMUOPTS": " jaguar -cart "
+}

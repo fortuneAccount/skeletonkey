@@ -37,6 +37,7 @@ class MainWindow(QMainWindow):
         self._emus = EmuRegistry()
         self._assignments = AssignmentRegistry()
         self._launch_params = LaunchParamsRegistry()
+        self._pre_mini_size = None
         self._setup_window()
         self._build_ui()
         self._register_tabs()
@@ -57,7 +58,7 @@ class MainWindow(QMainWindow):
                 icon_path = icons[0]
         if icon_path.exists():
             self.setWindowIcon(QIcon(str(icon_path)))
-        self.resize(1024, 768)
+        self.resize(800, 600)
 
     def _build_ui(self):
         # Initialize status bar first so tabs can use it during init (mirrors AHK SB_SetText)
@@ -111,14 +112,16 @@ class MainWindow(QMainWindow):
         for tab in self._tabs_list:
             if hasattr(tab, "refresh_ui"):
                 tab.refresh_ui()
+        # Ensure global window settings (transparency, AOT) are reapplied
+        self.apply_settings()
         # Trigger layout adjustment after content refresh
         if self.layout():
             self.layout().activate()
             QCoreApplication.processEvents()  # Allow UI to update
 
     def _restore_geometry(self):
-        w = int(self._cfg.get("GUI", "width", fallback="1024"))
-        h = int(self._cfg.get("GUI", "height", fallback="768"))
+        w = int(self._cfg.get("GUI", "width", fallback="800"))
+        h = int(self._cfg.get("GUI", "height", fallback="600"))
         self.resize(w, h)
 
         # First-run: no settings saved yet → open on Settings tab
@@ -142,7 +145,6 @@ class MainWindow(QMainWindow):
     def apply_settings(self):
         """Apply global settings like transparency and stay-on-top."""
         # Always on top (mirrors ALWOTP in AHK)
-        self._cfg.reload() # Ensure latest settings are loaded
         aot = self._cfg.get("GLOBAL", "AlwaysOnTop", fallback="0") == "1"
         flags = self.windowFlags()
         if aot:
@@ -161,6 +163,9 @@ class MainWindow(QMainWindow):
 
     def set_mini_mode(self, enabled: bool):
         """Toggle visibility of navigation tabs and allow window to shrink."""
+        if enabled:
+            self._pre_mini_size = self.size()
+
         self._tabs.tabBar().setVisible(not enabled)
         
         # Relax constraints on other tabs to allow the window to shrink
@@ -177,7 +182,7 @@ class MainWindow(QMainWindow):
             self.setMinimumSize(0, 0)
             self._tabs.setMinimumSize(0, 0)
         else:
-            self.setMinimumSize(1024, 768)
+            self.setMinimumSize(800, 600)
             self._tabs.setMinimumSize(self._tabs.sizeHint())
 
         self.layout().activate()
@@ -185,7 +190,10 @@ class MainWindow(QMainWindow):
         if enabled:
             self.resize(0, 0) # Force to smallest possible size based on constraints
         else:
-            self.resize(1024, 768)
+            if self._pre_mini_size:
+                self.resize(self._pre_mini_size)
+            else:
+                self.resize(800, 600)
 
     def focusInEvent(self, event):
         """Restore full opacity when window gains focus."""

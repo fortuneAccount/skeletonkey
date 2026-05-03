@@ -1,0 +1,10 @@
+{
+    "rom_paths": [],
+    "extensions": [],
+    "platform": "SHRPMZ2K",
+    "MAME_EMUOPTS": [
+        " mz2000 -[RTYP] ",
+        " mz2000 -cass1 ",
+        " mz2000 -flop1 "
+    ]
+}

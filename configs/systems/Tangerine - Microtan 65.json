@@ -1,0 +1,16 @@
+{
+    "rom_paths": [],
+    "extensions": [
+        "bin",
+        "m65",
+        "wav",
+        "zip"
+    ],
+    "platform": "TMIC65",
+    "MAME_EMUOPTS": [
+        " microtan -[RTYP] ",
+        " microtan -cart ",
+        " microtan -cass ",
+        " microtan -dump "
+    ]
+}

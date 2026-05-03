@@ -1,0 +1,10 @@
+{
+    "rom_paths": [],
+    "extensions": [
+        "bin",
+        "rom",
+        "zip"
+    ],
+    "platform": "MODYS2",
+    "MAME_EMUOPTS": " odyssey2 -cart "
+}

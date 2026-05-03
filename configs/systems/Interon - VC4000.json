@@ -1,0 +1,10 @@
+{
+    "rom_paths": [],
+    "extensions": [
+        "bin",
+        "rom",
+        "zip"
+    ],
+    "platform": "IVC4K",
+    "MAME_EMUOPTS": " vc4000 -cart "
+}

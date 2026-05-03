@@ -1,0 +1,15 @@
+{
+    "rom_paths": [],
+    "extensions": [
+        "m12",
+        "mzf",
+        "mzt",
+        "wav",
+        "zip"
+    ],
+    "platform": "SMZ7H",
+    "MAME_EMUOPTS": [
+        " mz700 -cass ",
+        " mz700j -cass "
+    ]
+}

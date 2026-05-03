@@ -1,0 +1,16 @@
+{
+    "rom_paths": [],
+    "extensions": [
+        "a26",
+        "bin",
+        "rom",
+        "z26",
+        "zip",
+        "zip"
+    ],
+    "platform": "AT26",
+    "MAME_EMUOPTS": [
+        " a2600 -cart ",
+        " a2600p -cart "
+    ]
+}

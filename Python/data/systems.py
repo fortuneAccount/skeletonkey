@@ -2,7 +2,7 @@
 data/systems.py
 
 Loads and exposes the system/console metadata from Systems.json (assets)
-and user path overrides from systems.json (generated).
+and user path overrides from syscfg.json (root).
 """
 import json
 import fnmatch
@@ -43,6 +43,9 @@ class SystemRegistry:
 
     def __init__(self, home: Path | None = None):
         self._user_home = home or global_config().home
+        self._systems_config_dir = self._user_home / "systems"
+        self._systems_config_dir.mkdir(parents=True, exist_ok=True)
+        
         self._app_root = app_root()
         self._data: dict[str, SystemEntry] = {}
 
@@ -101,41 +104,41 @@ class SystemRegistry:
             logging.error(f"Error loading system entry from master list: {e}")
 
     def _load(self):
-        """Load user systems.json with resilient handling for mangled or corrupt entries."""
-        path = self._user_home / "systems.json"
-        if not path.exists():
+        """
+                Load segmented system JSON files from the configs/systems directory.
+        """
+        if not self._systems_config_dir.exists():
             return
 
-        try:
-            with open(path, "r", encoding="utf-8") as f:
-                user_data = json.load(f)
-                systems_dict = user_data.get("systems", user_data)
-                for name, info in systems_dict.items():
-                    raw_paths = info if isinstance(info, (str, list)) else info.get("rom_paths", [])
+            # Load every .json file in the systems config directory
+        for config_file in self._systems_config_dir.glob("*.json"):
+            try:
+                with open(config_file, "r", encoding="utf-8") as f:
+                    info = json.load(f)
+                    name = config_file.stem  # Filename is the system name
                     
+                    raw_paths = info.get("rom_paths", [])
                     def _parse_paths(val):
                         if isinstance(val, list): return [str(x).strip() for x in val]
                         if isinstance(val, str): return [x.strip() for x in val.split('|') if x.strip()]
                         return []
 
                     path_list = _parse_paths(raw_paths)
-                    
                     extra = {}
-                    if isinstance(info, dict):
-                        for k, v in info.items():
-                            k_up = k.upper()
-                            if k_up.endswith("OPTS") or k_up.endswith("ARGS") or k_up == "LAST_EMU":
-                                extra[k] = v
+                    for k, v in info.items():
+                        if k not in ["rom_paths", "extensions", "platform"]:
+                            for k, v in info.items():
+                                k_up = k.upper()
+                                if k_up.endswith("OPTS") or k_up.endswith("ARGS") or k_up == "LAST_EMU":
+                                    extra[k] = v
 
                     if name in self._data:
                         self._data[name].rom_paths = path_list
                         self._data[name].extra_metadata.update(extra)
                     else:
                         self._data[name] = SystemEntry(name=name, rom_paths=path_list, extra_metadata=extra)
-        except (json.JSONDecodeError, KeyError, IOError, AttributeError) as e:
-            logging.debug(f"Resilient load active. Skipping mangled user file: {e}")
-            # If corrupted, we continue with the master list data already in self._data
-            return
+            except Exception as e:
+                logging.error(f"Failed to load segmented config {config_file.name}: {e}")
 
     def reload(self):
         self._data.clear()
@@ -166,24 +169,16 @@ class SystemRegistry:
             self._data[system].rom_paths = path
 
     def save(self):
-        """Persist unified systems data to JSON."""
-        dest = self._user_home / "systems.json"
-        dest.parent.mkdir(parents=True, exist_ok=True)
-        # Filter to only save systems that have ROM paths defined
-        to_save = {}
+        """Save each modified system into its own individual JSON file."""
+        self._systems_config_dir.mkdir(parents=True, exist_ok=True)
         for name, entry in self._data.items():
             if entry.rom_paths or entry.extra_metadata or entry.extensions:
-                data = {
-                    "rom_paths": entry.rom_paths,
-                    "extensions": entry.extensions,
-                    "platform": entry.platform
-                }
+                data = { "rom_paths": entry.rom_paths, "extensions": entry.extensions, "platform": entry.platform }
                 data.update(entry.extra_metadata)
-                to_save[name] = data
-
-        with open(dest, "w", encoding="utf-8") as f:
-            json.dump(to_save, f, indent=4)
-
+                
+                dest = self._systems_config_dir / f"{name}.json"
+                with open(dest, "w", encoding="utf-8") as f:
+                    json.dump(data, f, indent=4)
     def __len__(self) -> int:
         return len(self._data)
 
@@ -215,16 +210,16 @@ class SystemRegistry:
         # 1. Exact matches for user-saved LAST_EMU specific keys
         for k, v in entry.extra_metadata.items():
             k_low = k.lower()
-            if k_low == f"{emu_name}_emuopts".lower():
+            if k_low == f"{emu_name}_opts".lower():
                 opts.extend(split_val(v))
-            elif k_low == f"{emu_name}_emuargs".lower():
+            elif k_low == f"{emu_name}_args".lower():
                 args.extend(split_val(v))
 
         # 2. Fuzzy matches for asset-defined keys (e.g. MAMEOPTS)
         for k, v in entry.extra_metadata.items():
             k_low = k.lower()
             # Skip if already added as an exact match
-            if k_low == f"{emu_name}_emuopts".lower() or k_low == f"{emu_name}_emuargs".lower():
+            if k_low == f"{emu_name}_opts".lower() or k_low == f"{emu_name}_args".lower():
                 continue
             
             if clean_emu in k_low or k_low in ["emuopts", "emuargs"]:

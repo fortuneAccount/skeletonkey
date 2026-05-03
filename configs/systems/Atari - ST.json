@@ -1,0 +1,16 @@
+{
+    "rom_paths": [],
+    "extensions": [
+        "ipf",
+        "msa",
+        "st",
+        "stx",
+        "zip"
+    ],
+    "platform": "ATST",
+    "MAME_EMUOPTS": [
+        " st -[RTYP] ",
+        " st -cart ",
+        " st -flop1 "
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "rom_paths": [],
+    "extensions": [
+        "bin",
+        "rom",
+        "zip"
+    ],
+    "platform": "EXL1",
+    "MAME_EMUOPTS": " exl100 -cart "
+}

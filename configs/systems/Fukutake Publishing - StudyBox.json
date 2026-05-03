@@ -1,0 +1,20 @@
+{
+    "rom_paths": [],
+    "extensions": [
+        "bin",
+        "fam",
+        "fds",
+        "nes",
+        "nsf",
+        "unf",
+        "unif",
+        "zip"
+    ],
+    "platform": "FPSBX",
+    "MAME_EMUOPTS": [
+        " famitwin -[RTYP] ",
+        " famitwin -cart ",
+        " fds -flop ",
+        " fds -flop "
+    ]
+}

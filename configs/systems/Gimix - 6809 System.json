@@ -1,0 +1,6 @@
+{
+    "rom_paths": [],
+    "extensions": [],
+    "platform": "GIM68",
+    "MAME_EMUOPTS": " gimix -flop1 "
+}

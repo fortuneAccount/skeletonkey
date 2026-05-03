@@ -1,0 +1,13 @@
+{
+    "rom_paths": [],
+    "extensions": [
+        "tap",
+        "wav",
+        "zip"
+    ],
+    "platform": "TOATMOS",
+    "MAME_EMUOPTS": [
+        " oric1 -cass ",
+        " orica -cass "
+    ]
+}

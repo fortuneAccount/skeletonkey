@@ -99,7 +99,7 @@ class ArtworkTab(BaseTab):
         rl.addStretch()
 
         splitter.addWidget(right)
-        splitter.setSizes([280, 720])
+        splitter.setSizes([200, 600])
 
     def _populate_systems(self):
         self._systems.reload()

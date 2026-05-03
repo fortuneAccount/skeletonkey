@@ -1,0 +1,9 @@
+{
+    "rom_paths": [],
+    "extensions": [],
+    "platform": "CONTPR180",
+    "MAME_EMUOPTS": [
+        " prof180 -flop1 ",
+        " prof180 -flop2 "
+    ]
+}

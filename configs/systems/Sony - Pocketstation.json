@@ -1,0 +1,9 @@
+{
+    "rom_paths": [],
+    "extensions": [
+        "gme",
+        "zip"
+    ],
+    "platform": "SPKSTAT",
+    "MAME_EMUOPTS": " pockstat -cart "
+}

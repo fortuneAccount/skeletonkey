@@ -1,0 +1,12 @@
+{
+    "rom_paths": [],
+    "extensions": [
+        "bin",
+        "chd",
+        "7z",
+        "zip"
+    ],
+    "platform": "ARCADE",
+    "MAME_EMUOPTS": " [ROMNAME] ",
+    "MAME_EMUARGS": "-rp [ROMPATH]"
+}

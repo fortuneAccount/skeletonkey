@@ -1,0 +1,10 @@
+{
+    "rom_paths": [],
+    "extensions": [
+        "bin",
+        "cue",
+        "iso",
+        "wav"
+    ],
+    "platform": "TOMKIS"
+}

@@ -1,0 +1,10 @@
+{
+    "rom_paths": [],
+    "extensions": [],
+    "platform": "NASCOM",
+    "MAME_EMUOPTS": [
+        " nascom2 -[RTYP] ",
+        " nascom2 -flop1 ",
+        " nascom2 -socket "
+    ]
+}

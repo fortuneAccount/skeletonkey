@@ -1,0 +1,10 @@
+{
+    "rom_paths": [],
+    "extensions": [],
+    "platform": "AMIG1K",
+    "MAME_EMUOPTS": [
+        " a1000 -flop ",
+        " a1000n -flop ",
+        " a1000n -flop "
+    ]
+}

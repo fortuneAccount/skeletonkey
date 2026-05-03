@@ -1,0 +1,16 @@
+{
+    "rom_paths": [
+        "D:\\Console\\Sony - Playstation 3"
+    ],
+    "extensions": [
+        "elf",
+        "iso",
+        "bin",
+        "cue",
+        "img",
+        "cso",
+        "eboot.bin",
+        "boot.bin"
+    ],
+    "platform": "SPLAY3"
+}

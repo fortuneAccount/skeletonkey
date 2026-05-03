@@ -1,0 +1,10 @@
+{
+    "rom_paths": [],
+    "extensions": [
+        "k7",
+        "wav",
+        "zip"
+    ],
+    "platform": "PVG5K",
+    "MAME_EMUOPTS": " vg5k -cart "
+}

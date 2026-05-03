@@ -1,0 +1,21 @@
+{
+    "rom_paths": [],
+    "extensions": [
+        "bin",
+        "bit",
+        "sc",
+        "sg",
+        "wav",
+        "zip"
+    ],
+    "platform": "SSC3K",
+    "MAME_EMUOPTS": [
+        " sc3000 -[RTYP] ",
+        " sc3000 -cart ",
+        " sc3000 -cass ",
+        " sc3000h -cart ",
+        " sc3000h -cass ",
+        " sf7000 -cass ",
+        " sf7000 -flop "
+    ]
+}

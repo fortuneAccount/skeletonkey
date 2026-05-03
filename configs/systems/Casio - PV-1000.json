@@ -1,0 +1,6 @@
+{
+    "rom_paths": [],
+    "extensions": [],
+    "platform": "CASPV1K",
+    "MAME_EMUOPTS": " pv1000 -cart "
+}

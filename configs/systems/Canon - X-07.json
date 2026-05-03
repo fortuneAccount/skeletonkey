@@ -1,0 +1,9 @@
+{
+    "rom_paths": [],
+    "extensions": [],
+    "platform": "CANX07",
+    "MAME_EMUOPTS": [
+        " x07 -card ",
+        " x07 -cass1 "
+    ]
+}

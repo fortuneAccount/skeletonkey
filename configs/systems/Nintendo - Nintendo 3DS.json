@@ -1,0 +1,13 @@
+{
+    "rom_paths": [],
+    "extensions": [
+        "3ds",
+        "3dsx",
+        "app",
+        "axf",
+        "cci",
+        "cxi",
+        "elf"
+    ],
+    "platform": "NN3DS"
+}

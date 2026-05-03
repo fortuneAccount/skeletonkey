@@ -1,0 +1,33 @@
+{
+    "rom_paths": [],
+    "extensions": [
+        "bin",
+        "32x",
+        "cdr",
+        "chd",
+        "cue",
+        "gdi",
+        "img",
+        "iso",
+        "nrg",
+        "toc",
+        "zip"
+    ],
+    "platform": "SG32X",
+    "Fusion_EMUOPTS": [
+        " -32X ",
+        " -FullScreen -32X "
+    ],
+    "MAME_EMUOPTS": [
+        " 32x -cart ",
+        " 32x -cart ",
+        " 32x_mcd -cart ",
+        " 32x_mcd -cdrm ",
+        " 32x_mcdj -cart ",
+        " 32x_mcdj -cdrm ",
+        " 32x_scd -cart ",
+        " 32x_scd -cdrm ",
+        " 32xe -cart ",
+        " 32xj -cart "
+    ]
+}

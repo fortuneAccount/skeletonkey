@@ -1,0 +1,14 @@
+{
+    "rom_paths": [],
+    "extensions": [
+        "ciso",
+        "dol",
+        "elf",
+        "gcm",
+        "iso",
+        "tgc",
+        "wad",
+        "wbfs"
+    ],
+    "platform": "NKCFL"
+}

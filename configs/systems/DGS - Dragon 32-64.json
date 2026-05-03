@@ -1,0 +1,34 @@
+{
+    "rom_paths": [],
+    "extensions": [
+        "1dd",
+        "cas",
+        "ccc",
+        "cqi",
+        "cqm",
+        "d77",
+        "d88",
+        "dfi",
+        "dmk",
+        "dsk",
+        "hfe",
+        "imd",
+        "ipf",
+        "jvc",
+        "mfi",
+        "mfm",
+        "rom",
+        "sdf",
+        "td0",
+        "vdk",
+        "wav",
+        "zip"
+    ],
+    "platform": "DGSDRAG",
+    "MAME_EMUOPTS": [
+        " d64 -[RTYP] ",
+        " d64 -cart ",
+        " d64 -cass ",
+        " d64 -flop1 "
+    ]
+}

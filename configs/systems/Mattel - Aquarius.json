@@ -1,0 +1,14 @@
+{
+    "rom_paths": [],
+    "extensions": [
+        "bin",
+        "wav",
+        "zip"
+    ],
+    "platform": "MAQUAR",
+    "MAME_EMUOPTS": [
+        " aqaurius -[RTYP] ",
+        " aqaurius -cass ",
+        " aquarius -cart "
+    ]
+}

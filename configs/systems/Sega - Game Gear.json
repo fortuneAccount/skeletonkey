@@ -1,0 +1,17 @@
+{
+    "rom_paths": [],
+    "extensions": [
+        "gg",
+        "bin",
+        "zip"
+    ],
+    "platform": "SGG",
+    "Fusion_EMUOPTS": [
+        " -FullScreen -gg ",
+        " -gg "
+    ],
+    "MAME_EMUOPTS": [
+        " gamegeaj -cart ",
+        " gamegear -cart "
+    ]
+}

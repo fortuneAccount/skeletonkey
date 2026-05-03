@@ -1,0 +1,10 @@
+{
+    "rom_paths": [],
+    "extensions": [
+        "bin",
+        "ic1",
+        "zip"
+    ],
+    "platform": "CASLOOP",
+    "MAME_EMUOPTS": " casloopy -cart "
+}

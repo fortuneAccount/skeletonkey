@@ -1,0 +1,32 @@
+{
+    "rom_paths": [],
+    "extensions": [
+        "ach",
+        "bin",
+        "blk",
+        "frz",
+        "plusd",
+        "prg",
+        "rom",
+        "sem",
+        "sit",
+        "sna",
+        "snp",
+        "snx",
+        "sp",
+        "tap",
+        "tzx",
+        "wav",
+        "z80",
+        "zip",
+        "zx"
+    ],
+    "platform": "SINZXS",
+    "MAME_EMUOPTS": [
+        " spec128 -[RTYP] ",
+        " spec128 -cart ",
+        " spec128 -dump ",
+        " specpls3 -flop1 ",
+        "spec128 -cass "
+    ]
+}

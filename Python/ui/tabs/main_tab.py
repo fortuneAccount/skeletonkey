@@ -782,8 +782,8 @@ class MainTab(BaseTab):
         sys_entry = self._systems._data.get(system)
         if sys_entry:
             sys_entry.extra_metadata["LAST_EMU"] = emu_name
-            sys_entry.extra_metadata[f"{emu_name}_EMUOPTS"] = options
-            sys_entry.extra_metadata[f"{emu_name}_EMUARGS"] = arguments
+            sys_entry.extra_metadata[f"{emu_name}_opts"] = options
+            sys_entry.extra_metadata[f"{emu_name}_args"] = arguments
             self._systems.save()
 
         launcher = Launcher(cfg)

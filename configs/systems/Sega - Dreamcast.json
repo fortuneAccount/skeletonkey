@@ -1,0 +1,20 @@
+{
+    "rom_paths": [],
+    "extensions": [
+        "cdr",
+        "chd",
+        "cue",
+        "gdi",
+        "img",
+        "iso",
+        "nrg",
+        "toc"
+    ],
+    "platform": "SDREAM",
+    "MAME_EMUOPTS": [
+        " dc -cdrm ",
+        " dc -cdrm ",
+        " dceu -cdrm ",
+        " dcjp -cdrm "
+    ]
+}

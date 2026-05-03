@@ -1,0 +1,12 @@
+{
+    "rom_paths": [],
+    "extensions": [],
+    "platform": "AMIGCDTV",
+    "MAME_EMUOPTS": [
+        " cdtv -[RTYP] ",
+        " cdtv -cdrom ",
+        " cdtv -flop ",
+        " cdtvn -cdrom ",
+        " cdtvn -flop "
+    ]
+}

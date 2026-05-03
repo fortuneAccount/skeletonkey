@@ -1,0 +1,14 @@
+{
+    "rom_paths": [],
+    "extensions": [
+        "bs",
+        "fig",
+        "sfc",
+        "smc",
+        "st",
+        "swc",
+        "zip"
+    ],
+    "platform": "SNESPAL",
+    "MAME_EMUOPTS": " snespal -cart "
+}

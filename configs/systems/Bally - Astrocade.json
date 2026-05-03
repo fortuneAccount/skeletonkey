@@ -1,0 +1,14 @@
+{
+    "rom_paths": [],
+    "extensions": [
+        "bin",
+        "zip"
+    ],
+    "platform": "BASTR",
+    "MAME_EMUOPTS": [
+        " astrocde -cart ",
+        " astrocde -cart ",
+        " astrocdl -cart ",
+        " astrocdw -cart "
+    ]
+}

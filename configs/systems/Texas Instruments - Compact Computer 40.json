@@ -1,0 +1,6 @@
+{
+    "rom_paths": [],
+    "extensions": [],
+    "platform": "TICC40",
+    "MAME_EMUOPTS": " cc40 -flop "
+}

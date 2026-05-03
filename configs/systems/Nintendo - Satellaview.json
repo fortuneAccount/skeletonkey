@@ -1,0 +1,14 @@
+{
+    "rom_paths": [],
+    "extensions": [
+        "sfc",
+        "smc",
+        "zip"
+    ],
+    "platform": "NNSAT",
+    "MAME_EMUOPTS": [
+        " snes -cart ",
+        " snes -cart ",
+        " snespal -cart "
+    ]
+}

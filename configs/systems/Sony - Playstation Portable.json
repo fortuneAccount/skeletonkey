@@ -1,0 +1,14 @@
+{
+    "rom_paths": [
+        "D:\\Console\\Sony - Playstation Portable"
+    ],
+    "extensions": [
+        "cso",
+        "img",
+        "iso",
+        "jso",
+        "pbp",
+        "pkg"
+    ],
+    "platform": "SPLAYP"
+}

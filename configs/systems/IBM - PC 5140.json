@@ -1,0 +1,6 @@
+{
+    "rom_paths": [],
+    "extensions": [],
+    "platform": "IBMPC40",
+    "MAME_EMUOPTS": " ibm5140 -flop "
+}

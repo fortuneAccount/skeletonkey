@@ -1,0 +1,20 @@
+{
+    "rom_paths": [],
+    "extensions": [
+        "cdi",
+        "cdr",
+        "chd",
+        "cue",
+        "gdi",
+        "img",
+        "iso",
+        "nrg",
+        "toc"
+    ],
+    "platform": "T3DO",
+    "MAME_EMUOPTS": [
+        " 3do -cdrm ",
+        " 3do_m2 -cdrm ",
+        " 3do_pal -cdrm "
+    ]
+}

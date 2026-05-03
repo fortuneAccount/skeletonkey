@@ -1,0 +1,20 @@
+{
+    "rom_paths": [],
+    "extensions": [
+        "chd",
+        "d64",
+        "hd",
+        "n64",
+        "pal",
+        "rom",
+        "usa",
+        "z64",
+        "zip"
+    ],
+    "platform": "N64DD",
+    "MAME_EMUOPTS": [
+        " n64dd -[RTYP] ",
+        " n64dd -cart ",
+        " n64dd -disk "
+    ]
+}

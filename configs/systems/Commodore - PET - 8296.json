@@ -1,0 +1,6 @@
+{
+    "rom_paths": [],
+    "extensions": [],
+    "platform": "COMPET82",
+    "MAME_EMUOPTS": " cbm8296 -flop "
+}

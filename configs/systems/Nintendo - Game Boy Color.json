@@ -1,0 +1,17 @@
+{
+    "rom_paths": [],
+    "extensions": [
+        "cgb",
+        "dmg",
+        "gb",
+        "gbc",
+        "sgb",
+        "zip"
+    ],
+    "platform": "NNGBC",
+    "MAME_EMUOPTS": [
+        " gbcolor -cart ",
+        " supergb -cart ",
+        " supergb2 -cart "
+    ]
+}

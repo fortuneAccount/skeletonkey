@@ -1,0 +1,11 @@
+{
+    "rom_paths": [],
+    "extensions": [
+        "bin",
+        "vb",
+        "vboy",
+        "zip"
+    ],
+    "platform": "NNVB",
+    "MAME_EMUOPTS": " vboy -cart "
+}

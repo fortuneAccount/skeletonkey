@@ -1,0 +1,6 @@
+{
+    "rom_paths": [],
+    "extensions": [],
+    "platform": "PSIORG2",
+    "MAME_EMUOPTS": " psion2 -cart "
+}

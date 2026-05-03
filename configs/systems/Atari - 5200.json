@@ -1,0 +1,16 @@
+{
+    "rom_paths": [],
+    "extensions": [
+        "a52",
+        "bin",
+        "car",
+        "rom",
+        "zip"
+    ],
+    "platform": "AT52",
+    "Altirra_EMUOPTS": [
+        " /f /hardware:5200 /kernel:5200lle ",
+        " /hardware:5200 /kernel:5200lle "
+    ],
+    "MAME_EMUOPTS": " a5200 -cart "
+}

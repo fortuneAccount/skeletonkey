@@ -1,0 +1,6 @@
+{
+    "rom_paths": [],
+    "extensions": [],
+    "platform": "COMX35",
+    "MAME_EMUOPTS": " comx35 -flop "
+}

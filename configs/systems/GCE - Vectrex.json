@@ -1,0 +1,11 @@
+{
+    "rom_paths": [],
+    "extensions": [
+        "bin",
+        "gam",
+        "vec",
+        "zip"
+    ],
+    "platform": "GVEXTR",
+    "MAME_EMUOPTS": " vectrex -cart "
+}

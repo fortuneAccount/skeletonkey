@@ -1,0 +1,18 @@
+{
+    "rom_paths": [
+        "C:\\Console\\Nintendo - Wii"
+    ],
+    "extensions": [
+        "ciso",
+        "dff",
+        "dol",
+        "elf",
+        "gcm",
+        "gcz",
+        "iso",
+        "tgc",
+        "wad",
+        "wbfs"
+    ],
+    "platform": "NNWII"
+}

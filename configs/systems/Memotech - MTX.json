@@ -1,0 +1,14 @@
+{
+    "rom_paths": [],
+    "extensions": [
+        "mtx",
+        "wav",
+        "zip"
+    ],
+    "platform": "MMTX",
+    "MAME_EMUOPTS": [
+        " mtx512 -[RTYP] ",
+        " mtx512 -cass ",
+        " mtx512 -dump "
+    ]
+}

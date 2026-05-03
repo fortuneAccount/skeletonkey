@@ -1,0 +1,12 @@
+{
+    "rom_paths": [],
+    "extensions": [
+        "bin",
+        "chd",
+        "cue",
+        "iso",
+        "zip"
+    ],
+    "platform": "SNEOCD",
+    "MAME_EMUOPTS": " neocd -cdrm "
+}

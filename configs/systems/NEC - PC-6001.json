@@ -1,0 +1,17 @@
+{
+    "rom_paths": [],
+    "extensions": [
+        "bin",
+        "cas",
+        "p6",
+        "zip"
+    ],
+    "platform": "NPC6K1",
+    "MAME_EMUOPTS": [
+        " pc6001 -cart1 ",
+        " pc6001a -cart1 ",
+        " pc6001mk2 -cart1 ",
+        " pc6001sr -cart1 ",
+        " pc6601 -cart1 "
+    ]
+}

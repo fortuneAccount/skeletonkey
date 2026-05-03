@@ -1,0 +1,8 @@
+{
+    "rom_paths": [],
+    "extensions": [
+        "chd",
+        "zip"
+    ],
+    "platform": "HYPNEO"
+}

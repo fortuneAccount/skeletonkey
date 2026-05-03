@@ -45,19 +45,10 @@ def app_home() -> Path:
 
 def config_home() -> Path:
     """Determine writable config location based on portable status."""
-    root = app_root()
-    # 1. Check for portable flag in root
-    if (root / "portable.txt").exists():
-        return root
-    
-    # 2. Check for portable flag in AppData (fallback)
-    appdata = Path(os.environ.get("APPDATA", str(root))) / "skeletonkey"
-    if (appdata / "portable.txt").exists():
-        return appdata
-
-    # 3. Default to AppData if not explicitly portable
-    appdata.mkdir(parents=True, exist_ok=True)
-    return appdata
+    # Establishing 'configs' folder in the root for all user configuration data.
+    path = app_root() / "configs"
+    path.mkdir(parents=True, exist_ok=True)
+    return path
 
 
 def assets_dir() -> Path:

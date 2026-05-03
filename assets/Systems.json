@@ -1,14 +1,6 @@
 {
     "Acetronic - MPU-1000": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "mpu1000",
         "MAME_EMUOPTS": " mpu1000 -cart ",
         "SHORTNM": "ACEMPU1K",
@@ -19,14 +11,6 @@
     },
     "Acorn - Archimedes": {
         "EMUPRESET": "Arculator",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "a310",
         "MAME_EMUOPTS": " a310 -flop a7000 -flop",
         "ROMXT": [
@@ -62,34 +46,18 @@
     },
     "Acorn - Atom": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "atom",
         "MAME_EMUOPTS": " atom -flop ",
         "SHORTNM": "ACATOM",
         "SUPCORE": "mame_libretro.dll",
         "SUPEMU": [
             "atom",
-            "atomulator", 
+            "atomulator",
             "MAME"
         ]
     },
     "Acorn - BBC": {
         "EMUPRESET": "BeebEm",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "bbca",
         "MAME_EMUOPTS": [
             " bbca -[RTYP] ",
@@ -121,14 +89,6 @@
     },
     "Acorn - Electron": {
         "EMUPRESET": "ElecEM",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "electron",
         "MAME_EMUOPTS": [
             " electron -[RTYP] ",
@@ -162,14 +122,6 @@
     },
     "Acorn - FileStore": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "e01",
         "MAME_EMUOPTS": " e01 -flop ",
         "SHORTNM": "ACFILST",
@@ -180,14 +132,6 @@
     },
     "ACT - Apricot PC-Xi": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "apricot",
         "MAME_EMUOPTS": " apricot -flop ",
         "SHORTNM": "APRIC",
@@ -198,14 +142,6 @@
     },
     "ADC - Super Six": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "super6",
         "MAME_EMUOPTS": " super6 -flop ",
         "SHORTNM": "SUPRSIX",
@@ -216,14 +152,6 @@
     },
     "Adobe - Flash": {
         "EMUPRESET": "FlashRun",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "ROMXT": [
             "htm",
             "html",
@@ -246,14 +174,6 @@
         ]
     },
     "ALG - American Laser Games": {
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "SHORTNM": "ALAZG",
         "SUPCORE": [
             "daphne_libretro.dll",
@@ -266,14 +186,6 @@
     },
     "Altos - Series 5": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "altos5",
         "MAME_EMUOPTS": " altos5 -flop ",
         "SHORTNM": "ALTOSSV",
@@ -284,14 +196,6 @@
     },
     "Ampro - Little Z80 Board": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "ampro",
         "MAME_EMUOPTS": " ampro -flop ",
         "SHORTNM": "AMPLZ",
@@ -306,14 +210,6 @@
             " /A"
         ],
         "EMUPRESET": "WinApe",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAME_EMUARGS": " ",
         "MAMENM": "cpc6128p",
         "MAME_EMUOPTS": [
@@ -364,14 +260,6 @@
     "Amstrad - GX4000": {
         "EMUARGS": " \"",
         "EMUPRESET": "WinApe",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "1",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "gx4000",
         "MAME_EMUOPTS": " gx4000 -cart ",
         "ROMXT": [
@@ -383,20 +271,12 @@
         "SHORTNM": "AMGX4K",
         "SUPCORE": "mame_libretro.dll",
         "SUPEMU": [
-            "WinApe", 
+            "WinApe",
             "MAME"
         ]
     },
     "Amstrad - Mega PC": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "megapc",
         "MAME_EMUOPTS": " megapc -flop1 ",
         "SHORTNM": "AMSTRMPC",
@@ -404,20 +284,12 @@
         "SUPEMU": [
             "WinApe",
             "arnold",
-            "caprice", 
+            "caprice",
             "MAME"
         ]
     },
     "Amstrad - PC1512 SD": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "pc1512",
         "MAME_EMUOPTS": " pc1512 -flop ",
         "SHORTNM": "AMSTP5SD",
@@ -425,20 +297,12 @@
         "SUPEMU": [
             "WinApe",
             "arnold",
-            "caprice", 
+            "caprice",
             "MAME"
         ]
     },
     "Amstrad - PC1640 SD": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "pc1640",
         "MAME_EMUOPTS": " pc1640 -flop ",
         "SHORTNM": "AMSTP6SD",
@@ -446,20 +310,12 @@
         "SUPEMU": [
             "WinApe",
             "arnold",
-            "caprice", 
+            "caprice",
             "MAME"
         ]
     },
     "Amstrad - PcW": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "pcw",
         "MAME_EMUOPTS": " pcw -flop1 ",
         "SHORTNM": "AMSTPCW",
@@ -474,14 +330,6 @@
     },
     "Amstrad - PcW16": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "pcw16",
         "MAME_EMUOPTS": " pcw16 -flop ",
         "SHORTNM": "AMSTPCWX",
@@ -495,14 +343,6 @@
     },
     "Android - Android": {
         "EMUPRESET": "Nox",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "1",
-            "1",
-            "1",
-            "1"
-        ],
         "ROMXT": "apk",
         "SHORTNM": "ANDRD",
         "SUPCORE": "mame_libretro.dll",
@@ -518,14 +358,6 @@
     },
     "APF - M-1000": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "apfm1000",
         "MAME_EMUOPTS": " apfm1000 -flop ",
         "SHORTNM": "APFM1K",
@@ -534,14 +366,6 @@
     },
     "Apogee - BK-01": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "apogee",
         "MAME_EMUOPTS": " apogee -flop ",
         "SHORTNM": "APOGBK",
@@ -553,14 +377,6 @@
     },
     "Apollo - Apollo": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "apollo",
         "MAME_EMUOPTS": " apollo -flop ",
         "SHORTNM": "APOLLO",
@@ -571,14 +387,6 @@
     },
     "Apple - Bandai - Pippin": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "pippin",
         "MAME_EMUOPTS": " pippin -cdrom ",
         "SHORTNM": "BPIPN",
@@ -589,14 +397,6 @@
     },
     "Apple - I": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "apple1",
         "MAME_EMUOPTS": " apple1 -flop ",
         "SHORTNM": "APLI",
@@ -610,14 +410,6 @@
     },
     "Apple - II": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "apple2",
         "MAME_EMUOPTS": [
             " apple2 -[RTYP] ",
@@ -662,14 +454,6 @@
     },
     "Apple - IIe": {
         "EMUPRESET": "AppleWin",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "apple2e",
         "MAME_EMUOPTS": [
             " apple2e -[RTYP] ",
@@ -717,14 +501,6 @@
     },
     "Apple - IIgs": {
         "EMUPRESET": "Kegs32",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "apple2gs",
         "MAME_EMUOPTS": " apple2gs -flop1 ",
         "ROMXT": [
@@ -753,20 +529,12 @@
             "ActiveGS",
             "Kegs32",
             "gsport",
-            "kegs", 
+            "kegs",
             "MAME"
         ]
     },
     "Apple - III": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "apple3",
         "MAME_EMUOPTS": " apple3 -flop ",
         "SHORTNM": "APLIII",
@@ -777,14 +545,6 @@
     },
     "Apple - Lisa": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "lisa",
         "MAME_EMUOPTS": [
             " lisa -flop1 ",
@@ -794,20 +554,12 @@
         "SUPCORE": "mame_libretro.dll",
         "SUPEMU": [
             "lisa",
-            "lisaem", 
+            "lisaem",
             "MAME"
         ]
     },
     "Apple - Lisa 2": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "lisa2",
         "MAME_EMUOPTS": [
             " lisa2 -flop1 ",
@@ -817,20 +569,12 @@
         "SUPCORE": "mame_libretro.dll",
         "SUPEMU": [
             "lisa",
-            "lisaem", 
+            "lisaem",
             "MAME"
         ]
     },
     "Apple - Macintosh": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "mac128k",
         "MAME_EMUOPTS": " mac128k -flop1 ",
         "SHORTNM": "APLMAC",
@@ -844,14 +588,6 @@
     },
     "Atari - 2600": {
         "EMUPRESET": "Stella",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "1",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "a2600",
         "MAME_EMUOPTS": [
             " a2600 -cart ",
@@ -867,13 +603,12 @@
         ],
         "SHORTNM": "AT26",
         "SUPCORE": [
-            "",
             "stella_libretro.dll"
         ],
         "SUPEMU": [
             "Stella",
             "no$2k6",
-            "z26", 
+            "z26",
             "MAME"
         ]
     },
@@ -888,14 +623,6 @@
             " /hardware:5200 /kernel:5200lle "
         ],
         "EMUPRESET": "Altirra",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "1",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "a5200",
         "MAME_EMUOPTS": " a5200 -cart ",
         "ROMXT": [
@@ -919,14 +646,6 @@
     },
     "Atari - 7800": {
         "EMUPRESET": "prosystem",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "1",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "a7800",
         "MAME_EMUOPTS": [
             " a7800 -cart ",
@@ -948,7 +667,7 @@
             "Bizhawk",
             "bliss",
             "emu7800",
-            "prosystem", 
+            "prosystem",
             "MAME"
         ]
     },
@@ -959,14 +678,6 @@
             " /hardware:800xl /tape "
         ],
         "EMUPRESET": "Altirra",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "a800xl",
         "MAME_EMUOPTS": [
             " a800 -cart ",
@@ -1017,14 +728,6 @@
             " /hardware:800xl /cart ",
             " /hardware:800xl /disk ",
             " /hardware:800xl /tape "
-        ],
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
         ],
         "MAME_EMUOPTS": [
             " a800 -cart ",
@@ -1077,14 +780,6 @@
             " /hardware:800xl /tape "
         ],
         "EMUPRESET": "Altirra",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "a800xl",
         "MAME_EMUOPTS": [
             " a800 -cart ",
@@ -1140,14 +835,6 @@
     },
     "Atari - Jaguar": {
         "EMUPRESET": "BigPEmu",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "1",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "jaguar",
         "MAME_EMUOPTS": " jaguar -cart ",
         "ROMXT": [
@@ -1172,14 +859,6 @@
     },
     "Atari - Jaguar CD": {
         "EMUPRESET": "ProjectTempest",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "1",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "jaguarcd",
         "MAME_EMUOPTS": " jaguarcd -cdrom ",
         "ROMXT": [
@@ -1201,23 +880,14 @@
         "SHORTNM": "ATJAGCD",
         "SUPCORE": "mame_libretro.dll",
         "SUPEMU": [
-            "ProjectTempest", 
+            "ProjectTempest",
             "MAME"
         ]
     },
     "Atari - Lynx": {
         "EMUPRESET": "Mednafen",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "1",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "lynx",
         "MAME_EMUOPTS": " lynx -cart ",
-        "MEDNM": "lynx",
         "ROMXT": [
             "com",
             "lnx",
@@ -1232,20 +902,12 @@
         ],
         "SUPEMU": [
             "Mednafen",
-            "BizHawk", 
+            "BizHawk",
             "MAME"
         ]
     },
     "Atari - Portfolio": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "pofo",
         "MAME_EMUOPTS": " pofo -card ",
         "SHORTNM": "ATPFOL",
@@ -1256,14 +918,6 @@
     },
     "Atari - ST": {
         "EMUPRESET": "STeem",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAME_EMUOPTS": [
             " st -[RTYP] ",
             " st -cart ",
@@ -1283,7 +937,7 @@
             "STeem",
             "gemulator",
             "hatari",
-            "sainT", 
+            "sainT",
             "MAME"
         ]
     },
@@ -1294,14 +948,6 @@
             " /hardware:800xl /tape "
         ],
         "EMUPRESET": "Altirra",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "xegs",
         "MAME_EMUOPTS": [
             " a800 -cart ",
@@ -1332,20 +978,12 @@
         "SUPEMU": [
             "Altirra",
             "Atari800winplus",
-            "atari++", 
+            "atari++",
             "MAME"
         ]
     },
     "Bally - Astrocade": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "astrocde",
         "MAME_EMUOPTS": [
             " astrocde -cart ",
@@ -1365,14 +1003,6 @@
     },
     "Bandai - Gundam RX-78": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "rx78",
         "MAME_EMUOPTS": " rx78 -cart ",
         "SHORTNM": "BGUND",
@@ -1383,14 +1013,6 @@
     },
     "Bandai - Playdia": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "playdia",
         "MAME_EMUOPTS": " playdia -cdrom ",
         "SHORTNM": "BPLAD",
@@ -1401,14 +1023,6 @@
     },
     "Bandai - Super Note Club": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "snotec",
         "MAME_EMUOPTS": " snotec ",
         "SHORTNM": "BSUPRN",
@@ -1419,14 +1033,6 @@
     },
     "Bandai - Super Vision 8000": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "omv2000",
         "MAME_EMUOPTS": " omv2000 -cart ",
         "SHORTNM": "BSUPRV",
@@ -1437,17 +1043,8 @@
     },
     "Bandai - WonderSwan": {
         "EMUPRESET": "Mednafen",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "1",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "wswan",
         "MAME_EMUOPTS": " wswan -cart ",
-        "MEDNM": "wswan",
         "ROMXT": [
             "bin",
             "ws",
@@ -1467,17 +1064,8 @@
     },
     "Bandai - WonderSwan Color": {
         "EMUPRESET": "Mednafen",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "1",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "wscolor",
         "MAME_EMUOPTS": " wswan -cart ",
-        "MEDNM": "wswan",
         "ROMXT": [
             "bin",
             "ws",
@@ -1498,14 +1086,6 @@
     },
     "BBC - Bridge Companion": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "bbcbc",
         "MAME_EMUOPTS": " bbcbc -flop ",
         "SHORTNM": "BBCBR",
@@ -1516,14 +1096,6 @@
     },
     "BBC - Master": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "bbcm",
         "MAME_EMUOPTS": " bbcm -flop ",
         "SHORTNM": "BBCMAS",
@@ -1534,14 +1106,6 @@
     },
     "BBC - Master Compact": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "bbcmc",
         "MAME_EMUOPTS": " bbcmc -flop ",
         "SHORTNM": "BBCMC",
@@ -1552,14 +1116,6 @@
     },
     "BBC - Micro Model A": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "bbca",
         "MAME_EMUOPTS": " bbca -flop ",
         "SHORTNM": "BBCMA",
@@ -1570,14 +1126,6 @@
     },
     "BBC - Micro Model B": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "bbcb",
         "MAME_EMUOPTS": " bbcb -flop ",
         "SHORTNM": "BBCMB",
@@ -1588,14 +1136,6 @@
     },
     "Belogic - Uzebox": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "uzebox",
         "MAME_EMUOPTS": " uzebox -cart ",
         "SHORTNM": "BELOUZ",
@@ -1606,14 +1146,6 @@
     },
     "Benesse - Pocket Challenge V2": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "pockchalv2",
         "MAME_EMUOPTS": " pockchalv2 -cart ",
         "SHORTNM": "BELPCII",
@@ -1625,42 +1157,16 @@
     },
     "Benesse - Pocket Challenge W": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "pockchalw",
         "MAME_EMUOPTS": " pockchalw -cart ",
-        "SHORTNM": [
-            "BELPCW",
-            "byuu"
-        ],
+        "SHORTNM": "BELPCW",
         "SUPCORE": "mame_libretro.dll",
         "SUPEMU": [
             "MAME"
         ]
     },
-    "BIOS - BIOS": {
-        "EMUPRESET": "MAME",
-        "MAMENM": "",
-        "MAME_EMUOPTS": "",
-        "MEDNM": "",
-        "ROMXT": ""
-    },
     "Bit Corp - Gamate": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "gamate",
         "MAME_EMUOPTS": " gamate -cart ",
         "SHORTNM": "BITCGA",
@@ -1671,14 +1177,6 @@
     },
     "BNPO - Bashkiria-2M": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "b2m",
         "MAME_EMUOPTS": " b2m -flop ",
         "SHORTNM": "BNPOB",
@@ -1689,14 +1187,6 @@
     },
     "Bondwell - Bondwell 12": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "bw12",
         "MAME_EMUOPTS": " bw12 -flop ",
         "SHORTNM": "BOND12",
@@ -1707,14 +1197,6 @@
     },
     "Bondwell - Bondwell 14": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "bw14",
         "MAME_EMUOPTS": " bw14 -flop ",
         "SHORTNM": "BOND14",
@@ -1725,14 +1207,6 @@
     },
     "Bondwell - Bondwell 2": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "bw2",
         "MAME_EMUOPTS": " bw2 -flop ",
         "SHORTNM": "BOND2",
@@ -1743,14 +1217,6 @@
     },
     "Cambridge Computers - Z88": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "z88",
         "MAME_EMUOPTS": " z88 -cart1 ",
         "SHORTNM": "CAMBZ",
@@ -1761,14 +1227,6 @@
     },
     "Camputers - Lynx": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "lynx128",
         "MAME_EMUOPTS": [
             " lynx128k -[RTYP] ",
@@ -1803,14 +1261,6 @@
     },
     "Canon - X-07": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "x07",
         "MAME_EMUOPTS": [
             " x07 -card ",
@@ -1825,18 +1275,9 @@
     "Capcom Play System - CPS": {
         "EMUPRESET": "FinalBurnAlpha",
         "EXTRARC": "0",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "0",
-            "0",
-            "0"
-        ],
         "NICEFLDR": "1",
         "PEREMUCFG": "1",
         "ROMXT": "zip",
-        "SETLST": "",
         "SHORTNM": "CPS",
         "SUPCORE": [
             "fbalpha2012_cps1_libretro.dll",
@@ -1863,17 +1304,8 @@
     "Capcom Play System - CPS II": {
         "EMUPRESET": "FinalBurnAlpha",
         "EXTRARC": "0",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "0",
-            "0",
-            "0"
-        ],
         "NICEFLDR": "1",
         "ROMXT": "zip",
-        "SETLST": "",
         "SHORTNM": "CPSII",
         "SUPCORE": [
             "fbalpha2012_cps2_libretro.dll",
@@ -1899,20 +1331,11 @@
     "Capcom Play System - CPS III": {
         "EMUPRESET": "cps3emulator",
         "EXTRARC": "0",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "0",
-            "0",
-            "0"
-        ],
         "NICEFLDR": "1",
         "ROMXT": [
             "chd",
             "zip"
         ],
-        "SETLST": "",
         "SHORTNM": "CPSIII",
         "SUPCORE": [
             "fbalpha2012_libretro.dll",
@@ -1928,20 +1351,12 @@
         "SUPEMU": [
             "FBNeo",
             "FinalBurnAlpha",
-            "cps3emulator", 
+            "cps3emulator",
             "MAME"
         ]
     },
     "Casio - Loopy": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "casloopy",
         "MAME_EMUOPTS": " casloopy -cart ",
         "ROMXT": [
@@ -1957,14 +1372,6 @@
     },
     "Casio - PB-1000": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "pb1000",
         "MAME_EMUOPTS": " pb1000 ",
         "ROMXT": "*",
@@ -1976,14 +1383,6 @@
     },
     "Casio - PB-2000C": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "pb2000c",
         "MAME_EMUOPTS": " pb2000c -cart ",
         "SHORTNM": "CASPB2KC",
@@ -1994,17 +1393,8 @@
     },
     "Casio - PV-1000": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "pv1000",
         "MAME_EMUOPTS": " pv1000 -cart ",
-        "ROMXT": "*",
         "SHORTNM": "CASPV1K",
         "SUPCORE": "mame_libretro.dll",
         "SUPEMU": [
@@ -2014,14 +1404,6 @@
     },
     "Casio - PV-2000": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "pv2000",
         "MAME_EMUOPTS": [
             " pv2000 -[RTYP] ",
@@ -2031,7 +1413,7 @@
         "SHORTNM": "CASPV2K",
         "SUPCORE": "mame_libretro.dll",
         "SUPEMU": [
-            "pv2000", 
+            "pv2000",
             "MAME"
         ]
     },
@@ -2040,18 +1422,9 @@
         "MAME_EMUOPTS": " [MAMENM] -[MAMEMEDIA] ",
         "EMUPRESET": "MAME",
         "EXTRARC": "0",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "0",
-            "0",
-            "0"
-        ],
         "NICEFLDR": "1",
         "ROMXT": "zip",
         "RUNDIR": "0",
-        "SETLST": "",
         "SHORTNM": "CAVE",
         "SUPCORE": [
             "fbalpha_libretro.dll",
@@ -2063,14 +1436,6 @@
     },
     "Chess-Master - Diamond Modules": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "chessmstdm",
         "MAME_EMUOPTS": " chessmstdm -flop ",
         "SHORTNM": "CHEDMOD",
@@ -2080,14 +1445,6 @@
         ]
     },
     "Cinematronics - Laserdisc": {
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "ROMXT": "txt",
         "SHORTNM": "CINLD",
         "SUPCORE": "daphne_libretro.dll",
@@ -2098,14 +1455,6 @@
     },
     "Coleco - ADAM": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "adam",
         "MAME_EMUOPTS": [
             " adam -[RTYP] ",
@@ -2116,7 +1465,7 @@
         "SHORTNM": "COLADAM",
         "SUPCORE": "mame_libretro.dll",
         "SUPEMU": [
-            "adamemu", 
+            "adamemu",
             "MAME"
         ]
     },
@@ -2128,14 +1477,6 @@
             " /machine \"COL - Colecovision\" /rom1zip "
         ],
         "EMUPRESET": "BlueMSX",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "1",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "coleco",
         "MAME_EMUOPTS": [
             " coleco -cart ",
@@ -2150,7 +1491,7 @@
             "colem",
             "dsp",
             "koleko",
-            "meka", 
+            "meka",
             "MAME"
         ]
     },
@@ -2162,14 +1503,6 @@
             " /machine \"COL - Colecovision\" /rom1zip "
         ],
         "EMUPRESET": "BlueMSX",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "1",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "colecop",
         "MAME_EMUOPTS": " colecop -flop ",
         "SHORTNM": "COLECOP",
@@ -2188,14 +1521,6 @@
     },
     "Commodore - 64": {
         "EMUPRESET": "WinVICE",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "c64",
         "MAME_EMUOPTS": [
             " c64 -[RTYP] ",
@@ -2254,33 +1579,17 @@
     },
     "Commodore - 65": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "c65",
         "MAME_EMUOPTS": " c65 -flop ",
         "SHORTNM": "COM65",
         "SUPCORE": "mame_libretro.dll",
         "SUPEMU": [
-            "WinVICE", 
+            "WinVICE",
             "MAME"
         ]
     },
     "Commodore - Amiga": {
         "EMUPRESET": "FS-UAE",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "a500n",
         "MAME_EMUOPTS": [
             " a1200n -flop",
@@ -2301,14 +1610,6 @@
     },
     "Commodore - Amiga 1000": {
         "EMUPRESET": "FS-UAE",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "a1000n",
         "MAME_EMUOPTS": [
             " a1000 -flop ",
@@ -2326,14 +1627,6 @@
     },
     "Commodore - Amiga 1200": {
         "EMUPRESET": "FS-UAE",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "a1200n",
         "MAME_EMUOPTS": [
             " a1200 -flop ",
@@ -2350,14 +1643,6 @@
     },
     "Commodore - Amiga 2000": {
         "EMUPRESET": "FS-UAE",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "a2000n",
         "MAME_EMUOPTS": [
             " a2000 -flop ",
@@ -2374,14 +1659,6 @@
     },
     "Commodore - Amiga 3000": {
         "EMUPRESET": "FS-UAE",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "a3000n",
         "MAME_EMUOPTS": [
             " a3000 -flop ",
@@ -2408,14 +1685,6 @@
     },
     "Commodore - Amiga CD32": {
         "EMUPRESET": "WinVICE",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "1",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "cd32",
         "MAME_EMUOPTS": [
             " cd32 -cdrom ",
@@ -2425,20 +1694,12 @@
         "SUPCORE": "mame_libretro.dll",
         "SUPEMU": [
             "FS-UAE",
-            "WinUAE", 
+            "WinUAE",
             "MAME"
         ]
     },
     "Commodore - Amiga CDTV": {
         "EMUPRESET": "FS-UAE",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "1",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "cdtv",
         "MAME_EMUOPTS": [
             " cdtv -[RTYP] ",
@@ -2456,59 +1717,26 @@
         ]
     },
     "Commodore - BX256-80HP": {
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "SHORTNM": "COMBX256",
         "SUPCORE": "mame_libretro.dll",
         "SUPEMU": [
             "MAME"
         ]
     },
-    "Commodore - C128": {
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ]
-    },
+    "Commodore - C128": {},
     "Commodore - C16": {
         "EMUPRESET": "WinVICE",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "c16",
         "MAME_EMUOPTS": " c16 -cart",
         "SHORTNM": "COMC16",
         "SUPCORE": "mame_libretro.dll",
         "SUPEMU": [
-            "WinVICE", 
+            "WinVICE",
             "MAME"
         ]
     },
     "Commodore - CBM-II": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "cbm2",
         "MAME_EMUOPTS": " cbm2 -flop ",
         "SHORTNM": "COMCBMII",
@@ -2520,14 +1748,6 @@
     },
     "Commodore - PET": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "pet8032",
         "MAME_EMUOPTS": [
             " pet8032 -[RTYP] ",
@@ -2559,58 +1779,34 @@
         "SHORTNM": "COMPET",
         "SUPCORE": "mame_libretro.dll",
         "SUPEMU": [
-            "WinVICE", 
+            "WinVICE",
             "MAME"
         ]
     },
     "Commodore - PET - 8096": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "cbm8096",
         "MAME_EMUOPTS": " cbm8096 -flop ",
         "SHORTNM": "COMPET80",
         "SUPCORE": "mame_libretro.dll",
         "SUPEMU": [
-            "WinVICE", 
+            "WinVICE",
             "MAME"
         ]
     },
     "Commodore - PET - 8296": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "cbm8296",
         "MAME_EMUOPTS": " cbm8296 -flop ",
         "SHORTNM": "COMPET82",
         "SUPCORE": "mame_libretro.dll",
         "SUPEMU": [
-            "WinVICE", 
+            "WinVICE",
             "MAME"
         ]
     },
     "Commodore - Plus-4": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "plus4",
         "MAME_EMUOPTS": [
             " plus4 -[RTYP] ",
@@ -2621,20 +1817,12 @@
         "SHORTNM": "COMPLUS",
         "SUPCORE": "vice_xplus_libretro.dll",
         "SUPEMU": [
-            "WinVICE", 
+            "WinVICE",
             "MAME"
         ]
     },
     "Commodore - VIC-10": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "vic10",
         "MAME_EMUOPTS": [
             " vic10 -[RTYP] ",
@@ -2644,20 +1832,12 @@
         "SHORTNM": "COMVIC10",
         "SUPCORE": "mame_libretro.dll",
         "SUPEMU": [
-            "WinVICE", 
+            "WinVICE",
             "MAME"
         ]
     },
     "Commodore - VIC-10 - Max Machine - UltiMax": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "vic10",
         "MAME_EMUOPTS": [
             " vic10 -[RTYP] ",
@@ -2667,20 +1847,12 @@
         "SHORTNM": "COMMAX",
         "SUPCORE": "mame_libretro.dll",
         "SUPEMU": [
-            "WinVICE", 
+            "WinVICE",
             "MAME"
         ]
     },
     "Commodore - VIC-1001": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "vic1001",
         "MAME_EMUOPTS": [
             " vic1001 -[RTYP] ",
@@ -2691,20 +1863,12 @@
         "SHORTNM": "COMVIC1K",
         "SUPCORE": "mame_libretro.dll",
         "SUPEMU": [
-            "WinVICE", 
+            "WinVICE",
             "MAME"
         ]
     },
     "Commodore - VIC-20": {
         "EMUPRESET": "WinVICE",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "vic20",
         "MAME_EMUOPTS": [
             " vic20 -[RTYP] ",
@@ -2727,7 +1891,8 @@
             "d77",
             "d88",
             "dfi",
-            "dsk .p00",
+            "dsk",
+            "p00",
             "g41",
             "g64",
             "imd",
@@ -2758,14 +1923,6 @@
     },
     "Compucolor - Compucolor II": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "compclr2",
         "MAME_EMUOPTS": " compclr2 -flop ",
         "SHORTNM": "COCOII",
@@ -2777,14 +1934,6 @@
     },
     "COMX - 35": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "comx35",
         "MAME_EMUOPTS": " comx35 -flop ",
         "SHORTNM": "COMX35",
@@ -2797,14 +1946,6 @@
     },
     "Conitec - PROF-180": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "prof180",
         "MAME_EMUOPTS": [
             " prof180 -flop1 ",
@@ -2818,14 +1959,6 @@
     },
     "Conitec - PROF-80": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "prof80",
         "MAME_EMUOPTS": [
             " prof80 -flop1 ",
@@ -2839,14 +1972,6 @@
     },
     "Creatronic - Mega Duck": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "megaduck",
         "MAME_EMUOPTS": " megaduck -cart ",
         "ROMXT": [
@@ -2860,14 +1985,6 @@
         ]
     },
     "Cybiko - Cybiko": {
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "cybikov2",
         "MAME_EMUOPTS": " cybikov2 -quik ",
         "ROMXT": [
@@ -2877,19 +1994,11 @@
         "SHORTNM": "CYBKO",
         "SUPCORE": "mame_libretro.dll",
         "SUPEMU": [
-            "c4pc", 
+            "c4pc",
             "MAME"
         ]
     },
     "Cybiko - Xtreme": {
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAME_EMUOPTS": " cybikov2 -quik ",
         "ROMXT": [
             "bin",
@@ -2898,20 +2007,12 @@
         "SHORTNM": "CYBKX",
         "SUPCORE": "mame_libretro.dll",
         "SUPEMU": [
-            "c4pc", 
+            "c4pc",
             "MAME"
         ]
     },
     "DAI - Personal Computer": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "dai",
         "MAME_EMUOPTS": " dai -flop ",
         "SHORTNM": "DAIPC",
@@ -2938,14 +2039,6 @@
     },
     "DEC - Rainbow 100": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "rainbow",
         "MAME_EMUOPTS": [
             " rainbow -flop1 ",
@@ -2959,14 +2052,6 @@
     },
     "DGS - Dragon": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "dragon",
         "MAME_EMUOPTS": " dragon -flop ",
         "SHORTNM": "DGSDRG",
@@ -2977,14 +2062,6 @@
     },
     "DGS - Dragon 32-64": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "d64plus",
         "MAME_EMUOPTS": [
             " d64 -[RTYP] ",
@@ -3025,14 +2102,6 @@
     },
     "Dick Smith Electronics - Super-80": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "super80",
         "MAME_EMUOPTS": " super80 -cass ",
         "SHORTNM": "DSM",
@@ -3043,14 +2112,6 @@
     },
     "Dick Smith Electronics - VZ-200-300": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "vz",
         "MAME_EMUOPTS": " vz -cass1 ",
         "SHORTNM": "DSMVZ",
@@ -3061,14 +2122,6 @@
     },
     "Dimension - 68000": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "dim68k",
         "MAME_EMUOPTS": " dim68k -flop ",
         "SHORTNM": "DIMEN68",
@@ -3079,14 +2132,6 @@
     },
     "Dragon - Alpha": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "dgnalpha",
         "MAME_EMUOPTS": " dgnalpha -flop ",
         "SHORTNM": "DRAGA",
@@ -3097,14 +2142,6 @@
     },
     "Dragon - Beta": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "dgnbeta",
         "MAME_EMUOPTS": " dgnbeta -flop ",
         "SHORTNM": "DRAGB",
@@ -3115,14 +2152,6 @@
     },
     "EACA - Colour Genie EG2000": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "cgenie",
         "MAME_EMUOPTS": " cgenie -flop ",
         "SHORTNM": "ECGENIE",
@@ -3134,14 +2163,6 @@
     },
     "EasyRPG - EasyRPG": {
         "EMUPRESET": "easyrpg",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "ROMXT": [
             "ini",
             "lmt"
@@ -3154,14 +2175,6 @@
     },
     "Electronmash - Poisk-1": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "poisk1",
         "MAME_EMUOPTS": " poisk1 -flop1 ",
         "SHORTNM": "ELPOISK",
@@ -3172,14 +2185,6 @@
     },
     "Elektronika - BK-0010": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "bk0010",
         "MAME_EMUOPTS": " bk0010 -flop ",
         "SHORTNM": "ELKBK",
@@ -3190,14 +2195,6 @@
     },
     "Elektronska Industrija Nis - PeCom 32": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "pecom32",
         "MAME_EMUOPTS": " pecom32 -cass ",
         "SHORTNM": "EINP32",
@@ -3208,14 +2205,6 @@
     },
     "Elektronska Industrija Nis - PeCom 64": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "pecom64",
         "MAME_EMUOPTS": " pecom64 -cass ",
         "SHORTNM": "EINP64",
@@ -3226,14 +2215,6 @@
     },
     "Emerson - Arcadia 2001": {
         "EMUPRESET": "WinArcadia",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "arcadia",
         "SHORTNM": "EMARC",
         "SUPCORE": "mame_libretro.dll",
@@ -3244,14 +2225,6 @@
     },
     "Enterprise - 128": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "ep128",
         "MAME_EMUOPTS": [
             " ep128 -[RTYP] ",
@@ -3275,14 +2248,6 @@
     },
     "Enterprise - 64": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "ep64",
         "MAME_EMUOPTS": [
             " ep64 -[RTYP] ",
@@ -3306,14 +2271,6 @@
     },
     "Entex - Adventure Vision": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "advision",
         "MAME_EMUOPTS": " advision -cart ",
         "ROMXT": [
@@ -3329,14 +2286,6 @@
     },
     "Epoch - Game Pocket Computer": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "gamepock",
         "MAME_EMUOPTS": " gamepock -cart ",
         "SHORTNM": "EGAMPC",
@@ -3347,14 +2296,6 @@
     },
     "Epoch - Super Cassette Vision": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "scv",
         "MAME_EMUOPTS": " scv -cart ",
         "ROMXT": [
@@ -3364,20 +2305,12 @@
         "SHORTNM": "ESCVIS",
         "SUPCORE": "mame_libretro.dll",
         "SUPEMU": [
-            "scv", 
+            "scv",
             "MAME"
         ]
     },
     "Epson - CPM Systems": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "epson",
         "MAME_EMUOPTS": " epson -flop ",
         "SHORTNM": "EPCPM",
@@ -3388,14 +2321,6 @@
     },
     "EPSON - PX-4": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "px4",
         "MAME_EMUOPTS": " px4 -cart ",
         "SHORTNM": "EPX4",
@@ -3406,14 +2331,6 @@
     },
     "EPSON - PX-8": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "px8",
         "MAME_EMUOPTS": " px8 -cart ",
         "SHORTNM": "EPX8",
@@ -3424,14 +2341,6 @@
     },
     "Epson - QX-10": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "qx10",
         "MAME_EMUOPTS": " qx10 -flop1 ",
         "SHORTNM": "EPQX10",
@@ -3442,14 +2351,6 @@
     },
     "ES PEVM - EC 1841": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "ec1841",
         "MAME_EMUOPTS": " ec1841 -flop ",
         "SHORTNM": "ESPEVM",
@@ -3460,14 +2361,6 @@
     },
     "Exelvision - EXL 100": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "exl100",
         "MAME_EMUOPTS": " exl100 -cart ",
         "ROMXT": [
@@ -3484,14 +2377,6 @@
     },
     "Exidy - Sorcerer": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "sorcerer",
         "MAME_EMUOPTS": [
             " sorcerer -[RTYP] ",
@@ -3502,20 +2387,12 @@
         "SHORTNM": "EXIDSOR",
         "SUPCORE": "mame_libretro.dll",
         "SUPEMU": [
-            "sorcerer", 
+            "sorcerer",
             "MAME"
         ]
     },
     "Fairchild - Channel F": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "1",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "channelf",
         "MAME_EMUOPTS": " channelf -cart ",
         "ROMXT": [
@@ -3531,14 +2408,6 @@
     },
     "Fidelity - Fidelity SCC": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "fidel",
         "MAME_EMUOPTS": " fidel -cart ",
         "SHORTNM": "FIDSCC",
@@ -3550,14 +2419,6 @@
     "Fujitsu - FM Towns": {
         "DISCMNT": "1",
         "EMUPRESET": "UNZ",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "1",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "fmtowns",
         "MAME_EMUOPTS": [
             " fmtmarty -cdrm ",
@@ -3633,14 +2494,6 @@
     },
     "Fujitsu - FM-7": {
         "EMUPRESET": "XM7",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "fm7",
         "MAME_EMUOPTS": [
             " fm7 -[RTYP] ",
@@ -3677,14 +2530,6 @@
     },
     "Fujitsu - FM-77AV": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "fm77av",
         "MAME_EMUOPTS": " fm77av -flop ",
         "SHORTNM": "FM77AV",
@@ -3692,19 +2537,11 @@
         "SUPEMU": [
             "XM7",
             "fm7",
-            "fm77", 
+            "fm77",
             "MAME"
         ]
     },
     "Fujitsu - FM-8": {
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "SHORTNM": "FM8",
         "SUPCORE": "mame_libretro.dll",
         "SUPEMU": [
@@ -3713,14 +2550,6 @@
     },
     "Fukutake Publishing - StudyBox": {
         "EMUPRESET": "nestopia",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "1",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "famitwin",
         "MAME_EMUOPTS": [
             " famitwin -[RTYP] ",
@@ -3728,7 +2557,6 @@
             " fds -flop ",
             " fds -flop "
         ],
-        "MEDNM": "nes",
         "ROMXT": [
             "bin",
             "fam",
@@ -3765,14 +2593,6 @@
     },
     "Funtech - Super Acan": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "1",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "supracan",
         "MAME_EMUOPTS": " supracan -cart ",
         "ROMXT": [
@@ -3787,35 +2607,18 @@
     },
     "Galaksija - Galaksija Plus": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "galaxy",
         "MAME_EMUOPTS": " galaxy -cass ",
         "SHORTNM": "GALPLUS",
         "SUPCORE": "mame_libretro.dll",
         "SUPEMU": [
-            "galaxywin", 
+            "galaxywin",
             "MAME"
         ]
     },
     "Galeco - Galeco": {
         "EMUPRESET": "Demul",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "0",
-            "0",
-            "0"
-        ],
         "ROMXT": "zip",
-        "SETLST": "",
         "SHORTNM": "GALEC",
         "SUPCORE": "mame_libretro.dll",
         "SUPEMU": [
@@ -3825,33 +2628,17 @@
     },
     "GamePark - GP32": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "gp32",
         "MAME_EMUOPTS": " gp32 -cart ",
         "SHORTNM": "GP32",
         "SUPCORE": "mame_libretro.dll",
         "SUPEMU": [
-            "geepee32", 
+            "geepee32",
             "MAME"
         ]
     },
     "GCE - Vectrex": {
         "EMUPRESET": "ParaJVE",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "1",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "vectrex",
         "MAME_EMUOPTS": " vectrex -cart ",
         "ROMXT": [
@@ -3870,14 +2657,6 @@
     },
     "Gimix - 6809 System": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "gimix",
         "MAME_EMUOPTS": " gimix -flop1 ",
         "SHORTNM": "GIM68",
@@ -3888,14 +2667,6 @@
     },
     "Hanimex - Pencil II": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "pencil2",
         "MAME_EMUOPTS": " pencil2 -cart ",
         "SHORTNM": "HANPII",
@@ -3906,14 +2677,6 @@
     },
     "Hartung - Game Master": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "gmaster",
         "MAME_EMUOPTS": " gmaster -cart ",
         "ROMXT": [
@@ -3928,14 +2691,6 @@
     },
     "Hawthorne Technology - TinyGiant HT68k": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "ht68k",
         "MAME_EMUOPTS": " ht68k -flop1 ",
         "SHORTNM": "HAWTG",
@@ -3946,14 +2701,6 @@
     },
     "HP - HP 9835A-B Option": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "hp9835a",
         "MAME_EMUOPTS": " hp9835a ",
         "SHORTNM": "HP98B",
@@ -3964,14 +2711,6 @@
     },
     "HP - HP 9845A-S Option": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "hp9845a",
         "MAME_EMUOPTS": " hp9845a ",
         "SHORTNM": "HP98S",
@@ -3982,14 +2721,6 @@
     },
     "HP - HP 9845B-T-C Option": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "hp9845b",
         "MAME_EMUOPTS": " hp9845b ",
         "SHORTNM": "HP98C",
@@ -4000,14 +2731,6 @@
     },
     "HP - HP-85 Option": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "hp85",
         "MAME_EMUOPTS": " hp85 ",
         "SHORTNM": "HP85",
@@ -4018,14 +2741,6 @@
     },
     "HP - Integral PC": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "hp",
         "MAME_EMUOPTS": " hp -flop1 ",
         "SHORTNM": "HPIPC",
@@ -4036,14 +2751,6 @@
     },
     "IBM - Displaywriter": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "ibm6580",
         "MAME_EMUOPTS": " ibm6580 -flop1 ",
         "SHORTNM": "IBMDW",
@@ -4054,14 +2761,6 @@
     },
     "IBM - PC 5140": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "ibm5140",
         "MAME_EMUOPTS": " ibm5140 -flop ",
         "SHORTNM": "IBMPC40",
@@ -4072,14 +2771,6 @@
     },
     "IBM - PC 5150": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "ibm5150",
         "MAME_EMUOPTS": " ibm5150 -flop ",
         "SHORTNM": "IBMPC50",
@@ -4090,14 +2781,6 @@
     },
     "IBM - PC 5170": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "ibm5170",
         "MAME_EMUOPTS": " ibm5170 -flop ",
         "SHORTNM": "IBMPC70",
@@ -4108,14 +2791,6 @@
     },
     "IBM - PC Jr": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "ibmpcjr",
         "MAME_EMUOPTS": [
             " ibmpcjr -[RTYP] ",
@@ -4149,19 +2824,11 @@
         "SHORTNM": "IPCJR",
         "SUPCORE": "mame_libretro.dll",
         "SUPEMU": [
-            "jr100", 
+            "jr100",
             "MAME"
         ]
     },
     "Incredible Technologies - Eagle": {
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAME_EMUOPTS": "iteagle",
         "SHORTNM": "ITEAGLE",
         "SUPCORE": "mame_libretro.dll",
@@ -4170,14 +2837,6 @@
         ]
     },
     "Infocom - Z-Machine": {
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "ROMXT": [
             "dat",
             "z1",
@@ -4199,34 +2858,18 @@
     },
     "Interact - Family Computer": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "interact",
         "MAME_EMUOPTS": " interact -cass ",
         "SHORTNM": "INTFC",
         "SUPCORE": "mame_libretro.dll",
         "SUPEMU": [
             "dchector",
-            "virtualinteract", 
+            "virtualinteract",
             "MAME"
         ]
     },
     "Interon - VC4000": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "vc4000",
         "MAME_EMUOPTS": " vc4000 -cart ",
         "ROMXT": [
@@ -4243,14 +2886,6 @@
     },
     "iQue - iQue": {
         "EMUPRESET": "Project64",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "1",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "n64",
         "MAME_EMUOPTS": " n64 -cart ",
         "ROMXT": [
@@ -4276,20 +2911,12 @@
             "Mupen64Plus",
             "Mupen64PlusPlus",
             "Project64",
-            "Project64k", 
+            "Project64k",
             "MAME"
         ]
     },
     "Itautec - I-7000": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "i7000",
         "MAME_EMUOPTS": " i7000 -card ",
         "SHORTNM": "ITI7K",
@@ -4300,14 +2927,6 @@
     },
     "Ithaca InterSystems - DPS-1": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "dps1",
         "MAME_EMUOPTS": " dps1 -flop ",
         "SHORTNM": "IIDPS",
@@ -4318,14 +2937,6 @@
     },
     "JPM - Give Us A Break": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "guab",
         "MAME_EMUOPTS": " guab ",
         "SHORTNM": "JGUAB",
@@ -4336,14 +2947,6 @@
     },
     "JungleTac Sport - Vii": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "vii",
         "MAME_EMUOPTS": " vii -cart ",
         "SHORTNM": "JUMSP",
@@ -4354,14 +2957,6 @@
     },
     "Jupiter Cantab - Jupiter Ace": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "jupace",
         "MAME_EMUOPTS= jupace -[RTYP] ": [
             " jupace -cass ",
@@ -4387,14 +2982,6 @@
     },
     "Kaypro - Kaypro II": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "kayproii",
         "MAME_EMUOPTS": " kayproii -flop1 ",
         "SHORTNM": "KAYPROII",
@@ -4405,14 +2992,6 @@
     },
     "Koei - PasoGo": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "pasogo",
         "MAME_EMUOPTS": " pasogo -cart ",
         "SHORTNM": "KOPASOGO",
@@ -4430,16 +3009,7 @@
     "Konami - Bemani System 573 Analog": {
         "EMUPRESET": "MAME",
         "EXTRARC": "1",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "NICEFLDR": "1",
-        "SETLST": "",
         "SHORTNM": "KS573A",
         "SUPCORE": "mame_libretro.dll",
         "SUPEMU": [
@@ -4449,16 +3019,7 @@
     "Konami - Bemani System 573 Digital": {
         "EMUPRESET": "MAME",
         "EXTRARC": "1",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "NICEFLDR": "1",
-        "SETLST": "",
         "SHORTNM": "KS573D",
         "SUPCORE": "mame_libretro.dll",
         "SUPEMU": [
@@ -4467,14 +3028,6 @@
     },
     "Konami - Picno": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "picno",
         "MAME_EMUOPTS": " picno -cart ",
         "ROMXT": [
@@ -4490,16 +3043,7 @@
     "Konami - System 573": {
         "EMUPRESET": "MAME",
         "EXTRARC": "1",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "NICEFLDR": "1",
-        "SETLST": "",
         "SHORTNM": "KS573",
         "SUPCORE": "mame_libretro.dll",
         "SUPEMU": [
@@ -4509,16 +3053,7 @@
     "Konami - System 573 Satelite Terminal": {
         "EMUPRESET": "MAME",
         "EXTRARC": "1",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "NICEFLDR": "1",
-        "SETLST": "",
         "SHORTNM": "KS573S",
         "SUPCORE": "mame_libretro.dll",
         "SUPEMU": [
@@ -4529,21 +3064,12 @@
         "ARCLOC": "0",
         "CONSOLID": "Individuate",
         "EMUARGS": [
-            " ",
             " -rp \": [EMUPATH]/roms\"",
             " -rp \": [ROMPATH]\""
         ],
         "EXT": "0",
         "EXTRARC": "0",
         "LNCHP": "0",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "0",
-            "0",
-            "0"
-        ],
         "NICEFLD": "1",
         "PATH": "0",
         "PEREMUCFG": "1",
@@ -4581,14 +3107,6 @@
     },
     "Kontron - PSI98": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "psi98",
         "MAME_EMUOPTS": " psi98 -flop1 ",
         "SHORTNM": "KONPSI",
@@ -4599,14 +3117,6 @@
     },
     "Korvet - PK8020 Korvet": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "korvet",
         "MAME_EMUOPTS": " korvet -flop1 ",
         "SHORTNM": "KORVPK",
@@ -4617,14 +3127,6 @@
     },
     "LeapFrog - LeapPad": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "leapster",
         "MAME_EMUOPTS": " leapster -cart ",
         "SHORTNM": "LEAPST",
@@ -4635,14 +3137,6 @@
     },
     "Leapfrog - Leapster Learning Game System": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "SHORTNM": "LEAPLGS",
         "SUPCORE": "mame_libretro.dll",
         "SUPEMU": [
@@ -4651,14 +3145,6 @@
     },
     "LeapFrog - My First LeapPad": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "leapster",
         "MAME_EMUOPTS": " leapster -cart ",
         "SHORTNM": "LEAPFST",
@@ -4669,14 +3155,6 @@
     },
     "Lianozovo Electromechanical Factory - Mikrosha": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "mikrosha",
         "MAME_EMUOPTS": [
             " mikrosha -[RTYP] ",
@@ -4691,14 +3169,6 @@
     },
     "LSI - Octopus": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "octopus",
         "MAME_EMUOPTS": " octopus -flop1 ",
         "SHORTNM": "LSIOCT",
@@ -4709,14 +3179,6 @@
     },
     "Luxor - ABC 1600": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "abc1600",
         "MAME_EMUOPTS": " abc1600 -flop ",
         "SHORTNM": "LUX16",
@@ -4727,14 +3189,6 @@
     },
     "Luxor - ABC 80": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "abc80",
         "MAME_EMUOPTS": " abc80 -flop ",
         "SHORTNM": "LUX80",
@@ -4744,14 +3198,6 @@
         ]
     },
     "Luxor - Video Entertainment System": {
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "SHORTNM": "LUXVES",
         "SUPCORE": "mame_libretro.dll",
         "SUPEMU": [
@@ -4760,14 +3206,6 @@
     },
     "Magnavox - Odyssey": {
         "EMUPRESET": "DOSBox-X",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "SHORTNM": "MODYS",
         "SUPCORE": "",
         "SUPEMU": [
@@ -4777,14 +3215,6 @@
     },
     "Magnavox - Odyssey2": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "odyssey2",
         "MAME_EMUOPTS": " odyssey2 -cart ",
         "ROMXT": [
@@ -4795,20 +3225,12 @@
         "SHORTNM": "MODYS2",
         "SUPCORE": "o2em_libretro.dll",
         "SUPEMU": [
-            "o2em", 
+            "o2em",
             "MAME"
         ]
     },
     "Magnavox - Odyssey3": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "odyssey3",
         "MAME_EMUOPTS": " odyssey3 -cart ",
         "ROMXT": [
@@ -4824,33 +3246,23 @@
     },
     "MAME - Arcade": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "",
         "MAME_EMUOPTS": " [ROMNAME] ",
-        "MAME_EMUARGS": "-rp [ROMPATH]", 
+        "MAME_EMUARGS": "-rp [ROMPATH]",
         "SHORTNM": "ARCADE",
         "SUPCORE": "mame_libretro.dll",
+        "ROMXT": [
+            "bin",
+            "chd",
+            "7z",
+            "zip"
+        ],
         "SUPEMU": [
             "MAME"
         ]
     },
-     "Matra - Alice 32": {
+    "Matra - Alice 32": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "alice32",
         "MAME_EMUOPTS": " alice32 -flop ",
         "SHORTNM": "MATAL32",
@@ -4864,14 +3276,6 @@
     },
     "Matra - Alice 90": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "alice90",
         "MAME_EMUOPTS": " alice90 -flop ",
         "SHORTNM": "MATAL90",
@@ -4882,14 +3286,6 @@
     },
     "Mattel - Aquarius": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "aquarius",
         "MAME_EMUOPTS": [
             " aqaurius -[RTYP] ",
@@ -4910,14 +3306,6 @@
         ]
     },
     "Mattel - Hyperscan": {
-        "LNCHPRM": [
-            "",
-            "$",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "hs",
         "ROMXT": [
             "bin",
@@ -4932,14 +3320,6 @@
     },
     "Mattel - Intellivision": {
         "EMUPRESET": "Nostalgia",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "1",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "intv",
         "MAME_EMUOPTS": [
             " intv -cart ",
@@ -4956,20 +3336,12 @@
         "SUPCORE": "freeintv_libretro.dll",
         "SUPEMU": [
             "Nostalgia",
-            "jzintv", 
+            "jzintv",
             "MAME"
         ]
     },
     "Mattel - Intellivision ECS": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "1",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "intvecs",
         "MAME_EMUOPTS": " intvecs -cart ",
         "SHORTNM": "INTELECS",
@@ -4980,14 +3352,6 @@
     },
     "Mattel - Juice Box": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "juicebox",
         "MAME_EMUOPTS": " juicebox ",
         "SHORTNM": "MATJB",
@@ -4999,14 +3363,6 @@
         ]
     },
     "MCA - Laserdisc Arcade": {
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "SHORTNM": "MCALD",
         "SUPCORE": "mame_libretro.dll",
         "SUPEMU": [
@@ -5015,14 +3371,6 @@
     },
     "Memorex - Video Information System": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "vis",
         "MAME_EMUOPTS": " vis -cdrm ",
         "SHORTNM": "MXVIS",
@@ -5033,14 +3381,6 @@
     },
     "Memotech - MTX": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "mtx512",
         "MAME_EMUOPTS": [
             " mtx512 -[RTYP] ",
@@ -5055,20 +3395,12 @@
         "SHORTNM": "MMTX",
         "SUPCORE": "",
         "SUPEMU": [
-            "mtxemu", 
+            "mtxemu",
             "MAME"
         ]
     },
     "Mephisto - Super Mondial II": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "smondial2",
         "MAME_EMUOPTS": " smondial2 -cart ",
         "SHORTNM": "MSMII",
@@ -5079,14 +3411,6 @@
     },
     "MGT - Sam Coupe": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "samcoupe",
         "MAME_EMUOPTS": [
             " samcoupe -cass ",
@@ -5124,14 +3448,6 @@
         ]
     },
     "Microkey - Primo": {
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "SHORTNM": "MICPRI",
         "SUPCORE": "",
         "SUPEMU": [
@@ -5143,14 +3459,6 @@
     "Microsoft - DOS": {
         "cmdfun": " 1",
         "EMUPRESET": "DOSBox-X",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "ROMXT": [
             "bat",
             "com",
@@ -5182,14 +3490,6 @@
             " /machine \"MSX\" /rom1zip "
         ],
         "EMUPRESET": "BlueMSX",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "canonv10",
         "MAME_EMUOPTS": [
             " canonv10 -[RTYP] ",
@@ -5200,7 +3500,8 @@
         "ROMXT": [
             "1dd",
             "bin",
-            "cas.zip",
+            "cas",
+            "zip",
             "cqi",
             "cqm",
             "d77",
@@ -5253,14 +3554,6 @@
             " /machine \"MSXturboR\" /rom1zip "
         ],
         "EMUPRESET": "BlueMSX",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "fsa1st",
         "MAME_EMUOPTS": [
             " fsa1st -[RTYP] ",
@@ -5271,7 +3564,8 @@
         "ROMXT": [
             "1dd",
             "bin",
-            "cas.zip",
+            "cas",
+            "zip",
             "cqi",
             "cqm",
             "d77",
@@ -5321,14 +3615,6 @@
             " /machine \"MSXturboR\" /rom1zip "
         ],
         "EMUPRESET": "BlueMSX",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "fsa1st",
         "MAME_EMUOPTS": [
             " fsa1st -[RTYP] ",
@@ -5339,7 +3625,8 @@
         "ROMXT": [
             "1dd",
             "bin",
-            "cas.zip",
+            "cas",
+            "zip",
             "cqi",
             "cqm",
             "d77",
@@ -5390,14 +3677,6 @@
             " /machine \"MSX2+\" /rom1zip "
         ],
         "EMUPRESET": "BlueMSX",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "canonv30f",
         "MAME_EMUOPTS": [
             " canonv30f -[RTYP] ",
@@ -5408,7 +3687,8 @@
         "ROMXT": [
             "1dd",
             "bin",
-            "cas.zip",
+            "cas",
+            "zip",
             "cqi",
             "cqm",
             "d77",
@@ -5440,7 +3720,7 @@
             "msx2",
             "nlmsx",
             "no$msx",
-            "openMSX", 
+            "openMSX",
             "MAME"
         ]
     },
@@ -5459,20 +3739,13 @@
             " /machine \"MSX2+\" /rom1zip "
         ],
         "EMUPRESET": "BlueMSX",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "hbf9sp",
         "MAME_EMUOPTS": " hbf9sp -flop ",
         "ROMXT": [
             "1dd",
             "bin",
-            "cas.zip",
+            "cas",
+            "zip",
             "cqi",
             "cqm",
             "d77",
@@ -5502,7 +3775,7 @@
             "msx2p",
             "nlmsx",
             "no$msx",
-            "openMSX", 
+            "openMSX",
             "MAME"
         ]
     },
@@ -5524,14 +3797,6 @@
     },
     "Microsoft - XBOX": {
         "EMUPRESET": "Cxbx",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "1",
-            "1",
-            "1",
-            "1"
-        ],
         "SHORTNM": "MSXBOX",
         "SUPCORE": "",
         "SUPEMU": [
@@ -5542,14 +3807,6 @@
     },
     "Microsoft - XBOX 360": {
         "EMUPRESET": "Xenia",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "1",
-            "1",
-            "1",
-            "1"
-        ],
         "SHORTNM": "MS360",
         "SUPCORE": "",
         "SUPEMU": [
@@ -5558,14 +3815,6 @@
     },
     "Microsoft - XBOX ONE": {
         "EMUPRESET": "Xerg",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "1",
-            "1",
-            "1",
-            "1"
-        ],
         "SHORTNM": "XBONE",
         "SUPCORE": "",
         "SUPEMU": [
@@ -5574,14 +3823,6 @@
     },
     "Mikro - Mikro-80": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "mikro80",
         "MAME_EMUOPTS": " mikro80 -cass1 ",
         "SHORTNM": "MKRO80",
@@ -5592,14 +3833,6 @@
     },
     "Mikroelektronika - Pyldin-601": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "pyl601",
         "MAME_EMUOPTS": " pyl601 -disk ",
         "SHORTNM": "MIKPYL",
@@ -5610,14 +3843,6 @@
     },
     "MikroMikko - MikroMikko 1": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "mm1",
         "MAME_EMUOPTS": " mm1 -flop1 ",
         "SHORTNM": "MIKMIK",
@@ -5628,14 +3853,6 @@
     },
     "Millennium Systems - Wicat": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "wicat",
         "MAME_EMUOPTS": " wicat -flop1 ",
         "SHORTNM": "MILWILC",
@@ -5646,14 +3863,6 @@
     },
     "Milton Bradley - MicroVision": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "microvision",
         "MAME_EMUOPTS": " microvision -cart ",
         "SHORTNM": "MBMVIS",
@@ -5663,14 +3872,6 @@
         ]
     },
     "MITS - Altair 8800": {
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "SHORTNM": "MITSALT",
         "SUPCORE": "mame_libretro.dll",
         "SUPEMU": [
@@ -5679,14 +3880,6 @@
     },
     "Mobile - J2ME": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "SHORTNM": "M2JME",
         "SUPEMU": [
             "MAME"
@@ -5694,14 +3887,6 @@
     },
     "Mobile - Palm OS": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "SHORTNM": "PALMOS",
         "SUPEMU": [
             "MAME"
@@ -5709,14 +3894,6 @@
     },
     "Mobile - Symbian": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "SHORTNM": "SYMBN",
         "SUPEMU": [
             "MAME"
@@ -5724,14 +3901,6 @@
     },
     "Morrow Designs - Micro Decision MD-2": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "md2",
         "MAME_EMUOPTS": " md2 -flop1 ",
         "SHORTNM": "MDMD2",
@@ -5742,14 +3911,6 @@
     },
     "Morrow Designs - Morrow MPZ80": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "mpz80",
         "MAME_EMUOPTS": " mpz80 -flop ",
         "SHORTNM": "MDMPZ",
@@ -5760,14 +3921,6 @@
     },
     "MOS Technology - KIM-1": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "kim1",
         "MAME_EMUOPTS": " kim1 -cass ",
         "SHORTNM": "MOSKIM",
@@ -5776,49 +3929,8 @@
             "MAME"
         ]
     },
-    "Movies - Films": {
-        "EMUPRESET": "videoplayer",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "1",
-            "1",
-            "1",
-            "1"
-        ],
-        "ROMXT": [
-            "avi",
-            "cue",
-            "iso",
-            "m4v",
-            "mkv",
-            "mov",
-            "mp4",
-            "mpeg",
-            "mpg",
-            "mpv",
-            "wmv"
-        ],
-        "SHORTNM": "MOVFILM",
-        "SUPCORE": "",
-        "SUPEMU": [
-            "mplayerc",
-            "retroarch",
-            "videoplayer",
-            "vlc",
-            "wmplayer"
-        ]
-    },
     "Nascom - I-II": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "nascom",
         "MAME_EMUOPTS": [
             " nascom2 -[RTYP] ",
@@ -5833,14 +3945,6 @@
     },
     "NCR - Decision Mate V": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "dmv",
         "MAME_EMUOPTS": " dmv -flop ",
         "SHORTNM": "NCRDMV",
@@ -5851,14 +3955,6 @@
     },
     "NEC - Advanced Personal Computer": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "apc",
         "MAME_EMUOPTS": " apc -flop ",
         "SHORTNM": "NECAPC",
@@ -5869,17 +3965,8 @@
     },
     "NEC - PC Engine - JAP": {
         "EMUPRESET": "Mednafen",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "1",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "pce",
         "MAME_EMUOPTS": " pce -cart ",
-        "MEDNM": "pce",
         "ROMXT": [
             "bin",
             "pce",
@@ -5905,20 +3992,11 @@
     },
     "NEC - PC Engine - TurboGrafx 16": {
         "EMUPRESET": "Mednafen",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "1",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "tg16",
         "MAME_EMUOPTS": [
             " pce -cart ",
             " tg16 -cart "
         ],
-        "MEDNM": "pce",
         "ROMXT": [
             "bin",
             "pce",
@@ -5946,20 +4024,11 @@
     },
     "NEC - PC Engine CD - TurboGrafx CD": {
         "EMUPRESET": "Mednafen",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "1",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "tg16",
         "MAME_EMUOPTS": [
             " pce -cdrm ",
             " tg16 -cdrm "
         ],
-        "MEDNM": "pce",
         "ROMXT": [
             "ccd",
             "cdr",
@@ -5991,21 +4060,12 @@
     },
     "NEC - PC Engine SuperGrafx": {
         "EMUPRESET": "Mednafen",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "1",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "sgx",
         "MAME_EMUOPTS": [
             " sgx -[RTYP] ",
             " sgx -cart ",
             " sgx -cdrm "
         ],
-        "MEDNM": "pce",
         "ROMXT": [
             "bin",
             "cdr",
@@ -6035,14 +4095,6 @@
     },
     "NEC - PC-6001": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "pc6001",
         "MAME_EMUOPTS": [
             " pc6001 -cart1 ",
@@ -6067,14 +4119,6 @@
     },
     "NEC - PC-8201(A) Option": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "pc8201",
         "MAME_EMUOPTS": " pc8201 -cart ",
         "SHORTNM": "PC82A",
@@ -6089,20 +4133,11 @@
     },
     "NEC - PC-FX": {
         "EMUPRESET": "Mednafen",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "pcfx",
         "MAME_EMUOPTS": [
             " pcfx -cdrm ",
             " pcfxga -cdrm "
         ],
-        "MEDNM": "pcfx",
         "ROMXT": [
             "ccd",
             "cdr",
@@ -6123,14 +4158,6 @@
     },
     "NEC - PC88": {
         "EMUPRESET": "m88",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "pc8801",
         "MAME_EMUOPTS": [
             " pc8801 -cart ",
@@ -6194,14 +4221,6 @@
     },
     "NEC - PC88-VA": {
         "EMUPRESET": "m88",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "pc88va",
         "MAME_EMUOPTS": [
             " pc8801 -cart ",
@@ -6265,14 +4284,6 @@
     },
     "NEC - PC8801": {
         "EMUPRESET": "m88",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "pc8801",
         "MAME_EMUOPTS": [
             " pc8801 -[RTYP] ",
@@ -6335,14 +4346,6 @@
     },
     "NEC - PC98": {
         "EMUPRESET": "Neko",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "1",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "pc9821xs",
         "MAME_EMUOPTS": [
             " pc9801bx2 -cdrm ",
@@ -6425,14 +4428,6 @@
     },
     "NEC - PC98 - Touhou": {
         "EMUPRESET": "Anex86",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "1",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "pc9821xs",
         "MAME_EMUOPTS": [
             " pc9801bx2 -cdrm ",
@@ -6590,14 +4585,6 @@
     },
     "NeXT - NeXTStation": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "next",
         "MAME_EMUOPTS": [
             " nextstc -flop1 ",
@@ -6611,14 +4598,6 @@
     },
     "Nichibutsu - My Vision": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "myvision",
         "MAME_EMUOPTS": " myvision -cart ",
         "SHORTNM": "NICHMV",
@@ -6629,17 +4608,8 @@
     },
     "Nintendo - e-Reader": {
         "EMUPRESET": "VisualBoyAdvance-M",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "1",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "gba",
         "MAME_EMUOPTS": " gba -cart ",
-        "MEDNM": "gba",
         "ROMXT": [
             "agb",
             "bin",
@@ -6658,7 +4628,6 @@
         ],
         "SUPEMU": [
             "BizHawk",
-            "MAME",
             "Mednafen",
             "VisualBoyAdvance",
             "VisualBoyAdvance-M",
@@ -6670,22 +4639,14 @@
             "no$gba",
             "rascalboyadv",
             "vgba",
+            "MAME",
             "xe"
         ]
     },
     "Nintendo - Famicom": {
         "EMUPRESET": "nestopia",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "1",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "famicom",
         "MAME_EMUOPTS": " famicom -cart ",
-        "MEDNM": "nes",
         "ROMXT": [
             "bin",
             "fam",
@@ -6706,7 +4667,6 @@
         ],
         "SUPEMU": [
             "BizHawk",
-            "MAME",
             "Mednafen",
             "Mesen",
             "byuu",
@@ -6715,19 +4675,12 @@
             "kindred",
             "nestopia",
             "vdmgr",
+            "MAME",
             "xe"
         ]
     },
     "Nintendo - Family Computer Disk System": {
         "EMUPRESET": "nestopia",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "1",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "famitwin",
         "MAME_EMUOPTS": [
             " famitwin -[RTYP] ",
@@ -6735,7 +4688,6 @@
             " fds -flop ",
             " fds -flop "
         ],
-        "MEDNM": "nes",
         "ROMXT": [
             "bin",
             "fam",
@@ -6756,7 +4708,6 @@
         ],
         "SUPEMU": [
             "BizHawk",
-            "MAME",
             "Mednafen",
             "Mesen",
             "byuu",
@@ -6767,19 +4718,12 @@
             "vdmgr",
             "virtuanes",
             "virtuanesplus",
+            "MAME",
             "xe"
         ]
     },
     "Nintendo - Game Boy": {
         "EMUPRESET": "bgb",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "1",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "gameboy",
         "MAME_EMUOPTS": [
             " gameboy -cart ",
@@ -6787,7 +4731,6 @@
             " supergb -cart ",
             " supergb2 -cart "
         ],
-        "MEDNM": "gb",
         "ROMXT": [
             "cgb",
             "dmg",
@@ -6804,7 +4747,6 @@
         ],
         "SUPEMU": [
             "BizHawk",
-            "MAME",
             "Mednafen",
             "bgb",
             "byuu",
@@ -6821,22 +4763,14 @@
             "tgbdual",
             "vgb",
             "xe",
+            "MAME",
             "zboy"
         ]
     },
     "Nintendo - Game Boy Advance": {
         "EMUPRESET": "VisualBoyAdvance-M",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "1",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "gba",
         "MAME_EMUOPTS": " gba -cart ",
-        "MEDNM": "gba",
         "ROMXT": [
             "agb",
             "bin",
@@ -6856,7 +4790,6 @@
         ],
         "SUPEMU": [
             "BizHawk",
-            "MAME",
             "Mednafen",
             "VisualBoyAdvance",
             "VisualBoyAdvance-M",
@@ -6868,26 +4801,18 @@
             "no$gba",
             "rascalboyadv",
             "vgba",
+            "MAME",
             "xe"
         ]
     },
     "Nintendo - Game Boy Color": {
         "EMUPRESET": "bgb",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "1",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "gbcolor",
         "MAME_EMUOPTS": [
             " gbcolor -cart ",
             " supergb -cart ",
             " supergb2 -cart "
         ],
-        "MEDNM": "gb",
         "ROMXT": [
             "cgb",
             "dmg",
@@ -6904,7 +4829,6 @@
         ],
         "SUPEMU": [
             "BizHawk",
-            "MAME",
             "bgb",
             "byuu",
             "dinoboy",
@@ -6917,19 +4841,12 @@
             "sameboy",
             "tgbdual",
             "vgb",
+            "MAME",
             "xe"
         ]
     },
     "Nintendo - GameCube": {
         "EMUPRESET": "Dolphin",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "1",
-            "1",
-            "1",
-            "1"
-        ],
         "PRECFG": [
             "GCPadNew.ini",
             "Hotkeys.ini",
@@ -6958,14 +4875,6 @@
     },
     "Nintendo - Kiosk Compact Flash": {
         "EMUPRESET": "Dolphin",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "1",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "wii",
         "PRECFG": [
             "*New.ini",
@@ -6994,17 +4903,9 @@
     },
     "Nintendo - New Nintendo 3DS": {
         "EMUPRESET": "Citra",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "1",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "3ds",
         "ROMXT": [
-            " .3ds",
+            "3ds",
             "3dsx",
             "app",
             "axf",
@@ -7025,17 +4926,9 @@
     },
     "Nintendo - Nintendo 3DS": {
         "EMUPRESET": "Citra",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "1",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "3ds",
         "ROMXT": [
-            " .3ds",
+            "3ds",
             "3dsx",
             "app",
             "axf",
@@ -7056,14 +4949,6 @@
     },
     "Nintendo - Nintendo 64": {
         "EMUPRESET": "Project64",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "1",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "n64",
         "MAME_EMUOPTS": " n64 -cart ",
         "ROMXT": [
@@ -7095,14 +4980,6 @@
     },
     "Nintendo - Nintendo 64DD": {
         "EMUPRESET": "Project64",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "1",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "n64dd",
         "MAME_EMUOPTS": [
             " n64dd -[RTYP] ",
@@ -7126,23 +5003,15 @@
             "parallel_n64_libretro.dll"
         ],
         "SUPEMU": [
-            "MAME",
             "Mupen64Plus",
             "Mupen64PlusPlus",
             "Project64",
-            "Project64k"
+            "Project64k", 
+            "MAME"
         ]
     },
     "Nintendo - Nintendo DS": {
         "EMUPRESET": "Desmume",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "1",
-            "1",
-            "1",
-            "1"
-        ],
         "ROMXT": [
             "7z",
             "bin",
@@ -7171,16 +5040,8 @@
     },
     "Nintendo - Nintendo DS Decrypted": {
         "EMUPRESET": "Desmume",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "1",
-            "1",
-            "1",
-            "1"
-        ],
         "ROMXT": [
-            " .zip",
+            "zip",
             "7z",
             "ds",
             "gba",
@@ -7206,16 +5067,8 @@
     },
     "Nintendo - Nintendo DSi": {
         "EMUPRESET": "Desmume",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "1",
-            "1",
-            "1",
-            "1"
-        ],
         "ROMXT": [
-            " .zip",
+            "zip",
             "7z",
             "ds",
             "gba",
@@ -7241,21 +5094,12 @@
     },
     "Nintendo - Nintendo Entertainment System": {
         "EMUPRESET": "nestopia",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "1",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "nes",
         "MAME_EMUOPTS": [
             " nes -cart ",
             " nes -cart ",
             " nespal -cart "
         ],
-        "MEDNM": "nes",
         "ROMXT": [
             "bin",
             "fam",
@@ -7296,14 +5140,6 @@
     },
     "Nintendo - Nintendo Entertainment System - PAL": {
         "EMUPRESET": "nestopia",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "1",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "nespal",
         "MAME_EMUOPTS": " nespal -cart ",
         "SHORTNM": "NESPAL",
@@ -7315,7 +5151,6 @@
             "quicknes_libretro.dll"
         ],
         "SUPEMU": [
-            "Mednafen",
             "Mednafen",
             "BizHawk",
             "Mesen",
@@ -7334,14 +5169,6 @@
         ]
     },
     "Nintendo - Nintendo Switch": {
-        "LNCHPRM": [
-            "$",
-            "0",
-            "1",
-            "1",
-            "1",
-            "1"
-        ],
         "SHORTNM": "NSWTCH",
         "SUPCORE": "",
         "SUPEMU": [
@@ -7351,14 +5178,6 @@
     },
     "Nintendo - Pokemon Mini": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "1",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "pokemini",
         "MAME_EMUOPTS": " pokemini -cart ",
         "ROMXT": [
@@ -7370,20 +5189,12 @@
         "SUPCORE": "pokemini_libretro.dll",
         "SUPEMU": [
             "minimon",
-            "pokemini", 
+            "pokemini",
             "MAME"
         ]
     },
     "Nintendo - Satellaview": {
         "EMUPRESET": "snes9x",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "1",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "snes",
         "MAME_EMUOPTS": [
             " snes -cart ",
@@ -7405,7 +5216,7 @@
         ],
         "SUPEMU": [
             "snes9k",
-            "snes9x", 
+            "snes9x",
             "MAME"
         ]
     },
@@ -7427,38 +5238,29 @@
             "snes9x_libretro.dll"
         ],
         "SUPEMU": [
+            "snes9x",
+            "snesgt",
             "Mednafen",
-            "BizHawk",
             "bsnes",
+            "BizHawk",
             "kindred",
             "mesen-s",
             "no$sns",
             "snes9k",
-            "snes9x",
-            "snesgt",
-            "xe",
-            "MAME",
             "zmz",
-            "zsnes"
+            "zsnes", 
+            "MAME",
+            "xe"
         ]
     },
     "Nintendo - Super Famicom": {
         "EMUPRESET": "snes9x",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "1",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "snes",
         "MAME_EMUOPTS": [
             " snes -cart ",
             " snes -cart ",
             " snespal -cart "
         ],
-        "MEDNM": "snes",
         "ROMXT": [
             "bml",
             "sfc",
@@ -7483,16 +5285,16 @@
             "snes9x_libretro.dll"
         ],
         "SUPEMU": [
-            "BizHawk",
-            "zsnes", 
+            "snes9x",
+            "snes9k",
             "Mednafen",
+            "zsnes",
             "bsnes",
+            "BizHawk",
             "byuu",
             "kindred",
             "mesen-s",
             "neusnem",
-            "snes9k",
-            "snes9x",
             "xe",
             "zmz",
             "MAME"
@@ -7500,20 +5302,11 @@
     },
     "Nintendo - Super Game Boy": {
         "EMUPRESET": "bgb",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "1",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "supergb",
         "MAME_EMUOPTS": [
             " supergb -cart ",
             " supergb2 -cart "
         ],
-        "MEDNM": "gb",
         "ROMXT": [
             "cgb",
             "dmg",
@@ -7533,35 +5326,26 @@
             "higan_sfc_libretro.dll"
         ],
         "SUPEMU": [
-            "BizHawk",
-            "Visualboyadvance",
+            "mgba",
             "Visualboyadvance-M",
+            "Visualboyadvance",
             "bgb",
+            "BizHawk",
             "byuu",
             "gest",
             "kigb",
-            "mgba",
-            "MAME", 
+            "MAME",
             "tgbdual"
         ]
     },
     "Nintendo - Super Nintendo Entertainment System": {
         "EMUPRESET": "snes9x",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "1",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "snes",
         "MAME_EMUOPTS": [
             " snes -cart ",
             " snes -cart ",
             " snespal -cart "
         ],
-        "MEDNM": "snes",
         "ROMXT": [
             "bml",
             "bsx",
@@ -7592,16 +5376,16 @@
             "snes9x_libretro.dll"
         ],
         "SUPEMU": [
-            "zsnes", 
-            "Mednafen",
-            "BizHawk",
+            "snes9x",
+            "snes9k",
+            "zsnes",
             "bsnes",
             "byuu",
+            "Mednafen",
+            "BizHawk",
             "kindred",
             "mesen-s",
             "no$sns",
-            "snes9k",
-            "snes9x",
             "snesgt",
             "xe",
             "zmz",
@@ -7610,14 +5394,6 @@
     },
     "Nintendo - Super Nintendo Entertainment System - PAL": {
         "EMUPRESET": "snes9x",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "1",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "snespal",
         "MAME_EMUOPTS": " snespal -cart ",
         "ROMXT": [
@@ -7646,15 +5422,15 @@
             "snes9x_libretro.dll"
         ],
         "SUPEMU": [
+            "snes9x",
+            "zsnes",
+            "snes9k",
             "BizHawk",
-            "zsnes", 
+            "snesgt",
             "Mednafen",
             "byuu",
             "mesen-s",
             "no$sns",
-            "snes9k",
-            "snes9x",
-            "snesgt",
             "xe",
             "zmz",
             "MAME"
@@ -7662,17 +5438,8 @@
     },
     "Nintendo - Virtual Boy": {
         "EMUPRESET": "Mednafen",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "1",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "vboy",
         "MAME_EMUOPTS": " vboy -cart ",
-        "MEDNM": "vb",
         "ROMXT": [
             "bin",
             "vb",
@@ -7684,21 +5451,12 @@
         "SUPEMU": [
             "Mednafen",
             "realityboy",
-            "retroarch",
-            "MAME", 
+            "MAME",
             "vbjin"
         ]
     },
     "Nintendo - Wii": {
         "EMUPRESET": "Dolphin",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "1",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "wii",
         "PRECFG": [
             "*New.ini",
@@ -7727,14 +5485,6 @@
     },
     "Nintendo - Wii U": {
         "EMUPRESET": "CEMU",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "1",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "wiiu",
         "SHORTNM": "NNWIIU",
         "SUPCORE": "",
@@ -7745,14 +5495,6 @@
     },
     "Nintendo - WiiWare": {
         "EMUPRESET": "Dolphin",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "1",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "wii",
         "PRECFG": [
             "*New.ini",
@@ -7780,14 +5522,6 @@
     },
     "Nokia - N-Gage": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "1",
-            "1",
-            "1",
-            "1"
-        ],
         "SHORTNM": "NNGAGE",
         "SUPCORE": "mame_libretro.dll",
         "SUPEMU": [
@@ -7796,14 +5530,6 @@
     },
     "Northstar - Advantage": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "advantage",
         "MAME_EMUOPTS": " advantage -flop ",
         "SHORTNM": "NSTADV",
@@ -7814,14 +5540,6 @@
     },
     "Northstar - Horizon": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "horizon",
         "MAME_EMUOPTS": " horizon -flop1 ",
         "SHORTNM": "NSTHOR",
@@ -7832,14 +5550,6 @@
     },
     "NPO - Elektronika MS 1502": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "mc1502",
         "MAME_EMUOPTS": " mc1502 -flop1 ",
         "SHORTNM": "NPOELMS",
@@ -7850,14 +5560,6 @@
     },
     "Nuova Elettronica - Z80NE": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "z80ne",
         "MAME_EMUOPTS": " z80ne -cass1 ",
         "SHORTNM": "NUEZ80",
@@ -7868,14 +5570,6 @@
     },
     "Olivetti - M20": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "m20",
         "MAME_EMUOPTS": [
             " m20 -flop1 ",
@@ -7889,14 +5583,6 @@
     },
     "Olivetti - Prodest PC 128": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "pro128",
         "MAME_EMUOPTS": [
             " pro128 -[RTYP] ",
@@ -7912,14 +5598,6 @@
     },
     "Olivetti - Prodest PC 128S": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "pro128s",
         "MAME_EMUOPTS": " pro128s -flop1 ",
         "SHORTNM": "OLIVPCS",
@@ -7930,14 +5608,6 @@
     },
     "Ondra - Ondra ViLi": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "ondra",
         "MAME_EMUOPTS": " ondra -cass ",
         "SHORTNM": "ONVILI",
@@ -7948,14 +5618,6 @@
     },
     "Open - Beats of Rage": {
         "EMUPRESET": "openbeatsofrage",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "1",
-            "1",
-            "1",
-            "1"
-        ],
         "ROMXT": [
             "bor",
             "pak"
@@ -7968,14 +5630,6 @@
     },
     "Orion - Orion 128": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "orionide",
         "MAME_EMUOPTS": [
             " orionide -cart ",
@@ -7985,39 +5639,21 @@
         "SHORTNM": "OR128",
         "SUPCORE": "mame_libretro.dll",
         "SUPEMU": [
-            "EMU",
             "MAME"
         ]
     },
     "Orion - Orion Pro": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "orionpro",
         "MAME_EMUOPTS": " orionpro -disk ",
         "SHORTNM": "ORIONP",
         "SUPCORE": "mame_libretro.dll",
         "SUPEMU": [
-            "EMU",
             "MAME"
         ]
     },
     "Osborne - Osborne-1": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "osborne1",
         "MAME_EMUOPTS": " osborne1 -flop1 ",
         "SHORTNM": "OSBR1",
@@ -8028,14 +5664,6 @@
     },
     "Osborne - Osborne-2": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "osborne2",
         "MAME_EMUOPTS": " osborne2 -flop1 ",
         "SHORTNM": "OSBR2",
@@ -8046,14 +5674,6 @@
     },
     "Osborne 4 - Vixen": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "vixen",
         "MAME_EMUOPTS": " vixen -flop1 ",
         "SHORTNM": "OSB4V",
@@ -8064,14 +5684,6 @@
     },
     "Otrona - Attache": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "attache",
         "MAME_EMUOPTS": " attache -flop ",
         "SHORTNM": "OTRAT",
@@ -8082,14 +5694,6 @@
     },
     "Ouya - Ouya": {
         "EMUPRESET": "Nox",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "1",
-            "1",
-            "1",
-            "1"
-        ],
         "ROMXT": "apk",
         "SHORTNM": "ANDRD",
         "SUPCORE": "mame_libretro.dll",
@@ -8100,14 +5704,6 @@
     },
     "Palson - CX 3000 Tele Computer": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "cx3000tc",
         "MAME_EMUOPTS": " cx3000tc -flop ",
         "SHORTNM": "PALCX3K",
@@ -8117,14 +5713,6 @@
         ]
     },
     "Panasonic - JR-200": {
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "SHORTNM": "PANJR2",
         "SUPCORE": "mame_libretro.dll",
         "SUPEMU": [
@@ -8134,14 +5722,6 @@
     },
     "Patisonic - Aleste 520EX": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "aleste",
         "MAME_EMUOPTS": " aleste -flop ",
         "SHORTNM": "PATAL",
@@ -8152,14 +5732,6 @@
     },
     "PEL Varazdin - Orao": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "orao",
         "MAME_EMUOPTS": " orao -cass1 ",
         "SHORTNM": "PVORAO",
@@ -8170,14 +5742,6 @@
     },
     "Peripheral Technology - PT68K2": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "pt68k2",
         "MAME_EMUOPTS": " pt68k2 -flop1 ",
         "SHORTNM": "PERT68K",
@@ -8188,14 +5752,6 @@
     },
     "Philips - CD-I": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "1",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "cdi910",
         "MAME_EMUOPTS": [
             " cd490a -cdrm ",
@@ -8214,20 +5770,12 @@
         "SHORTNM": "PCDI",
         "SUPCORE": "mame_libretro.dll",
         "SUPEMU": [
-            "MAME",
-            "wcdi"
+            "wcdi", 
+            "MAME"
         ]
     },
     "Philips - P2000": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "pc2000",
         "MAME_EMUOPTS": " pc2000 -cart ",
         "ROMXT": [
@@ -8242,14 +5790,6 @@
     },
     "Philips - VG-5000": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "vg5k",
         "MAME_EMUOPTS": " vg5k -cart ",
         "ROMXT": [
@@ -8266,19 +5806,12 @@
     },
     "Philips - Videopac+": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "videopac",
         "MAME_EMUOPTS": " videopac -cart ",
         "ROMXT": [
             "bin",
-            "rom,zip"
+            "rom",
+            "zip"
         ],
         "SHORTNM": "PVIDPAC",
         "SUPCORE": "mame_libretro.dll",
@@ -8289,14 +5822,6 @@
     },
     "PopCap - PopCap": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "ROMXT": [
             "bat",
             "cmd",
@@ -8312,14 +5837,6 @@
     },
     "PPG - Waveterm A": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "waveterm",
         "MAME_EMUOPTS": " waveterm -flop1 ",
         "SHORTNM": "PPGWAV",
@@ -8330,14 +5847,6 @@
     },
     "Processor Technology Corporation - SOL-20": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "sol20",
         "MAME_EMUOPTS": " sol20 -cass ",
         "SHORTNM": "PTCSOL",
@@ -8348,14 +5857,6 @@
     },
     "Psion - Organiser I": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "psion1",
         "MAME_EMUOPTS": " psion1 -cart ",
         "SHORTNM": "PSIORG",
@@ -8366,14 +5867,6 @@
     },
     "Psion - Organiser II": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "psion2",
         "MAME_EMUOPTS": " psion2 -cart ",
         "SHORTNM": "PSIORG2",
@@ -8383,14 +5876,6 @@
         ]
     },
     "RCA - CHIP 8": {
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "SHORTNM": "RCACHP8",
         "SUPCORE": "mame_libretro.dll",
         "SUPEMU": [
@@ -8402,14 +5887,6 @@
     },
     "RCA - Studio II": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "studio2",
         "MAME_EMUOPTS": " studio2 -cart ",
         "ROMXT": [
@@ -8428,14 +5905,6 @@
         ]
     },
     "RCA - Superchip": {
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "SHORTNM": "RCASUP",
         "SUPCORE": "mame_libretro.dll",
         "SUPEMU": [
@@ -8446,14 +5915,6 @@
     },
     "RCA - VIP": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "vip",
         "MAME_EMUOPTS": " vip -cass ",
         "SHORTNM": "RCAVIP",
@@ -8464,14 +5925,6 @@
     },
     "RCA Studio II - Victory MPT-02": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "studio2",
         "MAME_EMUOPTS": " studio2 -cart ",
         "SHORTNM": "RCAVICT",
@@ -8482,14 +5935,6 @@
     },
     "Research Machines - Nimbus": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "nimbus",
         "MAME_EMUOPTS": " nimbus -flop1 ",
         "SHORTNM": "RMNIMB",
@@ -8499,31 +5944,14 @@
         ]
     },
     "Robotron - KC Compact": {
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "SHORTNM": "ROBKCC",
         "SUPCORE": "mame_libretro.dll",
         "SUPEMU": [
-            "EMU",
             "MAME",
             "kcemu"
         ]
     },
     "Robotron - Z9001": {
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "SHORTNM": "ROBZ9K1",
         "SUPCORE": "mame_libretro.dll",
         "SUPEMU": [
@@ -8532,14 +5960,6 @@
     },
     "Rockwell - AIM 65": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "aim65",
         "MAME_EMUOPTS": " aim65 -flop ",
         "SHORTNM": "ROCKAIM",
@@ -8550,14 +5970,6 @@
     },
     "ROLM - CBX 9751": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "r9751",
         "MAME_EMUOPTS": " r9751 -flop ",
         "SHORTNM": "ROLMCBX",
@@ -8568,14 +5980,6 @@
     },
     "Rowtron - Television Computer System": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "rwtrntcs",
         "MAME_EMUOPTS": " rwtrntcs -cart ",
         "SHORTNM": "ROWTCS",
@@ -8586,14 +5990,6 @@
     },
     "Sage Technology - Sage II": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "sage2",
         "MAME_EMUOPTS": [
             " sage2 -flop1 ",
@@ -8607,14 +6003,6 @@
     },
     "SAM SKB VM - Partner-01.01": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "partner",
         "MAME_EMUOPTS": [
             " partner -[RTYP] ",
@@ -8632,21 +6020,12 @@
         "EMUPRESET": "Demul",
         "EXT": "0",
         "EXTRARC": "0",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "0",
-            "0",
-            "0"
-        ],
         "NICEFLDR": "1",
         "PATH": "0",
         "QUOTES": "0",
         "ROMNAME": "0",
         "ROMXT": "zip",
         "RUNDIR": "0",
-        "SETLST": "",
         "SHORTNM": "SATOM",
         "SUPCORE": [
             "flycast_libretro.dll",
@@ -8661,20 +6040,12 @@
         "SUPEMU": [
             "Demul",
             "flycast",
-            "redream", 
+            "redream",
             "MAME"
         ]
     },
     "Samsung - SPC-1000": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "spc1000",
         "MAME_EMUOPTS": " spc1000 -cass ",
         "SHORTNM": "SAMSPC1K",
@@ -8685,14 +6056,6 @@
     },
     "Samsung - SPC-1500": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "spc1500",
         "MAME_EMUOPTS": " spc1500 -cass ",
         "SHORTNM": "SAMSPC15",
@@ -8703,14 +6066,6 @@
     },
     "San Bergmans - Izabella Malcolm - SITCOM": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "sitcom",
         "MAME_EMUOPTS": " sitcom -flash1 ",
         "SHORTNM": "SBIZMSITC",
@@ -8721,14 +6076,6 @@
     },
     "Sanyo - MBC-200 - 1200": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "mbc200",
         "MAME_EMUOPTS": " mbc200 -flop1 ",
         "SHORTNM": "SMBC2",
@@ -8739,14 +6086,6 @@
     },
     "Sanyo - MBC-55x": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "mbc55x",
         "MAME_EMUOPTS": " mbc55x -flop1 ",
         "SHORTNM": "SMBC55",
@@ -8757,14 +6096,6 @@
     },
     "Sanyo - PHC-25": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "phc25",
         "MAME_EMUOPTS": " phc25 -cass ",
         "SHORTNM": "SPHC25",
@@ -8776,14 +6107,6 @@
     "ScummVM - ScummVM": {
         "cmdfun": " 1",
         "EMUPRESET": "ScummVM",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "1",
-            "1",
-            "1",
-            "1"
-        ],
         "SHORTNM": "SCUMV",
         "SUPCORE": "scummvm_libretro.dll",
         "SUPEMU": [
@@ -8795,14 +6118,6 @@
         "Fusion_EMUOPTS": [
             " -32X ",
             " -FullScreen -32X "
-        ],
-        "LNCHPRM": [
-            "$",
-            "0",
-            "1",
-            "1",
-            "1",
-            "1"
         ],
         "MAMENM": "32x",
         "MAME_EMUOPTS": [
@@ -8818,7 +6133,8 @@
             " 32xj -cart "
         ],
         "ROMXT": [
-            "bin,32x",
+            "bin",
+            "32x",
             "cdr",
             "chd",
             "cue",
@@ -8833,25 +6149,18 @@
         "SUPCORE": "picodrive_libretro.dll",
         "SUPEMU": [
             "Fusion",
-            "MAME",
             "gens",
-            "gensplus"
+            "gensplus", 
+            "MAME"
         ]
     },
     "Sega - 32X - JAP": {
         "EMUPRESET": "fusion",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "1",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "32xj",
         "MAME_EMUOPTS": " 32xj -cart ",
         "ROMXT": [
-            "bin,32x",
+            "bin",
+            "32x",
             "cdr",
             "chd",
             "cue",
@@ -8866,25 +6175,18 @@
         "SUPCORE": "picodrive_libretro.dll",
         "SUPEMU": [
             "Fusion",
-            "MAME",
             "gens",
-            "gensplus"
+            "gensplus", 
+            "MAME"
         ]
     },
     "Sega - 32X - PAL": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "1",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "32xe",
         "MAME_EMUOPTS": " 32xe -cart ",
         "ROMXT": [
-            "bin,32x",
+            "bin",
+            "32x",
             "cdr",
             "chd",
             "cue",
@@ -8899,9 +6201,9 @@
         "SUPCORE": "picodrive_libretro.dll",
         "SUPEMU": [
             "Fusion",
-            "MAME",
             "gens",
-            "gensplus"
+            "gensplus", 
+            "MAME"
         ]
     },
     "Sega - Beena": {
@@ -8909,14 +6211,6 @@
         "Fusion_EMUOPTS": [
             " -FullScreen -gen ",
             " -gen "
-        ],
-        "LNCHPRM": [
-            "$",
-            "0",
-            "1",
-            "1",
-            "1",
-            "1"
         ],
         "MAMENM": "beena",
         "MAME_EMUOPTS": " beena -cart ",
@@ -8935,14 +6229,6 @@
     },
     "Sega - Chihiro": {
         "EMUPRESET": "Cxbx",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "1",
-            "1",
-            "1",
-            "1"
-        ],
         "SHORTNM": "SEGCHI",
         "SUPCORE": "",
         "SUPEMU": [
@@ -8954,14 +6240,6 @@
     "Sega - Dreamcast": {
         "Demul_EMUOPTS= -run=dc -image": "\": [CMDLINELOC]\"",
         "EMUPRESET": "Demul",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "1",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "dc",
         "MAME_EMUOPTS": [
             " dc -cdrm ",
@@ -8974,7 +6252,7 @@
             "chd",
             "cue",
             "gdi",
-            "img ",
+            "img",
             "iso",
             "nrg",
             "toc"
@@ -9002,22 +6280,13 @@
             " -FullScreen -gg ",
             " -gg "
         ],
-        "LNCHPRM": [
-            "$",
-            "0",
-            "1",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "gamegear",
         "MAME_EMUOPTS": [
             " gamegeaj -cart ",
             " gamegear -cart "
         ],
-        "MEDNM": "gg",
         "ROMXT": [
-            " .gg",
+            "gg",
             "bin",
             "zip"
         ],
@@ -9050,14 +6319,6 @@
     },
     "Sega - Game Gear - JAP": {
         "EMUPRESET": "fusion",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "1",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "gamegearj",
         "MAME_EMUOPTS": " gamegearj -cart ",
         "SHORTNM": "SGGJ",
@@ -9069,7 +6330,6 @@
         "SUPEMU": [
             "Fusion",
             "mednafen",
-            "MAME",
             "byuu",
             "cogwheel",
             "dega",
@@ -9084,22 +6344,14 @@
             "osmose",
             "regen",
             "twombit",
+            "MAME",
             "xe"
         ]
     },
     "Sega - Hikaru": {
         "EMUPRESET": "Demul",
         "EXTRARC": "0",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "0",
-            "0",
-            "0"
-        ],
         "ROMXT": "zip",
-        "SETLST": "",
         "SHORTNM": "HIKAR",
         "SUPCORE": "mame_libretro.dll",
         "SUPEMU": [
@@ -9109,14 +6361,6 @@
     },
     "Sega - Mark III - JPN": {
         "EMUPRESET": "fusion",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "1",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "smsj",
         "MAME_EMUOPTS": " smsj -cart ",
         "SHORTNM": "SMSJ",
@@ -9152,14 +6396,6 @@
             " -FullScreen -sms ",
             " -sms "
         ],
-        "LNCHPRM": [
-            "$",
-            "0",
-            "1",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "sms",
         "MAME_EMUOPTS": [
             " sg1000m3 -cart ",
@@ -9171,7 +6407,6 @@
             " smsj -cart ",
             " smspal -cart "
         ],
-        "MEDNM": "sms",
         "ROMXT": [
             "bin",
             "sms",
@@ -9207,14 +6442,6 @@
     },
     "Sega - Master System - PAL": {
         "EMUPRESET": "fusion",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "1",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "smspal",
         "MAME_EMUOPTS": " smspal -cart ",
         "SHORTNM": "SMSP",
@@ -9251,14 +6478,6 @@
             " -FullScreen -gen ",
             " -gen "
         ],
-        "LNCHPRM": [
-            "$",
-            "0",
-            "1",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "genesis",
         "MAME_EMUOPTS": [
             " genesis -cart ",
@@ -9269,7 +6488,6 @@
             " megadrij -cart ",
             " megadriv -cart "
         ],
-        "MEDNM": "md",
         "ROMXT": [
             "bin",
             "gen",
@@ -9301,14 +6519,6 @@
     },
     "Sega - Mega Drive - PAL": {
         "EMUPRESET": "fusion",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "1",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "megadriv",
         "MAME_EMUOPTS": " megadriv -cart ",
         "SHORTNM": "SMDP",
@@ -9339,14 +6549,6 @@
             " -FullScreen -gen ",
             " -gen "
         ],
-        "LNCHPRM": [
-            "$",
-            "0",
-            "1",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "megacd",
         "MAME_EMUOPTS": [
             " 32x_mcd -cdrm ",
@@ -9359,7 +6561,6 @@
             " megacdj -cdrm ",
             " segacd -cdrm "
         ],
-        "MEDNM": "md",
         "ROMXT": [
             "cdr",
             "chd",
@@ -9388,14 +6589,6 @@
     },
     "Sega - MegaTech": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "0",
-            "0",
-            "0"
-        ],
         "MAMENM": "megatech",
         "MAME_EMUOPTS": " megatech -cart ",
         "SHORTNM": "SEGMT",
@@ -9418,14 +6611,6 @@
         ]
     },
     "Sega - Model 1": {
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "0",
-            "0",
-            "0"
-        ],
         "SHORTNM": "SMOD1",
         "SUPCORE": "mame_libretro.dll",
         "SUPEMU": [
@@ -9436,41 +6621,23 @@
     "Sega - Model 2": {
         "EMUPRESET": "m2emulator",
         "EXTRARC": "0",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "0",
-            "0",
-            "0"
-        ],
         "MAME_EMUOPTS": " segamod2 -cart ",
         "NICEFLDR": "1",
         "ROMXT": "zip",
-        "SETLST": "",
         "SHORTNM": "SMOD2",
         "SUPCORE": "mame_libretro.dlls",
         "SUPEMU": [
-            "m2emulator", 
+            "m2emulator",
             "MAME"
         ]
     },
     "Sega - Model 3": {
         "EMUPRESET": "supermodel",
         "EXTRARC": "0",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "0",
-            "0",
-            "1"
-        ],
         "MAMENM": "supmodel",
         "MAME_EMUOPTS": " segamod3 -cart ",
         "NICEFLDR": "1",
         "ROMXT": "zip",
-        "SETLST": "",
         "SHORTNM": "SMOD3",
         "SUPCORE": "",
         "SUPEMU": [
@@ -9483,14 +6650,6 @@
         "EXT": "0",
         "EXTRARC": "0",
         "flycast_EMUOPTS": " ",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "0",
-            "0",
-            "0"
-        ],
         "MAMENM": "naomi",
         "MAME_EMUOPTS": [
             " naomi -[RTYP] ",
@@ -9510,7 +6669,6 @@
             "zip"
         ],
         "RUNDIR": "0",
-        "SETLST": "",
         "SHORTNM": "SNAOMI",
         "SUPCORE": [
             "flycast_libretro.dll",
@@ -9527,7 +6685,7 @@
             "NullDC",
             "flycast",
             "redream",
-            "reicast", 
+            "reicast",
             "MAME"
         ]
     },
@@ -9536,14 +6694,6 @@
         "Fusion_EMUOPTS": [
             " -FullScreen -gen ",
             " -gen "
-        ],
-        "LNCHPRM": [
-            "$",
-            "0",
-            "1",
-            "1",
-            "1",
-            "1"
         ],
         "MAMENM": "picou",
         "MAME_EMUOPTS": [
@@ -9562,21 +6712,13 @@
         "SUPCORE": "picodrive_libretro.dll",
         "SUPEMU": [
             "Fusion",
-            "picodrive", 
+            "picodrive",
             "MAME"
         ]
     },
     "Sega - Saturn": {
         "DISCMNT": "1",
         "EMUPRESET": "SSF",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "1",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "saturnu",
         "MAME_EMUOPTS": [
             " saturn -[RTYP] ",
@@ -9587,7 +6729,6 @@
             " saturnjp -cart ",
             " saturnjp -cdrm "
         ],
-        "MEDNM": "ss",
         "ROMXT": [
             "cdi",
             "cdr",
@@ -9613,20 +6754,12 @@
             "SSF",
             "Yabause",
             "kronos",
-            "MAME", 
+            "MAME",
             "nova"
         ]
     },
     "Sega - SC-3000": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "sc3000",
         "MAME_EMUOPTS": [
             " sc3000 -[RTYP] ",
@@ -9657,14 +6790,6 @@
     },
     "Sega - SF-7000": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "sf7000",
         "MAME_EMUOPTS": [
             " sc3000 -cart ",
@@ -9713,14 +6838,6 @@
             " ",
             " -FullScreen "
         ],
-        "LNCHPRM": [
-            "$",
-            "0",
-            "1",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "sg1000",
         "MAME_EMUOPTS": [
             " sg1000 -cart ",
@@ -9755,26 +6872,18 @@
         ]
     },
     "Sega - STV": {
-        "EMUPRESET": "SSF",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
+        "EMUPRESET": "MAME",
+        "MAMENM": "stv",
+        "MAME_EMUOPTS": " stv -cart ",
+        "SHORTNM": "SEGSTV",
+        "SUPCORE": "mame_libretro.dll",
+        "SUPEMU": [
+            "MAME",
+            "SSF"
         ]
     },
     "Sega - Super Control Station": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAME_EMUOPTS": [
             " sc3000 -cart ",
             " sc3000 -cass ",
@@ -9811,14 +6920,6 @@
     },
     "Sega - Titan Video": {
         "EMUPRESET": "SSF",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "stv",
         "MAME_EMUOPTS": " stv -cart ",
         "SHORTNM": "SEGSTV",
@@ -9830,14 +6931,6 @@
     },
     "Sega - Visual Memory Unit": {
         "EMUPRESET": "directvms",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "1",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "svmu",
         "MAME_EMUOPTS": " svmu -quik ",
         "SHORTNM": "SEGVMU",
@@ -9850,14 +6943,6 @@
         ]
     },
     "Seiko - Ruputer": {
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "SHORTNM": "SRPUT",
         "SUPCORE": "mame_libretro.dll",
         "SUPEMU": [
@@ -9867,14 +6952,6 @@
     },
     "Sharp - MZ-2000": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "mz2000",
         "MAME_EMUOPTS": [
             " mz2000 -[RTYP] ",
@@ -9890,14 +6967,6 @@
     },
     "Sharp - MZ-2500": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "mz2500",
         "MAME_EMUOPTS": " mz2500 -flop1 ",
         "SHORTNM": "SHRPMZ25",
@@ -9908,14 +6977,6 @@
     },
     "Sharp - MZ-700": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "mz700",
         "MAME_EMUOPTS": [
             " mz700 -cass ",
@@ -9939,14 +7000,6 @@
     },
     "Sharp - MZ-800": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "mz800",
         "MAME_EMUOPTS": " mz800 -cass ",
         "ROMXT": [
@@ -9966,14 +7019,6 @@
     },
     "Sharp - X1": {
         "EMUPRESET": "X1turbo",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "1",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "x1",
         "MAME_EMUOPTS": [
             " x1 -cart ",
@@ -10018,20 +7063,12 @@
             "X1turbo",
             "winX1",
             "x1",
-            "x1twin", 
+            "x1twin",
             "MAME"
         ]
     },
     "Sharp - X68000": {
         "EMUPRESET": "XM6",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "1",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "x68000",
         "MAME_EMUOPTS": [
             " x68000 -cdrm ",
@@ -10088,19 +7125,11 @@
             "Anex86",
             "Winx68k",
             "XM6",
-            "ex68", 
+            "ex68",
             "MAME"
         ]
     },
     "Signetics - Pipbug": {
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "SHORTNM": "SPIPB",
         "SUPCORE": "mame_libretro.dll",
         "SUPEMU": [
@@ -10110,14 +7139,6 @@
     },
     "Sinclair - QL": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "ql",
         "MAME_EMUOPTS": [
             " ql -[RTYP] ",
@@ -10155,14 +7176,6 @@
     },
     "Sinclair - ZX Spectrum +3": {
         "EMUPRESET": "ZXSpin",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "spec128",
         "MAME_EMUOPTS": [
             " spec128 -[RTYP] ",
@@ -10176,7 +7189,8 @@
             "bin",
             "blk",
             "frz",
-            "plusd.prg",
+            "plusd",
+            "prg",
             "rom",
             "sem",
             "sit",
@@ -10212,14 +7226,6 @@
     },
     "Sinclair - ZX80": {
         "EMUPRESET": "ZXSpin",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "zx80",
         "MAME_EMUOPTS": " zx80 -cass1 ",
         "ROMXT": [
@@ -10241,14 +7247,6 @@
     },
     "Sinclair - ZX81": {
         "EMUPRESET": "ZXSpin",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "zx81",
         "MAME_EMUOPTS": " zx81 -cass1 ",
         "ROMXT": [
@@ -10270,14 +7268,6 @@
     },
     "Small Systems Engineering - SSE Softbox": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "softbox",
         "MAME_EMUOPTS": " softbox -flop1 ",
         "SHORTNM": "SSESOFT",
@@ -10289,21 +7279,12 @@
     "SNK - Hyper Neo-Geo 64": {
         "EMUPRESET": "MAME",
         "EXTRARC": "0",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "0",
-            "0",
-            "0"
-        ],
         "MAMENM": "hng64",
         "NICEFLDR": "1",
         "ROMXT": [
             "chd",
             "zip"
         ],
-        "SETLST": "",
         "SHORTNM": "HYPNEO",
         "SUPCORE": [
             "mame2000_libretro.dll",
@@ -10320,21 +7301,12 @@
     "SNK - Neo Geo AES": {
         "EMUPRESET": "FinalBurnAlpha",
         "EXTRARC": "0",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "0",
-            "0",
-            "0"
-        ],
         "MAMENM": "neogeo",
         "NICEFLDR": "1",
         "ROMXT": [
             "chd",
             "zip"
         ],
-        "SETLST": "",
         "SHORTNM": "SNEOAES",
         "SUPCORE": [
             "fbalpha2012_libretro.dll",
@@ -10360,14 +7332,6 @@
     },
     "SNK - Neo Geo CD": {
         "EMUPRESET": "NeoRaine",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "1",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "neocd",
         "MAME_EMUOPTS": " neocd -cdrm ",
         "ROMXT": [
@@ -10393,21 +7357,12 @@
     "SNK - Neo Geo MVS": {
         "EMUPRESET": "FinalBurnAlpha",
         "EXTRARC": "0",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "0",
-            "0",
-            "0"
-        ],
         "MAMENM": "neogeo",
         "NICEFLDR": "1",
         "ROMXT": [
             "chd",
             "zip"
         ],
-        "SETLST": "",
         "SHORTNM": "SNEOMVS",
         "SUPCORE": [
             "fbalpha2012_libretro.dll",
@@ -10434,17 +7389,8 @@
     },
     "SNK - Neo Geo Pocket": {
         "EMUPRESET": "Mednafen",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "ngp",
         "MAME_EMUOPTS": " ngp -cart ",
-        "MEDNM": "ngp",
         "ROMXT": [
             "bin",
             "ngc",
@@ -10467,17 +7413,8 @@
     },
     "SNK - Neo Geo Pocket Color": {
         "EMUPRESET": "Mednafen",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "ngpc",
         "MAME_EMUOPTS": " ngpc -cart ",
-        "MEDNM": "ngp",
         "ROMXT": [
             "bin",
             "ngc",
@@ -10499,14 +7436,6 @@
     },
     "Sony - Playstation": {
         "EMUPRESET": "duckstation",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "1",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "psu",
         "MAME_EMUOPTS": [
             " psa -cdrm ",
@@ -10519,7 +7448,6 @@
             " psu -cdrm ",
             " psu -memc1 "
         ],
-        "MEDNM": "psx",
         "ROMXT": [
             "bin",
             "ccd",
@@ -10558,14 +7486,6 @@
     },
     "Sony - Playstation - PAL": {
         "EMUPRESET": "duckstation",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "1",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "pse",
         "MAME_EMUOPTS": [
             " psa -cdrm ",
@@ -10578,7 +7498,6 @@
             " psu -cdrm ",
             " psu -memc1 "
         ],
-        "MEDNM": "psx",
         "ROMXT": [
             "bin",
             "cue",
@@ -10614,16 +7533,8 @@
     "Sony - Playstation 2": {
         "EMUOPTS": " --no-gui ",
         "EMUPRESET": "pcsx2",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "1",
-            "1",
-            "1",
-            "1"
-        ],
         "ROMXT": [
-            " .iso",
+            "iso",
             "bin",
             "ccd",
             "ccd",
@@ -10641,24 +7552,16 @@
     },
     "Sony - Playstation 3": {
         "EMUPRESET": "rcps3",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "1",
-            "1",
-            "1",
-            "1"
-        ],
         "ROMXT": [
             "elf",
-            "iso", 
-            "bin", 
-            "cue", 
-            "img", 
-            "cso", 
+            "iso",
+            "bin",
+            "cue",
+            "img",
+            "cso",
             "eboot.bin",
             "boot.bin"
-            ], 
+        ],
         "SHORTNM": "SPLAY3",
         "SUPCORE": "",
         "SUPEMU": [
@@ -10669,14 +7572,6 @@
     },
     "Sony - Playstation 4": {
         "EMUPRESET": "gcps4",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "1",
-            "1",
-            "1",
-            "1"
-        ],
         "ROMXT": [
             "elf",
             "bin"
@@ -10690,14 +7585,6 @@
     },
     "Sony - Playstation Mobile": {
         "EMUPRESET": "PPSSPP",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "1",
-            "1",
-            "1",
-            "1"
-        ],
         "SHORTNM": "SPLAYM",
         "SUPCORE": "pkg",
         "SUPEMU": [
@@ -10707,14 +7594,6 @@
     },
     "Sony - Playstation Portable": {
         "EMUPRESET": "PPSSPP",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "1",
-            "1",
-            "1",
-            "1"
-        ],
         "ROMXT": [
             "cso",
             "img",
@@ -10733,14 +7612,6 @@
     },
     "Sony - Playstation Vita": {
         "EMUPRESET": "vita3k",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "1",
-            "1",
-            "1",
-            "1"
-        ],
         "ROMXT": [
             "pkg",
             "psv",
@@ -10754,14 +7625,6 @@
     },
     "Sony - Pocketstation": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "pockstat",
         "MAME_EMUOPTS": " pockstat -cart ",
         "ROMXT": [
@@ -10779,14 +7642,6 @@
     },
     "Sony - SMC777": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "smc777",
         "MAME_EMUOPTS": " smc777 -flop1 ",
         "SHORTNM": "SSMC777",
@@ -10797,14 +7652,6 @@
     },
     "Sord - M5": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "m5",
         "MAME_EMUOPTS": [
             " m5 -[RTYP] ",
@@ -10844,14 +7691,6 @@
     },
     "Soviet - Radio-86RK": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "radio86",
         "MAME_EMUOPTS": " radio86 -cass ",
         "SHORTNM": "RAD86RK",
@@ -10862,14 +7701,6 @@
     },
     "Soviet - Specialist": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "special",
         "MAME_EMUOPTS": [
             " special -[RTYP] ",
@@ -10884,14 +7715,6 @@
     },
     "Soviet - UT-88": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "ut88",
         "MAME_EMUOPTS": " ut88 -cass ",
         "SHORTNM": "SOVUT88",
@@ -10902,14 +7725,6 @@
     },
     "Soviet - Vector 06c": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "vector06",
         "MAME_EMUOPTS": " vector06 -flop ",
         "SHORTNM": "SOVVEC",
@@ -10921,14 +7736,6 @@
     },
     "SpectraVision - Spectravideo": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "SHORTNM": "SPECTRAV",
         "SUPCORE": "mame_libretro.dll",
         "SUPEMU": [
@@ -10943,14 +7750,6 @@
             "/machine \"SVI - Spectravideo SVI-318\" /fullscreen /cas "
         ],
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "svi318",
         "MAME_EMUOPTS": [
             " svi318 -[RTYP] ",
@@ -10967,14 +7766,6 @@
     },
     "Streets Of Rage - Remake": {
         "EMUPRESET": "StreetsOfRageRemake",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "ROMXT": "sor",
         "SHORTNM": "SORR",
         "SUPCORE": "mame_libretro.dll",
@@ -10984,14 +7775,6 @@
     },
     "Taito - Taito Type X": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "ROMXT": [
             "bat",
             "cmd",
@@ -11008,14 +7791,6 @@
     },
     "Tandberg - TDV 2324": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "tdv2324",
         "MAME_EMUOPTS": " tdv2324 -flop ",
         "SHORTNM": "TANTDV",
@@ -11026,14 +7801,6 @@
     },
     "Tandy - 1000": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "t1000",
         "MAME_EMUOPTS": " t1000 -flop1 ",
         "SHORTNM": "TAN1K",
@@ -11044,14 +7811,6 @@
     },
     "Tandy - 200 Option": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "tandy200",
         "MAME_EMUOPTS": " tandy200 -cart ",
         "SHORTNM": "TAN2HO",
@@ -11062,14 +7821,6 @@
     },
     "Tandy - 2000": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "tandy2k",
         "MAME_EMUOPTS": " tandy2k -flop1 ",
         "SHORTNM": "TAN2K",
@@ -11080,14 +7831,6 @@
     },
     "Tandy - 6000": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "tandy6k",
         "MAME_EMUOPTS": " tandy6k -flop ",
         "SHORTNM": "TAN6K",
@@ -11098,14 +7841,6 @@
     },
     "Tandy - MC-10": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "mc10",
         "MAME_EMUOPTS": " mc10 -cass1 ",
         "SHORTNM": "TANMC",
@@ -11116,14 +7851,6 @@
     },
     "Tandy - Radio Shack - Color Computer": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "coco",
         "MAME_EMUOPTS": " coco -flop ",
         "SHORTNM": "TANCOCO",
@@ -11134,14 +7861,6 @@
     },
     "Tandy - TRS-80 Model 100 Option": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "trsm100",
         "MAME_EMUOPTS": " trsm100 -cart ",
         "SHORTNM": "TTRS1H",
@@ -11152,14 +7871,6 @@
     },
     "Tandy - TRS-80 Model II": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "trs80m2",
         "MAME_EMUOPTS": " trs80m2 -flop1 ",
         "SHORTNM": "TTRSMII",
@@ -11170,14 +7881,6 @@
     },
     "Tangerine - Microtan 65": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "microtan",
         "MAME_EMUOPTS": [
             " microtan -[RTYP] ",
@@ -11199,14 +7902,6 @@
     },
     "Tangerine - Oric Atmos": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "orica",
         "MAME_EMUOPTS": [
             " oric1 -cass ",
@@ -11227,14 +7922,6 @@
     },
     "Tatung - Einstein TC-01": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "einstein",
         "MAME_EMUOPTS": " einstein -flop ",
         "SHORTNM": "TEINST",
@@ -11245,14 +7932,6 @@
     },
     "Technosys - Aamber Pegasus": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "pegasus",
         "MAME_EMUOPTS": " pegasus -cart ",
         "SHORTNM": "TAPEG",
@@ -11263,14 +7942,6 @@
     },
     "Tektronix - Tektronix 4052": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "tek4052",
         "MAME_EMUOPTS": " tek4052 -cart ",
         "SHORTNM": "TEKTRON",
@@ -11281,14 +7952,6 @@
     },
     "Telcon - Zorba": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "zorba",
         "MAME_EMUOPTS": " zorba -flop1 ",
         "SHORTNM": "TELZOR",
@@ -11299,14 +7962,6 @@
     },
     "Telenova - Compis": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "compis",
         "MAME_EMUOPTS": " compis -flop ",
         "SHORTNM": "TELCPIS",
@@ -11315,49 +7970,8 @@
             "MAME"
         ]
     },
-    "Television - Series": {
-        "EMUPRESET": "videoplayer",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "1",
-            "1",
-            "1",
-            "1"
-        ],
-        "ROMXT": [
-            "avi",
-            "cue",
-            "iso",
-            "m4v",
-            "mkv",
-            "mov",
-            "mp4",
-            "mpeg",
-            "mpg",
-            "mpv",
-            "wmv"
-        ],
-        "SHORTNM": "TVSERIES",
-        "SUPCORE": "",
-        "SUPEMU": [
-            "mplayerc",
-            "retroarch",
-            "videoplayer",
-            "vlc",
-            "wmplayer"
-        ]
-    },
     "Tesla - PMD-85": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "pmd853",
         "MAME_EMUOPTS": " pmd853 -cass ",
         "SHORTNM": "TESPMD",
@@ -11369,14 +7983,6 @@
     },
     "Texas Instruments - Compact Computer 40": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "cc40",
         "MAME_EMUOPTS": " cc40 -flop ",
         "SHORTNM": "TICC40",
@@ -11387,14 +7993,6 @@
     },
     "Texas Instruments - Language Tutor": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "lantutor",
         "MAME_EMUOPTS": " lantutor -cart ",
         "SHORTNM": "TILTUT",
@@ -11405,14 +8003,6 @@
     },
     "Texas Instruments - Speak and Read": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "snread",
         "MAME_EMUOPTS": " snread -cart ",
         "SHORTNM": "TISPKR",
@@ -11423,14 +8013,6 @@
     },
     "Texas Instruments - Speak and Spell": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "snspell",
         "MAME_EMUOPTS": " snspell -cart ",
         "SHORTNM": "TISPNS",
@@ -11441,14 +8023,6 @@
     },
     "Texas Instruments - TI-73": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "ti73",
         "MAME_EMUOPTS": " ti73 -cart ",
         "SHORTNM": "TI73",
@@ -11459,14 +8033,6 @@
     },
     "Texas Instruments - TI-74": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "ti74",
         "MAME_EMUOPTS": " ti74 -cart ",
         "SHORTNM": "TI74",
@@ -11477,14 +8043,6 @@
     },
     "Texas Instruments - TI-80": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "ti80",
         "MAME_EMUOPTS": " ti80 -cart ",
         "SHORTNM": "TI80",
@@ -11495,14 +8053,6 @@
     },
     "Texas Instruments - TI-81": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "ti81",
         "MAME_EMUOPTS": " ti81 -cart ",
         "SHORTNM": "TI81",
@@ -11513,14 +8063,6 @@
     },
     "Texas Instruments - TI-82": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "ti82",
         "MAME_EMUOPTS": " ti82 -cart ",
         "SHORTNM": "TI82",
@@ -11531,14 +8073,6 @@
     },
     "Texas Instruments - TI-83": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "ti83",
         "MAME_EMUOPTS": " ti83 -cart ",
         "SHORTNM": "TI83",
@@ -11549,14 +8083,6 @@
     },
     "Texas Instruments - TI-92": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "ti92",
         "MAME_EMUOPTS": " ti92 -cart ",
         "SHORTNM": "TI92",
@@ -11567,14 +8093,6 @@
     },
     "Texas Instruments - TI-95": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "ti95",
         "MAME_EMUOPTS": " ti95 -cart ",
         "SHORTNM": "TI95",
@@ -11585,14 +8103,6 @@
     },
     "Texas Instruments - TI-99": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "ti99",
         "MAME_EMUOPTS": " ti99 -cart ",
         "SHORTNM": "TI99",
@@ -11605,14 +8115,6 @@
         ]
     },
     "Texas Instruments - TI-99-4A": {
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "ti99",
         "MAME_EMUOPTS": " ti99 -cart ",
         "SHORTNM": "TI994A",
@@ -11626,14 +8128,6 @@
     },
     "Texas Instruments - Touch and Tell": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "tntell",
         "MAME_EMUOPTS": " tntell -cart ",
         "SHORTNM": "TITNT",
@@ -11644,14 +8138,6 @@
     },
     "The 3DO Company - 3DO": {
         "EMUPRESET": "4DO",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "1",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "3do",
         "MAME_EMUOPTS": [
             " 3do -cdrm ",
@@ -11681,14 +8167,6 @@
     },
     "Thomson - M05": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "mo5",
         "MAME_EMUOPTS": [
             " mo5 -[RTYP] ",
@@ -11734,14 +8212,6 @@
     },
     "Thomson - MO6": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "mo6",
         "MAME_EMUOPTS": [
             " mo6 -[RTYP] ",
@@ -11756,14 +8226,6 @@
     },
     "Thomson - To7": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "to7",
         "MAME_EMUOPTS": [
             " to7 -[RTYP] ",
@@ -11811,14 +8273,6 @@
     },
     "Thomson - TO7 - TO7-70": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "to770",
         "MAME_EMUOPTS": [
             " to770 -[RTYP] ",
@@ -11834,14 +8288,6 @@
     },
     "Thomson - TO7 - TO7-70A": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "to770a",
         "MAME_EMUOPTS": [
             " to770a -[RTYP] ",
@@ -11857,14 +8303,6 @@
     },
     "Thomson - To8": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "to8",
         "MAME_EMUOPTS": [
             " to8 -[RTYP] ",
@@ -11910,14 +8348,6 @@
     },
     "Tiger - Game.com": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "1",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "gamecom",
         "MAME_EMUOPTS": " gamecom -cart ",
         "SHORTNM": "TIGAME",
@@ -11928,14 +8358,6 @@
         ]
     },
     "Tiger - Gizmondo": {
-        "LNCHPRM": [
-            "$",
-            "0",
-            "1",
-            "1",
-            "1",
-            "1"
-        ],
         "SHORTNM": "TIGTEL",
         "SUPCORE": "mame_libretro.dll",
         "SUPEMU": [
@@ -11944,14 +8366,6 @@
     },
     "Tiger - K28 7-232": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "k28m2",
         "MAME_EMUOPTS": " k28m2 -cart ",
         "SHORTNM": "TIGK28",
@@ -11962,14 +8376,6 @@
     },
     "Tiki Data A-S - TIKI 100": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "tiki100",
         "MAME_EMUOPTS": " tiki100 -flop1 ",
         "SHORTNM": "TIKI1H",
@@ -11980,14 +8386,6 @@
     },
     "TimeTop - GameKing": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "gameking",
         "MAME_EMUOPTS": " gameking -cart ",
         "SHORTNM": "TTGAM",
@@ -11998,14 +8396,6 @@
     },
     "TimeTop - GameKing 3": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "gameking3",
         "MAME_EMUOPTS": " gameking3 -cart ",
         "SHORTNM": "TTGAM3",
@@ -12016,14 +8406,6 @@
     },
     "Timex - Sinclair TS-2068 DOCK": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "timex",
         "MAME_EMUOPTS": " timex -cart ",
         "SHORTNM": "TIIMSTS",
@@ -12034,14 +8416,6 @@
     },
     "Tomy - KISS-Site": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "",
-            "$",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "ROMXT": [
             "bin",
             "cue",
@@ -12056,14 +8430,6 @@
     },
     "Tomy - Prin-C": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "princ",
         "MAME_EMUOPTS": " princ ",
         "SHORTNM": "TOMYPR",
@@ -12074,14 +8440,6 @@
     },
     "Tomy - Tutor - Pyuuta": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "tutor",
         "MAME_EMUOPTS": " tutor -cart ",
         "SHORTNM": "TOMYPU",
@@ -12092,21 +8450,13 @@
     },
     "Toshiba - Pasopia": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "pasopia7",
         "MAME_EMUOPTS": [
-        " pasopia7 -flop1 ",
-        " pasopia7 -flop2 ",
-        " pasopia7lcd -flop1 ",
-        " pasopia7lcd -flop2 "
-        ], 
+            " pasopia7 -flop1 ",
+            " pasopia7 -flop2 ",
+            " pasopia7lcd -flop1 ",
+            " pasopia7lcd -flop2 "
+        ],
         "ROMXT": [
             "1dd",
             "bin",
@@ -12133,14 +8483,6 @@
     },
     "Toshiba - Visicom": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "visicom",
         "MAME_EMUOPTS": " visicom -cart ",
         "SHORTNM": "TOSHVIS",
@@ -12151,14 +8493,6 @@
     },
     "Triumph-Adler - Alphatronic PC": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "alphatro",
         "MAME_EMUOPTS": " alphatro -flop ",
         "SHORTNM": "TRADLPC",
@@ -12169,14 +8503,6 @@
     },
     "TRQ - Video Computer H-21": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "h21",
         "MAME_EMUOPTS": " h21 -cart ",
         "SHORTNM": "TRQVC",
@@ -12187,14 +8513,6 @@
     },
     "Tsukuda - Othello Multivision": {
         "MAME_EMUOPTS": " omv2000 -cart ",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "omv2000",
         "ROMXT": [
             "bin",
@@ -12208,14 +8526,6 @@
     },
     "Unisonic - Champion 2711": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "unichamp",
         "MAME_EMUOPTS": " unichamp -cart ",
         "SHORTNM": "UNICHAM",
@@ -12225,14 +8535,6 @@
         ]
     },
     "University of Cambridge - EDSAC": {
-        "LNCHPRM": [
-            "",
-            "$",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "ROMXT": "txt",
         "SHORTNM": "EDSAC",
         "SUPCORE": "",
@@ -12241,30 +8543,14 @@
         ]
     },
     "V. I. Lenin - L'vov-Lviv": {
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "SHORTNM": "VILELOV",
         "SUPCORE": "mame_libretro.dll",
         "SUPEMU": [
             "emu"
         ]
     },
-    "V. I. Lenin - PK-01 Lviv": {
+    "V.I. Lenin - PK-01 Lviv": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "lviv",
         "MAME_EMUOPTS": [
             " lviv -cass ",
@@ -12279,14 +8565,6 @@
     },
     "VEB Mikroelektronik - KC 85": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "kc",
         "MAME_EMUOPTS": [
             " kc -[RTYP] ",
@@ -12302,14 +8580,6 @@
     },
     "Victor Business Products - Victor 9000 - ACT Sirius 1": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "victor9k",
         "MAME_EMUOPTS": " victor9k -flop1 ",
         "SHORTNM": "VBPAS",
@@ -12318,70 +8588,8 @@
             "MAME"
         ]
     },
-    "Video - Media": {
-        "EMUPRESET": "videoplayer",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "1",
-            "1",
-            "1",
-            "1"
-        ],
-        "ROMXT": [
-            "3g2",
-            "3gp",
-            "asf",
-            "avi",
-            "cue",
-            "divx",
-            "f4f",
-            "f4v",
-            "flac",
-            "flv",
-            "iso",
-            "m2p",
-            "m2ts",
-            "m4a",
-            "m4v",
-            "mkv",
-            "mov",
-            "mp3",
-            "mp4",
-            "mpeg",
-            "mpg",
-            "mpv",
-            "mxf",
-            "ogg",
-            "ogm",
-            "ps",
-            "ts",
-            "vob",
-            "wav",
-            "webm",
-            "wma",
-            "wmv"
-        ],
-        "SHORTNM": "MLTMED",
-        "SUPCORE": "",
-        "SUPEMU": [
-            "mplayerc",
-            "retroarch",
-            "videoplayer",
-            "vlc",
-            "wmplayer"
-        ]
-    },
     "Video Technology - Socrates": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "socrates",
         "MAME_EMUOPTS": " socrates -cart ",
         "SHORTNM": "VTSOCR",
@@ -12392,14 +8600,6 @@
     },
     "VideoBrain - FamilyComputer": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "vidbrain",
         "MAME_EMUOPTS": " vidbrain -cart ",
         "ROMXT": [
@@ -12413,14 +8613,6 @@
         ]
     },
     "Videoton - TV-Computer": {
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "tvc",
         "MAME_EMUOPTS": [
             " tvc ",
@@ -12437,14 +8629,6 @@
     },
     "Visual Technology - Visual 1050": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "v1050",
         "MAME_EMUOPTS": " v1050 -flop1 ",
         "SHORTNM": "VIDVIS",
@@ -12454,14 +8638,6 @@
         ]
     },
     "VM Labs - Nuon": {
-        "LNCHPRM": [
-            "",
-            "$",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "",
         "ROMXT": [
             "dvd",
@@ -12475,14 +8651,6 @@
     },
     "Voltmace - Database": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "database",
         "MAME_EMUOPTS": " database -flop ",
         "SHORTNM": "VOLDAT",
@@ -12493,14 +8661,6 @@
     },
     "VTech - CreatiVision": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "crvision",
         "MAME_EMUOPTS": [
             " crvision -[RTYP] ",
@@ -12523,14 +8683,6 @@
     },
     "VTech - Genius 6": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "genius6",
         "MAME_EMUOPTS": " genius ",
         "SHORTNM": "VTECGEN6",
@@ -12541,14 +8693,6 @@
     },
     "VTech - Genius Junior Movie": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "gjmovie",
         "MAME_EMUOPTS": " gjmovie ",
         "SHORTNM": "VTECJM",
@@ -12559,14 +8703,6 @@
     },
     "VTech - Genius Leader 6000SL": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "gl6000sl",
         "MAME_EMUOPTS": " gl6000sl -cart ",
         "SHORTNM": "VTECGLD",
@@ -12577,14 +8713,6 @@
     },
     "VTech - Genius Leader Color": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "glcolor",
         "MAME_EMUOPTS": " glcolor ",
         "SHORTNM": "VTECGLDC",
@@ -12594,14 +8722,6 @@
         ]
     },
     "VTech - Laser 100": {
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "SHORTNM": "VLAS1",
         "SUPCORE": "mame_libretro.dll",
         "SUPEMU": [
@@ -12611,14 +8731,6 @@
     },
     "VTech - Laser 200": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "laser200",
         "MAME_EMUOPTS": [
             " laser200 -cass ",
@@ -12644,14 +8756,6 @@
     },
     "VTech - Laser 2001": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "laser2001",
         "MAME_EMUOPTS": " laser2001 -cart ",
         "SHORTNM": "VTECL2K1",
@@ -12662,14 +8766,6 @@
     },
     "VTech - Laser 310": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "laser310",
         "MAME_EMUOPTS": [
             " laser310 -[RTYP] ",
@@ -12696,14 +8792,6 @@
     },
     "VTech - PreComputer 1000": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "gl2000",
         "MAME_EMUOPTS": " gl2000 ",
         "SHORTNM": "VTPREC1K",
@@ -12714,14 +8802,6 @@
     },
     "VTech - V.Smile": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "vsmile",
         "MAME_EMUOPTS": [
             " vsmile -cart ",
@@ -12751,14 +8831,6 @@
     },
     "Wang Laboratories - Wang PC": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "wangpc",
         "MAME_EMUOPTS": " wangpc -flop1 ",
         "SHORTNM": "WANGPC",
@@ -12769,14 +8841,6 @@
     },
     "Watara - SuperVision": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "1",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "svision",
         "MAME_EMUOPTS": [
             " svision -cart ",
@@ -12801,14 +8865,6 @@
     },
     "WaveMate - Bullet": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "wmbullet",
         "MAME_EMUOPTS": " wmbullet -flop1 ",
         "SHORTNM": "WAVEB",
@@ -12820,14 +8876,6 @@
     "Windows - Games": {
         "cmdfun": " 1",
         "EMUPRESET": "DosBox-X",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "ROMXT": [
             "bat",
             "cmd",
@@ -12850,14 +8898,6 @@
     },
     "Xerox - 820": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "x820ii",
         "MAME_EMUOPTS": " x820ii -flop ",
         "SHORTNM": "XER82",
@@ -12868,14 +8908,6 @@
     },
     "Yamaha - Sega - Copera": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "copera",
         "MAME_EMUOPTS": " copera -flop ",
         "SHORTNM": "YSCOP",
@@ -12885,25 +8917,9 @@
         ]
     },
     "ZAPiT Games - Game Wave Family Entertainment System": {
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "SHORTNM": "ZPGAMW"
     },
     "Zeebo - Zeebo": {
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "SHORTNM": "ZEBO",
         "SUPCORE": "",
         "SUPEMU": [
@@ -12912,14 +8928,6 @@
     },
     "ZPA Novy Bor - IQ 151": {
         "EMUPRESET": "MAME",
-        "LNCHPRM": [
-            "$",
-            "0",
-            "0",
-            "1",
-            "1",
-            "1"
-        ],
         "MAMENM": "iq151",
         "MAME_EMUOPTS": [
             " iq151 -[RTYP] ",

@@ -1,0 +1,25 @@
+{
+    "rom_paths": [],
+    "extensions": [
+        "adf",
+        "adl",
+        "adm",
+        "ads",
+        "bbc",
+        "bin",
+        "csw",
+        "dsd",
+        "img",
+        "ssd",
+        "uef",
+        "wav",
+        "zip"
+    ],
+    "platform": "ACELEC",
+    "MAME_EMUOPTS": [
+        " electron -[RTYP] ",
+        " electron -cart ",
+        " electron -cass ",
+        " electron -flop "
+    ]
+}

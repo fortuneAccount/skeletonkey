@@ -1,0 +1,10 @@
+{
+    "rom_paths": [],
+    "extensions": [],
+    "platform": "SOVSPEC",
+    "MAME_EMUOPTS": [
+        " special -[RTYP] ",
+        " special -cass ",
+        " special -flop "
+    ]
+}

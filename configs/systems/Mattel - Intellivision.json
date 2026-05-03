@@ -1,0 +1,15 @@
+{
+    "rom_paths": [],
+    "extensions": [
+        "bin",
+        "int",
+        "itv",
+        "rom",
+        "zip"
+    ],
+    "platform": "MINTEL",
+    "MAME_EMUOPTS": [
+        " intv -cart ",
+        " intv2 -cart "
+    ]
+}

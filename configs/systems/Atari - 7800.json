@@ -1,0 +1,18 @@
+{
+    "rom_paths": [],
+    "extensions": [
+        "a78",
+        "bin",
+        "rom",
+        "zip"
+    ],
+    "platform": "AT78",
+    "MAME_EMUOPTS": [
+        " a7800 -cart ",
+        " a7800p -cart "
+    ],
+    "prosystem_EMUOPTS": [
+        " -Fullscreen 0 -MenuEnabled 1 -Region auto -Zoom 3 ",
+        " -Fullscreen 1 -MenuEnabled 0 -Region auto "
+    ]
+}
