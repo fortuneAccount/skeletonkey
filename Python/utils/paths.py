@@ -16,6 +16,7 @@ Directory structure:
 
 import os
 import sys
+import tempfile
 from pathlib import Path
 
 
@@ -49,6 +50,23 @@ def config_home() -> Path:
     path = app_root() / "configs"
     path.mkdir(parents=True, exist_ok=True)
     return path
+
+
+def temp_dir() -> Path:
+    """
+    Return the default temp directory: OS temp + skeletonkey.
+    Falls back to app root if the system temp is unwritable.
+    """
+    path = Path(tempfile.gettempdir()) / "skeletonkey"
+    try:
+        path.mkdir(parents=True, exist_ok=True)
+        # Test write access
+        test_file = path / ".write_test"
+        test_file.touch()
+        test_file.unlink()
+        return path
+    except (PermissionError, OSError):
+        return app_root() / "temp"
 
 
 def assets_dir() -> Path:

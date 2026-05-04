@@ -1,6 +1,0 @@
-{
-    "rom_paths": [],
-    "extensions": [],
-    "platform": "AMSTP5SD",
-    "MAME_EMUOPTS": " pc1512 -flop "
-}

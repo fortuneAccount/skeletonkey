@@ -1,6 +1,0 @@
-{
-    "rom_paths": [],
-    "extensions": [],
-    "platform": "MATAL90",
-    "MAME_EMUOPTS": " alice90 -flop "
-}

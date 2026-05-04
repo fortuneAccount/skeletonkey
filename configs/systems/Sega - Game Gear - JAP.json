@@ -1,6 +1,0 @@
-{
-    "rom_paths": [],
-    "extensions": [],
-    "platform": "SGGJ",
-    "MAME_EMUOPTS": " gamegearj -cart "
-}

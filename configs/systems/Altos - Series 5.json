@@ -1,6 +1,0 @@
-{
-    "rom_paths": [],
-    "extensions": [],
-    "platform": "ALTOSSV",
-    "MAME_EMUOPTS": " altos5 -flop "
-}

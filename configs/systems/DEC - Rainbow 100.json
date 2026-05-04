@@ -1,9 +1,0 @@
-{
-    "rom_paths": [],
-    "extensions": [],
-    "platform": "DECRBOW",
-    "MAME_EMUOPTS": [
-        " rainbow -flop1 ",
-        " rainbow -flop2 "
-    ]
-}

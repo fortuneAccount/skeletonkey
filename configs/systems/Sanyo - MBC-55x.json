@@ -1,6 +1,0 @@
-{
-    "rom_paths": [],
-    "extensions": [],
-    "platform": "SMBC55",
-    "MAME_EMUOPTS": " mbc55x -flop1 "
-}

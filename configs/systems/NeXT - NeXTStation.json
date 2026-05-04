@@ -1,9 +1,0 @@
-{
-    "rom_paths": [],
-    "extensions": [],
-    "platform": "NEXTST",
-    "MAME_EMUOPTS": [
-        " nextstc -flop1 ",
-        " nextstc -flop2 "
-    ]
-}

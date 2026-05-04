@@ -1,6 +1,0 @@
-{
-    "rom_paths": [],
-    "extensions": [],
-    "platform": "NICHMV",
-    "MAME_EMUOPTS": " myvision -cart "
-}

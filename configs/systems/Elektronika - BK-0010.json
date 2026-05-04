@@ -1,6 +1,0 @@
-{
-    "rom_paths": [],
-    "extensions": [],
-    "platform": "ELKBK",
-    "MAME_EMUOPTS": " bk0010 -flop "
-}

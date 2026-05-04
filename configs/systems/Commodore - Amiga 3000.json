@@ -1,9 +1,0 @@
-{
-    "rom_paths": [],
-    "extensions": [],
-    "platform": "AMIG3K",
-    "MAME_EMUOPTS": [
-        " a3000 -flop ",
-        " a3000n -flop "
-    ]
-}

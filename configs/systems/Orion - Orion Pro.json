@@ -1,6 +1,0 @@
-{
-    "rom_paths": [],
-    "extensions": [],
-    "platform": "ORIONP",
-    "MAME_EMUOPTS": " orionpro -disk "
-}

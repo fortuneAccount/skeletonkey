@@ -13,8 +13,11 @@ from PyQt6.QtWidgets import (
     QListWidget, QListWidgetItem, QLabel, QLineEdit,
     QPushButton, QFileDialog, QComboBox, QGroupBox,
     QFormLayout, QMessageBox, QPlainTextEdit, QProgressDialog,
-    QMenu
+    QMenu, QCheckBox
 )
+import shutil
+import hashlib
+import xml.etree.ElementTree as ET
 
 from core.config import global_config
 from core.launcher import Launcher, LaunchConfig, suspend_frontends, resume_frontends
@@ -24,6 +27,7 @@ import os
 import re
 import string
 import threading
+from core.task_manager import TaskManager
 from concurrent.futures import ThreadPoolExecutor
 from core.config import Config
 from data.assignments import AssignmentRegistry
@@ -265,6 +269,155 @@ class DetectionWorker(QThread):
         except Exception as e:
             self.log.emit(f"ERROR in auto-assignment: {str(e)}")
 
+class JacketizeWorker(QThread):
+    """Background worker for organizing ROMs into title-based folders."""
+    progress = pyqtSignal(int)
+    status = pyqtSignal(str)
+    finished = pyqtSignal()
+
+    def __init__(self, rom_dir, use_dat, use_filename, inverted, recursive, include_all, dat_data, extensions):
+        super().__init__()
+        self.rom_dir = Path(rom_dir)
+        self.use_dat = use_dat
+        self.use_filename = use_filename
+        self.inverted = inverted
+        self.recursive = recursive
+        self.include_all = include_all
+        self.dat_data = dat_data
+        self.extensions = [e.lower() for e in extensions]
+        self._is_cancelled = False
+
+    def cancel(self):
+        self._is_cancelled = True
+
+    def _get_clean_name(self, name: str) -> str:
+        name = re.sub(r'\(.*?\)|\[.*?\]', '', name)
+        return re.sub(r'[<>:"/\\|?*]', '-', name).strip()
+
+    def _get_alpha_key(self, name: str) -> str:
+        return re.sub(r'[^a-z0-9]', '', name.lower())
+
+    def _get_inverted_name(self, name: str) -> str:
+        lower = name.lower()
+        for prefix in ["the ", "a ", "an "]:
+            if lower.startswith(prefix):
+                return name[len(prefix):].strip() + ", " + name[:len(prefix)].strip()
+        return name
+
+    def run(self):
+        self.status.emit("Scanning directory...")
+        pattern = "**/*" if self.recursive else "*"
+        all_files = list(self.rom_dir.glob(pattern))
+        rom_files = [f for f in all_files if f.is_file() and f.suffix.lower().lstrip('.') in self.extensions]
+        
+        if not rom_files:
+            self.status.emit("No ROMs found to organize.")
+            return
+
+        # Calculate hashes in parallel
+        self.status.emit("Calculating file hashes...")
+        rom_hashes = {}
+        with concurrent.futures.ThreadPoolExecutor() as executor:
+            future_to_rom = {executor.submit(_calculate_md5, rf): rf for rf in rom_files}
+            for i, future in enumerate(concurrent.futures.as_completed(future_to_rom)):
+                if self._is_cancelled: break
+                file_path, md5_val = future.result()
+                rom_hashes[file_path] = md5_val
+                self.progress.emit(int((i / total) * 25)) # First 25% for hashing
+        
+        if self._is_cancelled: return
+
+        groups = {} # alpha_key -> {folder_name, roms: []}
+
+        for i, rom_file in enumerate(rom_files): # Iterate through rom_files again to use calculated hashes
+            if self._is_cancelled: break
+            self.progress.emit(25 + int((i / total) * 25)) # Next 25% for grouping
+            
+            title = None
+            if self.use_dat and rom_file in rom_hashes:
+                md5_val = rom_hashes[rom_file]
+                if md5_val in self.dat_data:
+                    title = self.dat_data[md5_val]
+
+            if not title and self.use_filename:
+                title = self._get_clean_name(rom_file.stem)
+
+            if title:
+                key = self._get_alpha_key(self._get_clean_name(title))
+                if key not in groups:
+                    folder_name = self._get_clean_name(title)
+                    if self.inverted:
+                        folder_name = self._get_inverted_name(folder_name)
+                    groups[key] = {"name": folder_name, "roms": []}
+                groups[key]["roms"].append(rom_file)
+
+        count = 0
+        self.status.emit("Moving files...")
+        for i, (key, data) in enumerate(groups.items()):
+            if self._is_cancelled: break
+            self.progress.emit(50 + int((i / len(groups)) * 50)) # Last 50% for moving
+            
+            dest_dir = self.rom_dir / data["name"]
+            dest_dir.mkdir(exist_ok=True)
+            
+            for rom_file in data["roms"]:
+                try:
+                    # Move the ROM
+                    target = dest_dir / rom_file.name
+                    shutil.move(str(rom_file), str(target))
+                    count += 1
+
+                    # Handle "Include All ROM-file matches"
+                    if self.include_all:
+                        rom_alpha = self._get_alpha_key(self._get_clean_name(rom_file.stem))
+                        # Scan only same directory for adjacent files
+                        for adj in rom_file.parent.iterdir():
+                            if adj.is_file() and adj.suffix.lower().lstrip('.') not in self.extensions:
+                                if self._get_alpha_key(self._get_clean_name(adj.stem)) == rom_alpha:
+                                    try:
+                                        shutil.move(str(adj), str(dest_dir / adj.name))
+                                    except: pass
+                except: pass
+
+        self.status.emit(f"Jacketize complete: {count} files organized.")
+        self.finished.emit()
+
+
+class UndoWorker(QThread):
+    """Background worker to reverse file movements from a log file."""
+    progress = pyqtSignal(int)
+    status = pyqtSignal(str)
+    finished = pyqtSignal()
+
+    def __init__(self, log_path: Path):
+        super().__init__()
+        self.log_path = log_path
+
+    def run(self):
+        try:
+            with open(self.log_path, "r", encoding="utf-8") as f:
+                data = json.load(f)
+            
+            moves = data.get("moves", [])
+            total = len(moves)
+            count = 0
+            
+            # Process in reverse order to undo nested movements correctly
+            for i, move in enumerate(reversed(moves)):
+                src = Path(move["src"])
+                dst = Path(move["dst"])
+                if dst.exists():
+                    src.parent.mkdir(parents=True, exist_ok=True)
+                    shutil.move(str(dst), str(src))
+                    count += 1
+                self.progress.emit(int(((i + 1) / total) * 100))
+            
+            self.status.emit(f"Undo complete: {count} files restored.")
+        except Exception as e:
+            self.status.emit(f"Undo failed: {e}")
+        self.finished.emit()
+
+
 class _LaunchThread(QThread):
     finished = pyqtSignal(int)
     def __init__(self, launcher):
@@ -277,16 +430,18 @@ class _LaunchThread(QThread):
 
 
 class SystemsTab(BaseTab):
-    def __init__(self, systems: SystemRegistry, emus: EmuRegistry, assignments: AssignmentRegistry, launch_params: LaunchParamsRegistry, parent=None):
+    def __init__(self, systems: SystemRegistry, emus: EmuRegistry, assignments: AssignmentRegistry, launch_params: LaunchParamsRegistry, tasks: TaskManager, parent=None):
         super().__init__(parent)
         self._cfg = global_config()
         self._systems = systems
         self._scanner = SystemScanner(self._systems)
         self._assignments = assignments
         self._launch_params = launch_params
+        self._tasks = tasks
         self._emus = emus
         self._launch_thread: _LaunchThread | None = None
         self._detection_worker: DetectionWorker | None = None
+        self._dat_data = {}
         self._first_run_dialog: QProgressDialog | None = None
         self._build_ui()
         self._populate_systems()
@@ -313,7 +468,7 @@ class SystemsTab(BaseTab):
             self._detection_worker.progress.connect(main_win._settings_tab.set_progress)
 
         self._detection_worker.finished.connect(self._on_first_run_finished)
-        self._detection_worker.start()
+        self._tasks.start_task("system_detection", self._detection_worker)
 
     def _on_first_run_finished(self):
         if self._cfg.get("GLOBAL", "first_run") == "1":
@@ -352,11 +507,13 @@ class SystemsTab(BaseTab):
 
         self._clear_search_btn = QPushButton("x")
         self._clear_search_btn.setFixedWidth(24)
+        self._clear_search_btn.setToolTip("Clear current search")
         self._clear_search_btn.clicked.connect(self._clear_search)
 
         self._filter_detected_btn = QPushButton("Y")
         self._filter_detected_btn.setFixedWidth(24)
         self._filter_detected_btn.setCheckable(True)
+        self._filter_detected_btn.setToolTip("Filter detected systems only")
         self._filter_detected_btn.clicked.connect(self._on_filter_detected_toggled)
         
         dg_layout.addWidget(self._detect_sys_btn)
@@ -405,6 +562,10 @@ class SystemsTab(BaseTab):
         self._req_files_edit = QPlainTextEdit()
         self._req_files_edit.setMaximumHeight(60)
         self._form.addRow("Required Files:", self._req_files_edit)
+        
+        self._dat_meta_btn = QPushButton("dat")
+        self._dat_meta_btn.setFixedWidth(60)
+        self._form.addRow("", self._dat_meta_btn)
 
         self._emu_combo = QComboBox()
         self._emu_combo.setEditable(True)
@@ -437,15 +598,53 @@ class SystemsTab(BaseTab):
         right_layout.addWidget(self._info_group)
 
         # ROM list
-        self._rom_label = QLabel("ROMs")
-        right_layout.addWidget(self._rom_label)
+        right_layout.addWidget(QLabel("ROMs"))
+
         self._rom_list = QListWidget()
         self._rom_list.itemDoubleClicked.connect(self._launch_rom)
         right_layout.addWidget(self._rom_list)
 
-        self._launch_btn = QPushButton("Launch Selected ROM")
+        # Bottom library controls aligned right
+        lib_controls = QVBoxLayout()
+        
+        chk_layout = QHBoxLayout()
+        chk_layout.addStretch()
+        self._recursive_chk = QCheckBox("Recursive")
+        self._include_all_chk = QCheckBox("Include All ROM-file matches")
+        self._use_dat_chk = QCheckBox("Dat")
+        self._use_filename_chk = QCheckBox("Filename")
+        self._inverted_title_chk = QCheckBox("Inverted Title")
+        for chk in [self._recursive_chk, self._include_all_chk, self._use_dat_chk, self._use_filename_chk, self._inverted_title_chk]:
+            chk_layout.addWidget(chk)
+        lib_controls.addLayout(chk_layout)
+
+        btn_layout = QHBoxLayout()
+        btn_layout.addStretch()
+        self._load_dat_btn = QPushButton("Load dat")
+        self._load_dat_btn.clicked.connect(self._on_load_dat_clicked)
+        self._jacketize_btn = QPushButton("Jacketize")
+        self._jacketize_btn.clicked.connect(self._on_jacketize_clicked)
+        self._individuate_btn = QPushButton("Individuate")
+        self._individuate_btn.clicked.connect(self._on_individuate_clicked)
+        self._undo_lib_btn = QPushButton("Undo")
+        self._undo_lib_btn.clicked.connect(self._on_undo_clicked)
+        self._cancel_lib_btn = QPushButton("Cancel")
+        self._cancel_lib_btn.setEnabled(False)
+        self._cancel_lib_btn.clicked.connect(self._on_cancel_lib_clicked)
+        for btn in [self._load_dat_btn, self._jacketize_btn, self._individuate_btn, self._undo_lib_btn, self._cancel_lib_btn]:
+            btn_layout.addWidget(btn)
+        lib_controls.addLayout(btn_layout)
+        
+        right_layout.addLayout(lib_controls)
+
+        launch_layout = QHBoxLayout()
+        launch_layout.addStretch()
+        self._launch_btn = QPushButton("RUN")
+        self._launch_btn.setMinimumWidth(100)
+        self._launch_btn.setStyleSheet("font-weight: bold;")
         self._launch_btn.clicked.connect(self._launch_selected)
-        right_layout.addWidget(self._launch_btn)
+        launch_layout.addWidget(self._launch_btn)
+        right_layout.addLayout(launch_layout)
 
         splitter.addWidget(right)
         splitter.setSizes([200, 600])
@@ -676,6 +875,130 @@ class SystemsTab(BaseTab):
         self.refresh_ui()
         self.set_status(f"System renamed: {old_name} -> {new_name}")
 
+    def _on_load_dat_clicked(self):
+        """Load a Logiqx XML Dat file for hash matching."""
+        path, _ = QFileDialog.getOpenFileName(self, "Select Dat File", "", "Dat Files (*.dat *.xml);;All Files (*)")
+        if not path:
+            return
+        
+        self._dat_data = {}
+        try:
+            tree = ET.parse(path)
+            root = tree.getroot()
+            for game in root.findall('game'):
+                game_name = game.get('name')
+                for rom in game.findall('rom'):
+                    md5 = rom.get('md5')
+                    if md5:
+                        self._dat_data[md5.lower()] = game_name
+            self.set_status(f"Loaded {len(self._dat_data)} entries from dat.")
+        except Exception as e:
+            self.set_status(f"Failed to load dat: {e}")
+
+    def _on_individuate_clicked(self):
+        rom_dir = self._rom_path_combo.current_path()
+        if not rom_dir or not Path(rom_dir).exists(): return
+        
+        rom_items = [self._rom_list.item(i).text() for i in range(self._rom_list.count())]
+        worker = IndividuateWorker(rom_dir, rom_items)
+        
+        worker.status.connect(self.set_status)
+        worker.finished.connect(lambda: self._on_lib_task_finished(rom_dir))
+        
+        main_win = self.window()
+        if hasattr(main_win, "_settings_tab"):
+            worker.progress.connect(main_win._settings_tab.set_progress)
+
+        self._cancel_lib_btn.setEnabled(True)
+        self._tasks.start_task("individuate_process", worker)
+
+    def _on_undo_clicked(self):
+        """Open file browser to select a movement log and trigger undo."""
+        log_dir = temp_dir()
+        path_str, _ = QFileDialog.getOpenFileName(
+            self, "Select Movement Log to Undo", str(log_dir), 
+            "Movement Logs (*_log_*.json);;All Files (*)"
+        )
+        if not path_str:
+            return
+
+        path = Path(path_str)
+        try:
+            with open(path, "r", encoding="utf-8") as f:
+                data = json.load(f)
+            moves = data.get("moves", [])
+            count = len(moves)
+
+            if count > 10:
+                reply = QMessageBox.question(
+                    self, "Confirm Undo",
+                    f"This operation will restore {count} files to their original locations.\n\nDo you want to proceed?",
+                    QMessageBox.StandardButton.Yes | QMessageBox.StandardButton.No
+                )
+                if reply == QMessageBox.StandardButton.No:
+                    return
+        except Exception as e:
+            self.set_status(f"Error reading log file: {e}")
+            return
+
+        worker = UndoWorker(path)
+        worker.status.connect(self.set_status)
+        worker.finished.connect(lambda: self._on_lib_task_finished(self._rom_path_combo.current_path()))
+        
+        main_win = self.window()
+        if hasattr(main_win, "_settings_tab"):
+            worker.progress.connect(main_win._settings_tab.set_progress)
+
+        self._tasks.start_task("undo_process", worker)
+
+    def _on_cancel_lib_clicked(self):
+        self._tasks.cancel_task("jacketize_process")
+        self._tasks.cancel_task("individuate_process")
+        self._cancel_lib_btn.setEnabled(False)
+
+    def _on_jacketize_clicked(self):
+        """
+        Starts the Jacketize background process via TaskManager.
+        """
+        rom_dir = self._rom_path_combo.current_path()
+        if not rom_dir or not Path(rom_dir).exists(): return
+        
+        if not (self._use_dat_chk.isChecked() or self._use_filename_chk.isChecked()):
+            QMessageBox.information(self, "Jacketize", "Select Dat or Filename source.")
+            return
+            
+        if self._use_dat_chk.isChecked() and not self._dat_data:
+            QMessageBox.warning(self, "Jacketize", "No dat loaded. Use 'Load dat' first.")
+            return
+
+        ext_str = self._ext_edit.text().lower()
+        extensions = [x.strip() for x in ext_str.split(",") if x.strip()]
+
+        worker = JacketizeWorker(
+            rom_dir=rom_dir,
+            use_dat=self._use_dat_chk.isChecked(),
+            use_filename=self._use_filename_chk.isChecked(),
+            inverted=self._inverted_title_chk.isChecked(),
+            recursive=self._recursive_chk.isChecked(),
+            include_all=self._include_all_chk.isChecked(),
+            dat_data=self._dat_data,
+            extensions=extensions
+        )
+        
+        worker.status.connect(self.set_status)
+        worker.finished.connect(lambda: self._on_lib_task_finished(rom_dir))
+        
+        main_win = self.window()
+        if hasattr(main_win, "_settings_tab"):
+            worker.progress.connect(main_win._settings_tab.set_progress)
+
+        self._cancel_lib_btn.setEnabled(True)
+        self._tasks.start_task("jacketize_process", worker)
+
+    def _on_lib_task_finished(self, rom_dir):
+        self._cancel_lib_btn.setEnabled(False)
+        self._populate_roms(rom_dir)
+
     def _on_clear_emu_clicked(self):
         """Clear the emulator assignment for the selected item."""
         item = self._item_list.currentItem()
@@ -725,6 +1048,7 @@ class SystemsTab(BaseTab):
         # Update metadata in SystemRegistry including options and arguments
         if name in self._systems._data:
             entry = self._systems._data[name]
+            entry.is_modified = True
             if emu:
                 entry.extra_metadata[f"{emu}_opts"] = self._emu_opts_edit.text().strip()
                 entry.extra_metadata[f"{emu}_args"] = self._emu_args_edit.text().strip()
@@ -736,7 +1060,8 @@ class SystemsTab(BaseTab):
             self._systems._data[name] = SystemEntry(
                 name=name, 
                 extensions=[x.strip() for x in self._ext_edit.text().split(",") if x.strip()],
-                extra_metadata=extra
+                extra_metadata=extra,
+                is_modified=True
             )
 
         self._systems.save()
@@ -775,6 +1100,8 @@ class SystemsTab(BaseTab):
         cfg = LaunchConfig(
             emulator_path=emu_exe,
             rom_path=rom_path,
+            system_name=system_name,
+            emu_name=emu_entry.name,
             include_extension=True, # Standard for manual launches
             include_path=True,
             working_dir=str(emu_dir),

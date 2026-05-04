@@ -1,6 +1,0 @@
-{
-    "rom_paths": [],
-    "extensions": [],
-    "platform": "BBCMAS",
-    "MAME_EMUOPTS": " bbcm -flop "
-}

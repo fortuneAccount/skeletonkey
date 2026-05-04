@@ -1,6 +1,0 @@
-{
-    "rom_paths": [],
-    "extensions": [],
-    "platform": "PPGWAV",
-    "MAME_EMUOPTS": " waveterm -flop1 "
-}

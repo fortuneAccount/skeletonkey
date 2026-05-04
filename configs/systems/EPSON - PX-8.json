@@ -1,6 +1,0 @@
-{
-    "rom_paths": [],
-    "extensions": [],
-    "platform": "EPX8",
-    "MAME_EMUOPTS": " px8 -cart "
-}

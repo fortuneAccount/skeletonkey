@@ -1,9 +1,0 @@
-{
-    "rom_paths": [],
-    "extensions": [
-        "pkg",
-        "psv",
-        "vpk"
-    ],
-    "platform": "SPLAYV"
-}

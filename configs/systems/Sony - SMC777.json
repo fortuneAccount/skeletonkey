@@ -1,6 +1,0 @@
-{
-    "rom_paths": [],
-    "extensions": [],
-    "platform": "SSMC777",
-    "MAME_EMUOPTS": " smc777 -flop1 "
-}

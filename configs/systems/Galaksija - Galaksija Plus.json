@@ -1,6 +1,0 @@
-{
-    "rom_paths": [],
-    "extensions": [],
-    "platform": "GALPLUS",
-    "MAME_EMUOPTS": " galaxy -cass "
-}

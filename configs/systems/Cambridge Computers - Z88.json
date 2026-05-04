@@ -1,6 +1,0 @@
-{
-    "rom_paths": [],
-    "extensions": [],
-    "platform": "CAMBZ",
-    "MAME_EMUOPTS": " z88 -cart1 "
-}

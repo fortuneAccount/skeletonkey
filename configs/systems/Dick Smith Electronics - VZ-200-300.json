@@ -1,6 +1,0 @@
-{
-    "rom_paths": [],
-    "extensions": [],
-    "platform": "DSMVZ",
-    "MAME_EMUOPTS": " vz -cass1 "
-}

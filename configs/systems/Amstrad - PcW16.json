@@ -1,6 +1,0 @@
-{
-    "rom_paths": [],
-    "extensions": [],
-    "platform": "AMSTPCWX",
-    "MAME_EMUOPTS": " pcw16 -flop "
-}

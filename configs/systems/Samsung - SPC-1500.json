@@ -1,6 +1,0 @@
-{
-    "rom_paths": [],
-    "extensions": [],
-    "platform": "SAMSPC15",
-    "MAME_EMUOPTS": " spc1500 -cass "
-}

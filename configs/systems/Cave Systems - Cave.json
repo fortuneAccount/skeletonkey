@@ -1,9 +1,0 @@
-{
-    "rom_paths": [],
-    "extensions": [
-        "zip"
-    ],
-    "platform": "CAVE",
-    "MAME_EMUARGS": " -rp \": [MAMEROMPTH]\"",
-    "MAME_EMUOPTS": " [MAMENM] -[MAMEMEDIA] "
-}

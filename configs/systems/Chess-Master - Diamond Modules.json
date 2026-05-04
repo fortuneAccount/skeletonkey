@@ -1,6 +1,0 @@
-{
-    "rom_paths": [],
-    "extensions": [],
-    "platform": "CHEDMOD",
-    "MAME_EMUOPTS": " chessmstdm -flop "
-}

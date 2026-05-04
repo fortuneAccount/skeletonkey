@@ -1,6 +1,0 @@
-{
-    "rom_paths": [],
-    "extensions": [],
-    "platform": "TI95",
-    "MAME_EMUOPTS": " ti95 -cart "
-}

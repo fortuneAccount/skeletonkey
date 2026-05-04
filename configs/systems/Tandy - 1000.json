@@ -1,6 +1,0 @@
-{
-    "rom_paths": [],
-    "extensions": [],
-    "platform": "TAN1K",
-    "MAME_EMUOPTS": " t1000 -flop1 "
-}

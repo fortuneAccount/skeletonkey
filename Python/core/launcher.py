@@ -18,7 +18,7 @@ import shutil
 from dataclasses import dataclass, field
 from pathlib import Path
 from typing import NamedTuple
-from utils.paths import assets_dir, app_root, check_paths_exist, emu_cfgs_dir
+from utils.paths import assets_dir, app_root, check_paths_exist, emu_cfgs_dir, temp_dir
 from utils.archive import extract
 
 logger = logging.getLogger(__name__)
@@ -42,6 +42,8 @@ class LaunchConfig:
     """All parameters needed to launch a single ROM."""
     emulator_path: str          # full path to emulator executable
     rom_path: str               # full path to ROM file
+    system_name: str            # system name for config staging
+    emu_name: str               # emulator name for config staging
     options: str = ""           # emulator option flags
     arguments: str = ""         # extra arguments appended after ROM path
     use_quotes: bool = True     # wrap ROM path in quotes
@@ -128,15 +130,15 @@ class Launcher:
         self.cfg.rom_path = self._resolve_rom_path(self.cfg.rom_path)
         
         # Prepare the isolated environment
-        self._prepare_sandbox()
+        self._prepare_sandbox(self.cfg.system_name, self.cfg.emu_name)
 
         # Handle Archive Extraction if required
         original_rom = Path(self.cfg.rom_path)
         if self.cfg.extract_rom and original_rom.suffix.lower() in ('.zip', '.7z', '.rar'):
-            temp_dir = app_root() / "temp" / original_rom.stem
-            if extract(str(original_rom), str(temp_dir)):
+            extract_dir = temp_dir() / "extraction" / original_rom.stem
+            if extract(str(original_rom), str(extract_dir)):
                 # Find the first file in the extracted folder to use as the target
-                files = [f for f in temp_dir.iterdir() if f.is_file()]
+                files = [f for f in extract_dir.iterdir() if f.is_file()]
                 if files:
                     self.cfg.rom_path = str(files[0])
 

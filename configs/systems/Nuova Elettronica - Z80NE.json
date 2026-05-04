@@ -1,6 +1,0 @@
-{
-    "rom_paths": [],
-    "extensions": [],
-    "platform": "NUEZ80",
-    "MAME_EMUOPTS": " z80ne -cass1 "
-}

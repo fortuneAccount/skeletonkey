@@ -1,6 +1,0 @@
-{
-    "rom_paths": [],
-    "extensions": [],
-    "platform": "VOLDAT",
-    "MAME_EMUOPTS": " database -flop "
-}

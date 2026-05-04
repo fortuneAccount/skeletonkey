@@ -1,6 +1,0 @@
-{
-    "rom_paths": [],
-    "extensions": [],
-    "platform": "IIDPS",
-    "MAME_EMUOPTS": " dps1 -flop "
-}

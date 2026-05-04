@@ -1,6 +1,0 @@
-{
-    "rom_paths": [],
-    "extensions": [],
-    "platform": "PTCSOL",
-    "MAME_EMUOPTS": " sol20 -cass "
-}

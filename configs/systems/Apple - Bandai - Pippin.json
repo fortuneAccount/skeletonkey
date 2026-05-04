@@ -1,6 +1,0 @@
-{
-    "rom_paths": [],
-    "extensions": [],
-    "platform": "BPIPN",
-    "MAME_EMUOPTS": " pippin -cdrom "
-}

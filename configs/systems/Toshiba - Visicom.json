@@ -1,6 +1,0 @@
-{
-    "rom_paths": [],
-    "extensions": [],
-    "platform": "TOSHVIS",
-    "MAME_EMUOPTS": " visicom -cart "
-}

@@ -1,6 +1,0 @@
-{
-    "rom_paths": [],
-    "extensions": [],
-    "platform": "NPOELMS",
-    "MAME_EMUOPTS": " mc1502 -flop1 "
-}

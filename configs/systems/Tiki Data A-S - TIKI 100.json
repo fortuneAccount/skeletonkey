@@ -1,6 +1,0 @@
-{
-    "rom_paths": [],
-    "extensions": [],
-    "platform": "TIKI1H",
-    "MAME_EMUOPTS": " tiki100 -flop1 "
-}

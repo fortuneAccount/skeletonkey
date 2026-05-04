@@ -1,6 +1,0 @@
-{
-    "rom_paths": [],
-    "extensions": [],
-    "platform": "TANMC",
-    "MAME_EMUOPTS": " mc10 -cass1 "
-}

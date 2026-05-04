@@ -1,6 +1,0 @@
-{
-    "rom_paths": [],
-    "extensions": [],
-    "platform": "SPHC25",
-    "MAME_EMUOPTS": " phc25 -cass "
-}

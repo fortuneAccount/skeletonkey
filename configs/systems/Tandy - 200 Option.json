@@ -1,6 +1,0 @@
-{
-    "rom_paths": [],
-    "extensions": [],
-    "platform": "TAN2HO",
-    "MAME_EMUOPTS": " tandy200 -cart "
-}

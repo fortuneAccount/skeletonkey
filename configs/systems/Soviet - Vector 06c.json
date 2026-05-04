@@ -1,6 +1,0 @@
-{
-    "rom_paths": [],
-    "extensions": [],
-    "platform": "SOVVEC",
-    "MAME_EMUOPTS": " vector06 -flop "
-}

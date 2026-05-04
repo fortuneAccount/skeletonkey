@@ -1,6 +1,0 @@
-{
-    "rom_paths": [],
-    "extensions": [],
-    "platform": "OSB4V",
-    "MAME_EMUOPTS": " vixen -flop1 "
-}

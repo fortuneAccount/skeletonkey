@@ -1,6 +1,0 @@
-{
-    "rom_paths": [],
-    "extensions": [],
-    "platform": "JUMSP",
-    "MAME_EMUOPTS": " vii -cart "
-}

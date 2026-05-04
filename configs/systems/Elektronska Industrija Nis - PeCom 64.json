@@ -1,6 +1,0 @@
-{
-    "rom_paths": [],
-    "extensions": [],
-    "platform": "EINP64",
-    "MAME_EMUOPTS": " pecom64 -cass "
-}

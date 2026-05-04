@@ -1,6 +1,0 @@
-{
-    "rom_paths": [],
-    "extensions": [],
-    "platform": "NSTHOR",
-    "MAME_EMUOPTS": " horizon -flop1 "
-}

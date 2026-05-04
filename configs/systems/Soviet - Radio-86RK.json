@@ -1,6 +1,0 @@
-{
-    "rom_paths": [],
-    "extensions": [],
-    "platform": "RAD86RK",
-    "MAME_EMUOPTS": " radio86 -cass "
-}

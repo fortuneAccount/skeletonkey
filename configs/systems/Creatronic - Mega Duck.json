@@ -1,9 +1,0 @@
-{
-    "rom_paths": [],
-    "extensions": [
-        "bin",
-        "zip"
-    ],
-    "platform": "MEGADUCK",
-    "MAME_EMUOPTS": " megaduck -cart "
-}

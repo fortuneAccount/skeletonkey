@@ -1,6 +1,0 @@
-{
-    "rom_paths": [],
-    "extensions": [],
-    "platform": "SMBC2",
-    "MAME_EMUOPTS": " mbc200 -flop1 "
-}

@@ -1,107 +1,107 @@
 [
   {
     "name": "ACT - Apricot PC-Xi",
-    "search_terms": ["ACT - Apricot PC-Xi|APRIC|ACT Apricot PC-Xi|ACT|Apricot PC-Xi|Apricot"]
+    "search_terms": ["ACT - Apricot PC-Xi|apricot|*Apricot*"]
   },
   {
     "name": "ADC - Super Six",
-    "search_terms": ["ADC - Super Six|SUPRSIX|ADC Super Six|ADC|Super Six"]
+    "search_terms": ["ADC - Super Six|super6|*Super Six*|*Super 6"]
   },
   {
     "name": "ALG - American Laser Games",
-    "search_terms": ["ALG - American Laser Games|ALAZG|ALG American Laser Games|American Laser Games|ALG"]
+    "search_terms": ["ALG - American Laser Games|ALG|*Laser Games*|*American*Laser*"]
   },
   {
     "name": "APF - Imagination Machine",
-    "search_terms": ["APF - Imagination Machine|APFIMG|APF Imagination Machine|APF|Imagination Machine"]
+    "search_terms": ["APF - Imagination Machine|apfimag|*APF*Imag*|*imagination*ma*"]
   },
   {
     "name": "APF - M-1000",
-    "search_terms": ["APF - M-1000|APFM1K|APF M-1000|APF|M-1000"]
+    "search_terms": ["APF - M-1000|apfm1000"]
   },
   {
     "name": "Acetronic - MPU-1000",
-    "search_terms": ["Acetronic - MPU-1000|ACEMPU1K|Acetronic MPU-1000|Acetronic|MPU-1000"]
+    "search_terms": ["Acetronic - MPU-1000|mpu1000"]
   },
   {
     "name": "Acorn - Archimedes",
-    "search_terms": ["Acorn - Archimedes|ACARC|Acorn Archimedes|Acorn|Archimedes"]
+    "search_terms": ["Acorn - Archimedes|a310|*Archimedes*"]
   },
   {
     "name": "Acorn - Atom",
-    "search_terms": ["Acorn - Atom|ACATOM|Acorn Atom|Acorn|Atom"]
+    "search_terms": ["Acorn - Atom|atom|Acorn*atom*"]
   },
   {
     "name": "Acorn - BBC",
-    "search_terms": ["Acorn - BBC|ACBBC|Acorn BBC|Acorn|BBC Micro"]
+    "search_terms": ["Acorn - BBC|bbc|bbca|*Acorn*BBC*"]
   },
   {
     "name": "Acorn - Electron",
-    "search_terms": ["Acorn - Electron|ACELEC|Acorn Electron|Acorn|Electron"]
+    "search_terms": ["Acorn - Electron|electron|*Electron*"]
   },
   {
     "name": "Adobe - Flash",
-    "search_terms": ["Adobe - Flash|AFLASH|Adobe Flash|Flash"]
+    "search_terms": ["Adobe - Flash|*flash*|*adobe*"]
   },
   {
     "name": "Amstrad - CPC",
-    "search_terms": ["Amstrad - CPC|AMSCPC|Amstrad CPC|CPC"]
+    "search_terms": ["Amstrad - CPC|cpc6128p|*amstrad*cpc*|*amstrad*"]
   },
   {
     "name": "Amstrad - GX4000",
-    "search_terms": ["Amstrad - GX4000|AMGX4K|Amstrad GX4000|GX4000"]
+    "search_terms": ["Amstrad - GX4000|gx4000|*amstrad*gx*4*"]
   },
   {
     "name": "Android - Android",
-    "search_terms": ["Android - Android|ANDRD|Android OS|Android"]
+    "search_terms": ["Android - Android|*Android*"]
   },
   {
     "name": "Apple - II",
-    "search_terms": ["Apple - II|APLII|Apple II|Apple 2"]
+    "search_terms": ["Apple - II|apple2"]
   },
   {
     "name": "Apple - Macintosh",
-    "search_terms": ["Apple - Macintosh|APLMAC|Apple Macintosh|Macintosh|Mac"]
+    "search_terms": ["Apple - Macintosh|mac|mac128k|*Macintosh*"]
   },
   {
     "name": "Atari - 2600",
-    "search_terms": ["Atari - 2600|AT26|Atari 2600|2600"]
+    "search_terms": ["Atari - 2600|2600|a2600|*2600*|*atari*26*|*a*26*"]
   },
   {
     "name": "Atari - 7800",
-    "search_terms": ["Atari - 7800|AT78|Atari 7800|7800"]
+    "search_terms": ["Atari - 7800|7800|a7800|*atari*78*|*a*78*"]
   },
   {
     "name": "Atari - Lynx",
-    "search_terms": ["Atari - Lynx|ATLYNX|Atari Lynx|Lynx"]
+    "search_terms": ["Atari - Lynx|lynx|*atari*lynx*"]
   },
   {
     "name": "Bandai - WonderSwan",
-    "search_terms": ["Bandai - WonderSwan|BWSWAN|WonderSwan|Bandai WonderSwan"]
+    "search_terms": ["Bandai - WonderSwan|bws|wswan|*wonder*swan|*wonderswan*"]
   },
   {
     "name": "Bandai - WonderSwan Color",
-    "search_terms": ["Bandai - WonderSwan Color|BWSWANC|WonderSwan Color|Bandai WonderSwan Color"]
+    "search_terms": ["Bandai - WonderSwan Color|wscolor|bwsc|wswanc*|*Wonder*swan*Color|*Wonder*swan*Colour|*Wonderswan colo*r*"]
   },
   {
     "name": "Coleco - ColecoVision",
-    "search_terms": ["Coleco - ColecoVision|COLECO|ColecoVision|Coleco Vision"]
+    "search_terms": ["Coleco - ColecoVision|coleco|*coleco*vision|*colecovision*"]
   },
   {
     "name": "Commodore - 64",
-    "search_terms": ["Commodore - 64|COM64|Commodore 64|C64"]
+    "search_terms": ["Commodore - 64|c64|com64|*com*64*|*C64*"]
   },
   {
     "name": "Commodore - Amiga",
-    "search_terms": ["Commodore - Amiga|AMIG|Commodore Amiga|Amiga"]
+    "search_terms": ["Commodore - Amiga|a500|a500n|*amiga*500|*amiga*"]
   },
   {
     "name": "Commodore - VIC-20",
-    "search_terms": ["Commodore - VIC-20|COMVIC|VIC-20|Commodore VIC20"]
+    "search_terms": ["Commodore - VIC-20|vic20|*VIC*20*"]
   },
   {
     "name": "Microsoft - DOS",
-    "search_terms": ["Microsoft - DOS|MSDOS|MS-DOS|DOS|Microsoft DOS"]
+    "search_terms": ["Microsoft - DOS|DOS|*microsoft*dos*|*ms*dos*|*d.o.s*|*dosbox*"]
   },
   {
     "name": "Microsoft - Windows 3x",
@@ -113,90 +113,218 @@
   },
   {
     "name": "Microsoft - XBOX 360",
-    "search_terms": ["Microsoft - XBOX 360|MS360|Xbox 360|Microsoft Xbox 360"]
+    "search_terms": ["Microsoft - XBOX 360|360|*xbox*360*"]
   },
   {
     "name": "Microsoft - XBOX ONE",
-    "search_terms": ["Microsoft - XBOX ONE|XBONE|Xbox One|Microsoft Xbox One"]
+    "search_terms": ["Microsoft - XBOX ONE|XBONE|*xbox*one*"]
   },
   {
     "name": "Nintendo - Game Boy",
-    "search_terms": ["Nintendo - Game Boy|NNGB|Game Boy|Nintendo Game Boy"]
+    "search_terms": ["Nintendo - Game Boy|gameboy|gb|ngb|*game*boy*"]
   },
   {
     "name": "Nintendo - Game Boy Advance",
-    "search_terms": ["Nintendo - Game Boy Advance|NNGBA|Game Boy Advance|GBA"]
+    "search_terms": ["Nintendo - Game Boy Advance|gba|*nintendo*GBA*|*N*Game*boy*Advance*"]
   },
   {
     "name": "Nintendo - GameCube",
-    "search_terms": ["Nintendo - GameCube|NNGC|GameCube|Nintendo GameCube"]
+    "search_terms": ["Nintendo - GameCube|gamecube|*game*cube*|*gamecube*"]
   },
   {
     "name": "Nintendo - Nintendo 64",
-    "search_terms": ["Nintendo - Nintendo 64|NN64|Nintendo 64|N64"]
+    "search_terms": ["Nintendo - Nintendo 64|n64|*nintendo*64*|*n64*|*nintendo64"]
   },
   {
     "name": "Nintendo - Nintendo DS",
-    "search_terms": ["Nintendo - Nintendo DS|NNDS|Nintendo DS|NDS"]
+    "search_terms": ["Nintendo - Nintendo DS|NDS|DS|*Nintendo DS|*NintendoDS*"]
   },
   {
     "name": "Nintendo - Nintendo Entertainment System",
-    "search_terms": ["Nintendo - Nintendo Entertainment System|NNES|NES|Nintendo NES"]
+    "search_terms": ["Nintendo - Nintendo Entertainment System|nes|nintendo*NES|N.E.S|NES|*Nintendo Entertainment System*"]
   },
   {
     "name": "Nintendo - Super Nintendo Entertainment System",
-    "search_terms": ["Nintendo - Super Nintendo Entertainment System|NSNES|SNES|Super Nintendo"]
+    "search_terms": ["Nintendo - Super Nintendo Entertainment System|snes|*snes*|Super*Nes*|*Super Nintendo*"]
   },
   {
     "name": "Nintendo - Wii",
-    "search_terms": ["Nintendo - Wii|NNWII|Nintendo Wii|Wii"]
+    "search_terms": ["Nintendo - Wii|Wii|*Wii"]
   },
   {
     "name": "Nintendo - Wii U",
-    "search_terms": ["Nintendo - Wii U|NNWIIU|Wii U|Nintendo Wii U"]
+    "search_terms": ["Nintendo - Wii U|wiiu|*Wii*U*"]
   },
   {
     "name": "Nintendo - Nintendo Switch",
-    "search_terms": ["Nintendo - Nintendo Switch|NSWTCH|Switch|Nintendo Switch"]
+    "search_terms": ["Nintendo - Nintendo Switch|switch|*nintendo*Switch*"]
   },
   {
     "name": "Sega - Dreamcast",
-    "search_terms": ["Sega - Dreamcast|SDREAM|Dreamcast|Sega Dreamcast"]
+    "search_terms": ["Sega - Dreamcast|dc|segadc|*dream*cast*"]
   },
   {
     "name": "Sega - Game Gear",
-    "search_terms": ["Sega - Game Gear|SGG|Game Gear|Sega Game Gear"]
+    "search_terms": ["Sega - Game Gear|gamegear|*game*gear*"]
   },
   {
     "name": "Sega - Mega Drive - Genesis",
-    "search_terms": ["Sega - Mega Drive - Genesis|SMEGAD|Genesis|Mega Drive|Sega Genesis"]
+    "search_terms": ["Sega - Mega Drive - Genesis|smd|megadriv|megatech|*mega*drive*|*genesis*"]
   },
   {
     "name": "Sega - Saturn",
-    "search_terms": ["Sega - Saturn|SEGSAT|Saturn|Sega Saturn"]
+    "search_terms": ["Sega - Saturn|saturnu|sat|saturn|*saturn*|*satourne*"]
   },
   {
     "name": "Sony - Playstation",
-    "search_terms": ["Sony - Playstation|SPLAY|PlayStation|PS1|Sony PlayStation"]
+    "search_terms": ["Sony - Playstation|psu|ps1|*psx*|*ps1*|*playstation 1*|*ps 1*|*playstation*"]
   },
   {
     "name": "Sony - Playstation 2",
-    "search_terms": ["Sony - Playstation 2|SPS2|PlayStation 2|PS2"]
+    "search_terms": ["Sony - Playstation 2|ps2|*sony*ps2*|*sony*ps 2*|*playstation 2*"]
   },
   {
     "name": "Sony - Playstation 3",
-    "search_terms": ["Sony - Playstation 3|SPLAY3|PlayStation 3|PS3"]
+    "search_terms": ["Sony - Playstation 3|ps3|*sony*ps3*|*playstation 3*"]
   },
   {
     "name": "Sony - Playstation 4",
-    "search_terms": ["Sony - Playstation 4|SPLAY4|PlayStation 4|PS4"]
+    "search_terms": ["Sony - Playstation 4|ps4|*sony*ps4*|*playstation 4*"]
   },
   {
     "name": "Sony - Playstation Portable",
-    "search_terms": ["Sony - Playstation Portable|SPLAYP|PSP|PlayStation Portable"]
+    "search_terms": ["Sony - Playstation Portable|psp|*sony*psp*|*playstation*portable*"]
   },
   { 
     "name": "Sony - Playstation Vita",
-    "search_terms": ["Sony - Playstation Vita|SPLAYV|PS Vita|PlayStation Vita"]
+    "search_terms": ["Sony - Playstation Vita|*VITA*"]
+  },
+  {
+    "name": "Sega - 32X",
+    "search_terms": ["Sega - 32X|32x|*32*X*"]
+  },
+  {
+    "name": "GCE - Vectrex",
+    "search_terms": ["GCE - Vectrex|vectrex|*GCE*ve*|*Vectrex*"]
+  },
+  {
+    "name": "MGT - Sam Coupe",
+    "search_terms": ["MGT - Sam Coupe|samcoupe|MGT*s*coupe*|*Sam*Coupe*"]
+  },
+  {
+    "name": "Coleco - ADAM",
+    "search_terms": ["Coleco - ADAM|adam|*Adam*"]
+  },
+  {
+    "name": "Funtech - Super Acan",
+    "search_terms": ["Funtech - Super Acan|supracan|Super*a*can|acan"]
+  },
+  {
+    "name": "Exidy - Sorcerer",
+    "search_terms": ["Exidy - Sorcerer|sorcerer|*sorcerer*"]
+  },
+  {
+    "name": "Sega - Titan Video",
+    "search_terms": ["Sega - Titan Video|stv|*sega*s.t.v*"]
+  },
+  {
+    "name": "Cybiko - Cybiko",
+    "search_terms": ["Cybiko - Cybiko|cybikov1|cybikov2|*Cybiko*Cybiko*"]
+  },
+  {
+    "name": "Sega - SG-1000",
+    "search_terms": ["Sega - SG-1000|sg1k|sg1000|sg-1000|sega*sg*"]
+  },
+  {
+    "name": "Sega - SC-3000",
+    "search_terms": ["Sega - SC-3000|sc3k|sc3000|sc-3000|sega*sc*"]
+  },
+  {
+    "name": "Atari - ST",
+    "search_terms": ["Atari - ST|st|ste|*Atari*ST*"]
+  },
+  {
+    "name": "Emerson - Arcadia 2001",
+    "search_terms": ["Emerson - Arcadia 2001|arcadia|*Emerson*|*Arcadia*"]
+  },
+  {
+    "name": "The 3DO Company - 3DO",
+    "search_terms": ["The 3DO Company - 3DO|3do|*3do|*3D-O*|*3DO*"]
+  },
+  {
+    "name": "Windows - Games",
+    "search_terms": ["Windows - Games|pc|*windows*|*win32*"]
+  },
+  {
+    "name": "Commodore - VIC-10 - Max Machine - UltiMax",
+    "search_terms": ["Commodore - VIC-10 - Max Machine - UltiMax|vic10|*Com*Max*"]
+  },
+  {
+    "name": "Nintendo - Kiosk Compact Flash",
+    "search_terms": ["Nintendo - Kiosk Compact Flash|*wii*kiosk*|kiosk*flash*|*nintendo*kiosk"]
+  },
+  {
+    "name": "VTech - Mobigo",
+    "search_terms": ["VTech - Mobigo|mobigo|v*tech*mobigo*"]
+  },
+  {
+    "name": "Open - Beats of Rage",
+    "search_terms": ["Open - Beats of Rage|OBOR|*Beats*of*Rage*|*Open*BOR*"]
+  },
+  {
+    "name": "Tangerine - Microtan 65",
+    "search_terms": ["Tangerine - Microtan 65|microtan|*microtan*"]
+  },
+  {
+    "name": "Enterprise - 64",
+    "search_terms": ["Enterprise - 64|ep64|*Enterprise*64*"]
+  },
+  {
+    "name": "Atari - Jaguar CD",
+    "search_terms": ["Atari - Jaguar CD|jaguarcd|*jag*cd*"]
+  },
+  {
+    "name": "Atari - Jaguar",
+    "search_terms": ["Atari - Jaguar|jaguar|*jaguar|jag|*Jaguar*"]
+  },
+  {
+    "name": "Nintendo - Nintendo 64DD",
+    "search_terms": ["Nintendo - Nintendo 64DD|n64dd|*nintendo*64*DD*|*n64*DD|*nintendo64*DD*"]
+  },
+  {
+    "name": "Sammy - Atomiswave",
+    "search_terms": ["Sammy - Atomiswave|awave|*Atomis*wave*"]
+  },
+  {
+    "name": "Nintendo - Play-Yan",
+    "search_terms": ["Nintendo - Play-Yan|*Play-Yan*"]
+  },
+  {
+    "name": "Sega - NAOMI",
+    "search_terms": ["Sega - NAOMI|naomi|sega*naomi*"]
+  },
+  {
+    "name": "Sharp - X1",
+    "search_terms": ["Sharp - X1|x1|x1turbo|*SHARP*X1*|*sharp*x-1"]
+  },
+  {
+    "name": "Sharp - X68000",
+    "search_terms": ["Sharp - X68000|x68000|x68ksupr|x68030|*sharp*68*|*x*68k*"]
+  },
+  {
+    "name": "Capcom Play System - CPS III",
+    "search_terms": ["Capcom Play System - CPS III|cps3|*cps*3*|*CPS*III*|*CPSIII*|Capcom*System*III*"]
+  },
+  {
+    "name": "Capcom Play System - CPS II",
+    "search_terms": ["Capcom Play System - CPS II|cps2|*cps*2*|*CPS II|*CPSII*|Capcom*System*II*"]
+  },
+  {
+    "name": "Capcom Play System - CPS",
+    "search_terms": ["Capcom Play System - CPS|CPS|*cps*1*|*CPS I|*CPSI*|Capcom*System*I*"]
+  },
+  {
+    "name": "MAME - Arcade",
+    "search_terms": ["MAME - Arcade|mame|arcade*"]
   }
 ]

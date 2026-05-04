@@ -1,6 +1,0 @@
-{
-    "rom_paths": [],
-    "extensions": [],
-    "platform": "RMNIMB",
-    "MAME_EMUOPTS": " nimbus -flop1 "
-}

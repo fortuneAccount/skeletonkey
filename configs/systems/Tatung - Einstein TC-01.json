@@ -1,6 +1,0 @@
-{
-    "rom_paths": [],
-    "extensions": [],
-    "platform": "TEINST",
-    "MAME_EMUOPTS": " einstein -flop "
-}

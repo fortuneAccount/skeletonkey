@@ -1,6 +1,0 @@
-{
-    "rom_paths": [],
-    "extensions": [],
-    "platform": "BBCBR",
-    "MAME_EMUOPTS": " bbcbc -flop "
-}

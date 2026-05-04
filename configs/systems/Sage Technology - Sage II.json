@@ -1,9 +1,0 @@
-{
-    "rom_paths": [],
-    "extensions": [],
-    "platform": "STSAGE2",
-    "MAME_EMUOPTS": [
-        " sage2 -flop1 ",
-        " sage2 -flop2 "
-    ]
-}

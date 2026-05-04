@@ -1,6 +1,0 @@
-{
-    "rom_paths": [],
-    "extensions": [],
-    "platform": "PC82A",
-    "MAME_EMUOPTS": " pc8201 -cart "
-}

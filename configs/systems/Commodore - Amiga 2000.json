@@ -1,9 +1,0 @@
-{
-    "rom_paths": [],
-    "extensions": [],
-    "platform": "AMIG2K",
-    "MAME_EMUOPTS": [
-        " a2000 -flop ",
-        " a2000n -flop "
-    ]
-}

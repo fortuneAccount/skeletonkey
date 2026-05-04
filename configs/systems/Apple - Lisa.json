@@ -1,9 +1,0 @@
-{
-    "rom_paths": [],
-    "extensions": [],
-    "platform": "APLISAII",
-    "MAME_EMUOPTS": [
-        " lisa -flop1 ",
-        " lisa -flop2 "
-    ]
-}

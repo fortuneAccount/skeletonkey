@@ -1,6 +1,0 @@
-{
-    "rom_paths": [],
-    "extensions": [],
-    "platform": "LEAPST",
-    "MAME_EMUOPTS": " leapster -cart "
-}

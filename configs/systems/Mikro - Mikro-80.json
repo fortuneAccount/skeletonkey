@@ -1,6 +1,0 @@
-{
-    "rom_paths": [],
-    "extensions": [],
-    "platform": "MKRO80",
-    "MAME_EMUOPTS": " mikro80 -cass1 "
-}

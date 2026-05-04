@@ -1,6 +1,0 @@
-{
-    "rom_paths": [],
-    "extensions": [],
-    "platform": "OSBR1",
-    "MAME_EMUOPTS": " osborne1 -flop1 "
-}

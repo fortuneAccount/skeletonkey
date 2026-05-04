@@ -1,6 +1,0 @@
-{
-    "rom_paths": [],
-    "extensions": [],
-    "platform": "WANGPC",
-    "MAME_EMUOPTS": " wangpc -flop1 "
-}

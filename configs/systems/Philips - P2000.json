@@ -1,9 +1,0 @@
-{
-    "rom_paths": [],
-    "extensions": [
-        "bin",
-        "zip"
-    ],
-    "platform": "PPC2K",
-    "MAME_EMUOPTS": " pc2000 -cart "
-}

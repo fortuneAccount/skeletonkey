@@ -1,6 +1,0 @@
-{
-    "rom_paths": [],
-    "extensions": [],
-    "platform": "BELPCII",
-    "MAME_EMUOPTS": " pockchalv2 -cart "
-}

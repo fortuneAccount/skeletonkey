@@ -1,6 +1,0 @@
-{
-    "rom_paths": [],
-    "extensions": [],
-    "platform": "VTECGLD",
-    "MAME_EMUOPTS": " gl6000sl -cart "
-}

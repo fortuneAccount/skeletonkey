@@ -1,9 +1,0 @@
-{
-    "rom_paths": [],
-    "extensions": [],
-    "platform": "OLIVM",
-    "MAME_EMUOPTS": [
-        " m20 -flop1 ",
-        " m20 -flop2 "
-    ]
-}

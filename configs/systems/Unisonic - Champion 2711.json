@@ -1,6 +1,0 @@
-{
-    "rom_paths": [],
-    "extensions": [],
-    "platform": "UNICHAM",
-    "MAME_EMUOPTS": " unichamp -cart "
-}

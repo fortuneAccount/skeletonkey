@@ -1,6 +1,0 @@
-{
-    "rom_paths": [],
-    "extensions": [],
-    "platform": "FM77AV",
-    "MAME_EMUOPTS": " fm77av -flop "
-}

@@ -1,6 +1,0 @@
-{
-    "rom_paths": [],
-    "extensions": [],
-    "platform": "MDMPZ",
-    "MAME_EMUOPTS": " mpz80 -flop "
-}

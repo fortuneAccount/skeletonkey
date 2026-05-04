@@ -20,6 +20,7 @@ from ui.tabs.settings_tab import SettingsTab
 from ui.tabs.artwork_tab import ArtworkTab
 from utils.paths import app_home, img_dir
 from data.systems import SystemRegistry
+from core.task_manager import TaskManager
 from data.emulators import EmuRegistry
 from data.assignments import AssignmentRegistry
 from data.launch_params import LaunchParamsRegistry
@@ -35,6 +36,7 @@ class MainWindow(QMainWindow):
         # Create shared registries
         self._systems = SystemRegistry()
         self._emus = EmuRegistry()
+        self._tasks = TaskManager()
         self._assignments = AssignmentRegistry()
         self._launch_params = LaunchParamsRegistry()
         self._pre_mini_size = None
@@ -76,9 +78,9 @@ class MainWindow(QMainWindow):
         
         self._settings_tab = SettingsTab(self)
         self._main_tab = MainTab(self._systems, self._emus, self._assignments, self._launch_params, self)
-        self._systems_tab = SystemsTab(self._systems, self._emus, self._assignments, self._launch_params, self)
-        self._emulators_tab = EmulatorsTab(self._systems, self._emus, self)
-        self._artwork_tab = ArtworkTab(self._systems, self)
+        self._systems_tab = SystemsTab(self._systems, self._emus, self._assignments, self._launch_params, self._tasks, self)
+        self._emulators_tab = EmulatorsTab(self._systems, self._emus, self._tasks, self)
+        self._artwork_tab = ArtworkTab(self._systems, self._tasks, self)
         
         self._tabs_list = [
             self._settings_tab, self._main_tab, self._systems_tab,

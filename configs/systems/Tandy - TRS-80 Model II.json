@@ -1,6 +1,0 @@
-{
-    "rom_paths": [],
-    "extensions": [],
-    "platform": "TTRSMII",
-    "MAME_EMUOPTS": " trs80m2 -flop1 "
-}

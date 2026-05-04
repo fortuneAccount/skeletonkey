@@ -771,6 +771,8 @@ class MainTab(BaseTab):
         cfg = LaunchConfig(
             emulator_path=emu_exe,
             rom_path=rom_path,
+            system_name=system,
+            emu_name=emu_name,
             options=options,
             arguments=arguments,
             include_extension=lp.extract if lp else True,

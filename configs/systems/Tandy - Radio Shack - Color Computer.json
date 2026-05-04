@@ -1,6 +1,0 @@
-{
-    "rom_paths": [],
-    "extensions": [],
-    "platform": "TANCOCO",
-    "MAME_EMUOPTS": " coco -flop "
-}

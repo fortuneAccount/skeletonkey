@@ -1,9 +1,0 @@
-{
-    "rom_paths": [],
-    "extensions": [],
-    "platform": "AMIG12",
-    "MAME_EMUOPTS": [
-        " a1200 -flop ",
-        " a1200n -flop1 "
-    ]
-}

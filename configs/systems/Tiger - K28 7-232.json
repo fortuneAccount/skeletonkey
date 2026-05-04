@@ -1,6 +1,0 @@
-{
-    "rom_paths": [],
-    "extensions": [],
-    "platform": "TIGK28",
-    "MAME_EMUOPTS": " k28m2 -cart "
-}

@@ -1,6 +1,0 @@
-{
-    "rom_paths": [],
-    "extensions": [],
-    "platform": "MOSKIM",
-    "MAME_EMUOPTS": " kim1 -cass "
-}

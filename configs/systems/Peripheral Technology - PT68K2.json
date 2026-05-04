@@ -1,6 +1,0 @@
-{
-    "rom_paths": [],
-    "extensions": [],
-    "platform": "PERT68K",
-    "MAME_EMUOPTS": " pt68k2 -flop1 "
-}

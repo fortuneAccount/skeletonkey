@@ -1,6 +1,0 @@
-{
-    "rom_paths": [],
-    "extensions": [],
-    "platform": "TTGAM3",
-    "MAME_EMUOPTS": " gameking3 -cart "
-}

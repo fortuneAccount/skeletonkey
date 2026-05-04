@@ -1,9 +1,0 @@
-{
-    "rom_paths": [],
-    "extensions": [
-        "bin",
-        "nv"
-    ],
-    "platform": "CYBKO",
-    "MAME_EMUOPTS": " cybikov2 -quik "
-}

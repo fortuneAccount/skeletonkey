@@ -1,6 +1,0 @@
-{
-    "rom_paths": [],
-    "extensions": [],
-    "platform": "APFM1K",
-    "MAME_EMUOPTS": " apfm1000 -flop "
-}

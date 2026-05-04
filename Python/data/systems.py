@@ -29,6 +29,7 @@ class SystemEntry:
     emu_reset: str = ""  # EMUPRESET - preferred emulator
     # Dynamic fields like MAME_EMUOPTS, Altirra_EMUARGS, etc.
     extra_metadata: dict[str, Any] = field(default_factory=dict)
+    is_modified: bool = False # Track if user or detection established local data
 
     @property
     def rom_path_list(self) -> list[str]:
@@ -76,7 +77,11 @@ class SystemRegistry:
                         for k in key_list:
                             val = info.get(k)
                             if isinstance(val, list):
-                                return [str(x).strip() for x in val]
+                                res = []
+                                for x in val:
+                                    if isinstance(x, list): res.extend([str(i).strip() for i in x if i])
+                                    else: res.append(str(x).strip())
+                                return res
                             if isinstance(val, str) and val:
                                 sep = "|" if "|" in val else ","
                                 return [x.strip() for x in val.split(sep) if x.strip()]
@@ -119,7 +124,18 @@ class SystemRegistry:
                     
                     raw_paths = info.get("rom_paths", [])
                     def _parse_paths(val):
-                        if isinstance(val, list): return [str(x).strip() for x in val]
+                        if isinstance(val, list):
+                            res = []
+                            for x in val:
+                                if isinstance(x, list):
+                                    res.extend([str(i).strip() for i in x if i])
+                                else:
+                                    s = str(x).strip()
+                                    # Fix existing mangled strings like "['path']"
+                                    if s.startswith("['") and s.endswith("']"):
+                                        s = s[2:-2].replace('\\\\', '\\')
+                                    res.append(s)
+                            return res
                         if isinstance(val, str): return [x.strip() for x in val.split('|') if x.strip()]
                         return []
 
@@ -127,14 +143,14 @@ class SystemRegistry:
                     extra = {}
                     for k, v in info.items():
                         if k not in ["rom_paths", "extensions", "platform"]:
-                            for k, v in info.items():
-                                k_up = k.upper()
-                                if k_up.endswith("OPTS") or k_up.endswith("ARGS") or k_up == "LAST_EMU":
-                                    extra[k] = v
+                            k_up = k.upper()
+                            if k_up.endswith("OPTS") or k_up.endswith("ARGS") or k_up == "LAST_EMU":
+                                extra[k] = v
 
                     if name in self._data:
                         self._data[name].rom_paths = path_list
                         self._data[name].extra_metadata.update(extra)
+                        self._data[name].is_modified = True
                     else:
                         self._data[name] = SystemEntry(name=name, rom_paths=path_list, extra_metadata=extra)
             except Exception as e:
@@ -164,15 +180,22 @@ class SystemRegistry:
         if system not in self._data:
             self._data[system] = SystemEntry(name=system)
         if isinstance(path, str):
-            self._data[system].rom_paths = [p.strip() for p in path.split('|') if p.strip()]
+            p_list = [p.strip() for p in path.split('|') if p.strip()]
         else:
-            self._data[system].rom_paths = path
+            p_list = []
+            for p in path:
+                if isinstance(p, list):
+                    p_list.extend([str(x).strip() for x in p if x])
+                else:
+                    p_list.append(str(p).strip())
+        self._data[system].rom_paths = p_list
+        self._data[system].is_modified = True
 
     def save(self):
         """Save each modified system into its own individual JSON file."""
         self._systems_config_dir.mkdir(parents=True, exist_ok=True)
         for name, entry in self._data.items():
-            if entry.rom_paths or entry.extra_metadata or entry.extensions:
+            if entry.is_modified:
                 data = { "rom_paths": entry.rom_paths, "extensions": entry.extensions, "platform": entry.platform }
                 data.update(entry.extra_metadata)
                 

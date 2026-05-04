@@ -1,6 +1,0 @@
-{
-    "rom_paths": [],
-    "extensions": [],
-    "platform": "RCAVIP",
-    "MAME_EMUOPTS": " vip -cass "
-}

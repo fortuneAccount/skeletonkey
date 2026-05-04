@@ -1,8 +1,0 @@
-{
-    "rom_paths": [],
-    "extensions": [
-        "zip"
-    ],
-    "platform": "SMOD3",
-    "MAME_EMUOPTS": " segamod3 -cart "
-}

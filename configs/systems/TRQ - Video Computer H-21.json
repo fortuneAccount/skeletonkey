@@ -1,6 +1,0 @@
-{
-    "rom_paths": [],
-    "extensions": [],
-    "platform": "TRQVC",
-    "MAME_EMUOPTS": " h21 -cart "
-}

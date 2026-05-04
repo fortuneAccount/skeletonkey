@@ -1,6 +1,0 @@
-{
-    "rom_paths": [],
-    "extensions": [],
-    "platform": "XER82",
-    "MAME_EMUOPTS": " x820ii -flop "
-}

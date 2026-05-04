@@ -1,6 +1,0 @@
-{
-    "rom_paths": [],
-    "extensions": [],
-    "platform": "NECAPC",
-    "MAME_EMUOPTS": " apc -flop "
-}

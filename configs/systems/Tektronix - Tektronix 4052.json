@@ -1,6 +1,0 @@
-{
-    "rom_paths": [],
-    "extensions": [],
-    "platform": "TEKTRON",
-    "MAME_EMUOPTS": " tek4052 -cart "
-}

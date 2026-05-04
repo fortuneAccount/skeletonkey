@@ -25,7 +25,7 @@ from PyQt6.QtWidgets import QPlainTextEdit, QProgressBar
 
 from core.config import global_config
 from ui.tabs.base_tab import BaseTab
-from utils.paths import app_home, config_home, assets_dir
+from utils.paths import app_home, config_home, assets_dir, temp_dir
 
 _SEP = "|"  # delimiter used in Settings.json for multi-path values
 
@@ -302,7 +302,7 @@ class SettingsTab(BaseTab):
         self._exclude_emus_combo.set_paths(_load_paths(emu_ex_raw))
 
         self._cache_dir.setText(
-            self._cfg.get("OPTIONS", "temp_location", fallback=""))
+            self._cfg.get("OPTIONS", "temp_location", fallback=str(temp_dir())))
 
         # Load booleans
         self._always_on_top_chk.setChecked(self._cfg.get("GLOBAL", "AlwaysOnTop", fallback="0") == "1")

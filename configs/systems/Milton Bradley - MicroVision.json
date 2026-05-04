@@ -1,6 +1,0 @@
-{
-    "rom_paths": [],
-    "extensions": [],
-    "platform": "MBMVIS",
-    "MAME_EMUOPTS": " microvision -cart "
-}

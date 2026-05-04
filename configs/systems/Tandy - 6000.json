@@ -1,6 +1,0 @@
-{
-    "rom_paths": [],
-    "extensions": [],
-    "platform": "TAN6K",
-    "MAME_EMUOPTS": " tandy6k -flop "
-}

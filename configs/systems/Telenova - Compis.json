@@ -1,6 +1,0 @@
-{
-    "rom_paths": [],
-    "extensions": [],
-    "platform": "TELCPIS",
-    "MAME_EMUOPTS": " compis -flop "
-}

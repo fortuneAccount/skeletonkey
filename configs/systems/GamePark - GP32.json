@@ -1,6 +1,0 @@
-{
-    "rom_paths": [],
-    "extensions": [],
-    "platform": "GP32",
-    "MAME_EMUOPTS": " gp32 -cart "
-}

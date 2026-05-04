@@ -1,6 +1,0 @@
-{
-    "rom_paths": [],
-    "extensions": [],
-    "platform": "COMC16",
-    "MAME_EMUOPTS": " c16 -cart"
-}

@@ -1,6 +1,0 @@
-{
-    "rom_paths": [],
-    "extensions": [],
-    "platform": "COMCBMII",
-    "MAME_EMUOPTS": " cbm2 -flop "
-}

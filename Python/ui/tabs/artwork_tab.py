@@ -17,6 +17,8 @@ from PyQt6.QtWidgets import (
 from core.config import global_config
 from data.systems import SystemRegistry
 from ui.tabs.base_tab import BaseTab
+from core.task_manager import TaskManager
+
 
 
 # Supported metadata sources (mirrors mediaordert in sets.ahk)
@@ -36,10 +38,11 @@ ARTWORK_TYPES = [
 
 
 class ArtworkTab(BaseTab):
-    def __init__(self, systems: SystemRegistry, parent=None):
+    def __init__(self, systems: SystemRegistry, tasks: TaskManager, parent=None):
         super().__init__(parent)
         self._cfg = global_config()
         self._systems = systems
+        self._tasks = tasks
         self._build_ui()
         self._populate_systems()
 

@@ -1,6 +1,0 @@
-{
-    "rom_paths": [],
-    "extensions": [],
-    "platform": "TISPKR",
-    "MAME_EMUOPTS": " snread -cart "
-}

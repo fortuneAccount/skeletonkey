@@ -1,6 +1,0 @@
-{
-    "rom_paths": [],
-    "extensions": [],
-    "platform": "TI83",
-    "MAME_EMUOPTS": " ti83 -cart "
-}

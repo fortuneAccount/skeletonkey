@@ -21,6 +21,7 @@ from core.downloader import DownloadWorker
 from data.emulators import EmuRegistry, EmuEntry
 from data.systems import SystemRegistry
 from ui.tabs.base_tab import BaseTab
+from core.task_manager import TaskManager
 from ui.tabs.settings_tab import _PathCombo
 from utils.paths import app_home, bin_dir, resolve_arch, check_paths_exist, app_root
 from PyQt6.QtGui import QColor, QBrush
@@ -36,12 +37,12 @@ def _get_file_hash(path: Path) -> str:
     return h.hexdigest()
 
 class EmulatorsTab(BaseTab):
-    def __init__(self, systems: SystemRegistry, emus: EmuRegistry, parent=None):
+    def __init__(self, systems: SystemRegistry, emus: EmuRegistry, tasks: TaskManager, parent=None):
         super().__init__(parent)
         self._cfg = global_config()
         self._emus = emus
         self._systems = systems
-        self._active_worker: DownloadWorker | None = None
+        self._tasks = tasks
         self._is_fallback_active = False
         self._romjacket_repo = "https://github.com/romjacket/romjacket-emulators/raw/master"
         self._build_ui()
@@ -72,6 +73,7 @@ class EmulatorsTab(BaseTab):
 
         self._clear_search_btn = QToolButton()
         self._clear_search_btn.setText("x")
+        self._clear_search_btn.setToolTip("Clear current search")
         self._clear_search_btn.clicked.connect(self._clear_search)
 
         self._filter_detected_btn = QToolButton()
@@ -160,15 +162,6 @@ class EmulatorsTab(BaseTab):
         act_row.addWidget(self._audit_btn)
         act_row.addWidget(self._reset_btn)
         rl.addLayout(act_row)
-
-        # Arch selector
-        arch_row = QHBoxLayout()
-        arch_row.addWidget(QLabel("Architecture:"))
-        self._arch_combo = QComboBox()
-        self._arch_combo.addItems(["64-bit", "32-bit"])
-        arch_row.addWidget(self._arch_combo)
-        arch_row.addStretch()
-        rl.addLayout(arch_row)
 
         # Progress
         self._progress = QProgressBar()
@@ -330,8 +323,7 @@ class EmulatorsTab(BaseTab):
             is_installed = installed_path and Path(installed_path.strip('"')).exists()
 
             # 2. Check if downloaded (archive exists in store)
-            bits = 64 if self._arch_combo.currentIndex() == 0 else 32
-            archive_url = resolve_arch(entry.archive, bits)
+            archive_url = resolve_arch(entry.archive, 64)
             is_downloaded = (download_store / Path(archive_url).name).exists()
 
             if is_installed:
@@ -486,8 +478,6 @@ class EmulatorsTab(BaseTab):
         detected = self._emus._apps_cfg.get("EMULATORS", entry.name)
         self._exe_path_edit.setText(detected if detected else "")
 
-        bits = 64 if self._arch_combo.currentIndex() == 0 else 32
-        
         emu_dirs = [p.strip() for p in self._cfg.get("GLOBAL", "emulators_directory", fallback="").split("|") if p.strip()]
         base = Path(emu_dirs[0]) if emu_dirs else app_home() / "Emulators"
         self._install_path.setText(str(base / entry.name))
@@ -506,8 +496,7 @@ class EmulatorsTab(BaseTab):
                                     "No download archive defined for this emulator.")
             return
 
-        bits = 64 if self._arch_combo.currentIndex() == 0 else 32
-        archive_url = url_override if url_override else resolve_arch(entry.archive, bits)
+        archive_url = url_override if url_override else resolve_arch(entry.archive, 64)
 
         filename = Path(archive_url).name
         download_store = app_root() / "downloaded"
@@ -524,19 +513,19 @@ class EmulatorsTab(BaseTab):
         # Prepend base URL if the archive path is relative and not an override
         if not archive_url.startswith("http") and not url_override:
             archive_url = f"https://www.google.com/search?q={entry.name}+portable+download" # Placeholder logic for 'preferred'
-        self._active_worker = DownloadWorker(url=archive_url, target_dir=dest_dir, filename=filename)
-        self._active_worker.progress.connect(self._progress.setValue)
-        self._active_worker.speed.connect(self._speed_label.setText)
-        self._active_worker.finished.connect(self._on_download_finished)
-        self._active_worker.start()
+        worker = DownloadWorker(url=archive_url, target_dir=dest_dir, filename=filename)
+        worker.progress.connect(self._progress.setValue)
+        worker.speed.connect(self._speed_label.setText)
+        worker.finished.connect(self._on_download_finished)
+        
+        self._tasks.start_task(f"download_{entry.name}", worker)
 
         self._download_btn.setEnabled(False)
         self._cancel_btn.setEnabled(True)
         self.set_status(f"Downloading {entry.name}…")
 
     def _cancel_download(self):
-        if self._active_worker:
-            self._active_worker.cancel()
+        self._tasks.cancel_task(f"download_{self._name_edit.text()}")
         self._download_btn.setEnabled(True)
         self._cancel_btn.setEnabled(False)
 
@@ -550,8 +539,7 @@ class EmulatorsTab(BaseTab):
             if item:
                 entry = self._emus.get(item.text())
                 if entry:
-                    bits = 64 if self._arch_combo.currentIndex() == 0 else 32
-                    rel_path = resolve_arch(entry.archive, bits)
+                    rel_path = resolve_arch(entry.archive, 64)
                     fallback_url = f"{self._romjacket_repo}/{rel_path}"
                     self.set_status(f"Primary download failed. Trying RomJacket fallback...")
                     self._is_fallback_active = True
@@ -570,8 +558,7 @@ class EmulatorsTab(BaseTab):
                 entry = self._emus.get(name)
                 if entry:
                     dest_dir = Path(self._install_path.text())
-                    bits = 64 if self._arch_combo.currentIndex() == 0 else 32
-                    archive_url = resolve_arch(entry.archive, bits)
+                    archive_url = resolve_arch(entry.archive, 64)
                     
                     archive_path = cached_path or (dest_dir / Path(archive_url).name)
                     

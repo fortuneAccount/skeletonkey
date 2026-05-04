@@ -1,6 +1,0 @@
-{
-    "rom_paths": [],
-    "extensions": [],
-    "platform": "BOND2",
-    "MAME_EMUOPTS": " bw2 -flop "
-}

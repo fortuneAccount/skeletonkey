@@ -1,6 +1,0 @@
-{
-    "rom_paths": [],
-    "extensions": [],
-    "platform": "KORVPK",
-    "MAME_EMUOPTS": " korvet -flop1 "
-}
