@@ -153,10 +153,8 @@ class SystemScanner:
             norm_path = str(folder)
 
         if norm_path not in entry.rom_path_list:
-            current = entry.rom_paths
-            # Append new paths to the end using the pipe delimiter
-            new_path = f"{current}|{norm_path}" if current else norm_path
-            self._registry.set_path(system_name, new_path)
+            new_paths = entry.rom_path_list + [norm_path]
+            self._registry.set_path(system_name, new_paths)
 
     def _scan_dir(self, path: Path, sys_p: list, emu_p: list, found_s: list, found_e: list):
         try:

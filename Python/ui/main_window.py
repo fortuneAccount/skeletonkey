@@ -18,6 +18,7 @@ from ui.tabs.main_tab import MainTab
 from ui.tabs.emulators_tab import EmulatorsTab
 from ui.tabs.settings_tab import SettingsTab
 from ui.tabs.artwork_tab import ArtworkTab
+from ui.tabs.jackets_tab import JacketsTab
 from utils.paths import app_home, img_dir
 from data.systems import SystemRegistry
 from core.task_manager import TaskManager
@@ -81,9 +82,10 @@ class MainWindow(QMainWindow):
         self._systems_tab = SystemsTab(self._systems, self._emus, self._assignments, self._launch_params, self._tasks, self)
         self._emulators_tab = EmulatorsTab(self._systems, self._emus, self._tasks, self)
         self._artwork_tab = ArtworkTab(self._systems, self._tasks, self)
-        
+        self._jackets_tab = JacketsTab(self._systems, self._tasks, self)
+
         self._tabs_list = [
-            self._settings_tab, self._main_tab, self._systems_tab,
+            self._settings_tab, self._main_tab, self._systems_tab, self._jackets_tab,
             self._emulators_tab, self._artwork_tab
         ]
 
@@ -99,7 +101,8 @@ class MainWindow(QMainWindow):
             elif title == "Systems": title = "Systems"
             elif title == "Emulators": title = "Emulators"
             elif title == "Artwork": title = "Artwork"
-            
+            elif title == "Jackets": title = "Jackets"
+
             index = self._tabs.addTab(tab, title)
             self._tab_map[tab.__class__.__name__] = index
             
