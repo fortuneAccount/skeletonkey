@@ -176,17 +176,50 @@ class SystemScanner:
         if platform.system() == "Windows":
             for d in string.ascii_uppercase:
                 drive = Path(f"{d}:/")
-                if drive.exists():
+                if drive.exists() and not self._is_excluded_path(drive):
                     drives.append(drive)
         else:
-            drives.append(Path("/"))
+            root = Path("/")
+            if not self._is_excluded_path(root):
+                drives.append(root)
         return drives
+
+    def _is_excluded_path(self, path: Path) -> bool:
+        """
+        Check if a path should be excluded from system-root-discovery.
+        Excludes paths containing any of the following strings:
+        :\\Windows, :\\Program Files, :\\ProgramData, :\\temp,
+        :\\drivers, :\\., :\\Recovery
+        """
+        # Check original string representation first (before normalization)
+        # This catches patterns like "C:." which normalize to "C:/"
+        orig_str = str(path)
+        if ":/." in orig_str.lower() or ":\\." in orig_str.lower():
+            return True
+        
+        # Normalize path separators to forward slashes for consistent checking
+        path_str = orig_str.replace("\\", "/")
+        
+        excluded_patterns = [
+            ":/windows",
+            ":/program files",
+            ":/programdata", 
+            ":/temp",
+            ":/drivers",
+            ":/recovery"
+        ]
+        
+        # Check if any excluded pattern is in the path
+        for pattern in excluded_patterns:
+            if pattern in path_str.lower():
+                return True
+        return False
 
     def _get_targets_for_detection(self) -> list[Path]:
         cfg = global_config()
         raw = cfg.get("GLOBAL", "systems_directory", fallback="")
         paths = [Path(p.strip()) for p in raw.split("|") if p.strip() and Path(p.strip()).exists()]
         for d in self._get_all_drives():
-            if d not in paths:
+            if d not in paths and not self._is_excluded_path(d):
                 paths.append(d)
         return paths

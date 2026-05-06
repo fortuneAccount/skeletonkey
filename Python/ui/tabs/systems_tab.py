@@ -11,7 +11,7 @@ from PyQt6.QtGui import QBrush, QPixmap
 from PyQt6.QtWidgets import (
     QWidget, QVBoxLayout, QHBoxLayout, QSplitter,
     QListWidget, QListWidgetItem, QLabel, QLineEdit,
-    QPushButton, QFileDialog, QComboBox, QGroupBox,
+    QPushButton, QFileDialog, QComboBox, QGroupBox, QStyle,
     QFormLayout, QMessageBox, QPlainTextEdit, QProgressDialog,
     QMenu, QCheckBox
 )
@@ -269,6 +269,22 @@ class DetectionWorker(QThread):
         except Exception as e:
             self.log.emit(f"ERROR in auto-assignment: {str(e)}")
 
+
+class PathCheckWorker(QThread):
+    """Background worker to verify ROM paths without blocking the UI."""
+    result_ready = pyqtSignal(str, bool)
+
+    def __init__(self, check_list: list[tuple[str, str]]):
+        super().__init__()
+        self.check_list = check_list
+
+    def run(self):
+        from utils.paths import check_paths_exist
+        for name, path_str in self.check_list:
+            exists = check_paths_exist(path_str)
+            self.result_ready.emit(name, exists)
+
+
 class UndoWorker(QThread):
     """Background worker to reverse file movements from a log file."""
     progress = pyqtSignal(int)
@@ -327,6 +343,7 @@ class SystemsTab(BaseTab):
         self._emus = emus
         self._launch_thread: _LaunchThread | None = None
         self._detection_worker: DetectionWorker | None = None
+        self._detected_cache: dict[str, bool] = {}
         self._dat_data = {}
         self._first_run_dialog: QProgressDialog | None = None
         self._build_ui()
@@ -352,6 +369,11 @@ class SystemsTab(BaseTab):
         if hasattr(main_win, "_settings_tab"):
             self._detection_worker.log.connect(main_win._settings_tab.append_log)
             self._detection_worker.progress.connect(main_win._settings_tab.set_progress)
+
+        # During first run, bridge logs to the startup splash screen
+        if hasattr(main_win, "_splash") and main_win._splash:
+            self._detection_worker.log.connect(main_win._splash.update_log)
+            self._detection_worker.progress.connect(main_win._splash.update_progress)
 
         self._detection_worker.finished.connect(self._on_first_run_finished)
         self._tasks.start_task("system_detection", self._detection_worker)
@@ -523,18 +545,26 @@ class SystemsTab(BaseTab):
 
         self._item_list.clear()
         self._item_list.addItem("Add Custom")
+        
+        check_tasks = []
         for name in items:
             item = QListWidgetItem(name)
             entry = self._systems._data.get(name)
-            is_detected = False
-            if entry:
-                path_str = "|".join(entry.rom_path_list)
-                is_detected = check_paths_exist(path_str)
-
-            if not is_detected:
-                item.setForeground(QBrush(Qt.GlobalColor.gray))
-            self._item_list.addItem(item)
             
+            if name in self._detected_cache:
+                exists = self._detected_cache[name]
+                icon_type = QStyle.StandardPixmap.SP_DialogApplyButton if exists else QStyle.StandardPixmap.SP_DialogCancelButton
+                item.setIcon(self.style().standardIcon(icon_type))
+            elif entry and entry.rom_paths:
+                check_tasks.append((name, "|".join(entry.rom_path_list)))
+            
+            self._item_list.addItem(item)
+
+        if check_tasks:
+            worker = PathCheckWorker(check_tasks)
+            worker.result_ready.connect(self._on_path_verified)
+            self._tasks.start_task("path_verification", worker)
+
         # Only apply filtering if the 'Detected Only' toggle is active.
         # Do NOT auto-filter by the search combo text here, as that would 
         # immediately hide all but the first system in the list.
@@ -543,6 +573,19 @@ class SystemsTab(BaseTab):
         else:
             # Ensure everything is visible
             self._on_search_text_changed("")
+
+    def _on_path_verified(self, name: str, exists: bool):
+        """Update the UI when a background path check completes."""
+        self._detected_cache[name] = exists
+        items = self._item_list.findItems(name, Qt.MatchFlag.MatchExactly)
+        if items:
+            item = items[0]
+            icon_type = QStyle.StandardPixmap.SP_DialogApplyButton if exists else QStyle.StandardPixmap.SP_DialogCancelButton
+            item.setIcon(self.style().standardIcon(icon_type))
+
+            # If we are currently filtering for detected systems, handle visibility
+            if self._filter_detected_btn.isChecked():
+                item.setHidden(not exists)
 
     def _update_field_styling(self):
         """Apply Green (active) or Yellow (pending/missing) backgrounds to assignment fields."""
@@ -576,8 +619,8 @@ class SystemsTab(BaseTab):
         for i in range(self._item_list.count()):
             item = self._item_list.item(i)
             name = item.text()
-            entry = self._systems._data.get(name)
-            is_detected = any(Path(p).exists() for p in entry.rom_path_list) if entry else False
+            # Use the results from the background worker cache
+            is_detected = self._detected_cache.get(name, False)
 
             if checked:
                 item.setHidden(not is_detected)

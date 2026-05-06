@@ -6,7 +6,7 @@ Mirrors the multi-tab GUI from working.ahk.
 """
 from pathlib import Path
 
-from PyQt6.QtCore import Qt, QCoreApplication
+from PyQt6.QtCore import Qt, QCoreApplication, QTimer
 from PyQt6.QtGui import QIcon
 from PyQt6.QtWidgets import (
     QSizePolicy, QMainWindow, QTabWidget, QStatusBar, QLabel, QWidget,
@@ -42,14 +42,59 @@ class MainWindow(QMainWindow):
         self._launch_params = LaunchParamsRegistry()
         self._pre_mini_size = None
         self._setup_window()
+
+        # Initialize startup splash for every run to mask intensive UI construction
+        from ui.widgets.startup_splash import StartupSplashScreen
+        self._splash = StartupSplashScreen()
+        self._splash.show()
+        # Ensure splash is drawn before we hit the heavy construction bottleneck
+        QCoreApplication.processEvents()
+        
+        self._tasks.task_finished.connect(self._on_startup_task_finished)
+
         self._build_ui()
         self._register_tabs()
         self.apply_settings()
         self._restore_geometry()
 
+        # If no background detection is triggered within 500ms, assume UI-only init is done
+        QTimer.singleShot(500, self._check_splash_status)
+
+    def _check_splash_status(self):
+        """Closes splash if no background detection tasks are currently active."""
+        if self._splash and not self._tasks.is_running("system_detection"):
+            self._on_startup_task_finished("startup_init")
+
     # ------------------------------------------------------------------
     # Setup
     # ------------------------------------------------------------------
+
+    def _check_first_run(self) -> bool:
+        """Identify if settings are missing, indicating an initial run."""
+        return not self._cfg.path.exists() or (
+            not self._cfg.get("GLOBAL", "systems_directory")
+            and not self._cfg.get("GLOBAL", "emulators_directory")
+        )
+
+    def _on_startup_task_finished(self, name: str):
+        """Show main UI once the background system detection finishes."""
+        if self._splash and name in ("system_detection", "startup_init"):
+            self._splash.close()
+            self._splash = None
+            self.show()
+            
+            import logging
+            logger = logging.getLogger(__name__)
+            emu_idx = self._tab_map.get("EmulatorsTab")
+            if emu_idx is not None:
+                logger.info("Executing tab-command switch to 'Emulators'")
+                self._tabs.setCurrentIndex(emu_idx)
+
+    def show(self):
+        """Override show to keep UI hidden during startup splash."""
+        if self._splash:
+            return
+        super().show()
 
     def _setup_window(self):
         self.setWindowTitle("skeletonKey")
@@ -78,7 +123,7 @@ class MainWindow(QMainWindow):
         self.setCentralWidget(self._tabs)
         
         self._settings_tab = SettingsTab(self)
-        self._main_tab = MainTab(self._systems, self._emus, self._assignments, self._launch_params, self)
+        self._main_tab = MainTab(self._systems, self._emus, self._assignments, self._launch_params, self._tasks, self)
         self._systems_tab = SystemsTab(self._systems, self._emus, self._assignments, self._launch_params, self._tasks, self)
         self._emulators_tab = EmulatorsTab(self._systems, self._emus, self._tasks, self)
         self._artwork_tab = ArtworkTab(self._systems, self._tasks, self)
@@ -130,11 +175,7 @@ class MainWindow(QMainWindow):
         self.resize(w, h)
 
         # First-run: no settings saved yet → open on Settings tab
-        is_first_run = not self._cfg.path.exists() or (
-            not self._cfg.get("GLOBAL", "systems_directory")
-            and not self._cfg.get("GLOBAL", "emulators_directory")
-        )
-        if is_first_run:
+        if self._check_first_run():
             self._tabs.setCurrentIndex(self._settings_tab_index)
         else:
             self._tabs.setCurrentIndex(self._main_tab_index)

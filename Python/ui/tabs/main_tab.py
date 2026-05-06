@@ -20,7 +20,7 @@ from pathlib import Path
 from PyQt6.QtCore import Qt, QSortFilterProxyModel, QStringListModel, QThread, pyqtSignal
 from PyQt6.QtGui import QAction, QFont, QIcon, QColor, QBrush
 from PyQt6.QtWidgets import (
-    QWidget, QVBoxLayout, QHBoxLayout, QSplitter,
+    QWidget, QVBoxLayout, QHBoxLayout, QSplitter, QStyle, QProgressBar,
     QLabel, QPushButton, QComboBox, QLineEdit,
     QListWidget, QListWidgetItem, QCheckBox, QRadioButton,
     QGroupBox, QButtonGroup, QSizePolicy, QMenu,
@@ -29,11 +29,13 @@ from PyQt6.QtWidgets import (
 
 from core.config import global_config
 from core.launcher import Launcher, LaunchConfig, suspend_frontends, resume_frontends, check_launch_prerequisites, verify_bios
+from core.task_manager import TaskManager
 from data.systems import SystemRegistry
 from data.assignments import AssignmentRegistry
 from data.launch_params import LaunchParamsRegistry
 from data.emulators import EmuRegistry
 from data.cores import CoreRegistry
+from ui.tabs.systems_tab import PathCheckWorker
 from ui.tabs.base_tab import BaseTab
 from utils.paths import app_home
 
@@ -55,17 +57,23 @@ class _LaunchThread(QThread):
 class MainTab(BaseTab):
     """Primary ROM launcher tab."""
 
-    def __init__(self, systems: SystemRegistry, emus: EmuRegistry, assignments: AssignmentRegistry, launch_params: LaunchParamsRegistry, parent=None):
+    def __init__(self, systems: SystemRegistry, emus: EmuRegistry, assignments: AssignmentRegistry, launch_params: LaunchParamsRegistry, tasks: TaskManager, parent=None):
         super().__init__(parent)
         self._cfg = global_config()
         self._systems = systems
         self._assignments = assignments
         self._launch_params = launch_params
         self._emus = emus
+        self._tasks = tasks
         self._cores = self._emus._cores
         self._launch_thread: _LaunchThread | None = None
+        self._detected_cache: dict[str, bool] = {}
         self._all_rom_items: list[str] = []
         self._build_ui()
+
+        # Task monitoring for busy indicator
+        self._tasks.task_started.connect(self._on_task_busy_update)
+        self._tasks.task_finished.connect(self._on_task_busy_update)
         self._populate_systems()
         self._restore_last()
 
@@ -89,6 +97,13 @@ class MainTab(BaseTab):
         self._system_ddl.currentTextChanged.connect(self._on_system_changed)
         self._system_ddl.setToolTip("Select a playlist file or directory containing ROMs")
         row1.addWidget(self._system_ddl)
+
+        # Busy indicator for background tasks
+        self._busy_bar = QProgressBar()
+        self._busy_bar.setRange(0, 0) # Indeterminate
+        self._busy_bar.setFixedWidth(60)
+        self._busy_bar.setVisible(False)
+        row1.addWidget(self._busy_bar)
 
         # Edit-system button (mirrors RUNSYSBTN)
         sys_edit_btn = QToolButton()
@@ -251,6 +266,11 @@ class MainTab(BaseTab):
     # Data population
     # ------------------------------------------------------------------
 
+    def _on_task_busy_update(self, name: str):
+        """Update busy indicator visibility based on active verification tasks."""
+        is_busy = self._tasks.is_running("main_path_verification")
+        self._busy_bar.setVisible(is_busy)
+
     def refresh_ui(self):
         """Public entry point for global refreshes."""
         self._systems.reload()
@@ -267,35 +287,42 @@ class MainTab(BaseTab):
         self._system_ddl.clear()
         self._system_ddl.addItem(":=:System List:=:")
 
-        all_systems = self._systems.all_systems()
-        active = []
-        inactive = []
-
-        for name in all_systems:
+        items = self._systems.all_systems()
+        check_tasks = []
+        
+        for name in items:
+            self._system_ddl.addItem(name)
+            idx = self._system_ddl.count() - 1
             entry = self._systems._data.get(name)
-            paths = entry.rom_path_list if entry else []
-            is_active = any(Path(p).exists() for p in paths)
-            
-            if is_active and paths:
-                active.append(name)
-            else:
-                inactive.append(name)
-        
-        # Active systems at top with default font color
-        for name in active:
-            self._system_ddl.addItem(name)
-        
-        if active and inactive:
-            self._system_ddl.insertSeparator(self._system_ddl.count())
-            
-        # Inactive systems at bottom, grayed out
-        for name in inactive:
-            idx = self._system_ddl.count()
-            self._system_ddl.addItem(name)
-            self._system_ddl.setItemData(idx, QBrush(Qt.GlobalColor.gray), Qt.ItemDataRole.ForegroundRole)
+
+            if name in self._detected_cache:
+                exists = self._detected_cache[name]
+                icon_type = QStyle.StandardPixmap.SP_DialogApplyButton if exists else QStyle.StandardPixmap.SP_DialogCancelButton
+                self._system_ddl.setItemIcon(idx, self.style().standardIcon(icon_type))
+            elif entry and entry.rom_paths:
+                # Reset icon if we're about to re-check
+                self._system_ddl.setItemIcon(idx, QIcon())
+                check_tasks.append((name, "|".join(entry.rom_path_list)))
+
+        if check_tasks:
+            worker = PathCheckWorker(check_tasks)
+            worker.result_ready.connect(self._on_path_verified)
+            self._tasks.start_task("main_path_verification", worker)
             
         self._system_ddl.blockSignals(False)
-        self._search_roms() # Update ROM list based on current filters
+        self._search_roms()
+
+    def _on_path_verified(self, name: str, exists: bool):
+        """Update the dropdown item styling when a path check completes."""
+        self._detected_cache[name] = exists
+        idx = self._system_ddl.findText(name)
+        if idx >= 0:
+            icon_type = QStyle.StandardPixmap.SP_DialogApplyButton if exists else QStyle.StandardPixmap.SP_DialogCancelButton
+            self._system_ddl.setItemIcon(idx, self.style().standardIcon(icon_type))
+
+            # If this is the currently selected system, trigger a ROM refresh
+            if self._system_ddl.currentIndex() == idx:
+                self._populate_roms(name)
 
 
     def _populate_cores(self, system: str):

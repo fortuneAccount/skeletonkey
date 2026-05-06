@@ -48,6 +48,12 @@ class EmulatorsTab(BaseTab):
         self._build_ui()
         self._populate()
 
+    def showEvent(self, event):
+        """Log when the tab is actually displayed to the user."""
+        super().showEvent(event)
+        import logging
+        logging.getLogger(__name__).info("Emulators tab UI displayed")
+
     # ------------------------------------------------------------------
     # UI
     # ------------------------------------------------------------------

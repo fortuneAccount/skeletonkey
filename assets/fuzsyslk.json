@@ -253,7 +253,7 @@
   },
   {
     "name": "Windows - Games",
-    "search_terms": ["Windows - Games|pc|*windows*|*win32*"]
+    "search_terms": ["Windows - Games|pc*game*|*windows*Game*|*games*windows*|win32|win|x86*64|*win*game*"]
   },
   {
     "name": "Commodore - VIC-10 - Max Machine - UltiMax",

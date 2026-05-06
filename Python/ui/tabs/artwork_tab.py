@@ -8,11 +8,13 @@ from pathlib import Path
 
 from PyQt6.QtCore import Qt, QThread, pyqtSignal
 from PyQt6.QtWidgets import (
-    QWidget, QVBoxLayout, QHBoxLayout, QSplitter,
-    QListWidget, QLabel, QPushButton, QLineEdit,
+    QWidget, QVBoxLayout, QHBoxLayout, QSplitter, QStyle,
+    QListWidget, QListWidgetItem, QLabel, QPushButton, QLineEdit,
     QGroupBox, QFormLayout, QProgressBar, QComboBox,
     QCheckBox, QMessageBox, QFileDialog,
 )
+from PyQt6.QtGui import QIcon
+from ui.tabs.systems_tab import PathCheckWorker
 
 from core.config import global_config
 from data.systems import SystemRegistry
@@ -43,6 +45,7 @@ class ArtworkTab(BaseTab):
         self._cfg = global_config()
         self._systems = systems
         self._tasks = tasks
+        self._detected_cache: dict[str, bool] = {}
         self._build_ui()
         self._populate_systems()
 
@@ -107,8 +110,36 @@ class ArtworkTab(BaseTab):
     def _populate_systems(self):
         self._systems.reload()
         self._system_list.clear()
-        for name in self._systems.all_systems():
-            self._system_list.addItem(name)
+        
+        items = self._systems.all_systems()
+        check_tasks = []
+
+        for name in items:
+            item = QListWidgetItem(name)
+            entry = self._systems._data.get(name)
+            
+            if name in self._detected_cache:
+                exists = self._detected_cache[name]
+                icon_type = QStyle.StandardPixmap.SP_DialogApplyButton if exists else QStyle.StandardPixmap.SP_DialogCancelButton
+                item.setIcon(self.style().standardIcon(icon_type))
+            elif entry and entry.rom_paths:
+                check_tasks.append((name, "|".join(entry.rom_path_list)))
+            
+            self._system_list.addItem(item)
+
+        if check_tasks:
+            worker = PathCheckWorker(check_tasks)
+            worker.result_ready.connect(self._on_path_verified)
+            self._tasks.start_task("artwork_path_verification", worker)
+
+    def _on_path_verified(self, name: str, exists: bool):
+        """Update the UI when a background path check completes."""
+        self._detected_cache[name] = exists
+        items = self._system_list.findItems(name, Qt.MatchFlag.MatchExactly)
+        if items:
+            item = items[0]
+            icon_type = QStyle.StandardPixmap.SP_DialogApplyButton if exists else QStyle.StandardPixmap.SP_DialogCancelButton
+            item.setIcon(self.style().standardIcon(icon_type))
 
     def _browse_output(self):
         chosen = QFileDialog.getExistingDirectory(
