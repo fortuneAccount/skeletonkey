@@ -31,6 +31,6 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get install -y \
     xvfb
 
 python -m pip install --upgrade pip setuptools wheel
-python -m pip install -r ../../../workspaces/freeduction/requirements.txt
+python -m pip install -r ../../../workspaces/skeletonkey/requirements.txt
 
 echo "VNC dependencies and PyQt6 requirements are ready."
