@@ -7,6 +7,7 @@ sudo apt-get update
 sudo DEBIAN_FRONTEND=noninteractive apt-get install -y \
     fluxbox \
     libegl1 \
+    xterm \
     libxcb-cursor0 \
     libxcb-xtest0 \
     libxcb-xinput0 \
