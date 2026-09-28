@@ -1,0 +1,29 @@
+{
+  "name": "Python 3.12 VNC (Qt-safe)",
+  "image": "mcr.microsoft.com/devcontainers/python:3.12-bookworm",
+
+  "containerEnv": {
+    "DISPLAY": ":1",
+    "QT_QPA_PLATFORM": "xcb"
+  },
+
+  "forwardPorts": [
+    5901,
+    6080
+  ],
+
+  "portsAttributes": {
+    "5901": {
+      "label": "VNC",
+      "visibility": "private"
+    },
+    "6080": {
+      "label": "noVNC",
+      "visibility": "public"
+    }
+  },
+
+  "postCreateCommand": "bash ../../../workspaces/freeduction/.devcontainer/setup-vnc.sh",
+
+  "postStartCommand": "bash ../../../workspaces/freeduction/.devcontainer/start-vnc.sh"
+}
