@@ -1,13 +1,15 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+SCRIPT_DIR="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
+WORKSPACE_DIR="$(dirname "$SCRIPT_DIR")"
+
 echo "Installing Qt6 and VNC dependencies..."
 
 sudo apt-get update
 sudo DEBIAN_FRONTEND=noninteractive apt-get install -y \
     fluxbox \
     libegl1 \
-    xterm \
     libxcb-cursor0 \
     libxcb-xtest0 \
     libxcb-xinput0 \
@@ -32,6 +34,6 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get install -y \
     xvfb
 
 python -m pip install --upgrade pip setuptools wheel
-python -m pip install -r ../../../workspaces/skeletonkey/requirements.txt
+python -m pip install -r "$WORKSPACE_DIR/requirements.txt"
 
 echo "VNC dependencies and PyQt6 requirements are ready."
