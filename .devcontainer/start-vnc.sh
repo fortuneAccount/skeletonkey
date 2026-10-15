@@ -20,7 +20,7 @@ start_process() {
     fi
 
     log_file="/tmp/$(basename "$pid_file" .pid).log"
-    "$@" >"$log_file" 2>&1 &
+    nohup "$@" >"$log_file" 2>&1 </dev/null &
     echo "$!" >"$pid_file"
 }
 
