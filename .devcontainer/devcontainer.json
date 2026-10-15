@@ -23,7 +23,7 @@
     }
   },
 
-  "postCreateCommand": "bash ../../../workspaces/freeduction/.devcontainer/setup-vnc.sh",
+  "postCreateCommand": "bash ${containerWorkspaceFolder}/.devcontainer/setup-vnc.sh",
 
-  "postStartCommand": "bash ../../../workspaces/freeduction/.devcontainer/start-vnc.sh"
+  "postStartCommand": "bash ${containerWorkspaceFolder}/.devcontainer/start-vnc.sh"
 }
